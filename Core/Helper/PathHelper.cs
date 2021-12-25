@@ -9,20 +9,21 @@ namespace MupenToolkit.Core.Helper
 {
     public static class PathHelper
     {
-        public static bool ValidPath(string path, bool allowRelativePaths = false)
+        public static bool ValidPath(string path, string searchExt)
         {
             bool isValid = true;
 
             try
             {
                 string fullPath = Path.GetFullPath(path);
-                if (allowRelativePaths)
+                if (false)
                     isValid = Path.IsPathRooted(path);
                 else
                 {
                     string root = Path.GetPathRoot(path);
                     isValid = string.IsNullOrEmpty(root.Trim(new char[] { '\\', '/' })) == false;
                 }
+                if (!Path.GetExtension(path).Contains(searchExt, StringComparison.InvariantCultureIgnoreCase)) return false;
             }
             catch { isValid = false; }
 

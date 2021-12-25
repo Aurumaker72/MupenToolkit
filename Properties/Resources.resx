@@ -132,11 +132,20 @@
   <data name="ExitApp" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="HeaderParseFailed" xml:space="preserve">
+    <value>Failed to parse header</value>
+  </data>
+  <data name="InputsParseFailed" xml:space="preserve">
+    <value>Failed to parse inputs</value>
+  </data>
   <data name="LengthSamples" xml:space="preserve">
     <value>Length (Samples)</value>
   </data>
   <data name="LoadMovie" xml:space="preserve">
     <value>Select Movie</value>
+  </data>
+  <data name="NotAMovie" xml:space="preserve">
+    <value>This file is not a movie</value>
   </data>
   <data name="Rerecords" xml:space="preserve">
     <value>Rerecords</value>
@@ -146,6 +155,12 @@
   </data>
   <data name="RomName" xml:space="preserve">
     <value>ROM Name</value>
+  </data>
+  <data name="SaveAlignment" xml:space="preserve">
+    <value>Save is misaligned!</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Failed to save</value>
   </data>
   <data name="SaveMovie" xml:space="preserve">
     <value>Save Movie</value>

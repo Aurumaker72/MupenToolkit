@@ -103,41 +103,45 @@
             <Grid ShowGridLines="False" Margin="20">
                 <!-- Header -->
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
                     </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                    <Label     Grid.Column="0" Grid.Row="0" Content="{x:Static resx:Resources.Author}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding Header.Author, Mode=TwoWay}" BorderBrush="Transparent"/>
-                    <Label     Grid.Column="0" Grid.Row="1" Content="{x:Static resx:Resources.Description}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="1" Text="{Binding Header.Description, Mode=TwoWay}" BorderBrush="Transparent"/>
-                    <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.RomName}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.RomName, Mode=TwoWay}" BorderBrush="Transparent"/>
-                    <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray"/>
-                <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent"/>
-                
-                <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                    <Label     Grid.Column="0" Grid.Row="0" Content="{x:Static resx:Resources.Author}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding Header.Author, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label     Grid.Column="0" Grid.Row="1" Content="{x:Static resx:Resources.Description}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="1" Text="{Binding Header.Description, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.RomName}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.RomName, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue"/>
+                    <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-                    <Label     Grid.Column="0" Grid.Row="5" Content="{x:Static resx:Resources.Rerecords}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="5" Text="{Binding Header.Rerecords, Mode=TwoWay}" BorderBrush="Transparent"/>
-                    <Label     Grid.Column="0" Grid.Row="6" Content="{x:Static resx:Resources.LengthSamples}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="6" Text="{Binding Header.LengthSamples, Mode=TwoWay}" BorderBrush="Transparent"/>
-                    <Button     Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Controllers}" Background="Transparent" BorderBrush="Gray"/>
-                    <TextBox   Grid.Column="1" Grid.Row="7" Text="{Binding Header.Controllers, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0" HorizontalAlignment="Stretch">
+                        <!--<Separator.Effect>
+                            <DropShadowEffect BlurRadius="10" ShadowDepth="2" Direction="90" Opacity="0.5"/>
+                        </Separator.Effect>-->
+                    </Separator>
+
+                    <Label     Grid.Column="0" Grid.Row="5" Content="{x:Static resx:Resources.Rerecords}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="5" Text="{Binding Header.Rerecords, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label     Grid.Column="0" Grid.Row="6" Content="{x:Static resx:Resources.LengthSamples}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="6" Text="{Binding Header.LengthSamples, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button     Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Controllers}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue"/>
+                    <TextBox   Grid.Column="1" Grid.Row="7" Text="{Binding Header.Controllers, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
             </Grid>
 
@@ -186,6 +190,29 @@
 
     </Grid>
 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="{Binding Error.Visible}" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <ScaleTransform/>
+            </StackPanel.RenderTransform>
+            <StackPanel.Style>
+                <Style TargetType="{x:Type StackPanel}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Error.Visible, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource BounceAndFade}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
+            <TextBlock Text="!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Path=Error.Message, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" MaxWidth="256"/>
+
+        </StackPanel>
+        
 
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" Visibility="{Binding FileLoaded, Converter={StaticResource boolVisibility}}">
             <!--<Menu.Style>
@@ -204,6 +231,7 @@
             </Menu.Style>-->
             
             <MenuItem Header="File">
+
                 <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
                 <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
                 <Separator/>
@@ -231,6 +259,7 @@
               Click="DecreaseFont_Click"/>
             </MenuItem>-->
         </Menu>
-        
+
+       
     </Grid> <!--parent grid-->
 </Window>

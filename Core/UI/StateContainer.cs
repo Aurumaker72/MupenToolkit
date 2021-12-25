@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using MupenToolkit.Core.Interaction;
 using PostSharp.Patterns.Model;
 
 namespace MupenToolkit.Core.UI
@@ -16,6 +17,7 @@ namespace MupenToolkit.Core.UI
         public int CurrentController { get; set; } = 0;
         public bool Busy { get; set; } = true;
         public bool FileLoaded { get; set; } = false;
+        public UIError Error { get; set; } = new();
 
         public ICommand LoadMovie { get; set; }
         public ICommand UnloadMovie { get; set; }

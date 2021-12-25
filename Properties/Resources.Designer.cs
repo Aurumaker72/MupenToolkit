@@ -106,6 +106,24 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to parse header.
+        /// </summary>
+        public static string HeaderParseFailed {
+            get {
+                return ResourceManager.GetString("HeaderParseFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to parse inputs.
+        /// </summary>
+        public static string InputsParseFailed {
+            get {
+                return ResourceManager.GetString("InputsParseFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Length (Samples).
         /// </summary>
         public static string LengthSamples {
@@ -120,6 +138,15 @@ namespace MupenToolkit.Properties {
         public static string LoadMovie {
             get {
                 return ResourceManager.GetString("LoadMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This file is not a movie.
+        /// </summary>
+        public static string NotAMovie {
+            get {
+                return ResourceManager.GetString("NotAMovie", resourceCulture);
             }
         }
         
@@ -147,6 +174,24 @@ namespace MupenToolkit.Properties {
         public static string RomName {
             get {
                 return ResourceManager.GetString("RomName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save is misaligned!.
+        /// </summary>
+        public static string SaveAlignment {
+            get {
+                return ResourceManager.GetString("SaveAlignment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save.
+        /// </summary>
+        public static string SaveFailed {
+            get {
+                return ResourceManager.GetString("SaveFailed", resourceCulture);
             }
         }
         
