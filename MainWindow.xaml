@@ -190,7 +190,7 @@
 
     </Grid>
 
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Opacity="1" RenderTransformOrigin="0.5,0.5" >
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Opacity="0" RenderTransformOrigin="0.5,0.5" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*" />
             </Grid.ColumnDefinitions>
