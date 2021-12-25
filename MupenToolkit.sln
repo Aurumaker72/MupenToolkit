@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenToolkit", "MupenToolkit.csproj", "{E827D921-7C29-45CF-8CF9-1CCBBE6F6FD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E827D921-7C29-45CF-8CF9-1CCBBE6F6FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E827D921-7C29-45CF-8CF9-1CCBBE6F6FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E827D921-7C29-45CF-8CF9-1CCBBE6F6FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E827D921-7C29-45CF-8CF9-1CCBBE6F6FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92162C82-F8B6-4223-BBCB-45E3750DB4C2}
+	EndGlobalSection
+EndGlobal

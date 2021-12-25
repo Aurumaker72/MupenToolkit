@@ -1,0 +1,236 @@
+﻿<Window x:Class="MupenToolkit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MupenToolkit"
+        xmlns:ui="clr-namespace:MupenToolkit.Core.UI"
+        xmlns:resx="clr-namespace:MupenToolkit.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static resx:Resources.AppName}" Height="450" Width="800">
+    <Window.DataContext>
+        <ui:StateContainer/>
+    </Window.DataContext>
+    
+    
+    <Grid x:Name="Grid_ParentAll">
+        
+        <Grid x:Name="Grid_Main" IsHitTestVisible="{Binding FileLoaded}" Opacity="0">
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding FileLoaded}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+        
+            <Grid ShowGridLines="False">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*" />
+                <ColumnDefinition Width="2.5*" />
+            </Grid.ColumnDefinitions>
+            
+            <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Header" Margin="5"/>
+            <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Input" Margin="5"/>
+            
+            <Grid ShowGridLines="False" Margin="20" Grid.Column="1">
+                <!-- Input -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                </Grid.RowDefinitions>
+                <Label     Grid.Column="0" Grid.Row="0" Content="Controller:"/>
+                <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent"/>
+
+                <DataGrid x:Name="DataGrid_TASStudio" 
+                          EnableRowVirtualization="True" 
+                          EnableColumnVirtualization="True"
+                          AlternatingRowBackground="LightGray"
+                          GridLinesVisibility="All"
+                          HorizontalGridLinesBrush="Gray"
+                          VerticalGridLinesBrush="Gray"
+                          SelectionMode="Extended"
+                          SelectionUnit="CellOrRowHeader"
+                          AlternationCount="2" 
+                          AutoGenerateColumns="False" 
+                          ColumnWidth="40"
+                          Grid.RowSpan="2" 
+                          CanUserResizeRows="True"
+                          CanUserDeleteRows="False"
+                          CanUserResizeColumns="False"
+                          VirtualizingPanel.IsVirtualizingWhenGrouping="True" 
+                          RowHeight="23" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          CanUserSortColumns="False">
+                          <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
+                          
+                        <DataGrid.ItemsSource>
+                            <MultiBinding Converter="{StaticResource minConverter}">
+                                <Binding Path="Input.Samples"/>
+                                <Binding Path="CurrentController"/>
+                            </MultiBinding>
+                        </DataGrid.ItemsSource>
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Header="D>"    Binding="{Binding DPadRight, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D&lt;" Binding="{Binding DPadLeft, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="Dv"    Binding="{Binding DPadDown, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Binding="{Binding DPadUp, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="S"     Binding="{Binding Start, Mode=TwoWay}"/>
+                        <DataGridCheckBoxColumn Header="Z"     Binding="{Binding Z, Mode=TwoWay}"/>
+                        <DataGridCheckBoxColumn Header="B"     Binding="{Binding B, Mode=TwoWay}"/>
+                        <DataGridCheckBoxColumn Header="A"     Binding="{Binding A, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="C>"    Binding="{Binding CPadRight, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="C&lt;" Binding="{Binding CPadLeft, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="Cv"    Binding="{Binding CPadDown, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Binding="{Binding CPadUp, Mode=TwoWay}"/>
+                        <DataGridCheckBoxColumn Header="R"     Binding="{Binding R, Mode=TwoWay}"/>
+                        <DataGridCheckBoxColumn Header="L"     Binding="{Binding L, Mode=TwoWay}"/>
+                        <DataGridTextColumn Header="X"         Binding="{Binding X, Mode=TwoWay}"/>
+                        <DataGridTextColumn Header="Y"         Binding="{Binding Y, Mode=TwoWay}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            
+            <Grid ShowGridLines="False" Margin="20">
+                <!-- Header -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                    <Label     Grid.Column="0" Grid.Row="0" Content="{x:Static resx:Resources.Author}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding Header.Author, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Label     Grid.Column="0" Grid.Row="1" Content="{x:Static resx:Resources.Description}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="1" Text="{Binding Header.Description, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.RomName}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.RomName, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray"/>
+                <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent"/>
+                
+                <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+
+                    <Label     Grid.Column="0" Grid.Row="5" Content="{x:Static resx:Resources.Rerecords}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="5" Text="{Binding Header.Rerecords, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Label     Grid.Column="0" Grid.Row="6" Content="{x:Static resx:Resources.LengthSamples}"/>
+                    <TextBox   Grid.Column="1" Grid.Row="6" Text="{Binding Header.LengthSamples, Mode=TwoWay}" BorderBrush="Transparent"/>
+                    <Button     Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Controllers}" Background="Transparent" BorderBrush="Gray"/>
+                    <TextBox   Grid.Column="1" Grid.Row="7" Text="{Binding Header.Controllers, Mode=TwoWay}" BorderBrush="Transparent"/>
+
+            </Grid>
+
+
+
+        </Grid>
+    </Grid>
+
+        <Grid x:Name="Grid_PreMain" IsHitTestVisible="{Binding FileLoaded, Converter={StaticResource invBool}}">
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding FileLoaded}" Value="False">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            
+        <!--<Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.25*" />
+                <RowDefinition Height="1.25*" />
+                <RowDefinition Height="1.25*" />
+                <RowDefinition Height="1.25*" />
+            </Grid.RowDefinitions>
+        </Grid>-->
+
+            <Label FontSize="30" Content="{x:Static resx:Resources.AppName}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20"/>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="{x:Static resx:Resources.LoadMovie}" Command="{Binding LoadMovie }" Style="{StaticResource ReactiveButton}" FontSize="16"/>
+        </StackPanel>
+
+    </Grid>
+
+
+        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" Visibility="{Binding FileLoaded, Converter={StaticResource boolVisibility}}">
+            <!--<Menu.Style>
+                <Style TargetType="{x:Type Menu}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding FileLoaded}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Menu.Style>-->
+            
+            <MenuItem Header="File">
+                <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
+                <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
+                <Separator/>
+                <MenuItem Command="{Binding UnloadMovie}" Header="{x:Static resx:Resources.UnloadMovie}"/>
+            </MenuItem>
+            <!--<MenuItem Header="Input">
+                <MenuItem Header="Controller">
+                    <MenuItem Header="1" IsCheckable="True" />
+                    <MenuItem Header="2" IsCheckable="True" />
+                    <MenuItem Header="3" IsCheckable="True" />
+                    <MenuItem Header="4" IsCheckable="True" />
+                </MenuItem>
+            </MenuItem>-->
+            <!--<MenuItem Header="_Font">
+                <MenuItem Header="_Bold" IsCheckable="True"
+              Checked="Bold_Checked"
+              Unchecked="Bold_Unchecked"/>
+                <MenuItem Header="_Italic" IsCheckable="True"
+              Checked="Italic_Checked"
+              Unchecked="Italic_Unchecked"/>
+                <Separator/>
+                <MenuItem Header="I_ncrease Font Size"
+              Click="IncreaseFont_Click"/>
+                <MenuItem Header="_Decrease Font Size"
+              Click="DecreaseFont_Click"/>
+            </MenuItem>-->
+        </Menu>
+        
+    </Grid> <!--parent grid-->
+</Window>
