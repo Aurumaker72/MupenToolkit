@@ -38,5 +38,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: mupen-toolkit-artifact
-          path: bin/x64/Release
+          path: bin/Release
           retention-days: 7
