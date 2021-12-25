@@ -190,28 +190,42 @@
 
     </Grid>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="{Binding Error.Visible}" Opacity="0" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.RenderTransform>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Opacity="1" RenderTransformOrigin="0.5,0.5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <Grid.RenderTransform>
                 <ScaleTransform/>
-            </StackPanel.RenderTransform>
-            <StackPanel.Style>
-                <Style TargetType="{x:Type StackPanel}">
+            </Grid.RenderTransform>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=Error.Visible, UpdateSourceTrigger=PropertyChanged}" Value="True">
                             <DataTrigger.EnterActions>
                                 <BeginStoryboard Storyboard="{StaticResource BounceAndFade}" />
                             </DataTrigger.EnterActions>
                             <DataTrigger.ExitActions>
-                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                                <BeginStoryboard Storyboard="{StaticResource BounceAndFade}" />
                             </DataTrigger.ExitActions>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
-            </StackPanel.Style>
-            <TextBlock Text="!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Path=Error.Message, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" MaxWidth="256"/>
+            </Grid.Style>
 
-        </StackPanel>
+            <Rectangle Fill="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="10"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock Text="!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Foreground="White"/>
+            <TextBlock Text="{Binding Path=Error.Message, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="256" Grid.Row="1" Foreground="White"/>
+            
+        </Grid>
         
 
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" Visibility="{Binding FileLoaded, Converter={StaticResource boolVisibility}}">

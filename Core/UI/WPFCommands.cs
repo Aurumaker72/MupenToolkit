@@ -31,7 +31,7 @@ namespace MupenToolkit.Core.UI
             if (shellReturn.Cancelled || !PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
-                mwv.Error.Visible = true;
+                mwv.Error.Visible ^= true;
                 return;
             }
 
@@ -44,7 +44,7 @@ namespace MupenToolkit.Core.UI
             if (headerParsingStatus.Status == Core.Interaction.Status.Sentiment.Fail || headerParsingStatus.Header == null)
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.HeaderParseFailed;
-                mwv.Error.Visible = true;
+                mwv.Error.Visible ^= true;
                 return;
             }
             else
@@ -54,14 +54,12 @@ namespace MupenToolkit.Core.UI
             if (stat2.Status == Core.Interaction.Status.Sentiment.Fail || stat2.Inputs == null)
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.InputsParseFailed;
-                mwv.Error.Visible = true;
+                mwv.Error.Visible ^= true;
                 return;
             }
             else
                 mwv.Input.Samples = stat2.Inputs;
 
-
-            mwv.Error.Visible = false;
 
 
             mwv.FileLoaded = true;
@@ -89,23 +87,7 @@ namespace MupenToolkit.Core.UI
         }
     }
 
-    public class TASStudioEditCommand : ICommand
-    {
-        public StateContainer mwv;
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-        public void Execute(object parameter)
-        {
-            
-        }
-    }
+  
 
     public class SaveMovieCommand : ICommand
     {
@@ -198,7 +180,7 @@ namespace MupenToolkit.Core.UI
                 if (br.BaseStream.Position != 1024)
                 {
                     mwv.Error.Message = MupenToolkit.Properties.Resources.SaveAlignment;
-                    mwv.Error.Visible = true;
+                    mwv.Error.Visible ^= true;
                 }
 
                 br.BaseStream.Seek(1024, SeekOrigin.Begin);
@@ -219,7 +201,7 @@ namespace MupenToolkit.Core.UI
             catch
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.SaveFailed;
-                mwv.Error.Visible = true;
+                mwv.Error.Visible ^= true;
             }
 
             //char[] romName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.RomName)).ToCharArray();
@@ -264,11 +246,9 @@ namespace MupenToolkit.Core.UI
             //br.Write(rspPluginName);
             //br.Write(author);
             //br.Write(description);
-            if(br!=null)br.Flush();
+            if (br!=null)br.Flush();
             if(br!=null)br.Close();
             if(fs != null)fs.Close();
-
-            mwv.Error.Visible = false;
 
             
 

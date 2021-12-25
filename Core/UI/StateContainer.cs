@@ -22,14 +22,12 @@ namespace MupenToolkit.Core.UI
         public ICommand LoadMovie { get; set; }
         public ICommand UnloadMovie { get; set; }
         public ICommand SaveMovie { get; set; }
-        public ICommand TASStudioEdit { get; set; }
 
         public StateContainer()
         {
             LoadMovie = new LoadMovieCommand { mwv = this };
             UnloadMovie = new UnloadMovieCommand { mwv = this };
             SaveMovie = new SaveMovieCommand { mwv = this };
-            TASStudioEdit = new TASStudioEditCommand { mwv = this };
         }
     }
 }
