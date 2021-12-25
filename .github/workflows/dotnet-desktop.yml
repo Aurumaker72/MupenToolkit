@@ -32,7 +32,7 @@ jobs:
         
     - name: MSBuild
       run: |
-          msbuild.exe MupenToolkit.sln /p:platform="x64" /p:configuration="Release"
+          msbuild.exe MupenToolkit.sln /p:Configuration=Release /p:Platform="Any CPU"
           
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
