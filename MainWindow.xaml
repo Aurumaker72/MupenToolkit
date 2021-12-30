@@ -240,11 +240,11 @@
                     <Label     Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller3}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Separator Grid.Row="16" Grid.ColumnSpan="2" Background="Silver"/>
                     <Label    Grid.Column="0" Grid.Row="17" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <CheckBox Grid.Column="1" Grid.Row="17" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+                    <CheckBox Grid.Column="1" Grid.Row="17" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Label    Grid.Column="0" Grid.Row="18" Content="{x:Static resx:Resources.Mempak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <CheckBox Grid.Column="1" Grid.Row="18" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+                    <CheckBox Grid.Column="1" Grid.Row="18" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Label    Grid.Column="0" Grid.Row="19" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <CheckBox Grid.Column="1" Grid.Row="19" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+                    <CheckBox Grid.Column="1" Grid.Row="19" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
                     
 
