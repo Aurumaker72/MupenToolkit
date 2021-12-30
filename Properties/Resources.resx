@@ -123,6 +123,24 @@
   <data name="Author" xml:space="preserve">
     <value>Author</value>
   </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Controller" xml:space="preserve">
+    <value>Controller</value>
+  </data>
+  <data name="Controller0" xml:space="preserve">
+    <value>Controller 1</value>
+  </data>
+  <data name="Controller1" xml:space="preserve">
+    <value>Controller 2</value>
+  </data>
+  <data name="Controller2" xml:space="preserve">
+    <value>Controller 3</value>
+  </data>
+  <data name="Controller3" xml:space="preserve">
+    <value>Controller 4</value>
+  </data>
   <data name="Controllers" xml:space="preserve">
     <value>Controllers</value>
   </data>
@@ -141,8 +159,18 @@
   <data name="LengthSamples" xml:space="preserve">
     <value>Length (Samples)</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="LoadMovie" xml:space="preserve">
     <value>Select Movie</value>
+  </data>
+  <data name="Mempak" xml:space="preserve">
+    <value>Mempak</value>
+  </data>
+  <data name="NoControllers" xml:space="preserve">
+    <value>No Controllers connected</value>
   </data>
   <data name="NotAMovie" xml:space="preserve">
     <value>This file is not a movie</value>
@@ -155,6 +183,9 @@
   </data>
   <data name="RomName" xml:space="preserve">
     <value>ROM Name</value>
+  </data>
+  <data name="Rumblepak" xml:space="preserve">
+    <value>Rumblepak</value>
   </data>
   <data name="SaveAlignment" xml:space="preserve">
     <value>Save is misaligned!</value>

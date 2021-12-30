@@ -142,19 +142,6 @@ namespace MupenToolkit.Core.UI
         }
     }
 
-    public class EqualityConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return value == parameter;
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return value == parameter;
-
-        }
-    }
 
     public class MinConverter : IMultiValueConverter
     {
@@ -177,6 +164,31 @@ namespace MupenToolkit.Core.UI
         }
     }
 
+    public class ValueToEqualsParameterConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) throw new ArgumentException("Can\'t be null");
 
+            return value.ToString() == parameter.ToString();
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+    public class CurrentModeToEqualsParameterConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) throw new ArgumentException("Can\'t be null");
+
+            return (Interaction.Status.CurrentMode)value == (Interaction.Status.CurrentMode)parameter;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
 
 }

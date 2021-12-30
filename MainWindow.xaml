@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:MupenToolkit"
         xmlns:ui="clr-namespace:MupenToolkit.Core.UI"
         xmlns:resx="clr-namespace:MupenToolkit.Properties"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="{x:Static resx:Resources.AppName}" Height="450" Width="800">
+        Title="{x:Static resx:Resources.AppName}" Height="500" Width="900">
     <Window.DataContext>
         <ui:StateContainer/>
     </Window.DataContext>
     
     
     <Grid x:Name="Grid_ParentAll">
-        
+
         <Grid x:Name="Grid_Main" IsHitTestVisible="{Binding FileLoaded}" Opacity="0">
             <Grid.Style>
                 <Style TargetType="{x:Type Grid}">
@@ -30,35 +31,34 @@
                     </Style.Triggers>
                 </Style>
             </Grid.Style>
-        
-            <Grid ShowGridLines="False">
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2.5*" />
-                <ColumnDefinition Width="2.5*" />
-            </Grid.ColumnDefinitions>
-            
-            <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Header" Margin="5"/>
-            <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Input" Margin="5"/>
-            
-            <Grid ShowGridLines="False" Margin="20" Grid.Column="1">
-                <!-- Input -->
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2.5*" />
-                    <RowDefinition Height="2.5*" />
-                </Grid.RowDefinitions>
-                <Label     Grid.Column="0" Grid.Row="0" Content="Controller:"/>
-                <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent"/>
 
-                <DataGrid x:Name="DataGrid_TASStudio" 
+            <Grid ShowGridLines="False">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*" />
+                    <ColumnDefinition Width="2.5*" />
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Header" Margin="5"/>
+                <GroupBox Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Input" Margin="5"/>
+
+                <Grid ShowGridLines="False" Margin="20" Grid.Column="1">
+
+                    <!-- Input -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2.5*" />
+                        <RowDefinition Height="2.5*" />
+                    </Grid.RowDefinitions>
+
+                    <DataGrid x:Name="DataGrid_TASStudio" 
                           EnableRowVirtualization="True" 
                           EnableColumnVirtualization="True"
                           AlternatingRowBackground="LightGray"
-                          GridLinesVisibility="All"
+                          GridLinesVisibility="Horizontal"
                           HorizontalGridLinesBrush="Gray"
                           VerticalGridLinesBrush="Gray"
-                          SelectionMode="Extended"
-                          SelectionUnit="CellOrRowHeader"
+                          SelectionMode="Single"
+                          SelectionUnit="FullRow"
                           AlternationCount="2" 
                           AutoGenerateColumns="False" 
                           ColumnWidth="40"
@@ -71,55 +71,66 @@
                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
                           CanUserSortColumns="False">
-                          <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
-                          
+                        <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
+
+                        <DataGrid.ContextMenu>
+                            <ContextMenu >
+                                <!--<MenuItem Header="hi"/>-->
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True" >
+                                    <Label    Content="{x:Static resx:Resources.Controller}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                    <TextBox  Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </DockPanel>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
                         <DataGrid.ItemsSource>
                             <MultiBinding Converter="{StaticResource minConverter}">
                                 <Binding Path="Input.Samples"/>
-                                <Binding Path="CurrentController"/>
+                                <Binding Path="CurrentController" UpdateSourceTrigger="PropertyChanged"/>
                             </MultiBinding>
                         </DataGrid.ItemsSource>
-                    <DataGrid.Columns>
-                        <DataGridCheckBoxColumn Header="D>"    Binding="{Binding DPadRight, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D&lt;" Binding="{Binding DPadLeft, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="Dv"    Binding="{Binding DPadDown, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D^"    Binding="{Binding DPadUp, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="S"     Binding="{Binding Start, Mode=TwoWay}"/>
-                        <DataGridCheckBoxColumn Header="Z"     Binding="{Binding Z, Mode=TwoWay}"/>
-                        <DataGridCheckBoxColumn Header="B"     Binding="{Binding B, Mode=TwoWay}"/>
-                        <DataGridCheckBoxColumn Header="A"     Binding="{Binding A, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="C>"    Binding="{Binding CPadRight, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="C&lt;" Binding="{Binding CPadLeft, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="Cv"    Binding="{Binding CPadDown, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D^"    Binding="{Binding CPadUp, Mode=TwoWay}"/>
-                        <DataGridCheckBoxColumn Header="R"     Binding="{Binding R, Mode=TwoWay}"/>
-                        <DataGridCheckBoxColumn Header="L"     Binding="{Binding L, Mode=TwoWay}"/>
-                        <DataGridTextColumn Header="X"         Binding="{Binding X, Mode=TwoWay}"/>
-                        <DataGridTextColumn Header="Y"         Binding="{Binding Y, Mode=TwoWay}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
-            
-            <Grid ShowGridLines="False" Margin="20">
-                <!-- Header -->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="3*" />
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="D>"        Width="*" Binding="{Binding DPadRight, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D&lt;" Width="*" Binding="{Binding DPadLeft, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="Dv"    Width="*" Binding="{Binding DPadDown, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Width="*" Binding="{Binding DPadUp, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="S"     Width="*" Binding="{Binding Start, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="Z"         Width="*" Binding="{Binding Z, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="B"         Width="*" Binding="{Binding B, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="A"         Width="*" Binding="{Binding A, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="C>"    Width="*" Binding="{Binding CPadRight, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="C&lt;" Width="*" Binding="{Binding CPadLeft, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="Cv"    Width="*" Binding="{Binding CPadDown, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Width="*" Binding="{Binding CPadUp, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="R"         Width="*" Binding="{Binding R, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="L"         Width="*" Binding="{Binding L, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="X"             Width="*" Binding="{Binding X, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="Y"             Width="*" Binding="{Binding Y, Mode=TwoWay}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+                </Grid>
+
+                <Grid ShowGridLines="False" Margin="20">
+                    <!-- Header -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
                     </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
                     <Label     Grid.Column="0" Grid.Row="0" Content="{x:Static resx:Resources.Author}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding Header.Author, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
@@ -130,25 +141,120 @@
                     <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue"/>
                     <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-                    <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0" HorizontalAlignment="Stretch">
-                        <!--<Separator.Effect>
-                            <DropShadowEffect BlurRadius="10" ShadowDepth="2" Direction="90" Opacity="0.5"/>
-                        </Separator.Effect>-->
-                    </Separator>
+                    <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0" HorizontalAlignment="Stretch" Background="Silver"/>
 
                     <Label     Grid.Column="0" Grid.Row="5" Content="{x:Static resx:Resources.Rerecords}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <TextBox   Grid.Column="1" Grid.Row="5" Text="{Binding Header.Rerecords, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <Label     Grid.Column="0" Grid.Row="6" Content="{x:Static resx:Resources.LengthSamples}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <TextBox   Grid.Column="1" Grid.Row="6" Text="{Binding Header.LengthSamples, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <Button     Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Controllers}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue"/>
+                    <Button     Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Controllers}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue" Command="{Binding EditControllerFlags}"/>
                     <TextBox   Grid.Column="1" Grid.Row="7" Text="{Binding Header.Controllers, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                </Grid>
+
+
 
             </Grid>
 
 
+            <Grid x:Name="Grid_ControllerFlagsEditing" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=ControllerFlagsEditing}" Background="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <ScaleTransform/>
+                </Grid.RenderTransform>
+                
+                <Grid.Style>
+                    <Style TargetType="{x:Type Grid}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=ControllerFlagsEditing}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
 
+
+                <Grid Grid.Row="0" ShowGridLines="False" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+
+                    <Label    Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller0}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Separator                Grid.Row="1" Grid.ColumnSpan="2" Background="Silver"/>
+                    <Label    Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <CheckBox Grid.Column="1" Grid.Row="2" IsChecked="{Binding Path=Header.ControllerFlags.Controller0Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label    Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.Mempak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="3" IsChecked="{Binding Path=Header.ControllerFlags.Controller0Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label    Grid.Column="0" Grid.Row="4" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=Header.ControllerFlags.Controller0Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+
+                    <Label     Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller1}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Separator Grid.Row="6" Grid.ColumnSpan="2" Background="Silver"/>
+                    <Label    Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="7" IsChecked="{Binding Path=Header.ControllerFlags.Controller1Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label    Grid.Column="0" Grid.Row="8" Content="{x:Static resx:Resources.Mempak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="8" IsChecked="{Binding Path=Header.ControllerFlags.Controller1Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label    Grid.Column="0" Grid.Row="9" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="9" IsChecked="{Binding Path=Header.ControllerFlags.Controller1Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+
+                    <Label     Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2"  Content="{x:Static resx:Resources.Controller2}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Separator Grid.Row="11" Grid.ColumnSpan="2" Background="Silver"/>
+                    <Label    Grid.Column="0" Grid.Row="12" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="12" IsChecked="{Binding Path=Header.ControllerFlags.Controller2Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label    Grid.Column="0" Grid.Row="13" Content="{x:Static resx:Resources.Mempak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="13" IsChecked="{Binding Path=Header.ControllerFlags.Controller2Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label    Grid.Column="0" Grid.Row="14" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="14" IsChecked="{Binding Path=Header.ControllerFlags.Controller2Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+
+                    <Label     Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller3}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Separator Grid.Row="16" Grid.ColumnSpan="2" Background="Silver"/>
+                    <Label    Grid.Column="0" Grid.Row="17" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="17" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Connected, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+                    <Label    Grid.Column="0" Grid.Row="18" Content="{x:Static resx:Resources.Mempak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="18" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+                    <Label    Grid.Column="0" Grid.Row="19" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox Grid.Column="1" Grid.Row="19" IsChecked="{Binding Path=Header.ControllerFlags.Controller3Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource GenericCheckBox}"/>
+
+                    
+
+                </Grid>
+                
+                <Border BorderBrush="Gray" BorderThickness="2" />
+
+            </Grid>
+            
         </Grid>
-    </Grid>
 
         <Grid x:Name="Grid_PreMain" IsHitTestVisible="{Binding FileLoaded, Converter={StaticResource invBool}}">
             <Grid.Style>
@@ -224,8 +330,47 @@
             </Rectangle>
             <TextBlock Text="!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Foreground="White"/>
             <TextBlock Text="{Binding Path=Error.Message, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="256" Grid.Row="1" Foreground="White"/>
+
             
         </Grid>
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Opacity="0" RenderTransformOrigin="0.5,0.5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <Grid.RenderTransform>
+                <ScaleTransform/>
+            </Grid.RenderTransform>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Busy, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <Rectangle Fill="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Grid.RowSpan="2" RadiusX="30" RadiusY="30">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="30" Direction="0" ShadowDepth="0"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/loading.gif" gif:ImageBehavior.AnimationSpeedRatio="7" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+
+
+        </Grid>
+        
         
 
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" Visibility="{Binding FileLoaded, Converter={StaticResource boolVisibility}}">

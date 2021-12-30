@@ -79,6 +79,60 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Connected.
+        /// </summary>
+        public static string Connected {
+            get {
+                return ResourceManager.GetString("Connected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller.
+        /// </summary>
+        public static string Controller {
+            get {
+                return ResourceManager.GetString("Controller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller 1.
+        /// </summary>
+        public static string Controller0 {
+            get {
+                return ResourceManager.GetString("Controller0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller 2.
+        /// </summary>
+        public static string Controller1 {
+            get {
+                return ResourceManager.GetString("Controller1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller 3.
+        /// </summary>
+        public static string Controller2 {
+            get {
+                return ResourceManager.GetString("Controller2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller 4.
+        /// </summary>
+        public static string Controller3 {
+            get {
+                return ResourceManager.GetString("Controller3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Controllers.
         /// </summary>
         public static string Controllers {
@@ -133,11 +187,39 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] loading {
+            get {
+                object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Movie.
         /// </summary>
         public static string LoadMovie {
             get {
                 return ResourceManager.GetString("LoadMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mempak.
+        /// </summary>
+        public static string Mempak {
+            get {
+                return ResourceManager.GetString("Mempak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Controllers connected.
+        /// </summary>
+        public static string NoControllers {
+            get {
+                return ResourceManager.GetString("NoControllers", resourceCulture);
             }
         }
         
@@ -174,6 +256,15 @@ namespace MupenToolkit.Properties {
         public static string RomName {
             get {
                 return ResourceManager.GetString("RomName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rumblepak.
+        /// </summary>
+        public static string Rumblepak {
+            get {
+                return ResourceManager.GetString("Rumblepak", resourceCulture);
             }
         }
         

@@ -28,12 +28,15 @@ namespace MupenToolkit.Core.UI
         public void Execute(object parameter)
         {
             var shellReturn = WindowsShellWrapper.OpenFileDialogPrompt();
-            if (shellReturn.Cancelled || !PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
+            if (shellReturn.Cancelled) return;
+            if (!PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
                 mwv.Error.Visible ^= true;
                 return;
             }
+
+            mwv.Busy = true;
 
             // reset movie
             mwv.Header = new();
@@ -61,7 +64,9 @@ namespace MupenToolkit.Core.UI
                 mwv.Input.Samples = stat2.Inputs;
 
 
+            mwv.Busy = false;
 
+            mwv.Mode = "General";
             mwv.FileLoaded = true;
         }
     }
@@ -87,7 +92,26 @@ namespace MupenToolkit.Core.UI
         }
     }
 
-  
+
+
+    public class EditControllerFlagsCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (!mwv.FileLoaded) return; // ???
+            mwv.Mode = mwv.Mode == "ControllerFlagsEditing" ? "General" : "ControllerFlagsEditing";
+        }
+    }
 
     public class SaveMovieCommand : ICommand
     {
@@ -104,106 +128,42 @@ namespace MupenToolkit.Core.UI
         public void Execute(object parameter)
         {
             var shellReturn = WindowsShellWrapper.SaveFileDialogPrompt();
-            if (shellReturn.Cancelled || !PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
+            if (shellReturn.Cancelled) return;
+            if (!PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
-                mwv.Error.Visible = true;
+                mwv.Error.Visible ^= true;
                 return;
             }
+
+            mwv.Busy = true;
 
             FileStream fs   = null; 
             BinaryWriter br = null;
 
+#if !DEBUG
             try
             {
+#endif
                 fs = File.Open(shellReturn.ReturnedPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
                 br = new BinaryWriter(fs);
-
-
-                // this is reused from Mupen Utilities
-                byte[] zeroar1 = new byte[160]; byte[] zeroar2 = new byte[56];
-                byte[] magic = new byte[4] { 0x4D, 0x36, 0x34, 0x1A };
-                Array.Clear(zeroar1, 0, zeroar1.Length);
-                Array.Clear(zeroar2, 0, zeroar2.Length);
-
-                br.Write(mwv.Header.Magic); // Int32 - Magic (4D36341A)
-                br.Write(mwv.Header.Version); // UInt32 - Version number (3)
-                br.Write(mwv.Header.UID); // UInt32 - UID
-                br.Write((UInt32)mwv.Header.LengthVIs); // UInt32 - VIs
-                br.Write((UInt32)mwv.Header.Rerecords); // UInt32 - RRs
-                br.Write(mwv.Header.VIsPerSecond); // Byte - VI/s
-                br.Write(mwv.Header.Controllers); // Byte - Controllers
-                br.Write((Int16)0); // 2 Bytes - RESERVED
-                br.Write(mwv.Header.LengthSamples); // UInt32 - Input Samples
-
-                br.Write((UInt16)mwv.Header.StartFlags); // UInt16 - Movie start type
-                br.Write((Int16)0); // 2 bytes - RESERVED
-                br.Write(mwv.Header.ControllerFlags); // UInt32 - Controller Flags
-                br.Write(zeroar1, 0, zeroar1.Length); // 160 bytes - RESERVED
-                byte[] romname = new byte[32];
-                romname = ASCIIEncoding.ASCII.GetBytes(mwv.Header.RomName);
-                Array.Resize(ref romname, 32);
-                br.Write(romname, 0, 32);
-                br.Write(mwv.Header.RomCRC);
-                br.Write(mwv.Header.RomCountry);
-                br.Write(zeroar2, 0, zeroar2.Length); // 56 bytes - RESERVED
-
-
-                byte[] gfx = new byte[64];
-                byte[] audio = new byte[64];
-                byte[] input = new byte[64];
-                byte[] rsp = new byte[64];
-                byte[] author = new byte[222];
-                byte[] desc = new byte[256];
-
-                gfx = Encoding.ASCII.GetBytes(mwv.Header.VideoPluginName);
-                audio = Encoding.ASCII.GetBytes(mwv.Header.AudioPluginName);
-                input = Encoding.ASCII.GetBytes(mwv.Header.InputPluginName);
-                rsp = Encoding.ASCII.GetBytes(mwv.Header.RSPPluginName);
-                author = Encoding.UTF8.GetBytes(mwv.Header.Author);
-                desc = Encoding.UTF8.GetBytes(mwv.Header.Description);
-
-                Array.Resize(ref gfx, 64);
-                Array.Resize(ref audio, 64);
-                Array.Resize(ref input, 64);
-                Array.Resize(ref rsp, 64);
-                Array.Resize(ref author, 222);
-                Array.Resize(ref desc, 256);
-
-                br.Write(gfx, 0, 64);
-                br.Write(audio, 0, 64);
-                br.Write(input, 0, 64);
-                br.Write(rsp, 0, 64);
-                br.Write(author, 0, 222);
-                br.Write(desc, 0, 256);
-
-                if (br.BaseStream.Position != 1024)
+                var status = MovieManager.SaveMovie(fs, mwv.Header, mwv.Input.Samples);
+                if(status.Sentiment == Status.Sentiment.Fail)
                 {
-                    mwv.Error.Message = MupenToolkit.Properties.Resources.SaveAlignment;
+                    mwv.Error.Message = status.Error.Message;
                     mwv.Error.Visible ^= true;
+                    mwv.Busy = false;
+                    return;
                 }
-
-                br.BaseStream.Seek(1024, SeekOrigin.Begin);
-
-                for (int i = 0; i < mwv.Input.Samples[0].Count; i++)
-                {
-                    if (BitopHelper.GetBit(mwv.Header.ControllerFlags, 0))
-                        br.Write(mwv.Input.Samples[0][i].Raw);
-                    if (BitopHelper.GetBit(mwv.Header.ControllerFlags, 1) && i < mwv.Input.Samples[1].Count)
-                        br.Write(mwv.Input.Samples[1][i].Raw);
-                    if (BitopHelper.GetBit(mwv.Header.ControllerFlags, 2) && i < mwv.Input.Samples[2].Count)
-                        br.Write(mwv.Input.Samples[2][i].Raw);
-                    if (BitopHelper.GetBit(mwv.Header.ControllerFlags, 3) && i < mwv.Input.Samples[3].Count)
-                        br.Write(mwv.Input.Samples[3][i].Raw);
-                }
-
-            }
+#if !DEBUG
+        }
             catch
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.SaveFailed;
                 mwv.Error.Visible ^= true;
+                mwv.Busy = false;
             }
-
+#endif
             //char[] romName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.RomName)).ToCharArray();
             //Array.Resize(ref romName, 32);
 
@@ -250,7 +210,9 @@ namespace MupenToolkit.Core.UI
             if(br!=null)br.Close();
             if(fs != null)fs.Close();
 
-            
+            mwv.Busy = false;
+            mwv.Mode = "General";
+
 
         }
     }

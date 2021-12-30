@@ -9,8 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\loading.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PostSharp.Patterns.Model" Version="6.10.5" />
     <PackageReference Include="PostSharp.Patterns.Xaml" Version="6.10.5" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\loading.gif" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,5 +13,12 @@ namespace MupenToolkit.Core.Interaction
             Success,
             Fail,
         }
+        public enum CurrentMode
+        {
+            None,
+            General,
+            ControllerFlagsEditing,
+
+        }
     }
 }

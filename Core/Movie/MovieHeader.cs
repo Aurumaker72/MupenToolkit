@@ -23,7 +23,7 @@ namespace MupenToolkit.Core.Movie
 
         public ushort StartFlags { get; set; } // should equal 2 if the movie is from a clean start
         private ushort _Reserved2;
-        public uint ControllerFlags { get; set; }
+        public ControllersBitflag ControllerFlags { get; set; }
         private readonly uint _ReservedFlags;
 
         private readonly string _OldAuthorInfo;
