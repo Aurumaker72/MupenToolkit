@@ -70,11 +70,29 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Australia.
+        /// </summary>
+        public static string Australia {
+            get {
+                return ResourceManager.GetString("Australia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author.
         /// </summary>
         public static string Author {
             get {
                 return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beta.
+        /// </summary>
+        public static string Beta {
+            get {
+                return ResourceManager.GetString("Beta", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Demo.
+        /// </summary>
+        public static string Demo {
+            get {
+                return ResourceManager.GetString("Demo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -160,6 +187,24 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to France.
+        /// </summary>
+        public static string France {
+            get {
+                return ResourceManager.GetString("France", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Germany.
+        /// </summary>
+        public static string Germany {
+            get {
+                return ResourceManager.GetString("Germany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to parse header.
         /// </summary>
         public static string HeaderParseFailed {
@@ -174,6 +219,24 @@ namespace MupenToolkit.Properties {
         public static string InputsParseFailed {
             get {
                 return ResourceManager.GetString("InputsParseFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Italy.
+        /// </summary>
+        public static string Italy {
+            get {
+                return ResourceManager.GetString("Italy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Japan.
+        /// </summary>
+        public static string Japan {
+            get {
+                return ResourceManager.GetString("Japan", resourceCulture);
             }
         }
         
@@ -202,6 +265,16 @@ namespace MupenToolkit.Properties {
         public static string LoadMovie {
             get {
                 return ResourceManager.GetString("LoadMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -296,6 +369,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spain.
+        /// </summary>
+        public static string Spain {
+            get {
+                return ResourceManager.GetString("Spain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TAS Studio.
         /// </summary>
         public static string TASStudio {
@@ -305,11 +387,38 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Unknown {
+            get {
+                return ResourceManager.GetString("Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close Movie.
         /// </summary>
         public static string UnloadMovie {
             get {
                 return ResourceManager.GetString("UnloadMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to USA.
+        /// </summary>
+        public static string USA {
+            get {
+                return ResourceManager.GetString("USA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to USA/Japan.
+        /// </summary>
+        public static string USAJapan {
+            get {
+                return ResourceManager.GetString("USAJapan", resourceCulture);
             }
         }
     }

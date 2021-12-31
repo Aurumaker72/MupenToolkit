@@ -93,7 +93,7 @@ namespace MupenToolkit.Core.UI
     }
 
 
-
+    
     public class EditControllerFlagsCommand : ICommand
     {
         public StateContainer mwv;
@@ -111,6 +111,46 @@ namespace MupenToolkit.Core.UI
             if (!mwv.FileLoaded) return; // ???
             mwv.Mode = mwv.Mode == "ControllerFlagsEditing" ? "General" : "ControllerFlagsEditing";
         }
+    }
+
+    public class EditCountryCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (!mwv.FileLoaded) return; // ???
+            mwv.Mode = mwv.Mode == "CountryEditing" ? "General" : "CountryEditing";
+        }
+    }
+    
+
+    public class CountryChangedCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            var ccode = (ushort.Parse((string)(parameter)));
+            mwv.Header.RomCountry = ccode;
+        }
+
     }
 
     public class SaveMovieCommand : ICommand

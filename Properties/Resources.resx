@@ -120,8 +120,14 @@
   <data name="AppName" xml:space="preserve">
     <value>Mupen Toolkit</value>
   </data>
+  <data name="Australia" xml:space="preserve">
+    <value>Australia</value>
+  </data>
   <data name="Author" xml:space="preserve">
     <value>Author</value>
+  </data>
+  <data name="Beta" xml:space="preserve">
+    <value>Beta</value>
   </data>
   <data name="Connected" xml:space="preserve">
     <value>Connected</value>
@@ -144,17 +150,32 @@
   <data name="Controllers" xml:space="preserve">
     <value>Controllers</value>
   </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Demo</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="ExitApp" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="France" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
   <data name="HeaderParseFailed" xml:space="preserve">
     <value>Failed to parse header</value>
   </data>
   <data name="InputsParseFailed" xml:space="preserve">
     <value>Failed to parse inputs</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
   </data>
   <data name="LengthSamples" xml:space="preserve">
     <value>Length (Samples)</value>
@@ -165,6 +186,9 @@
   </data>
   <data name="LoadMovie" xml:space="preserve">
     <value>Select Movie</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Mempak" xml:space="preserve">
     <value>Mempak</value>
@@ -196,10 +220,22 @@
   <data name="SaveMovie" xml:space="preserve">
     <value>Save Movie</value>
   </data>
+  <data name="Spain" xml:space="preserve">
+    <value>Spain</value>
+  </data>
   <data name="TASStudio" xml:space="preserve">
     <value>TAS Studio</value>
   </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
   <data name="UnloadMovie" xml:space="preserve">
     <value>Close Movie</value>
+  </data>
+  <data name="USA" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="USAJapan" xml:space="preserve">
+    <value>USA/Japan</value>
   </data>
 </root>

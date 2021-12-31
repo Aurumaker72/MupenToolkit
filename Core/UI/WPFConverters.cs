@@ -164,6 +164,20 @@ namespace MupenToolkit.Core.UI
         }
     }
 
+    public class UnsignedShortValueToEqualsParameterConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null || parameter == null) throw new ArgumentException("Can\'t be null");
+
+            return (ushort)value == ushort.Parse((string)(parameter));
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
     public class ValueToEqualsParameterConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

@@ -138,7 +138,7 @@
                     <TextBox   Grid.Column="1" Grid.Row="1" Text="{Binding Header.Description, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.RomName}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.RomName, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue"/>
+                    <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue" Command="{Binding EditCountry}"/>
                     <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
                     <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0" HorizontalAlignment="Stretch" Background="Silver"/>
@@ -157,7 +157,7 @@
             </Grid>
 
 
-            <Grid x:Name="Grid_ControllerFlagsEditing" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=ControllerFlagsEditing}" Background="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <Grid x:Name="Grid_ControllerFlagsEditing" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=ControllerFlagsEditing}" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
                     <ScaleTransform/>
                 </Grid.RenderTransform>
@@ -177,6 +177,7 @@
                     </Style>
                 </Grid.Style>
 
+                <Rectangle Fill="LightGray" RadiusX="5" RadiusY="5"/>
 
                 <Grid Grid.Row="0" ShowGridLines="False" Margin="5">
                     <Grid.ColumnDefinitions>
@@ -236,7 +237,6 @@
                     <Label    Grid.Column="0" Grid.Row="14" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <CheckBox Grid.Column="1" Grid.Row="14" IsChecked="{Binding Path=Header.ControllerFlags.Controller2Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-
                     <Label     Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller3}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Separator Grid.Row="16" Grid.ColumnSpan="2" Background="Silver"/>
                     <Label    Grid.Column="0" Grid.Row="17" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
@@ -249,8 +249,76 @@
                     
 
                 </Grid>
+
                 
-                <Border BorderBrush="Gray" BorderThickness="2" />
+                <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" />
+
+            </Grid>
+
+            <Grid x:Name="Grid_CountryEditing" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=CountryEditing}" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <ScaleTransform/>
+                </Grid.RenderTransform>
+
+                <Grid.Style>
+                    <Style TargetType="{x:Type Grid}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=CountryEditing}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+
+                <Rectangle Fill="LightGray" RadiusX="5" RadiusY="5"/>
+
+                <Grid Grid.Row="0" ShowGridLines="False" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label    Grid.Column="0"    Grid.Row="0" Content="{x:Static resx:Resources.USA}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="0" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="69"/>
+
+                    <Label    Grid.Column="0"    Grid.Row="1" Content="{x:Static resx:Resources.USAJapan}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="1" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="65"/>
+
+                    <Label    Grid.Column="0"    Grid.Row="2" Content="{x:Static resx:Resources.Germany}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="2" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="68"/>
+                    
+                    <Label    Grid.Column="0"    Grid.Row="3" Content="{x:Static resx:Resources.France}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="3" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="70"/>
+
+                    <Label    Grid.Column="0"    Grid.Row="4" Content="{x:Static resx:Resources.Italy}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="73" />
+
+                    <Label    Grid.Column="0"    Grid.Row="5" Content="{x:Static resx:Resources.Japan}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="5" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="74" />
+
+                    <Label    Grid.Column="0"    Grid.Row="6" Content="{x:Static resx:Resources.Spain}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton Grid.Column="1" Grid.Row="6" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="83" />
+
+                </Grid>
+
+                    
+                <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" />
 
             </Grid>
             
@@ -288,9 +356,19 @@
             </Grid.RowDefinitions>
         </Grid>-->
 
-            <Label FontSize="30" Content="{x:Static resx:Resources.AppName}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20"/>
-
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                <!--<StackPanel.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0"/>
+                </StackPanel.Effect>-->
+                <Button HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" MaxWidth="64" MaxHeight="64"  MinWidth="64" MinHeight="64" Style="{StaticResource ReactiveButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/logo.png"/>
+                    </Button.Background>
+                </Button>
+            <Label FontSize="30" Content="{x:Static resx:Resources.AppName}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+            </StackPanel>
+            
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button Content="{x:Static resx:Resources.LoadMovie}" Command="{Binding LoadMovie }" Style="{StaticResource ReactiveButton}" FontSize="16"/>
         </StackPanel>
 
@@ -373,50 +451,30 @@
         
         
 
-        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" Visibility="{Binding FileLoaded, Converter={StaticResource boolVisibility}}">
-            <!--<Menu.Style>
-                <Style TargetType="{x:Type Menu}">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding FileLoaded}" Value="True">
-                            <DataTrigger.EnterActions>
-                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
-                            </DataTrigger.EnterActions>
-                            <DataTrigger.ExitActions>
-                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
-                            </DataTrigger.ExitActions>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Menu.Style>-->
+        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}">
             
-            <MenuItem Header="File">
 
+            <MenuItem Header="File">
+                <MenuItem.Style>
+                    <Style TargetType="{x:Type MenuItem}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding FileLoaded}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </MenuItem.Style>
+                
                 <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
                 <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
                 <Separator/>
                 <MenuItem Command="{Binding UnloadMovie}" Header="{x:Static resx:Resources.UnloadMovie}"/>
             </MenuItem>
-            <!--<MenuItem Header="Input">
-                <MenuItem Header="Controller">
-                    <MenuItem Header="1" IsCheckable="True" />
-                    <MenuItem Header="2" IsCheckable="True" />
-                    <MenuItem Header="3" IsCheckable="True" />
-                    <MenuItem Header="4" IsCheckable="True" />
-                </MenuItem>
-            </MenuItem>-->
-            <!--<MenuItem Header="_Font">
-                <MenuItem Header="_Bold" IsCheckable="True"
-              Checked="Bold_Checked"
-              Unchecked="Bold_Unchecked"/>
-                <MenuItem Header="_Italic" IsCheckable="True"
-              Checked="Italic_Checked"
-              Unchecked="Italic_Unchecked"/>
-                <Separator/>
-                <MenuItem Header="I_ncrease Font Size"
-              Click="IncreaseFont_Click"/>
-                <MenuItem Header="_Decrease Font Size"
-              Click="DecreaseFont_Click"/>
-            </MenuItem>-->
         </Menu>
 
        

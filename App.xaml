@@ -18,8 +18,9 @@
         <ui:MinConverter x:Key="minConverter"/>
         <ui:ValueToEqualsParameterConverter x:Key="eqConverter"/>
         <ui:CurrentModeToEqualsParameterConverter x:Key="ceeqConverter"/>
+        <ui:UnsignedShortValueToEqualsParameterConverter x:Key="ushortEqConverter"/>
 
-
+        
         <Storyboard x:Key="BounceIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                 <EasingDoubleKeyFrame KeyTime="00:00:0.5" Value="1.5">
@@ -338,6 +339,9 @@
                 </Setter.Value>
             </Setter>-->
         </Style>
+
+
+        
         
     </Application.Resources>
 </Application>

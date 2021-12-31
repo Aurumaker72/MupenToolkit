@@ -24,6 +24,8 @@ namespace MupenToolkit.Core.UI
         public ICommand UnloadMovie { get; set; }
         public ICommand SaveMovie { get; set; }
         public ICommand EditControllerFlags { get; set; }
+        public ICommand EditCountry { get; set; }
+        public ICommand CountryChanged { get; set; }
 
         public StateContainer()
         {
@@ -31,6 +33,9 @@ namespace MupenToolkit.Core.UI
             UnloadMovie = new UnloadMovieCommand { mwv = this };
             SaveMovie = new SaveMovieCommand { mwv = this };
             EditControllerFlags = new EditControllerFlagsCommand { mwv = this };
+            EditCountry = new EditCountryCommand { mwv = this };
+            CountryChanged = new CountryChangedCommand { mwv = this };
+
         }
     }
 }
