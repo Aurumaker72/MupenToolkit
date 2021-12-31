@@ -10,9 +10,6 @@ Continuation of Mupen Utilities
   - Saving modified m64
   - Multicontroller support
 
-## Disclaimer
-This app has animations, transitions, fading and various other redundant graphics. If you don't like that, you're in the wrong place.
-
 ## Technical Notes
 If I did something the way I did, there is a good reason.
 
