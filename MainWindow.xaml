@@ -139,7 +139,7 @@
                     <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.RomName}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.RomName, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <Button     Grid.Column="0" Grid.Row="3" Content="{x:Static resx:Resources.RomCountry}" Background="Transparent" BorderBrush="Gray" Style="{StaticResource ReactiveButton}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Blue" Command="{Binding EditCountry}"/>
-                    <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox   Grid.Column="1" Grid.Row="3" Text="{Binding Header.RomCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
                     <Separator Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0" HorizontalAlignment="Stretch" Background="Silver"/>
 
@@ -217,7 +217,6 @@
                     <Label    Grid.Column="0" Grid.Row="4" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <CheckBox Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=Header.ControllerFlags.Controller0Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
-
                     <Label     Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="{x:Static resx:Resources.Controller1}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Separator Grid.Row="6" Grid.ColumnSpan="2" Background="Silver"/>
                     <Label    Grid.Column="0" Grid.Row="7" Content="{x:Static resx:Resources.Connected}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
@@ -226,7 +225,6 @@
                     <CheckBox Grid.Column="1" Grid.Row="8" IsChecked="{Binding Path=Header.ControllerFlags.Controller1Mempak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Label    Grid.Column="0" Grid.Row="9" Content="{x:Static resx:Resources.Rumblepak}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <CheckBox Grid.Column="1" Grid.Row="9" IsChecked="{Binding Path=Header.ControllerFlags.Controller1Rumblepak, Mode=TwoWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-
 
                     <Label     Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2"  Content="{x:Static resx:Resources.Controller2}" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <Separator Grid.Row="11" Grid.ColumnSpan="2" Background="Silver"/>
@@ -295,25 +293,25 @@
                     </Grid.RowDefinitions>
 
                     <Label    Grid.Column="0"    Grid.Row="0" Content="{x:Static resx:Resources.USA}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="0" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="69"/>
+                    <RadioButton Grid.Column="1" Grid.Row="0" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="69"/>
 
                     <Label    Grid.Column="0"    Grid.Row="1" Content="{x:Static resx:Resources.USAJapan}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="1" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="65"/>
+                    <RadioButton Grid.Column="1" Grid.Row="1" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="65"/>
 
                     <Label    Grid.Column="0"    Grid.Row="2" Content="{x:Static resx:Resources.Germany}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="2" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="68"/>
+                    <RadioButton Grid.Column="1" Grid.Row="2" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="68"/>
                     
                     <Label    Grid.Column="0"    Grid.Row="3" Content="{x:Static resx:Resources.France}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="3" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="70"/>
+                    <RadioButton Grid.Column="1" Grid.Row="3" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="70"/>
 
                     <Label    Grid.Column="0"    Grid.Row="4" Content="{x:Static resx:Resources.Italy}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="73" />
+                    <RadioButton Grid.Column="1" Grid.Row="4" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="73" />
 
                     <Label    Grid.Column="0"    Grid.Row="5" Content="{x:Static resx:Resources.Japan}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="5" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="74" />
+                    <RadioButton Grid.Column="1" Grid.Row="5" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="74" />
 
                     <Label    Grid.Column="0"    Grid.Row="6" Content="{x:Static resx:Resources.Spain}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <RadioButton Grid.Column="1" Grid.Row="6" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="83" />
+                    <RadioButton Grid.Column="1" Grid.Row="6" IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding CountryChanged}" CommandParameter="83" />
 
                 </Grid>
 
