@@ -3,8 +3,9 @@ Continuation of Mupen Utilities
 
 [![Release](https://img.shields.io/github/v/release/Aurumaker72/MupenToolkit?label=Release)](https://github.com/Aurumaker72/MupenToolkit/releases)
 
+
 ## Features
-  - Basic header editing
+  - Header editing
   - TASStudio input editing
   - Saving modified m64
   - Multicontroller support
