@@ -10,6 +10,20 @@ Continuation of Mupen Utilities
   - Saving modified m64
   - Multicontroller support
 
+## Comparison
+| Aspect         | Mupen Utilities     | Mupen Toolkit |
+|--------------|-----------|------------|
+| Median loading time in miliseconds (1000 runs) | 1554      | 7        |
+| Basic Header Editing      | ✔️ | ✔️ |
+| Advanced Header Editing      | ✔️ | ✔️ |
+| TAS Studio      | ✔️ | ✔️ |
+| Input Statistics      | ✔️ | ❌* |
+| Copy/Paste      | ✔️ | ❌* |
+| Replacement      | ✔️ | ❌* |
+| [TAS Studio Fast Edit](a "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |
+#### Legend
+\*: coming soon...
+
 ## Technical Notes
 If I did something the way I did, there is a good reason.
 
