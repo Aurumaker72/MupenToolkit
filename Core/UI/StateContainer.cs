@@ -32,8 +32,9 @@ namespace MupenToolkit.Core.UI
         public ICommand InputStatistics { get; set; }
         public ICommand CountryChanged { get; set; }
         public ICommand DiagnoseMovie { get; set; }
+        public ICommand BypassMovie { get; set; }
 
-        
+
         public StateContainer()
         {
             LoadMovie = new LoadMovieCommand { mwv = this };
@@ -44,6 +45,7 @@ namespace MupenToolkit.Core.UI
             InputStatistics = new InputStatisticsCommand { mwv = this };
             CountryChanged = new CountryChangedCommand { mwv = this };
             DiagnoseMovie = new MovieDiagnosisCommand { mwv = this };
+            BypassMovie = new BypassMovieCommand { mwv = this };
 
         }
     }

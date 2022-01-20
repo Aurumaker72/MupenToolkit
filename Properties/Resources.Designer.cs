@@ -133,6 +133,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bypass.
+        /// </summary>
+        public static string BypassMovie {
+            get {
+                return ResourceManager.GetString("BypassMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check.
         /// </summary>
         public static string Check {

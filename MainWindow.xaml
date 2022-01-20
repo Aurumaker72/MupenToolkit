@@ -533,11 +533,11 @@
         
         
 
-        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" IsEnabled="{Binding FileLoaded}">
+        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Transparent" >
             
 
             <MenuItem Header="File">
-                <MenuItem.Style>
+                <!--<MenuItem.Style>
                     <Style TargetType="{x:Type MenuItem}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding FileLoaded}" Value="True">
@@ -550,12 +550,13 @@
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
-                </MenuItem.Style>
+                </MenuItem.Style>-->
                 
                 <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
                 <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
                 <MenuItem Command="{Binding DiagnoseMovie}" Header="{x:Static resx:Resources.MovieDiagnosis}" IsEnabled="{Binding FileLoaded}"/>
-            <Separator/>
+                <!--<MenuItem Command="{Binding BypassMovie}" Header="{x:Static resx:Resources.BypassMovie}"/>-->
+                <Separator/>
                 <MenuItem Command="{Binding UnloadMovie}" Header="{x:Static resx:Resources.UnloadMovie}"/>
             </MenuItem>
         </Menu>

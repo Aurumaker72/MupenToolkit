@@ -159,6 +159,25 @@ namespace MupenToolkit.Core.UI
 
         }
     }
+
+    public class BypassMovieCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            mwv.Mode = "General";
+            mwv.FileLoaded = true;
+        }
+    }
     public class MovieDiagnosisCommand : ICommand
     {
         public StateContainer mwv;

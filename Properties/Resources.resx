@@ -141,6 +141,9 @@
   <data name="ButtonStart" xml:space="preserve">
     <value>Start</value>
   </data>
+  <data name="BypassMovie" xml:space="preserve">
+    <value>Bypass</value>
+  </data>
   <data name="Check" xml:space="preserve">
     <value>Check</value>
   </data>
