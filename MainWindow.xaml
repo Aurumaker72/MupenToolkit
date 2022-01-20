@@ -12,8 +12,7 @@
     <Window.DataContext>
         <ui:StateContainer/>
     </Window.DataContext>
-    
-    
+
     <Grid x:Name="Grid_ParentAll">
 
         <Grid x:Name="Grid_Main" IsHitTestVisible="{Binding FileLoaded}" Opacity="0">
@@ -50,14 +49,14 @@
                         <RowDefinition Height="2.5*" />
                     </Grid.RowDefinitions>
 
-                    <DataGrid x:Name="DataGrid_TASStudio" 
+                    <ui:ExtendedDataGrid x:Name="DataGrid_TASStudio" 
                           EnableRowVirtualization="True" 
                           EnableColumnVirtualization="True"
                           AlternatingRowBackground="LightGray"
                           GridLinesVisibility="Horizontal"
                           HorizontalGridLinesBrush="Gray"
                           VerticalGridLinesBrush="Gray"
-                          SelectionMode="Single"
+                          SelectionMode="Extended"
                           SelectionUnit="FullRow"
                           AlternationCount="2" 
                           AutoGenerateColumns="False" 
@@ -71,21 +70,21 @@
                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
                           CanUserSortColumns="False"
+                              CanUserReorderColumns="False" 
                           ui:DataGridBehavior.DisplayRowNumber="True">
+                        <!-- col reorder breaks paste-->
                         <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
 
                         <DataGrid.ContextMenu>
                             <ContextMenu >
-                                <!--we need to put everything in dockpanel for correct layouting. for fucks sake-->
+                                <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
+                                <MenuItem Header="Paste" Command="ApplicationCommands.Paste" />
+
                                 <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                                     <Label    Content="{x:Static resx:Resources.Controller}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                    <TextBox  Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent" Background="Silver" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                    <TextBox  Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                 </DockPanel>
-                                <!--<DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                                    <Label    Content="{x:Static resx:Resources.Sample}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                    <TextBox  Text="{Binding ElementName=DataGrid_TASStudio, Path=SelectedIndex}" BorderBrush="Transparent" Background="Silver" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                </DockPanel>-->
-                                    <MenuItem Header="Input Statistics" Command="{Binding InputStatistics}"/>
+                                <MenuItem Header="Input Statistics" Command="{Binding InputStatistics}"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>
                         <DataGrid.ItemsSource>
@@ -112,7 +111,7 @@
                             <DataGridTextColumn Header="X"             Width="*" Binding="{Binding X,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             <DataGridTextColumn Header="Y"             Width="*" Binding="{Binding Y,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataGrid.Columns>
-                    </DataGrid>
+                    </ui:ExtendedDataGrid>
 
 
                 </Grid>

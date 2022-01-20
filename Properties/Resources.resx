@@ -256,6 +256,9 @@
   <data name="NotAMovie" xml:space="preserve">
     <value>This file is not a movie</value>
   </data>
+  <data name="PasteError" xml:space="preserve">
+    <value>Error when pasting. Is your clipboard content in the correct format?</value>
+  </data>
   <data name="Rerecords" xml:space="preserve">
     <value>Rerecords</value>
   </data>

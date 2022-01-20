@@ -1,10 +1,12 @@
-﻿using MupenToolkit.Core.Movie;
+﻿using MupenToolkit.Core.Helper;
+using MupenToolkit.Core.Movie;
 using MupenToolkit.Core.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,6 +33,7 @@ namespace MupenToolkit
 
         }
 
-
+        
+        
     }
 }

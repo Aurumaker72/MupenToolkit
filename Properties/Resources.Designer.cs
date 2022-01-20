@@ -477,6 +477,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error when pasting. Is your clipboard content in the correct format?.
+        /// </summary>
+        public static string PasteError {
+            get {
+                return ResourceManager.GetString("PasteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rerecords.
         /// </summary>
         public static string Rerecords {
