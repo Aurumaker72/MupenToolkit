@@ -113,9 +113,10 @@ namespace MupenToolkit.Core.Movie
             return (inputs, Sentiment.Success);
         }
 
-        public static (Sentiment Sentiment, Interaction.UIError? Error) SaveMovie(FileStream fs, MovieHeader header, ObservableCollection<ObservableCollection<Sample>> inputs)
+        public static (Sentiment Sentiment, Interaction.UIError? Error, List<string> notifications) SaveMovie(FileStream fs, MovieHeader header, ObservableCollection<ObservableCollection<Sample>> inputs)
         {
             BinaryWriter br = new BinaryWriter(fs);
+            List<string> notifications = new();
 
             // this is reused from Mupen Utilities
             byte[] zeroar1 = new byte[160]; byte[] zeroar2 = new byte[56];
@@ -137,6 +138,8 @@ namespace MupenToolkit.Core.Movie
             br.Write((Int16)0); // 2 bytes - RESERVED
             br.Write(header.ControllerFlags.Raw); // UInt32 - Controller Flags
             br.Write(zeroar1, 0, zeroar1.Length); // 160 bytes - RESERVED
+            if (header.RomName.Length > 32)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.RomName));
             byte[] romname = new byte[32];
             romname = ASCIIEncoding.ASCII.GetBytes(header.RomName);
             Array.Resize(ref romname, 32);
@@ -152,6 +155,20 @@ namespace MupenToolkit.Core.Movie
             byte[] rsp = new byte[64];
             byte[] author = new byte[222];
             byte[] desc = new byte[256];
+
+            
+            if (header.VideoPluginName.Length > 64)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.VideoPluginName));
+            if (header.AudioPluginName.Length > 64)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.AudioPluginName));
+            if (header.InputPluginName.Length > 64)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.InputPluginName));
+            if (header.RSPPluginName.Length > 64)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.RSPPluginName));
+            if (header.Author.Length > 222)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.Author));
+            if (header.Description.Length > 256)
+                notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.Description));
 
             gfx = Encoding.ASCII.GetBytes(header.VideoPluginName);
             audio = Encoding.ASCII.GetBytes(header.AudioPluginName);
@@ -176,7 +193,7 @@ namespace MupenToolkit.Core.Movie
 
             if (br.BaseStream.Position != 1024)
             {
-                return (Sentiment.Fail, new Interaction.UIError(Properties.Resources.SaveAlignment, Properties.Resources.SaveAlignment));
+                return (Sentiment.Fail, new Interaction.UIError(Properties.Resources.SaveAlignment, Properties.Resources.SaveAlignment), notifications);
             }
 
             int controllers = 0;
@@ -184,7 +201,7 @@ namespace MupenToolkit.Core.Movie
                 if (BitopHelper.GetBit(header.ControllerFlags.Raw, i)) controllers++;
             if(controllers == 0)
             {
-                return (Sentiment.Fail, new Interaction.UIError(Properties.Resources.NoControllers, Properties.Resources.NoControllers));
+                return (Sentiment.Fail, new Interaction.UIError(Properties.Resources.NoControllers, Properties.Resources.NoControllers), notifications);
             }
             
             br.BaseStream.Seek(1024, SeekOrigin.Begin);
@@ -201,7 +218,7 @@ namespace MupenToolkit.Core.Movie
                     br.Write(inputs[3][i].Raw);
             }
 
-            return (Sentiment.Success, null);
+            return (Sentiment.Success, null, notifications);
         }
 
     }

@@ -13,8 +13,10 @@ using System.Windows.Input;
 
 namespace MupenToolkit.Core.UI
 {
+
     public class LoadMovieCommand : ICommand
     {
+        int runs = 0;
         public StateContainer mwv;
         public bool CanExecute(object parameter)
         {
@@ -68,6 +70,9 @@ namespace MupenToolkit.Core.UI
 
             mwv.Mode = "General";
             mwv.FileLoaded = true;
+
+            mwv.Statistics = InputStatistics.GetStatistics();
+
         }
     }
 
@@ -93,7 +98,7 @@ namespace MupenToolkit.Core.UI
     }
 
 
-    
+
     public class EditControllerFlagsCommand : ICommand
     {
         public StateContainer mwv;
@@ -131,7 +136,27 @@ namespace MupenToolkit.Core.UI
             mwv.Mode = mwv.Mode == "CountryEditing" ? "General" : "CountryEditing";
         }
     }
-    
+    public class InputStatisticsCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (!mwv.FileLoaded) return; // ???
+            mwv.Mode = mwv.Mode == "InputStatistics" ? "General" : "InputStatistics";
+            if (mwv.Mode == "InputStatistics")
+                mwv.Statistics = InputStatistics.GetStatistics();
+
+        }
+    }
 
     public class CountryChangedCommand : ICommand
     {
@@ -178,23 +203,30 @@ namespace MupenToolkit.Core.UI
 
             mwv.Busy = true;
 
-            FileStream fs   = null; 
+            FileStream fs = null;
             BinaryWriter br = null;
 
 #if !DEBUG
             try
             {
 #endif
-                fs = File.Open(shellReturn.ReturnedPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
-                br = new BinaryWriter(fs);
-                var status = MovieManager.SaveMovie(fs, mwv.Header, mwv.Input.Samples);
-                if(status.Sentiment == Status.Sentiment.Fail)
-                {
-                    mwv.Error.Message = status.Error.Message;
-                    mwv.Error.Visible ^= true;
-                    mwv.Busy = false;
-                    return;
-                }
+            fs = File.Open(shellReturn.ReturnedPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
+            br = new BinaryWriter(fs);
+            var status = MovieManager.SaveMovie(fs, mwv.Header, mwv.Input.Samples);
+            if (status.notifications.Count > 0)
+            {
+                string final = string.Empty;
+                foreach (var item in status.notifications)
+                    final += item + "\n";
+                MessageBox.Show(final, Properties.Resources.SaveMovie, MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.None);
+            }
+            if (status.Sentiment == Status.Sentiment.Fail)
+            {
+                mwv.Error.Message = status.Error.Message;
+                mwv.Error.Visible ^= true;
+                mwv.Busy = false;
+                return;
+            }
 #if !DEBUG
         }
             catch
@@ -246,9 +278,9 @@ namespace MupenToolkit.Core.UI
             //br.Write(rspPluginName);
             //br.Write(author);
             //br.Write(description);
-            if (br!=null)br.Flush();
-            if(br!=null)br.Close();
-            if(fs != null)fs.Close();
+            if (br != null) br.Flush();
+            if (br != null) br.Close();
+            if (fs != null) fs.Close();
 
             mwv.Busy = false;
             mwv.Mode = "General";

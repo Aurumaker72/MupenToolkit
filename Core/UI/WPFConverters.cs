@@ -1,4 +1,5 @@
-﻿using MupenToolkit.Core.Movie;
+﻿using MupenToolkit.Core.Helper;
+using MupenToolkit.Core.Movie;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
+using System.Windows.Media;
 
 namespace MupenToolkit.Core.UI
 {
@@ -204,5 +208,136 @@ namespace MupenToolkit.Core.UI
             return null;
         }
     }
+
+    public class SumButtonsConverter : IMultiValueConverter
+    {
+        
+
+        object IMultiValueConverter.Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            var list = values[0] as ObservableCollection<ObservableCollection<Sample>>;
+            var ctl = values[1] as int?;
+            // [0] - list
+            // [1] - controller
+
+            var bit = parameter as int?;
+            // [1] - bit index
+
+            if (list != null && ctl != null && bit != null && ctl < list.Count && ctl >= 0)
+            {
+                int num = 0;
+                for (int i = 0; i < list[(int)ctl].Count; i++)
+                {
+                    if (BitopHelper.GetBit(list[(int)ctl][i].Raw, (int)bit)) ++num;
+                }
+                return num;
+            }
+            return null;
+        }
+
+        object[] IMultiValueConverter.ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class SamplesIndexConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (parameter == null) return DependencyProperty.UnsetValue;
+
+            return MainWindow.stateContainer.Input.Samples[MainWindow.stateContainer.CurrentController][(int)parameter];
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+
+    //https://stackoverflow.com/questions/4663771/wpf-4-datagrid-getting-the-row-number-into-the-rowheader/4663799#4663799
+    public class DataGridBehavior
+    {
+        #region DisplayRowNumber
+
+        public static DependencyProperty DisplayRowNumberProperty =
+            DependencyProperty.RegisterAttached("DisplayRowNumber",
+                                                typeof(bool),
+                                                typeof(DataGridBehavior),
+                                                new FrameworkPropertyMetadata(false, OnDisplayRowNumberChanged));
+
+        public static bool GetDisplayRowNumber(DependencyObject target)
+        {
+            return (bool)target.GetValue(DisplayRowNumberProperty);
+        }
+        public static void SetDisplayRowNumber(DependencyObject target, bool value)
+        {
+            target.SetValue(DisplayRowNumberProperty, value);
+        }
+
+        private static void OnDisplayRowNumberChanged(DependencyObject target, DependencyPropertyChangedEventArgs e)
+        {
+            DataGrid dataGrid = target as DataGrid;
+            if ((bool)e.NewValue == true)
+            {
+                EventHandler<DataGridRowEventArgs> loadedRowHandler = null;
+                loadedRowHandler = (object sender, DataGridRowEventArgs ea) =>
+                {
+                    if (GetDisplayRowNumber(dataGrid) == false)
+                    {
+                        dataGrid.LoadingRow -= loadedRowHandler;
+                        return;
+                    }
+                    ea.Row.Header = ea.Row.GetIndex();
+                };
+                dataGrid.LoadingRow += loadedRowHandler;
+
+                ItemsChangedEventHandler itemsChangedHandler = null;
+                itemsChangedHandler = (object sender, ItemsChangedEventArgs ea) =>
+                {
+                    if (GetDisplayRowNumber(dataGrid) == false)
+                    {
+                        dataGrid.ItemContainerGenerator.ItemsChanged -= itemsChangedHandler;
+                        return;
+                    }
+                    GetVisualChildCollection<DataGridRow>(dataGrid).
+                        ForEach(d => d.Header = d.GetIndex());
+                };
+                dataGrid.ItemContainerGenerator.ItemsChanged += itemsChangedHandler;
+            }
+        }
+
+        #endregion // DisplayRowNumber
+
+        #region Get Visuals
+
+        private static List<T> GetVisualChildCollection<T>(object parent) where T : Visual
+        {
+            List<T> visualCollection = new List<T>();
+            GetVisualChildCollection(parent as DependencyObject, visualCollection);
+            return visualCollection;
+        }
+
+        private static void GetVisualChildCollection<T>(DependencyObject parent, List<T> visualCollection) where T : Visual
+        {
+            int count = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < count; i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild(parent, i);
+                if (child is T)
+                {
+                    visualCollection.Add(child as T);
+                }
+                if (child != null)
+                {
+                    GetVisualChildCollection(child, visualCollection);
+                }
+            }
+        }
+
+        #endregion // Get Visuals
+    }
+
 
 }

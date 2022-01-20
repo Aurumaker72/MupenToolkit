@@ -28,6 +28,7 @@ namespace MupenToolkit
             stateContainer.FileLoaded = false;
 
             this.DataContext = stateContainer;
+
         }
 
 

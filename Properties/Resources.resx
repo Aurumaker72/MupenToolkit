@@ -120,6 +120,9 @@
   <data name="AppName" xml:space="preserve">
     <value>Mupen Toolkit</value>
   </data>
+  <data name="AudioPluginName" xml:space="preserve">
+    <value>Audio Plugin Name</value>
+  </data>
   <data name="Australia" xml:space="preserve">
     <value>Australia</value>
   </data>
@@ -128,6 +131,15 @@
   </data>
   <data name="Beta" xml:space="preserve">
     <value>Beta</value>
+  </data>
+  <data name="ButtonA" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="ButtonB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>Start</value>
   </data>
   <data name="Connected" xml:space="preserve">
     <value>Connected</value>
@@ -150,10 +162,37 @@
   <data name="Controllers" xml:space="preserve">
     <value>Controllers</value>
   </data>
+  <data name="CPadDown" xml:space="preserve">
+    <value>Cv</value>
+  </data>
+  <data name="CPadLeft" xml:space="preserve">
+    <value>C&lt;</value>
+  </data>
+  <data name="CPadRight" xml:space="preserve">
+    <value>C&gt;</value>
+  </data>
+  <data name="CPadUp" xml:space="preserve">
+    <value>C^</value>
+  </data>
   <data name="Demo" xml:space="preserve">
     <value>Demo</value>
   </data>
   <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DPadDown" xml:space="preserve">
+    <value>Dv</value>
+  </data>
+  <data name="DPadLeft" xml:space="preserve">
+    <value>D&lt;</value>
+  </data>
+  <data name="DPadRight" xml:space="preserve">
+    <value>D&gt;</value>
+  </data>
+  <data name="DPadUp" xml:space="preserve">
+    <value>D^</value>
+  </data>
+  <data name="Evaluation" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="ExitApp" xml:space="preserve">
@@ -168,8 +207,20 @@
   <data name="HeaderParseFailed" xml:space="preserve">
     <value>Failed to parse header</value>
   </data>
+  <data name="InputPluginName" xml:space="preserve">
+    <value>Input Plugin Name</value>
+  </data>
   <data name="InputsParseFailed" xml:space="preserve">
     <value>Failed to parse inputs</value>
+  </data>
+  <data name="InputStatistics" xml:space="preserve">
+    <value>Input Statistics</value>
+  </data>
+  <data name="IsABC" xml:space="preserve">
+    <value>ABC-Compliant</value>
+  </data>
+  <data name="IsABCDescription" xml:space="preserve">
+    <value>Whether this input sequence complies with A-Button-Challenge</value>
   </data>
   <data name="Italy" xml:space="preserve">
     <value>Italy</value>
@@ -193,6 +244,12 @@
   <data name="Mempak" xml:space="preserve">
     <value>Mempak</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="NoControllers" xml:space="preserve">
     <value>No Controllers connected</value>
   </data>
@@ -208,8 +265,14 @@
   <data name="RomName" xml:space="preserve">
     <value>ROM Name</value>
   </data>
+  <data name="RSPPluginName" xml:space="preserve">
+    <value>RSP Plugin Name</value>
+  </data>
   <data name="Rumblepak" xml:space="preserve">
     <value>Rumblepak</value>
+  </data>
+  <data name="Sample" xml:space="preserve">
+    <value>Sample</value>
   </data>
   <data name="SaveAlignment" xml:space="preserve">
     <value>Save is misaligned!</value>
@@ -223,8 +286,35 @@
   <data name="Spain" xml:space="preserve">
     <value>Spain</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
   <data name="TASStudio" xml:space="preserve">
     <value>TAS Studio</value>
+  </data>
+  <data name="TimesPressedFormat" xml:space="preserve">
+    <value>Quantity of {0} button held samples</value>
+  </data>
+  <data name="TimesPressedFormatShort" xml:space="preserve">
+    <value>{0} held</value>
+  </data>
+  <data name="TooLongStringNotificationFormat" xml:space="preserve">
+    <value>An inputted property "{0}" had an inappropriate length and has been truncated.</value>
+  </data>
+  <data name="TotalButtonPresses" xml:space="preserve">
+    <value>Total Button Presses</value>
+  </data>
+  <data name="TotalButtonPressesDescription" xml:space="preserve">
+    <value>Total Amount of buttons held on each frame</value>
+  </data>
+  <data name="TriggerL" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="TriggerR" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="TriggerZ" xml:space="preserve">
+    <value>Z</value>
   </data>
   <data name="Unknown" xml:space="preserve">
     <value>Unknown</value>
@@ -237,5 +327,14 @@
   </data>
   <data name="USAJapan" xml:space="preserve">
     <value>USA/Japan</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="VideoPluginName" xml:space="preserve">
+    <value>Video Plugin Name</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

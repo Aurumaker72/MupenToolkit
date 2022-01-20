@@ -70,16 +70,22 @@
                           RowHeight="23" 
                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
-                          CanUserSortColumns="False">
+                          CanUserSortColumns="False"
+                          ui:DataGridBehavior.DisplayRowNumber="True">
                         <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
 
                         <DataGrid.ContextMenu>
                             <ContextMenu >
-                                <!--<MenuItem Header="hi"/>-->
-                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True" >
+                                <!--we need to put everything in dockpanel for correct layouting. for fucks sake-->
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                                     <Label    Content="{x:Static resx:Resources.Controller}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                    <TextBox  Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                    <TextBox  Text="{Binding CurrentController, Mode=TwoWay}" BorderBrush="Transparent" Background="Silver" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                 </DockPanel>
+                                <!--<DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                                    <Label    Content="{x:Static resx:Resources.Sample}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                    <TextBox  Text="{Binding ElementName=DataGrid_TASStudio, Path=SelectedIndex}" BorderBrush="Transparent" Background="Silver" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </DockPanel>-->
+                                    <MenuItem Header="Input Statistics" Command="{Binding InputStatistics}"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>
                         <DataGrid.ItemsSource>
@@ -89,22 +95,22 @@
                             </MultiBinding>
                         </DataGrid.ItemsSource>
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Header="D>"        Width="*" Binding="{Binding DPadRight, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D&lt;" Width="*" Binding="{Binding DPadLeft, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="Dv"    Width="*" Binding="{Binding DPadDown, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D^"    Width="*" Binding="{Binding DPadUp, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="S"     Width="*" Binding="{Binding Start, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="Z"         Width="*" Binding="{Binding Z, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="B"         Width="*" Binding="{Binding B, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="A"         Width="*" Binding="{Binding A, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="C>"    Width="*" Binding="{Binding CPadRight, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="C&lt;" Width="*" Binding="{Binding CPadLeft, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="Cv"    Width="*" Binding="{Binding CPadDown, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="D^"    Width="*" Binding="{Binding CPadUp, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="R"         Width="*" Binding="{Binding R, Mode=TwoWay}"/>
-                            <DataGridCheckBoxColumn Header="L"         Width="*" Binding="{Binding L, Mode=TwoWay}"/>
-                            <DataGridTextColumn Header="X"             Width="*" Binding="{Binding X, Mode=TwoWay}"/>
-                            <DataGridTextColumn Header="Y"             Width="*" Binding="{Binding Y, Mode=TwoWay}"/>
+                            <DataGridCheckBoxColumn Header="D>"        Width="*" Binding="{Binding DPadRight,   Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="D&lt;" Width="*"     Binding="{Binding DPadLeft,    Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="Dv"    Width="*"     Binding="{Binding DPadDown,    Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Width="*"     Binding="{Binding DPadUp,      Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="S"     Width="*"     Binding="{Binding Start,       Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="Z"         Width="*" Binding="{Binding Z,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="B"         Width="*" Binding="{Binding B,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="A"         Width="*" Binding="{Binding A,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="C>"    Width="*"     Binding="{Binding CPadRight,   Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="C&lt;" Width="*"     Binding="{Binding CPadLeft,    Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="Cv"    Width="*"     Binding="{Binding CPadDown,    Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="D^"    Width="*"     Binding="{Binding CPadUp,      Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="R"         Width="*" Binding="{Binding R,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="L"         Width="*" Binding="{Binding L,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="X"             Width="*" Binding="{Binding X,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Y"             Width="*" Binding="{Binding Y,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataGrid.Columns>
                     </DataGrid>
 
@@ -316,6 +322,44 @@
                 </Grid>
 
                     
+                <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" />
+
+            </Grid>
+
+            <Grid x:Name="Grid_InputStatistics" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=InputStatistics}" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <ScaleTransform/>
+                </Grid.RenderTransform>
+
+                <Grid.Style>
+                    <Style TargetType="{x:Type Grid}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=InputStatistics}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+
+                <Rectangle Fill="LightGray" RadiusX="5" RadiusY="5"/>
+
+               
+                    <ListView x:Name="ListView_Statistics" ItemsSource="{Binding Statistics}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="3">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="{x:Static resx:Resources.Name}" DisplayMemberBinding="{Binding Name}" Width="Auto"/>
+                                <GridViewColumn Header="{x:Static resx:Resources.Evaluation}" DisplayMemberBinding="{Binding Description}" Width="Auto"/>
+                                <GridViewColumn Header="{x:Static resx:Resources.Value}" DisplayMemberBinding="{Binding Value}" Width="Auto"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                
                 <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" />
 
             </Grid>

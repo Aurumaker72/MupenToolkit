@@ -70,6 +70,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Audio Plugin Name.
+        /// </summary>
+        public static string AudioPluginName {
+            get {
+                return ResourceManager.GetString("AudioPluginName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Australia.
         /// </summary>
         public static string Australia {
@@ -93,6 +102,33 @@ namespace MupenToolkit.Properties {
         public static string Beta {
             get {
                 return ResourceManager.GetString("Beta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A.
+        /// </summary>
+        public static string ButtonA {
+            get {
+                return ResourceManager.GetString("ButtonA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B.
+        /// </summary>
+        public static string ButtonB {
+            get {
+                return ResourceManager.GetString("ButtonB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string ButtonStart {
+            get {
+                return ResourceManager.GetString("ButtonStart", resourceCulture);
             }
         }
         
@@ -160,6 +196,42 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cv.
+        /// </summary>
+        public static string CPadDown {
+            get {
+                return ResourceManager.GetString("CPadDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C&lt;.
+        /// </summary>
+        public static string CPadLeft {
+            get {
+                return ResourceManager.GetString("CPadLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C&gt;.
+        /// </summary>
+        public static string CPadRight {
+            get {
+                return ResourceManager.GetString("CPadRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C^.
+        /// </summary>
+        public static string CPadUp {
+            get {
+                return ResourceManager.GetString("CPadUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo.
         /// </summary>
         public static string Demo {
@@ -174,6 +246,51 @@ namespace MupenToolkit.Properties {
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dv.
+        /// </summary>
+        public static string DPadDown {
+            get {
+                return ResourceManager.GetString("DPadDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D&lt;.
+        /// </summary>
+        public static string DPadLeft {
+            get {
+                return ResourceManager.GetString("DPadLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D&gt;.
+        /// </summary>
+        public static string DPadRight {
+            get {
+                return ResourceManager.GetString("DPadRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D^.
+        /// </summary>
+        public static string DPadUp {
+            get {
+                return ResourceManager.GetString("DPadUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Evaluation {
+            get {
+                return ResourceManager.GetString("Evaluation", resourceCulture);
             }
         }
         
@@ -214,11 +331,47 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input Plugin Name.
+        /// </summary>
+        public static string InputPluginName {
+            get {
+                return ResourceManager.GetString("InputPluginName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to parse inputs.
         /// </summary>
         public static string InputsParseFailed {
             get {
                 return ResourceManager.GetString("InputsParseFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input Statistics.
+        /// </summary>
+        public static string InputStatistics {
+            get {
+                return ResourceManager.GetString("InputStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ABC-Compliant.
+        /// </summary>
+        public static string IsABC {
+            get {
+                return ResourceManager.GetString("IsABC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether this input sequence complies with A-Button-Challenge.
+        /// </summary>
+        public static string IsABCDescription {
+            get {
+                return ResourceManager.GetString("IsABCDescription", resourceCulture);
             }
         }
         
@@ -288,6 +441,24 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No Controllers connected.
         /// </summary>
         public static string NoControllers {
@@ -333,11 +504,29 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RSP Plugin Name.
+        /// </summary>
+        public static string RSPPluginName {
+            get {
+                return ResourceManager.GetString("RSPPluginName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rumblepak.
         /// </summary>
         public static string Rumblepak {
             get {
                 return ResourceManager.GetString("Rumblepak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sample.
+        /// </summary>
+        public static string Sample {
+            get {
+                return ResourceManager.GetString("Sample", resourceCulture);
             }
         }
         
@@ -378,11 +567,92 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TAS Studio.
         /// </summary>
         public static string TASStudio {
             get {
                 return ResourceManager.GetString("TASStudio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity of {0} button held samples.
+        /// </summary>
+        public static string TimesPressedFormat {
+            get {
+                return ResourceManager.GetString("TimesPressedFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} held.
+        /// </summary>
+        public static string TimesPressedFormatShort {
+            get {
+                return ResourceManager.GetString("TimesPressedFormatShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An inputted property &quot;{0}&quot; had an inappropriate length and has been truncated..
+        /// </summary>
+        public static string TooLongStringNotificationFormat {
+            get {
+                return ResourceManager.GetString("TooLongStringNotificationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Button Presses.
+        /// </summary>
+        public static string TotalButtonPresses {
+            get {
+                return ResourceManager.GetString("TotalButtonPresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Amount of buttons held on each frame.
+        /// </summary>
+        public static string TotalButtonPressesDescription {
+            get {
+                return ResourceManager.GetString("TotalButtonPressesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L.
+        /// </summary>
+        public static string TriggerL {
+            get {
+                return ResourceManager.GetString("TriggerL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to R.
+        /// </summary>
+        public static string TriggerR {
+            get {
+                return ResourceManager.GetString("TriggerR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z.
+        /// </summary>
+        public static string TriggerZ {
+            get {
+                return ResourceManager.GetString("TriggerZ", resourceCulture);
             }
         }
         
@@ -419,6 +689,33 @@ namespace MupenToolkit.Properties {
         public static string USAJapan {
             get {
                 return ResourceManager.GetString("USAJapan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Plugin Name.
+        /// </summary>
+        public static string VideoPluginName {
+            get {
+                return ResourceManager.GetString("VideoPluginName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }
