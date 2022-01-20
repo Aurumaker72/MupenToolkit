@@ -13,7 +13,7 @@ Continuation of Mupen Utilities
 ## Comparison
 | Aspect         | Mupen Utilities     | Mupen Toolkit |
 |--------------|-----------|------------|
-| Median loading time in miliseconds (1000 runs) | 1554      | 7        |
+| Median loading time of 1-hour long movie in miliseconds across 1000 runs | 1554      | 7        |
 | Basic Header Editing      | ✔️ | ✔️ |
 | Advanced Header Editing      | ✔️ | ✔️ |
 | TAS Studio      | ✔️ | ✔️ |
