@@ -22,6 +22,7 @@ namespace MupenToolkit.Core.UI
         public UIError Error { get; set; } = new();
         public string Mode { get; set; } = "None"; // this is horrible!
         public ObservableCollection<Statistic> Statistics { get; set; } = new();
+        public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
 
         public ICommand LoadMovie { get; set; }
         public ICommand UnloadMovie { get; set; }
@@ -30,7 +31,9 @@ namespace MupenToolkit.Core.UI
         public ICommand EditCountry { get; set; }
         public ICommand InputStatistics { get; set; }
         public ICommand CountryChanged { get; set; }
+        public ICommand DiagnoseMovie { get; set; }
 
+        
         public StateContainer()
         {
             LoadMovie = new LoadMovieCommand { mwv = this };
@@ -40,6 +43,7 @@ namespace MupenToolkit.Core.UI
             EditCountry = new EditCountryCommand { mwv = this };
             InputStatistics = new InputStatisticsCommand { mwv = this };
             CountryChanged = new CountryChangedCommand { mwv = this };
+            DiagnoseMovie = new MovieDiagnosisCommand { mwv = this };
 
         }
     }

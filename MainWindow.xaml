@@ -66,7 +66,7 @@
                           CanUserDeleteRows="False"
                           CanUserResizeColumns="False"
                           VirtualizingPanel.IsVirtualizingWhenGrouping="True" 
-                          RowHeight="23" 
+                          RowHeight="23"
                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
                           ScrollViewer.VerticalScrollBarVisibility="Visible"
                           CanUserSortColumns="False"
@@ -365,7 +365,48 @@
             
         </Grid>
 
-        <Grid x:Name="Grid_PreMain" IsHitTestVisible="{Binding FileLoaded, Converter={StaticResource invBool}}">
+        <Grid x:Name="Grid_MovieDiagnosis" IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=MovieDiagnosis}" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <ScaleTransform/>
+            </Grid.RenderTransform>
+
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=MovieDiagnosis}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeIn}" />
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FadeOut}" />
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+
+            <Rectangle Fill="LightGray" RadiusX="5" RadiusY="5"/>
+
+
+            <ListView x:Name="ListView_Diagnosis" ItemsSource="{Binding Diagnosis}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="3">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="{x:Static resx:Resources.Check}" DisplayMemberBinding="{Binding Name}" Width="Auto"/>
+                        <GridViewColumn Header="{x:Static resx:Resources.Evaluation}" DisplayMemberBinding="{Binding Description}" Width="Auto"/>
+                        <GridViewColumn Header="{x:Static resx:Resources.Status}" DisplayMemberBinding="{Binding Value}" Width="Auto"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" />
+
+        </Grid>
+
+   
+
+    
+    <Grid x:Name="Grid_PreMain" IsHitTestVisible="{Binding FileLoaded, Converter={StaticResource invBool}}">
             <Grid.Style>
                 <Style TargetType="{x:Type Grid}">
                     <Style.Triggers>
@@ -492,7 +533,7 @@
         
         
 
-        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}">
+        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Bottom" IsHitTestVisible="{Binding FileLoaded}" IsEnabled="{Binding FileLoaded}">
             
 
             <MenuItem Header="File">
@@ -513,7 +554,8 @@
                 
                 <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
                 <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
-                <Separator/>
+                <MenuItem Command="{Binding DiagnoseMovie}" Header="{x:Static resx:Resources.MovieDiagnosis}" IsEnabled="{Binding FileLoaded}"/>
+            <Separator/>
                 <MenuItem Command="{Binding UnloadMovie}" Header="{x:Static resx:Resources.UnloadMovie}"/>
             </MenuItem>
         </Menu>

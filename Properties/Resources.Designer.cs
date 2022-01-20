@@ -133,6 +133,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check.
+        /// </summary>
+        public static string Check {
+            get {
+                return ResourceManager.GetString("Check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connected.
         /// </summary>
         public static string Connected {
@@ -183,6 +192,24 @@ namespace MupenToolkit.Properties {
         public static string Controller3 {
             get {
                 return ResourceManager.GetString("Controller3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controller Amount.
+        /// </summary>
+        public static string ControllerBoundsCheck {
+            get {
+                return ResourceManager.GetString("ControllerBoundsCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the controller amount is within logical bounds.
+        /// </summary>
+        public static string ControllerBoundsCheckDescription {
+            get {
+                return ResourceManager.GetString("ControllerBoundsCheckDescription", resourceCulture);
             }
         }
         
@@ -300,6 +327,15 @@ namespace MupenToolkit.Properties {
         public static string ExitApp {
             get {
                 return ResourceManager.GetString("ExitApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FAIL.
+        /// </summary>
+        public static string Fail {
+            get {
+                return ResourceManager.GetString("Fail", resourceCulture);
             }
         }
         
@@ -432,11 +468,38 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Magic Cookie.
+        /// </summary>
+        public static string MagicCookieCheck {
+            get {
+                return ResourceManager.GetString("MagicCookieCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the movie&apos;s magic cookie (signature leading 4 bytes) match the M64 format convention.
+        /// </summary>
+        public static string MagicCookieCheckDescription {
+            get {
+                return ResourceManager.GetString("MagicCookieCheckDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mempak.
         /// </summary>
         public static string Mempak {
             get {
                 return ResourceManager.GetString("Mempak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movie Diagnosis.
+        /// </summary>
+        public static string MovieDiagnosis {
+            get {
+                return ResourceManager.GetString("MovieDiagnosis", resourceCulture);
             }
         }
         
@@ -473,6 +536,24 @@ namespace MupenToolkit.Properties {
         public static string NotAMovie {
             get {
                 return ResourceManager.GetString("NotAMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Old_Version {
+            get {
+                return ResourceManager.GetString("Old Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PASS.
+        /// </summary>
+        public static string Pass {
+            get {
+                return ResourceManager.GetString("Pass", resourceCulture);
             }
         }
         
@@ -572,6 +653,51 @@ namespace MupenToolkit.Properties {
         public static string Spain {
             get {
                 return ResourceManager.GetString("Spain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Region-Conformant VI/s.
+        /// </summary>
+        public static string StandardVISCheck {
+            get {
+                return ResourceManager.GetString("StandardVISCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether rounded VI/s conform to either PAL/NTSC standard.
+        /// </summary>
+        public static string StandardVISCheckDescription {
+            get {
+                return ResourceManager.GetString("StandardVISCheckDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Startup Type.
+        /// </summary>
+        public static string StartupTypeSanityCheck {
+            get {
+                return ResourceManager.GetString("StartupTypeSanityCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the startup type is within logical bounds and known values.
+        /// </summary>
+        public static string StartupTypeSanityCheckDescription {
+            get {
+                return ResourceManager.GetString("StartupTypeSanityCheckDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
         
@@ -707,6 +833,42 @@ namespace MupenToolkit.Properties {
         public static string Value {
             get {
                 return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version Validity.
+        /// </summary>
+        public static string VersionCheck {
+            get {
+                return ResourceManager.GetString("VersionCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the movies&apos; version is adequate to current standard.
+        /// </summary>
+        public static string VersionCheckDescription {
+            get {
+                return ResourceManager.GetString("VersionCheckDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bound VIs.
+        /// </summary>
+        public static string VIBoundsCheck {
+            get {
+                return ResourceManager.GetString("VIBoundsCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether VIs are within logical bounds.
+        /// </summary>
+        public static string VIBoundsCheckDescription {
+            get {
+                return ResourceManager.GetString("VIBoundsCheckDescription", resourceCulture);
             }
         }
         

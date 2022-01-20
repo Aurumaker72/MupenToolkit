@@ -26,8 +26,8 @@ namespace MupenToolkit.Core.Movie
             Value = value;
         }
 
-        
+
     }
 
-    
+
 }

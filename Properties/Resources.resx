@@ -141,6 +141,9 @@
   <data name="ButtonStart" xml:space="preserve">
     <value>Start</value>
   </data>
+  <data name="Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
   <data name="Connected" xml:space="preserve">
     <value>Connected</value>
   </data>
@@ -158,6 +161,12 @@
   </data>
   <data name="Controller3" xml:space="preserve">
     <value>Controller 4</value>
+  </data>
+  <data name="ControllerBoundsCheck" xml:space="preserve">
+    <value>Controller Amount</value>
+  </data>
+  <data name="ControllerBoundsCheckDescription" xml:space="preserve">
+    <value>Whether the controller amount is within logical bounds</value>
   </data>
   <data name="Controllers" xml:space="preserve">
     <value>Controllers</value>
@@ -197,6 +206,9 @@
   </data>
   <data name="ExitApp" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>FAIL</value>
   </data>
   <data name="France" xml:space="preserve">
     <value>France</value>
@@ -241,8 +253,17 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MagicCookieCheck" xml:space="preserve">
+    <value>Magic Cookie</value>
+  </data>
+  <data name="MagicCookieCheckDescription" xml:space="preserve">
+    <value>Whether the movie's magic cookie (signature leading 4 bytes) match the M64 format convention</value>
+  </data>
   <data name="Mempak" xml:space="preserve">
     <value>Mempak</value>
+  </data>
+  <data name="MovieDiagnosis" xml:space="preserve">
+    <value>Movie Diagnosis</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
@@ -255,6 +276,12 @@
   </data>
   <data name="NotAMovie" xml:space="preserve">
     <value>This file is not a movie</value>
+  </data>
+  <data name="Old Version" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>PASS</value>
   </data>
   <data name="PasteError" xml:space="preserve">
     <value>Error when pasting. Is your clipboard content in the correct format?</value>
@@ -288,6 +315,21 @@
   </data>
   <data name="Spain" xml:space="preserve">
     <value>Spain</value>
+  </data>
+  <data name="StandardVISCheck" xml:space="preserve">
+    <value>Region-Conformant VI/s</value>
+  </data>
+  <data name="StandardVISCheckDescription" xml:space="preserve">
+    <value>Whether rounded VI/s conform to either PAL/NTSC standard</value>
+  </data>
+  <data name="StartupTypeSanityCheck" xml:space="preserve">
+    <value>Startup Type</value>
+  </data>
+  <data name="StartupTypeSanityCheckDescription" xml:space="preserve">
+    <value>Whether the startup type is within logical bounds and known values</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="String1" xml:space="preserve">
     <value />
@@ -333,6 +375,18 @@
   </data>
   <data name="Value" xml:space="preserve">
     <value>Value</value>
+  </data>
+  <data name="VersionCheck" xml:space="preserve">
+    <value>Version Validity</value>
+  </data>
+  <data name="VersionCheckDescription" xml:space="preserve">
+    <value>Whether the movies' version is adequate to current standard</value>
+  </data>
+  <data name="VIBoundsCheck" xml:space="preserve">
+    <value>Bound VIs</value>
+  </data>
+  <data name="VIBoundsCheckDescription" xml:space="preserve">
+    <value>Whether VIs are within logical bounds</value>
   </data>
   <data name="VideoPluginName" xml:space="preserve">
     <value>Video Plugin Name</value>

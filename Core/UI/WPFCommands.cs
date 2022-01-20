@@ -94,6 +94,7 @@ namespace MupenToolkit.Core.UI
             mwv.Input = new();
 
             mwv.FileLoaded = false;
+            mwv.Mode = "None";
         }
     }
 
@@ -136,6 +137,7 @@ namespace MupenToolkit.Core.UI
             mwv.Mode = mwv.Mode == "CountryEditing" ? "General" : "CountryEditing";
         }
     }
+    
     public class InputStatisticsCommand : ICommand
     {
         public StateContainer mwv;
@@ -157,7 +159,27 @@ namespace MupenToolkit.Core.UI
 
         }
     }
+    public class MovieDiagnosisCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (!mwv.FileLoaded) return; // ???
+            mwv.Mode = mwv.Mode == "MovieDiagnosis" ? "General" : "MovieDiagnosis";
+            if (mwv.Mode == "MovieDiagnosis")
+                mwv.Diagnosis = MovieDiagnosis.GetDiagnosis();
 
+        }
+    }
     public class CountryChangedCommand : ICommand
     {
         public StateContainer mwv;
