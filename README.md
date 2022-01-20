@@ -17,12 +17,21 @@ Continuation of Mupen Utilities
 | Basic Header Editing      | ✔️ | ✔️ |
 | Advanced Header Editing      | ✔️ | ✔️ |
 | TAS Studio      | ✔️ | ✔️ |
-| Input Statistics      | ✔️ | ❌* |
+| Input Statistics      | ✔️ | ❌*! |
 | Copy/Paste      | ✔️ | ❌* |
-| Replacement      | ✔️ | ❌* |
-| [TAS Studio Fast Edit](a "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |
+| Replacement      | ✔️ | ❌ |
+| [TAS Studio Fast Edit](hoverOverTheControlWhichBroughtYouHere "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |
 #### Legend
 \*: coming soon...
+
+\.: low priority
+
+\!: high priority
+
+## Why?
+Mupen Utilities is very big and feature-packed but extremely error-prone, inaccurate and bloated. It has become realistically unmaintainable due to the displayed code quality.
+This project aims to be the official continuation of MupenUtilities with more user friendliness, less bloat and high maintainability and speed.
+*Irrelevant rant:* With some coding paradigms, research and lackluster optimization work I have cut down time loading of 120 Star TAS from 1554ms to 7ms. Yeah, I did 1000 runs on MupenUtilities, each taking a median of 1,5 seconds. What a waste of processing power.
 
 ## Technical Notes
 If I did something the way I did, there is a good reason.
