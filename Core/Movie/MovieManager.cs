@@ -1,4 +1,5 @@
 ﻿using MupenToolkit.Core.Helper;
+using MupenToolkit.Core.UI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -221,5 +222,52 @@ namespace MupenToolkit.Core.Movie
             return (Sentiment.Success, null, notifications);
         }
 
+
+        public static void LoadMovie(StateContainer mwv, string path)// passing entire statecontainer! very bad heap alloc
+        {
+            if (!PathHelper.ValidPath(path))
+            {
+                mwv.Error.Message = MupenToolkit.Properties.Resources.PathError;
+                mwv.Error.Visible ^= true;
+                return;
+            }
+
+            mwv.Busy = true;
+
+            // reset movie
+            mwv.Header = new();
+            mwv.Input = new();
+
+            var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+            var headerParsingStatus = MovieManager.ParseHeader(fs);
+            if (headerParsingStatus.Status == Core.Interaction.Status.Sentiment.Fail || headerParsingStatus.Header == null)
+            {
+                mwv.Error.Message = MupenToolkit.Properties.Resources.HeaderParseFailed;
+                mwv.Error.Visible ^= true;
+                return;
+            }
+            else
+                mwv.Header = headerParsingStatus.Header;
+
+            var stat2 = MovieManager.ParseInputs(fs, headerParsingStatus.Header);
+            if (stat2.Status == Core.Interaction.Status.Sentiment.Fail || stat2.Inputs == null)
+            {
+                mwv.Error.Message = MupenToolkit.Properties.Resources.InputsParseFailed;
+                mwv.Error.Visible ^= true;
+                return;
+            }
+            else
+                mwv.Input.Samples = stat2.Inputs;
+
+
+            mwv.Busy = false;
+
+            mwv.Mode = "General";
+            mwv.FileLoaded = true;
+            Properties.Settings.Default.MovieLastPath = path;
+            Properties.Settings.Default.Save();
+            mwv.Statistics = InputStatistics.GetStatistics();
+
+        } 
     }
 }

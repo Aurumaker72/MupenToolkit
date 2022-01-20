@@ -553,6 +553,8 @@
                 </MenuItem.Style>-->
                 
                 <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}"/>
+                <MenuItem Command="{Binding LoadLastMovie}" Header="{x:Static resx:Resources.LoadLastMovie}"/>
+
                 <MenuItem Command="{Binding SaveMovie}" Header="{x:Static resx:Resources.SaveMovie}" IsEnabled="{Binding FileLoaded}"/>
                 <MenuItem Command="{Binding DiagnoseMovie}" Header="{x:Static resx:Resources.MovieDiagnosis}" IsEnabled="{Binding FileLoaded}"/>
                 <!--<MenuItem Command="{Binding BypassMovie}" Header="{x:Static resx:Resources.BypassMovie}"/>-->

@@ -458,6 +458,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load Last Movie.
+        /// </summary>
+        public static string LoadLastMovie {
+            get {
+                return ResourceManager.GetString("LoadLastMovie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Movie.
         /// </summary>
         public static string LoadMovie {
@@ -572,6 +581,15 @@ namespace MupenToolkit.Properties {
         public static string PasteError {
             get {
                 return ResourceManager.GetString("PasteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File unavailable.
+        /// </summary>
+        public static string PathError {
+            get {
+                return ResourceManager.GetString("PathError", resourceCulture);
             }
         }
         

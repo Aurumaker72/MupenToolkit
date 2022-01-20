@@ -13,10 +13,11 @@ using System.Windows.Input;
 
 namespace MupenToolkit.Core.UI
 {
+    
+
 
     public class LoadMovieCommand : ICommand
     {
-        int runs = 0;
         public StateContainer mwv;
         public bool CanExecute(object parameter)
         {
@@ -37,42 +38,28 @@ namespace MupenToolkit.Core.UI
                 mwv.Error.Visible ^= true;
                 return;
             }
+            MovieManager.LoadMovie(mwv, shellReturn.ReturnedPath);
 
-            mwv.Busy = true;
+           
 
-            // reset movie
-            mwv.Header = new();
-            mwv.Input = new();
-
-            var fs = File.Open(shellReturn.ReturnedPath, FileMode.Open, FileAccess.Read, FileShare.Read);
-            var headerParsingStatus = MovieManager.ParseHeader(fs);
-            if (headerParsingStatus.Status == Core.Interaction.Status.Sentiment.Fail || headerParsingStatus.Header == null)
-            {
-                mwv.Error.Message = MupenToolkit.Properties.Resources.HeaderParseFailed;
-                mwv.Error.Visible ^= true;
-                return;
-            }
-            else
-                mwv.Header = headerParsingStatus.Header;
-
-            var stat2 = MovieManager.ParseInputs(fs, headerParsingStatus.Header);
-            if (stat2.Status == Core.Interaction.Status.Sentiment.Fail || stat2.Inputs == null)
-            {
-                mwv.Error.Message = MupenToolkit.Properties.Resources.InputsParseFailed;
-                mwv.Error.Visible ^= true;
-                return;
-            }
-            else
-                mwv.Input.Samples = stat2.Inputs;
-
-
-            mwv.Busy = false;
-
-            mwv.Mode = "General";
-            mwv.FileLoaded = true;
-
-            mwv.Statistics = InputStatistics.GetStatistics();
-
+        }
+    }
+    
+    public class LoadLastMovieCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            MovieManager.LoadMovie(mwv, Properties.Settings.Default.MovieLastPath);
         }
     }
 

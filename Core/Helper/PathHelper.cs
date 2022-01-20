@@ -29,5 +29,25 @@ namespace MupenToolkit.Core.Helper
 
             return isValid;
         }
+
+        public static bool ValidPath(string path)
+        {
+            bool isValid = true;
+
+            try
+            {
+                string fullPath = Path.GetFullPath(path);
+                if (false)
+                    isValid = Path.IsPathRooted(path);
+                else
+                {
+                    string root = Path.GetPathRoot(path);
+                    isValid = string.IsNullOrEmpty(root.Trim(new char[] { '\\', '/' })) == false;
+                }
+            }
+            catch { isValid = false; }
+
+            return isValid;
+        }
     }
 }

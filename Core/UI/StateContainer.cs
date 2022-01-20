@@ -25,6 +25,7 @@ namespace MupenToolkit.Core.UI
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
 
         public ICommand LoadMovie { get; set; }
+        public ICommand LoadLastMovie { get; set; }
         public ICommand UnloadMovie { get; set; }
         public ICommand SaveMovie { get; set; }
         public ICommand EditControllerFlags { get; set; }
@@ -33,7 +34,7 @@ namespace MupenToolkit.Core.UI
         public ICommand CountryChanged { get; set; }
         public ICommand DiagnoseMovie { get; set; }
         public ICommand BypassMovie { get; set; }
-
+        
 
         public StateContainer()
         {
@@ -46,6 +47,7 @@ namespace MupenToolkit.Core.UI
             CountryChanged = new CountryChangedCommand { mwv = this };
             DiagnoseMovie = new MovieDiagnosisCommand { mwv = this };
             BypassMovie = new BypassMovieCommand { mwv = this };
+            LoadLastMovie = new LoadLastMovieCommand { mwv = this };
 
         }
     }
