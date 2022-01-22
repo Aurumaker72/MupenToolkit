@@ -16,6 +16,9 @@ Continuation of Mupen Utilities
 | Median loading time of 1-hour long movie in miliseconds across 1000 runs | 1554      | 7        |
 | Basic Header Editing      | ✔️ | ✔️ |
 | Advanced Header Editing      | ✔️ | ✔️ |
+| M64 Support | ✔️ | ✔️ |
+| CMB Support | ✔️ | ❌ |
+| REC Support | ❌ | ❌ |
 | TAS Studio      | ✔️ | ✔️ |
 | Input Statistics      | ✔️ | ✔️ |
 | Copy/Paste      | 〰️ | ✔️ |
