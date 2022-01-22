@@ -16,16 +16,23 @@ namespace MupenToolkit.Core.Movie
     {
         private static BinaryReader br;
 
-        public static (MovieHeader? Header, Sentiment Status) ParseHeader(FileStream fs)
+        public static (MovieHeader? Header, Sentiment Status, string? StatusMessage) ParseHeader(FileStream fs)
         {
             br = new BinaryReader(fs);
             br.BaseStream.Seek(0, SeekOrigin.Begin);
-
+            if (br.BaseStream.Length < 1024)
+            {
+                return (null, Sentiment.Fail, Properties.Resources.NotAMovie);
+            }
             MovieHeader header = new();
 
             try
             {
                 header.Magic = br.ReadUInt32();
+                if(header.Magic != 0x4D36341A && header.Magic != 439629389)
+                {
+                    return (null, Sentiment.Fail, Properties.Resources.NotAMovie);
+                }
                 header.Version = br.ReadUInt32();
                 header.UID = br.ReadUInt32();
                 header.LengthVIs = br.ReadUInt32();
@@ -51,15 +58,15 @@ namespace MupenToolkit.Core.Movie
                 header.Author = Encoding.ASCII.GetString(br.ReadBytes(222));
                 header.Description = Encoding.ASCII.GetString(br.ReadBytes(256));
 
-                return (header, Sentiment.Success);
+                return (header, Sentiment.Success, null);
             }
             catch
             {
-                return (null,Sentiment.Fail);
+                return (null,Sentiment.Fail, Properties.Resources.GenericError);
             }
         }
 
-        public static (ObservableCollection<ObservableCollection<Sample>>? Inputs, Sentiment Status) ParseInputs(FileStream fs, MovieHeader header, bool closeFileStream = true)
+        public static (ObservableCollection<ObservableCollection<Sample>>? Inputs, Sentiment Status, string? StatusMessage) ParseInputs(FileStream fs, MovieHeader header, bool closeFileStream = true)
         {
             
             br.BaseStream.Seek(1024, SeekOrigin.Begin);
@@ -109,9 +116,9 @@ namespace MupenToolkit.Core.Movie
             br.Close();
             if (closeFileStream) fs.Close();
 
-            if (inputs == null) return (null, Sentiment.Fail);
+            if (inputs == null) return (null, Sentiment.Fail, Properties.Resources.InputsInvalidState);
 
-            return (inputs, Sentiment.Success);
+            return (inputs, Sentiment.Success, null);
         }
 
         public static (Sentiment Sentiment, Interaction.UIError? Error, List<string> notifications) SaveMovie(FileStream fs, MovieHeader header, ObservableCollection<ObservableCollection<Sample>> inputs)
@@ -242,8 +249,9 @@ namespace MupenToolkit.Core.Movie
             var headerParsingStatus = MovieManager.ParseHeader(fs);
             if (headerParsingStatus.Status == Core.Interaction.Status.Sentiment.Fail || headerParsingStatus.Header == null)
             {
-                mwv.Error.Message = MupenToolkit.Properties.Resources.HeaderParseFailed;
+                mwv.Error.Message = headerParsingStatus.StatusMessage;
                 mwv.Error.Visible ^= true;
+                mwv.Busy = false;
                 return;
             }
             else
@@ -252,8 +260,9 @@ namespace MupenToolkit.Core.Movie
             var stat2 = MovieManager.ParseInputs(fs, headerParsingStatus.Header);
             if (stat2.Status == Core.Interaction.Status.Sentiment.Fail || stat2.Inputs == null)
             {
-                mwv.Error.Message = MupenToolkit.Properties.Resources.InputsParseFailed;
+                mwv.Error.Message = stat2.StatusMessage;
                 mwv.Error.Visible ^= true;
+                mwv.Busy = false;
                 return;
             }
             else

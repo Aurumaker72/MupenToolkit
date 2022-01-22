@@ -168,6 +168,57 @@ namespace MupenToolkit.Core.UI
         }
     }
 
+    public class DividerConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return (double)((double)(value) / double.Parse((string)parameter));
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class JoystickHorizontalPositionConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Convert Relative->Absolute point
+            // Parameter: ClientRectangle
+            Rect rect = (Rect)parameter;
+            int x = (int)(rect.Left + ((int)value + 128) * (rect.Right - rect.Left) / 256);
+            return x;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Convert Absolute->Relative
+            // Parameter: control width
+            int x = ((int)value * 256 / (int)parameter - 128 + 1);
+            x = MathHelper.Clamp(x, -128, 127);
+            return x;
+        }
+    }
+    public class JoystickVerticalPositionConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Convert Relative->Absolute point
+            // Parameter: ClientRectangle
+            Rect rect = (Rect)parameter;
+            int y = (int)(rect.Top + ((int)value + 128) * (rect.Bottom - rect.Top) / 256);
+            return y;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Convert Absolute->Relative
+            // Parameter: control height
+            int y = ((int)value * 256 / (int)parameter - 128 + 1);
+            y = MathHelper.Clamp(y, -127, 128);
+            return y;
+        }
+    }
+
     public class UnsignedShortValueToEqualsParameterConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

@@ -22,6 +22,11 @@
         <ui:SumButtonsConverter x:Key="csbfbiConverter"/>
         <ui:SamplesIndexConverter x:Key="siConverter"/>
 
+        <ui:DividerConverter x:Key="div"/>
+
+        <ui:JoystickHorizontalPositionConverter x:Key="jxConverter"/>
+        <ui:JoystickVerticalPositionConverter x:Key="jyConverter"/>
+
         <Storyboard x:Key="BounceIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
                 <EasingDoubleKeyFrame KeyTime="00:00:0.5" Value="1.5">

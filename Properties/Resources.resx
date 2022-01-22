@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Analog" xml:space="preserve">
+    <value>Analog</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>Ang</value>
+  </data>
   <data name="AppName" xml:space="preserve">
     <value>Mupen Toolkit</value>
   </data>
@@ -128,6 +134,15 @@
   </data>
   <data name="Author" xml:space="preserve">
     <value>Author</value>
+  </data>
+  <data name="AxisX" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="AxisY" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="BadMagicCookie" xml:space="preserve">
+    <value>Invalid magic cookie</value>
   </data>
   <data name="Beta" xml:space="preserve">
     <value>Beta</value>
@@ -204,6 +219,9 @@
   <data name="DPadUp" xml:space="preserve">
     <value>D^</value>
   </data>
+  <data name="DragDropTooMany" xml:space="preserve">
+    <value>Dropped more than one file, the first will be considered and rest discarded.</value>
+  </data>
   <data name="Evaluation" xml:space="preserve">
     <value>Description</value>
   </data>
@@ -216,6 +234,9 @@
   <data name="France" xml:space="preserve">
     <value>France</value>
   </data>
+  <data name="GenericError" xml:space="preserve">
+    <value>Generic parser error</value>
+  </data>
   <data name="Germany" xml:space="preserve">
     <value>Germany</value>
   </data>
@@ -224,6 +245,9 @@
   </data>
   <data name="InputPluginName" xml:space="preserve">
     <value>Input Plugin Name</value>
+  </data>
+  <data name="InputsInvalidState" xml:space="preserve">
+    <value>Input buffer resulted logically impossible state</value>
   </data>
   <data name="InputsParseFailed" xml:space="preserve">
     <value>Failed to parse inputs</value>
@@ -354,6 +378,9 @@
   </data>
   <data name="TooLongStringNotificationFormat" xml:space="preserve">
     <value>An inputted property "{0}" had an inappropriate length and has been truncated.</value>
+  </data>
+  <data name="TooShort" xml:space="preserve">
+    <value>Movie is too short</value>
   </data>
   <data name="TotalButtonPresses" xml:space="preserve">
     <value>Total Button Presses</value>

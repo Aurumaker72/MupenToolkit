@@ -8,6 +8,8 @@
         xmlns:resx="clr-namespace:MupenToolkit.Properties"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
+        AllowDrop="True"
+        DragDrop.Drop="Window_Drop"
         Title="{x:Static resx:Resources.AppName}" Height="500" Width="900">
     <Window.DataContext>
         <ui:StateContainer/>
@@ -49,7 +51,9 @@
                         <RowDefinition Height="2.5*" />
                     </Grid.RowDefinitions>
 
-                    <ui:ExtendedDataGrid x:Name="DataGrid_TASStudio" 
+                    <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+                        <TabItem Header="{x:Static resx:Resources.TASStudio}">
+                            <ui:ExtendedDataGrid x:Name="DataGrid_TASStudio" 
                           EnableRowVirtualization="True" 
                           EnableColumnVirtualization="True"
                           AlternatingRowBackground="LightGray"
@@ -72,9 +76,7 @@
                           CanUserSortColumns="False"
                               CanUserReorderColumns="False" 
                           ui:DataGridBehavior.DisplayRowNumber="True">
-                        <!-- col reorder breaks paste-->
-                        <!--ItemsSource="{Binding Path=Input.Samples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ctlListSample}, ConverterParameter={Binding CurrentController}}"-->
-
+                               
                         <DataGrid.ContextMenu>
                             <ContextMenu >
                                 <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
@@ -112,6 +114,130 @@
                             <DataGridTextColumn Header="Y"             Width="*" Binding="{Binding Y,           Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataGrid.Columns>
                     </ui:ExtendedDataGrid>
+                            
+                        </TabItem>
+
+                        <TabItem Header="{x:Static resx:Resources.Analog}" IsEnabled="True">
+                            <Grid>
+                                <Grid ShowGridLines="False">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2.5*"/>
+                                        <RowDefinition Height="2.5*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid ShowGridLines="False" Grid.Column="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2.5*"/>
+                                            <ColumnDefinition Width="2.5*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Canvas x:Name="Canvas_Joystick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                                Width="{Binding cW, Mode=OneWayToSource}"  
+                                                Height="{Binding cH, Mode=OneWayToSource}"
+                                                 >
+                                            <Ellipse
+                                            Width="{Binding ElementName=Canvas_Joystick, Path=Width}"
+                                            Height="{Binding ElementName=Canvas_Joystick, Path=Height}"
+                                            Fill="White"
+                                            Stroke="Black"
+                                            StrokeThickness="1"
+                                           />
+                                            <Line Stroke="Red" StrokeThickness="5"
+                                                  X1="{Binding ElementName=Canvas_Joystick, Path=Width, Converter={StaticResource div}, ConverterParameter=2}"
+                                                  Y1="{Binding ElementName=Canvas_Joystick, Path=Height, Converter={StaticResource div}, ConverterParameter=2}"
+                                                  X2="{Binding Path=SelectedSample.X}"
+                                                  Y2="{Binding Path=SelectedSample.Y}"
+                                                  />
+
+                                        </Canvas>
+
+                                        <Grid ShowGridLines="False" Grid.Column="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*" />
+                                                <ColumnDefinition Width="3*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Label     Grid.Column="0" Grid.Row="0" Content="{x:Static resx:Resources.AxisX}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <TextBox   Grid.Column="1" Grid.Row="0" Text="{Binding SelectedSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <Label     Grid.Column="0" Grid.Row="1" Content="{x:Static resx:Resources.AxisY}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <TextBox   Grid.Column="1" Grid.Row="1" Text="{Binding SelectedSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <Label     Grid.Column="0" Grid.Row="2" Content="{x:Static resx:Resources.Angle}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <TextBox   Grid.Column="1" Grid.Row="2" Text="{Binding Header.Author, Mode=TwoWay}" BorderBrush="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                                        </Grid>
+
+
+                                    </Grid>
+
+                                    <Grid ShowGridLines="False" Grid.Row="1" Background="LightGray">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.83*" />
+                                            <ColumnDefinition Width="0.83*" />
+                                            <ColumnDefinition Width="0.83*" />
+                                            <ColumnDefinition Width="0.83*" />
+                                            <ColumnDefinition Width="0.83*" />
+                                            <ColumnDefinition Width="0.83*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <CheckBox Content="A"     Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.A, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="B"     Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="L"     Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.L, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="R"     Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="Z"     Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.Z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="S"     Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.Start, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                        <CheckBox Content="C^"    Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.CPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="C&lt;" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.CPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="Cv"    Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.CPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="C>"    Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.CPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        
+                                        <CheckBox Content="D^"    Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.DPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="D&lt;" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.DPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="Dv"    Grid.Row="3" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.DPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <CheckBox Content="D>"    Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding SelectedSample.DPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    </Grid>
+
+
+
+
+
+                                </Grid>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" ShowGridLines="True">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Column="1" Content="&lt;&lt;"  CommandParameter="-5"  Command="{Binding SampleIndexChange}"/>
+                                    <Button Grid.Column="2" Content="&lt;"  CommandParameter="-1"  Command="{Binding SampleIndexChange}"/>
+                                    <TextBox Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding CurrentSampleIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                    <Button Grid.Column="4"  Content="&gt;"  CommandParameter="1"  Command="{Binding SampleIndexChange}"/>
+                                    <Button Grid.Column="5"  Content="&gt;&gt;"  CommandParameter="5"  Command="{Binding SampleIndexChange}"/>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+
+                    
+
+                   
 
 
                 </Grid>

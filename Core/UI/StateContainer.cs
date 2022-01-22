@@ -23,6 +23,17 @@ namespace MupenToolkit.Core.UI
         public string Mode { get; set; } = "None"; // this is horrible!
         public ObservableCollection<Statistic> Statistics { get; set; } = new();
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
+        public int CurrentSampleIndex { get; set; }
+        public Sample SelectedSample
+        {
+            get { return Input.Samples[CurrentController][CurrentSampleIndex]; }
+        }
+        
+        public int cW { get; set; } // TODO: rewrite
+        public int cH { get; set; }
+        public int cX { get; set; }
+        public int cY { get; set; }
+
 
         public ICommand LoadMovie { get; set; }
         public ICommand LoadLastMovie { get; set; }
@@ -34,7 +45,8 @@ namespace MupenToolkit.Core.UI
         public ICommand CountryChanged { get; set; }
         public ICommand DiagnoseMovie { get; set; }
         public ICommand BypassMovie { get; set; }
-        
+        public ICommand SampleIndexChange { get; set; }
+
 
         public StateContainer()
         {
@@ -48,7 +60,7 @@ namespace MupenToolkit.Core.UI
             DiagnoseMovie = new MovieDiagnosisCommand { mwv = this };
             BypassMovie = new BypassMovieCommand { mwv = this };
             LoadLastMovie = new LoadLastMovieCommand { mwv = this };
-
+            SampleIndexChange = new SampleIndexChangeCommand { mwv = this };
         }
     }
 }

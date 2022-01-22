@@ -61,6 +61,24 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Analog.
+        /// </summary>
+        public static string Analog {
+            get {
+                return ResourceManager.GetString("Analog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ang.
+        /// </summary>
+        public static string Angle {
+            get {
+                return ResourceManager.GetString("Angle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mupen Toolkit.
         /// </summary>
         public static string AppName {
@@ -93,6 +111,33 @@ namespace MupenToolkit.Properties {
         public static string Author {
             get {
                 return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X.
+        /// </summary>
+        public static string AxisX {
+            get {
+                return ResourceManager.GetString("AxisX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y.
+        /// </summary>
+        public static string AxisY {
+            get {
+                return ResourceManager.GetString("AxisY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid magic cookie.
+        /// </summary>
+        public static string BadMagicCookie {
+            get {
+                return ResourceManager.GetString("BadMagicCookie", resourceCulture);
             }
         }
         
@@ -322,6 +367,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dropped more than one file, the first will be considered and rest discarded..
+        /// </summary>
+        public static string DragDropTooMany {
+            get {
+                return ResourceManager.GetString("DragDropTooMany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Evaluation {
@@ -358,6 +412,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generic parser error.
+        /// </summary>
+        public static string GenericError {
+            get {
+                return ResourceManager.GetString("GenericError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Germany.
         /// </summary>
         public static string Germany {
@@ -381,6 +444,15 @@ namespace MupenToolkit.Properties {
         public static string InputPluginName {
             get {
                 return ResourceManager.GetString("InputPluginName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input buffer resulted logically impossible state.
+        /// </summary>
+        public static string InputsInvalidState {
+            get {
+                return ResourceManager.GetString("InputsInvalidState", resourceCulture);
             }
         }
         
@@ -770,6 +842,15 @@ namespace MupenToolkit.Properties {
         public static string TooLongStringNotificationFormat {
             get {
                 return ResourceManager.GetString("TooLongStringNotificationFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movie is too short.
+        /// </summary>
+        public static string TooShort {
+            get {
+                return ResourceManager.GetString("TooShort", resourceCulture);
             }
         }
         

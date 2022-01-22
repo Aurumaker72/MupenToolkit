@@ -11,6 +11,8 @@ namespace MupenToolkit.Core.Movie
     [NotifyPropertyChanged]
     public class InputContainer
     {
+        
+
         public ObservableCollection<ObservableCollection<Sample>> Samples { get; set; } = new();
     }
 }

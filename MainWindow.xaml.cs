@@ -30,10 +30,28 @@ namespace MupenToolkit
             stateContainer.FileLoaded = false;
 
             this.DataContext = stateContainer;
-
         }
 
-        
-        
+        private void Window_Drop(object sender, DragEventArgs e)
+        {
+            // inplausible with MVVM, we have to resort to events
+            string[] fNames = (string[])e.Data.GetData(DataFormats.FileDrop, true);
+            string fName = fName = fNames[0];
+            if(fNames.Length > 1)
+            {
+                MessageBox.Show(Properties.Resources.DragDropTooMany, Title, MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+
+            if (!PathHelper.ValidPath(fName, "m64"))
+            {
+                stateContainer.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
+                stateContainer.Error.Visible ^= true;
+                return;
+            }
+            MovieManager.LoadMovie(stateContainer, fName);
+
+
+        }
     }
 }

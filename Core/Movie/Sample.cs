@@ -312,6 +312,7 @@ namespace MupenToolkit.Core.Movie
                 OnPropertyChanged();
             }
         }
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)

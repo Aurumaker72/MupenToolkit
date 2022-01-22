@@ -206,6 +206,28 @@ namespace MupenToolkit.Core.UI
 
     }
 
+    public class SampleIndexChangeCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (parameter == null) return;
+            var i = int.Parse((string)parameter);
+            //if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Header.LengthSamples) return;
+            if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Input.Samples[mwv.CurrentController].Count) return;
+            mwv.CurrentSampleIndex += i;
+        }
+
+    }
     public class SaveMovieCommand : ICommand
     {
         public StateContainer mwv;
