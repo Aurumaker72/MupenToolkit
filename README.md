@@ -20,7 +20,7 @@ Continuation of Mupen Utilities
 | Input Statistics      | ✔️ | ✔️ |
 | Copy/Paste      | 〰️ | ✔️ |
 | Replacement      | ✔️ | ❌* |
-| Movie Diagnostic | ✔️ | ❌ |
+| Movie Diagnostic | ✔️ | ✔️ |
 | [TAS Studio Fast Edit](hoverOverTheControlWhichBroughtYouHere "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |
 #### Legend
 \*: coming soon...
