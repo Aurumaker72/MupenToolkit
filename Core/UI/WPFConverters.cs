@@ -180,45 +180,87 @@ namespace MupenToolkit.Core.UI
         }
     }
 
-    public class JoystickHorizontalPositionConverter : IValueConverter
+
+    public class SubtractorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Convert Relative->Absolute point
-            // Parameter: ClientRectangle
-            Rect rect = (Rect)parameter;
-            int x = (int)(rect.Left + ((int)value + 128) * (rect.Right - rect.Left) / 256);
-            return x;
+            return (sbyte)value - sbyte.Parse((string)parameter);
         }
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Convert Absolute->Relative
-            // Parameter: control width
-            int x = ((int)value * 256 / (int)parameter - 128 + 1);
-            x = MathHelper.Clamp(x, -128, 127);
-            return x;
+            throw new NotImplementedException();
         }
     }
-    public class JoystickVerticalPositionConverter : IValueConverter
+    public class AdderConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Convert Relative->Absolute point
-            // Parameter: ClientRectangle
-            Rect rect = (Rect)parameter;
-            int y = (int)(rect.Top + ((int)value + 128) * (rect.Bottom - rect.Top) / 256);
-            return y;
+            return (sbyte)value + sbyte.Parse((string)parameter);
         }
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Convert Absolute->Relative
-            // Parameter: control height
-            int y = ((int)value * 256 / (int)parameter - 128 + 1);
-            y = MathHelper.Clamp(y, -127, 128);
-            return y;
+            throw new NotImplementedException();
         }
     }
 
+    //Point RelativeToAbsolute(Point pt)
+    //{
+    //    int X = pb_JoystickPic.ClientRectangle.Left + (pt.X + 128) * (pb_JoystickPic.ClientRectangle.Right - pb_JoystickPic.ClientRectangle.Left) / 256;
+    //    int Y = pb_JoystickPic.ClientRectangle.Top + (pt.Y + 128) * (pb_JoystickPic.ClientRectangle.Bottom - pb_JoystickPic.ClientRectangle.Top) / 256;
+    //    return new Point(X, Y);
+    //}
+    //Point AbsoluteToRelative(Point pt)
+    //{
+    //    int x = (pt.X * 256 / pb_JoystickPic.Width - 128 + 1);
+    //    int y = (pt.Y * 256 / pb_JoystickPic.Height - 128 + 1);
+    //    x = ExtensionMethods.Clamp(x, -128, 127);
+    //    y = ExtensionMethods.Clamp(y, -127, 128);
+    //    return new Point(x, y);
+    //
+    //}
+    public class JoystickHorizontalConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values == null || parameter == null) return null;
+            // Relative to Absolute
+            Canvas ctl = (Canvas)parameter;
+            Rect ctlRect = VisualTreeHelper.GetDescendantBounds(ctl);
+            return ctlRect.Left + ((int)values[0] + 128) * (ctlRect.Right - ctlRect.Left) / 256;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            if (value == null || parameter == null) return null;
+            // Absolute to Relative
+            Canvas ctl = (Canvas)parameter;
+            int x = ((int)((int)value * 256 / ctl.ActualWidth - 128 + 1));
+            x = MathHelper.Clamp(x, -128, 127);
+            return new object[] { x };
+        }
+    }
+    public class JoystickVerticalConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values == null || parameter == null) return null;
+            // Relative to Absolute
+            Canvas ctl = (Canvas)parameter;
+            Rect ctlRect = VisualTreeHelper.GetDescendantBounds(ctl);
+            return ctlRect.Top + ((int)values[0] + 128) * (ctlRect.Bottom - ctlRect.Top) / 256;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            if (value == null || parameter == null) return null;
+            // Absolute to Relative
+            Canvas ctl = (Canvas)parameter;
+            int y = ((int)((int)value * 256 / ctl.Height - 128 + 1));
+            y = MathHelper.Clamp(y, -127, 128);
+            return new object[] { y };
+        }
+    }
     public class UnsignedShortValueToEqualsParameterConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -260,6 +302,40 @@ namespace MupenToolkit.Core.UI
         }
     }
 
+    public class CanvasTopConverter : IValueConverter
+    {
+        #region IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var canasActualHeight = (double)value;
+            return (canasActualHeight / 2) * -1;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+    public class CanvasLeftConverter : IValueConverter
+    {
+        #region IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var canasActualWidth = (double)value;
+            return (canasActualWidth / 2) * -1;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
     public class SumButtonsConverter : IMultiValueConverter
     {
         

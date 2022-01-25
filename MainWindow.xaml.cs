@@ -3,6 +3,7 @@ using MupenToolkit.Core.Movie;
 using MupenToolkit.Core.UI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -42,7 +43,6 @@ namespace MupenToolkit
                 MessageBox.Show(Properties.Resources.DragDropTooMany, Title, MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-
             if (!PathHelper.ValidPath(fName, "m64"))
             {
                 stateContainer.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
@@ -51,6 +51,17 @@ namespace MupenToolkit
             }
             MovieManager.LoadMovie(stateContainer, fName);
 
+
+        }
+
+        private void Border_Joystick_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Point p = Mouse.GetPosition(Canvas_Joystick);
+                stateContainer.SelectedSample.X = (sbyte)MathHelper.Clamp(Math.Round(p.X), -127, 127);
+                stateContainer.SelectedSample.Y = (sbyte)MathHelper.Clamp(Math.Round(p.Y), -127, 127);
+            }
 
         }
     }

@@ -35,7 +35,7 @@ namespace MupenToolkit.Core.Movie
     }
 
     //[NotifyPropertyChanged]
-    public class Sample
+    public class Sample : INotifyPropertyChanged
     {
         public int Raw;
 
@@ -289,6 +289,7 @@ namespace MupenToolkit.Core.Movie
                         BitopHelper.SetByte(ptr, _X, 2);
                 }
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
+                Debug.Print("Set X" + X);
                 OnPropertyChanged();
             }
         }
@@ -323,6 +324,7 @@ namespace MupenToolkit.Core.Movie
         public Sample(int rawValue)
         {
             Set(rawValue);
+            OnPropertyChanged();
         }
 
         /// <summary>

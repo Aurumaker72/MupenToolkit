@@ -21,11 +21,15 @@
         <ui:UnsignedShortValueToEqualsParameterConverter x:Key="ushortEqConverter"/>
         <ui:SumButtonsConverter x:Key="csbfbiConverter"/>
         <ui:SamplesIndexConverter x:Key="siConverter"/>
-
+        <ui:CanvasLeftConverter x:Key="CanvasLeftConverter"/>
+        <ui:CanvasTopConverter x:Key="CanvasTopConverter"/>
+        <ui:SubtractorConverter x:Key="SubtractorConverter"/>
+        <ui:AdderConverter x:Key="AdderConverter"/>
+        
         <ui:DividerConverter x:Key="div"/>
 
-        <ui:JoystickHorizontalPositionConverter x:Key="jxConverter"/>
-        <ui:JoystickVerticalPositionConverter x:Key="jyConverter"/>
+        <ui:JoystickHorizontalConverter x:Key="joystickXConverter"/>
+        <ui:JoystickVerticalConverter x:Key="joystickYConverter"/>
 
         <Storyboard x:Key="BounceIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
@@ -215,7 +219,13 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-
+        <LinearGradientBrush x:Key="Flat3DBorderBrush"
+                         StartPoint="0.499,0" EndPoint="0.501,1">
+            <GradientStop Color="#FFF" Offset="0" />
+            <GradientStop Color="#DDD" Offset="0.01" />
+            <GradientStop Color="#AAA" Offset="0.99" />
+            <GradientStop Color="#888" Offset="1" />
+        </LinearGradientBrush>
         <Style x:Key="GenericCheckBox" TargetType="{x:Type CheckBox}">
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>

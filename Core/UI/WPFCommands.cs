@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace MupenToolkit.Core.UI
@@ -60,6 +61,28 @@ namespace MupenToolkit.Core.UI
         public void Execute(object parameter)
         {
             MovieManager.LoadMovie(mwv, Properties.Settings.Default.MovieLastPath);
+        }
+    }
+    // UNUSED
+    public class JoystickClickCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object? parameter)
+        {
+            return true;
+        }
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object? parameter)
+        {
+            var canvas = parameter as Canvas;
+            Point p = Mouse.GetPosition(canvas);
+
+            mwv.SelectedSample.X = (sbyte)MathHelper.Clamp(Math.Round(p.X), -127, 127);
+            mwv.SelectedSample.Y = (sbyte)MathHelper.Clamp(Math.Round(p.Y), -127, 127);
         }
     }
 
@@ -165,6 +188,9 @@ namespace MupenToolkit.Core.UI
             mwv.FileLoaded = true;
         }
     }
+
+    
+
     public class MovieDiagnosisCommand : ICommand
     {
         public StateContainer mwv;

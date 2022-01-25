@@ -230,7 +230,7 @@ namespace MupenToolkit.Core.Movie
         }
 
 
-        public static void LoadMovie(StateContainer mwv, string path)// passing entire statecontainer! very bad heap alloc
+        public static void LoadMovie(StateContainer mwv, string path)
         {
             if (!PathHelper.ValidPath(path))
             {
