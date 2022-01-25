@@ -289,7 +289,6 @@ namespace MupenToolkit.Core.Movie
                         BitopHelper.SetByte(ptr, _X, 2);
                 }
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
-                Debug.Print("Set X" + X);
                 OnPropertyChanged();
             }
         }

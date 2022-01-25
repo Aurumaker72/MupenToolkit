@@ -77,29 +77,27 @@
                         <TabItem Header="{x:Static resx:Resources.TASStudio}">
                             <ui:ExtendedDataGrid
                                 x:Name="DataGrid_TASStudio"
-                                Grid.RowSpan="2"
                                 ui:DataGridBehavior.DisplayRowNumber="True"
-                                AlternatingRowBackground="LightGray"
-                                AlternationCount="2"
-                                AutoGenerateColumns="False"
-                                CanUserDeleteRows="False"
-                                CanUserReorderColumns="False"
-                                CanUserResizeColumns="False"
-                                CanUserResizeRows="True"
-                                CanUserSortColumns="False"
-                                GridLinesVisibility="Horizontal"
-                                HorizontalGridLinesBrush="Gray"
-                                SelectionMode="Extended"
-                                SelectionUnit="FullRow"
-                                VerticalGridLinesBrush="Gray"
-                                VirtualizingPanel.IsVirtualizingWhenGrouping="True"
-                                VirtualizingPanel.IsVirtualizing="True" 
-                                RowHeight="23" 
-                                ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                                ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                EnableColumnVirtualization="True"
-                                EnableRowVirtualization="True"
-                                ScrollViewer.CanContentScroll="False"
+                                EnableRowVirtualization="True" 
+                          EnableColumnVirtualization="True"
+                          AlternatingRowBackground="LightGray"
+                          GridLinesVisibility="Horizontal"
+                          HorizontalGridLinesBrush="Gray"
+                          VerticalGridLinesBrush="Gray"
+                          SelectionMode="Extended"
+                          SelectionUnit="CellOrRowHeader"
+                          AlternationCount="2" 
+                          AutoGenerateColumns="False" 
+                          Grid.RowSpan="2" 
+                          CanUserResizeRows="True"
+                          CanUserDeleteRows="False"
+                          CanUserResizeColumns="True"
+                          VirtualizingPanel.IsVirtualizingWhenGrouping="True" 
+                          RowHeight="23" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          CanUserSortColumns="False"
+                                
                                 >
 
                                 <DataGrid.ContextMenu>
@@ -133,67 +131,51 @@
                                 </DataGrid.ItemsSource>
                                 <DataGrid.Columns>
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding DPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="D&gt;" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding DPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="D&lt;" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding DPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="Dv" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding DPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="D^" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding Start, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="S" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding Z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="Z" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="B" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding A, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="A" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding CPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="C&gt;" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding CPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="C&lt;" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding CPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="Cv" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding CPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="D^" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="R" />
                                     <DataGridCheckBoxColumn
-                                        Width="*"
                                         Binding="{Binding L, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="L" />
                                     <DataGridTextColumn
-                                        Width="*"
                                         Binding="{Binding X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="X" />
                                     <DataGridTextColumn
-                                        Width="*" 
                                         Binding="{Binding Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         Header="Y" />
                                     <!-- HACK: setting last column fixed size will prevent "chain" repaint -->
@@ -590,7 +572,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Author, Mode=TwoWay}" />
+                        Text="{Binding Header.Author, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="1"
                         Grid.Column="0"
@@ -603,7 +585,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Description, Mode=TwoWay}" />
+                        Text="{Binding Header.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="2"
                         Grid.Column="0"
@@ -616,7 +598,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.RomName, Mode=TwoWay}" />
+                        Text="{Binding Header.RomName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Button
                         Grid.Row="3"
                         Grid.Column="0"
@@ -656,7 +638,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Rerecords, Mode=TwoWay}" />
+                        Text="{Binding Header.Rerecords, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="6"
                         Grid.Column="0"
@@ -669,7 +651,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.LengthSamples, Mode=TwoWay}" />
+                        Text="{Binding Header.LengthSamples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Button
                         Grid.Row="7"
                         Grid.Column="0"
@@ -687,7 +669,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Controllers, Mode=TwoWay}" />
+                        Text="{Binding Header.Controllers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 </Grid>
 

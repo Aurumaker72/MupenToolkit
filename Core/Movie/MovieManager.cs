@@ -3,6 +3,7 @@ using MupenToolkit.Core.UI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace MupenToolkit.Core.Movie
             br.BaseStream.Seek(0, SeekOrigin.Begin);
             if (br.BaseStream.Length < 1024)
             {
+                br.Close();
                 return (null, Sentiment.Fail, Properties.Resources.NotAMovie);
             }
             MovieHeader header = new();
@@ -31,6 +33,7 @@ namespace MupenToolkit.Core.Movie
                 header.Magic = br.ReadUInt32();
                 if(header.Magic != 0x4D36341A && header.Magic != 439629389)
                 {
+                    br.Close();
                     return (null, Sentiment.Fail, Properties.Resources.NotAMovie);
                 }
                 header.Version = br.ReadUInt32();
@@ -73,9 +76,8 @@ namespace MupenToolkit.Core.Movie
 
             ObservableCollection<ObservableCollection<Sample>> inputs = new();
 
-            var frames = header.LengthSamples;
-            var curFrame = 0;
-            var lenFs = fs.Length;
+            long curFrame = 0;
+            bool cont = true;
             bool[] ctlEnabled = new bool[4];
             for (int i = 0; i < 4; i++)
             {
@@ -85,32 +87,34 @@ namespace MupenToolkit.Core.Movie
                     inputs.Add(new ObservableCollection<Sample>());
                 }
             }
-            while (curFrame < frames)
+            while (curFrame <= fs.Length)
             {
                 if (ctlEnabled[0])
                 {
-                    if (br.BaseStream.Position + sizeof(int) > lenFs || 0 < 0 || 0 >= inputs.Count)
+                    if (br.BaseStream.Position + 4 > fs.Length)
                         break;
                     inputs[0].Add(new Sample(br.ReadInt32()));
                 }
                 if (ctlEnabled[1])
                 {
-                    if (br.BaseStream.Position + sizeof(int) > lenFs || 1 < 0 || 1 >= inputs.Count)
+                    if (br.BaseStream.Position + 4 > fs.Length)
                         break;
                     inputs[1].Add(new Sample(br.ReadInt32()));
                 }
                 if (ctlEnabled[2])
                 {
-                    if (br.BaseStream.Position + sizeof(int) > lenFs || 2 < 0 || 2 >= inputs.Count)
+                    if (br.BaseStream.Position + 4 > fs.Length)
                         break;
                     inputs[2].Add(new Sample(br.ReadInt32()));
                 }
                 if (ctlEnabled[3])
                 {
-                    if (br.BaseStream.Position + sizeof(int) > lenFs || 3 < 0 || 3 >= inputs.Count)
+                    if (br.BaseStream.Position + 4 > fs.Length)
                         break;
                     inputs[3].Add(new Sample(br.ReadInt32()));
                 }
+                curFrame++;
+
             }
 
             br.Close();
