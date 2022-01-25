@@ -59,8 +59,14 @@ namespace MupenToolkit
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 Point p = Mouse.GetPosition(Canvas_Joystick);
-                stateContainer.SelectedSample.X = (sbyte)MathHelper.Clamp(Math.Round(p.X), -127, 127);
-                stateContainer.SelectedSample.Y = (sbyte)MathHelper.Clamp(Math.Round(p.Y), -127, 127);
+                var tgX = (sbyte)MathHelper.Clamp(Math.Round(p.X), -127, 127);
+                var tgY = (sbyte)MathHelper.Clamp(Math.Round(p.Y), -127, 127);
+                if (tgX < 7 && tgX > -7)
+                    tgX = 0;
+                if (tgY < 7 && tgY > -7)
+                    tgY = 0;
+                stateContainer.SelectedSample.X = tgX;
+                stateContainer.SelectedSample.Y = tgY;
             }
 
         }
