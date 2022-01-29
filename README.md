@@ -10,7 +10,7 @@ Continuation of Mupen Utilities
 | Basic Header Editing      | ✔️ | ✔️ |
 | Advanced Header Editing      | ✔️ | ✔️ |
 | M64 Support | ✔️ | ✔️ |
-| CMB Support | ✔️ | ❌ |
+| CMB Support | ✔️ | ✔️ |
 | REC Support | ❌ | ❌ |
 | TAS Studio      | ✔️ | ✔️ |
 | Input Statistics      | ✔️ | ✔️ |
