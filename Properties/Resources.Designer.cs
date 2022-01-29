@@ -196,6 +196,24 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Malformed combo.
+        /// </summary>
+        public static string ComboEOFStringSearch {
+            get {
+                return ResourceManager.GetString("ComboEOFStringSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Malformed combo.
+        /// </summary>
+        public static string ComboOOBLength {
+            get {
+                return ResourceManager.GetString("ComboOOBLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connected.
         /// </summary>
         public static string Connected {

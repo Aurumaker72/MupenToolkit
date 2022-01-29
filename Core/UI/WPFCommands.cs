@@ -33,13 +33,13 @@ namespace MupenToolkit.Core.UI
         {
             var shellReturn = WindowsShellWrapper.OpenFileDialogPrompt();
             if (shellReturn.Cancelled) return;
-            if (!PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
+            if (!PathHelper.ValidPath(shellReturn.ReturnedPath))
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
                 mwv.Error.Visible ^= true;
                 return;
             }
-            MovieManager.LoadMovie(mwv, shellReturn.ReturnedPath);
+            MovieManager.AttemptLoad(mwv, shellReturn.ReturnedPath);
 
            
 
@@ -60,7 +60,7 @@ namespace MupenToolkit.Core.UI
         }
         public void Execute(object parameter)
         {
-            MovieManager.LoadMovie(mwv, Properties.Settings.Default.MovieLastPath);
+            MovieManager.AttemptLoad(mwv, Properties.Settings.Default.MovieLastPath);
         }
     }
     // UNUSED
@@ -105,6 +105,7 @@ namespace MupenToolkit.Core.UI
 
             mwv.FileLoaded = false;
             mwv.Mode = "None";
+            mwv.InteractionMode = Provider.InfoProvider.InteractionTypes.None;
         }
     }
 
@@ -270,7 +271,7 @@ namespace MupenToolkit.Core.UI
         {
             var shellReturn = WindowsShellWrapper.SaveFileDialogPrompt();
             if (shellReturn.Cancelled) return;
-            if (!PathHelper.ValidPath(shellReturn.ReturnedPath, "m64"))
+            if (!PathHelper.ValidPath(shellReturn.ReturnedPath))
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
                 mwv.Error.Visible ^= true;

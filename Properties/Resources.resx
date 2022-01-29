@@ -162,6 +162,12 @@
   <data name="Check" xml:space="preserve">
     <value>Check</value>
   </data>
+  <data name="ComboEOFStringSearch" xml:space="preserve">
+    <value>Malformed combo</value>
+  </data>
+  <data name="ComboOOBLength" xml:space="preserve">
+    <value>Malformed combo</value>
+  </data>
   <data name="Connected" xml:space="preserve">
     <value>Connected</value>
   </data>

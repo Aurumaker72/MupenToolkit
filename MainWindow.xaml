@@ -77,28 +77,26 @@
                         <TabItem Header="{x:Static resx:Resources.TASStudio}">
                             <ui:ExtendedDataGrid
                                 x:Name="DataGrid_TASStudio"
+                                Grid.RowSpan="2"
                                 ui:DataGridBehavior.DisplayRowNumber="True"
-                                EnableRowVirtualization="True" 
-                          EnableColumnVirtualization="True"
-                          AlternatingRowBackground="LightGray"
-                          GridLinesVisibility="Horizontal"
-                          HorizontalGridLinesBrush="Gray"
-                          VerticalGridLinesBrush="Gray"
-                          SelectionMode="Extended"
-                          SelectionUnit="CellOrRowHeader"
-                          AlternationCount="2" 
-                          AutoGenerateColumns="False" 
-                          Grid.RowSpan="2" 
-                          CanUserResizeRows="True"
-                          CanUserDeleteRows="False"
-                          CanUserResizeColumns="True"
-                          VirtualizingPanel.IsVirtualizingWhenGrouping="True" 
-                          RowHeight="23" 
-                          ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                          ScrollViewer.VerticalScrollBarVisibility="Visible"
-                          CanUserSortColumns="False"
-                                
-                                >
+                                AlternatingRowBackground="LightGray"
+                                AlternationCount="2"
+                                AutoGenerateColumns="False"
+                                CanUserDeleteRows="False"
+                                CanUserResizeColumns="True"
+                                CanUserResizeRows="True"
+                                CanUserSortColumns="False"
+                                EnableColumnVirtualization="True"
+                                EnableRowVirtualization="True"
+                                GridLinesVisibility="Horizontal"
+                                HorizontalGridLinesBrush="Gray"
+                                RowHeight="23"
+                                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                SelectionMode="Extended"
+                                SelectionUnit="CellOrRowHeader"
+                                VerticalGridLinesBrush="Gray"
+                                VirtualizingPanel.IsVirtualizingWhenGrouping="True">
 
                                 <DataGrid.ContextMenu>
                                     <ContextMenu>
@@ -130,63 +128,31 @@
                                     </MultiBinding>
                                 </DataGrid.ItemsSource>
                                 <DataGrid.Columns>
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding DPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="D&gt;" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding DPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="D&lt;" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding DPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Dv" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding DPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="D^" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding Start, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="S" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding Z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Z" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="B" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding A, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="A" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding CPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="C&gt;" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding CPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="C&lt;" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding CPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Cv" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding CPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="D^" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="R" />
-                                    <DataGridCheckBoxColumn
-                                        Binding="{Binding L, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="L" />
-                                    <DataGridTextColumn
-                                        Binding="{Binding X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="X" />
-                                    <DataGridTextColumn
-                                        Binding="{Binding Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Y" />
-                                    <!-- HACK: setting last column fixed size will prevent "chain" repaint -->
+                                    <DataGridCheckBoxColumn Binding="{Binding DPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="D&gt;" />
+                                    <DataGridCheckBoxColumn Binding="{Binding DPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="D&lt;" />
+                                    <DataGridCheckBoxColumn Binding="{Binding DPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Dv" />
+                                    <DataGridCheckBoxColumn Binding="{Binding DPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="D^" />
+                                    <DataGridCheckBoxColumn Binding="{Binding Start, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="S" />
+                                    <DataGridCheckBoxColumn Binding="{Binding Z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Z" />
+                                    <DataGridCheckBoxColumn Binding="{Binding B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="B" />
+                                    <DataGridCheckBoxColumn Binding="{Binding A, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="A" />
+                                    <DataGridCheckBoxColumn Binding="{Binding CPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="C&gt;" />
+                                    <DataGridCheckBoxColumn Binding="{Binding CPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="C&lt;" />
+                                    <DataGridCheckBoxColumn Binding="{Binding CPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Cv" />
+                                    <DataGridCheckBoxColumn Binding="{Binding CPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="D^" />
+                                    <DataGridCheckBoxColumn Binding="{Binding R, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="R" />
+                                    <DataGridCheckBoxColumn Binding="{Binding L, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="L" />
+                                    <DataGridTextColumn Binding="{Binding X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="X" />
+                                    <DataGridTextColumn Binding="{Binding Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Y" />
+                                    <!--  HACK: setting last column fixed size will prevent "chain" repaint  -->
                                 </DataGrid.Columns>
                             </ui:ExtendedDataGrid>
 
                         </TabItem>
 
-                        <TabItem Header="{x:Static resx:Resources.Analog}" IsEnabled="True" >
+                        <TabItem Header="{x:Static resx:Resources.Analog}" IsEnabled="True">
                             <Grid>
-                                <Grid ShowGridLines="False" >
+                                <Grid ShowGridLines="False">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="2.5*" />
                                         <RowDefinition Height="2.5*" />
@@ -197,57 +163,72 @@
                                             <ColumnDefinition Width="2.5*" />
                                         </Grid.ColumnDefinitions>
 
-                                        
-                                        <Viewbox Grid.Row="0" Grid.Column="0" >
-                                            <Border x:Name="Border_Joystick" Height="256" Width="256" BorderBrush="Black" Background="Transparent"  BorderThickness="1" Margin="10" PreviewMouseMove="Border_Joystick_PreviewMouseMove">
+
+                                        <Viewbox Grid.Row="0" Grid.Column="0">
+                                            <Border
+                                                x:Name="Border_Joystick"
+                                                Width="256"
+                                                Height="256"
+                                                Margin="10"
+                                                Background="Transparent"
+                                                BorderBrush="Black"
+                                                BorderThickness="1"
+                                                PreviewMouseMove="Border_Joystick_PreviewMouseMove">
                                                 <!--<Border.InputBindings>
                                                     <MouseBinding MouseAction="LeftClick" Command="{Binding CanvasClickCommand}" CommandParameter="{Binding ElementName=Canvas_Joystick}" />
                                                 </Border.InputBindings>-->
-                                                <Canvas x:Name="Canvas_Joystick" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-                                                    
+                                                <Canvas
+                                                    x:Name="Canvas_Joystick"
+                                                    Width="Auto"
+                                                    Height="Auto"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    RenderTransformOrigin="0.5,0.5">
 
-                                                    <!-- INFO: The ViewModel will explode if Command in InputBinding is not found, this is a WPF Bug! -->
+
+                                                    <!--  INFO: The ViewModel will explode if Command in InputBinding is not found, this is a WPF Bug!  -->
 
                                                     <Canvas.RenderTransform>
                                                         <TransformGroup>
-                                                            <ScaleTransform ScaleY="1" ScaleX="1" />
+                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
                                                         </TransformGroup>
                                                     </Canvas.RenderTransform>
 
 
 
-                                                    <Ellipse x:Name="Ellipse_Joystick"
+                                                    <Ellipse
+                                                        x:Name="Ellipse_Joystick"
+                                                        Canvas.Left="{Binding ElementName=Border_Joystick, Path=ActualWidth, Converter={StaticResource CanvasLeftConverter}}"
+                                                        Canvas.Top="{Binding ElementName=Border_Joystick, Path=ActualHeight, Converter={StaticResource CanvasTopConverter}}"
                                                         Width="{Binding ElementName=Border_Joystick, Path=ActualWidth}"
-                         Height="{Binding ElementName=Border_Joystick, Path=ActualHeight}"
-                         Stroke="Black" 
-                         StrokeThickness="1"
-                         Canvas.Left="{Binding ElementName=Border_Joystick, Path=ActualWidth, Converter={StaticResource CanvasLeftConverter}}"
-                         Canvas.Top="{Binding ElementName=Border_Joystick, Path=ActualHeight, Converter={StaticResource CanvasTopConverter}}" />
+                                                        Height="{Binding ElementName=Border_Joystick, Path=ActualHeight}"
+                                                        Stroke="Black"
+                                                        StrokeThickness="1" />
 
 
 
                                                     <Line
-                                              X1="0"
-                                                    Y1="-128" 
-                                                    Stroke="Black" 
-                                                    StrokeThickness="1" 
-                                                    X2="0" 
-                                                    Y2="128" />
-                                                    <Line
-                                                    X1="-128"
-                                                    Y1="0" 
-                                                    Stroke="Black" 
-                                                    StrokeThickness="1" 
-                                                    X2="128" 
-                                                    Y2="0" />
-                                                    <Ellipse/>
-                                                    <Line 
+                                                        Stroke="Black"
+                                                        StrokeThickness="1"
                                                         X1="0"
-                                                     Y1="0" 
-                                                     Stroke="Blue" 
-                                                     StrokeThickness="4" 
-                                                     X2="{Binding Path=SelectedSample.X, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" 
-                                                     Y2="{Binding Path=SelectedSample.Y, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+                                                        X2="0"
+                                                        Y1="-128"
+                                                        Y2="128" />
+                                                    <Line
+                                                        Stroke="Black"
+                                                        StrokeThickness="1"
+                                                        X1="-128"
+                                                        X2="128"
+                                                        Y1="0"
+                                                        Y2="0" />
+                                                    <Ellipse />
+                                                    <Line
+                                                        Stroke="Blue"
+                                                        StrokeThickness="4"
+                                                        X1="0"
+                                                        X2="{Binding Path=SelectedSample.X, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                                                        Y1="0"
+                                                        Y2="{Binding Path=SelectedSample.Y, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
                                                         <!--<Line.Clip>
                                                             <EllipseGeometry RadiusX="128"
                                              RadiusY="128"
@@ -255,7 +236,11 @@
                                                         </Line.Clip>-->
                                                     </Line>
                                                     <Ellipse
-                                                         Width="10" Height="10" Fill="Red" Canvas.Left="{Binding SelectedSample.X, Converter={StaticResource SubtractorConverter}, ConverterParameter=5}" Canvas.Top="{Binding SelectedSample.Y, Converter={StaticResource SubtractorConverter}, ConverterParameter=5}"/>
+                                                        Canvas.Left="{Binding SelectedSample.X, Converter={StaticResource SubtractorConverter}, ConverterParameter=5}"
+                                                        Canvas.Top="{Binding SelectedSample.Y, Converter={StaticResource SubtractorConverter}, ConverterParameter=5}"
+                                                        Width="10"
+                                                        Height="10"
+                                                        Fill="Red" />
 
                                                 </Canvas>
 
@@ -271,90 +256,104 @@
                                                 <RowDefinition Height="*" />
                                                 <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
-                                            
-                                            
+
+
                                             <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
                                                 Content="{x:Static resx:Resources.AxisX}" />
-                                            <Slider Grid.Row="0"
-                                                Grid.Column="1" Minimum="-127"
-                                                Value="{Binding Path=SelectedSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                                Maximum="127" 
-                                                TickFrequency="1" IsSnapToTickEnabled="True" />
-                                            <Grid Grid.Column="1" Grid.Row="0" ShowGridLines="False">
-                                                
+                                            <Slider
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                IsSnapToTickEnabled="True"
+                                                Maximum="127"
+                                                Minimum="-127"
+                                                TickFrequency="1"
+                                                Value="{Binding Path=SelectedSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                            <Grid
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                ShowGridLines="False">
+
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="*" />
                                                     <RowDefinition Height="*" />
                                                 </Grid.RowDefinitions>
-                                                <Separator HorizontalAlignment="Stretch" Background="Silver"/>
+                                                <Separator HorizontalAlignment="Stretch" Background="Silver" />
                                                 <Grid Grid.Row="1" ShowGridLines="False">
-                                                    
+
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*" />
                                                         <ColumnDefinition Width="*" />
                                                     </Grid.ColumnDefinitions>
                                                     <Label
-                                                    Grid.Row="1"
-                                                    Grid.Column="0"
-                                                    HorizontalContentAlignment="Center"
-                                                    VerticalContentAlignment="Center"
-                                                    Content="{x:Static resx:Resources.AxisX}" />
-                                                    <TextBox Grid.Row="1"
-                                                    Grid.Column="1"
-                                                    HorizontalContentAlignment="Center"
-                                                    VerticalContentAlignment="Center"
-                                                    Text="{Binding SelectedSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                                        Grid.Row="1"
+                                                        Grid.Column="0"
+                                                        HorizontalContentAlignment="Center"
+                                                        VerticalContentAlignment="Center"
+                                                        Content="{x:Static resx:Resources.AxisX}" />
+                                                    <TextBox
+                                                        Grid.Row="1"
+                                                        Grid.Column="1"
+                                                        HorizontalContentAlignment="Center"
+                                                        VerticalContentAlignment="Center"
+                                                        Text="{Binding SelectedSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                                 </Grid>
                                             </Grid>
 
-                                            
-                                            
+
+
                                             <Label
                                                 Grid.Row="1"
                                                 Grid.Column="0"
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
                                                 Content="{x:Static resx:Resources.AxisY}" />
-                                            <Slider Grid.Row="1"
-                                                Grid.Column="1" Minimum="-127"
-                                                Value="{Binding Path=SelectedSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                                Maximum="127" 
-                                                TickFrequency="1" IsSnapToTickEnabled="True"/>
-                                            <Grid Grid.Column="1" Grid.Row="1" ShowGridLines="False">
+                                            <Slider
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                IsSnapToTickEnabled="True"
+                                                Maximum="127"
+                                                Minimum="-127"
+                                                TickFrequency="1"
+                                                Value="{Binding Path=SelectedSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                            <Grid
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                ShowGridLines="False">
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="*" />
                                                     <RowDefinition Height="*" />
                                                 </Grid.RowDefinitions>
-                                                <Separator HorizontalAlignment="Stretch" Background="Silver"/>
+                                                <Separator HorizontalAlignment="Stretch" Background="Silver" />
                                                 <Grid Grid.Row="1" ShowGridLines="False">
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*" />
                                                         <ColumnDefinition Width="*" />
                                                     </Grid.ColumnDefinitions>
-                                                    
-                                                        <Label
-                                                    Grid.Row="1"
-                                                    Grid.Column="0"
-                                                    HorizontalContentAlignment="Center"
-                                                    VerticalContentAlignment="Center"
-                                                    Content="{x:Static resx:Resources.AxisY}" />
-                                                   
-                                                    <TextBox Grid.Row="1"
-                                                    Grid.Column="1"
-                                                    HorizontalContentAlignment="Center"
-                                                    VerticalContentAlignment="Center"
-                                                    Text="{Binding SelectedSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                                                   
+
+                                                    <Label
+                                                        Grid.Row="1"
+                                                        Grid.Column="0"
+                                                        HorizontalContentAlignment="Center"
+                                                        VerticalContentAlignment="Center"
+                                                        Content="{x:Static resx:Resources.AxisY}" />
+
+                                                    <TextBox
+                                                        Grid.Row="1"
+                                                        Grid.Column="1"
+                                                        HorizontalContentAlignment="Center"
+                                                        VerticalContentAlignment="Center"
+                                                        Text="{Binding SelectedSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
                                                 </Grid>
-                                               
+
                                             </Grid>
-                                           
+
                                         </Grid>
-                                        
+
 
                                     </Grid>
 
@@ -685,7 +684,7 @@
                 Background="Transparent"
                 IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=ControllerFlagsEditing}"
                 Opacity="0"
-                RenderTransformOrigin="0.5,0.5" >
+                RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
                     <ScaleTransform />
                 </Grid.RenderTransform>
@@ -1416,21 +1415,19 @@
                 </Style>
             </Grid.Style>
 
-            <Rectangle
+            <Ellipse
                 Grid.RowSpan="2"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
-                Fill="White"
-                RadiusX="30"
-                RadiusY="30">
-                <Rectangle.Effect>
+                Fill="White">
+                <Ellipse.Effect>
                     <DropShadowEffect
                         BlurRadius="30"
                         Direction="0"
                         ShadowDepth="0" />
-                </Rectangle.Effect>
-            </Rectangle>
+                </Ellipse.Effect>
+            </Ellipse>
             <Image
                 Grid.Row="0"
                 Grid.Column="0"

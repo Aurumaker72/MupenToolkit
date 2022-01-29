@@ -17,7 +17,14 @@ namespace MupenToolkit.Core.UI
 
 
             openFileDialog.InitialDirectory = "C:\\";
-            openFileDialog.Filter = String.Format("Movie files (*.{0})|*.{0}|All files(*.*)|*.*", InfoProvider.FILE_EXTENSION);
+            string filter = "Movie files |";
+            for (int i = 0; i < InfoProvider.VALID_FILE_EXTENSIONS.Length; i++)
+            {
+                string? item = InfoProvider.VALID_FILE_EXTENSIONS[i];
+                if(i == InfoProvider.VALID_FILE_EXTENSIONS.Length-1) filter += ($"*.{item}");
+                else filter += String.Format("*.{0};", item);
+            }
+            openFileDialog.Filter = filter;
             openFileDialog.Title = "Select a Movie";
             openFileDialog.FilterIndex = 0;
             openFileDialog.RestoreDirectory = true;
@@ -32,8 +39,15 @@ namespace MupenToolkit.Core.UI
 
 
             saveFileDialog.InitialDirectory = "C:\\";
-            saveFileDialog.Filter = String.Format("Movie files (*.{0})|*.{0}|All files(*.*)|*.*", InfoProvider.FILE_EXTENSION);
-            saveFileDialog.Title = "Select a Movie";
+            string filter = "Movie files |";
+            for (int i = 0; i < InfoProvider.VALID_FILE_EXTENSIONS.Length; i++)
+            {
+                string? item = InfoProvider.VALID_FILE_EXTENSIONS[i];
+                if (i == InfoProvider.VALID_FILE_EXTENSIONS.Length - 1) filter += ($"*.{item}");
+                else filter += String.Format("*.{0};", item);
+            }
+            saveFileDialog.Filter = filter;
+                saveFileDialog.Title = "Select a Movie";
             saveFileDialog.FilterIndex = 0;
             saveFileDialog.RestoreDirectory = true;
             var result = saveFileDialog.ShowDialog();

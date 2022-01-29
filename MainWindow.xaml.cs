@@ -43,13 +43,13 @@ namespace MupenToolkit
                 MessageBox.Show(Properties.Resources.DragDropTooMany, Title, MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
-            if (!PathHelper.ValidPath(fName, "m64"))
+            if (!PathHelper.ValidPath(fName))
             {
                 stateContainer.Error.Message = MupenToolkit.Properties.Resources.NotAMovie;
                 stateContainer.Error.Visible ^= true;
                 return;
             }
-            MovieManager.LoadMovie(stateContainer, fName);
+            MovieManager.AttemptLoad(stateContainer, fName);
 
 
         }

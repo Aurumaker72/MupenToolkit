@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MupenToolkit.Core.Provider;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,27 +10,6 @@ namespace MupenToolkit.Core.Helper
 {
     public static class PathHelper
     {
-        public static bool ValidPath(string path, string searchExt)
-        {
-            bool isValid = true;
-
-            try
-            {
-                string fullPath = Path.GetFullPath(path);
-                if (false)
-                    isValid = Path.IsPathRooted(path);
-                else
-                {
-                    string root = Path.GetPathRoot(path);
-                    isValid = string.IsNullOrEmpty(root.Trim(new char[] { '\\', '/' })) == false;
-                }
-                if (!Path.GetExtension(path).Contains(searchExt, StringComparison.InvariantCultureIgnoreCase)) return false;
-            }
-            catch { isValid = false; }
-
-            return isValid;
-        }
-
         public static bool ValidPath(string path)
         {
             bool isValid = true;
@@ -44,10 +24,13 @@ namespace MupenToolkit.Core.Helper
                     string root = Path.GetPathRoot(path);
                     isValid = string.IsNullOrEmpty(root.Trim(new char[] { '\\', '/' })) == false;
                 }
+                return (InfoProvider.VALID_FILE_EXTENSIONS.Where(ext => Path.GetExtension(path).Contains(ext, StringComparison.InvariantCultureIgnoreCase))).Count() > 0;
+                
             }
             catch { isValid = false; }
 
             return isValid;
         }
+
     }
 }

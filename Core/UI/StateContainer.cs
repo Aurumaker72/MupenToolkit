@@ -43,7 +43,8 @@ namespace MupenToolkit.Core.UI
         public bool Busy { get; set; } = false;
         public bool FileLoaded { get; set; } = false;
         public UIError Error { get; set; } = new();
-        public string Mode { get; set; } = "None"; // this is horrible!
+        public string Mode { get; set; } = "None";
+        public Provider.InfoProvider.InteractionTypes InteractionMode { get; set; } = Provider.InfoProvider.InteractionTypes.None;
         public ObservableCollection<Statistic> Statistics { get; set; } = new();
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
         public int CurrentSampleIndex { get; set; }
