@@ -37,3 +37,4 @@ If I did something the way I did, there is a good reason.
   - When saving, writing every primitive property manually to stream with `BinaryWriter` and manually resizing and "reinterpreting" dynamic `string` types is required, as this guarantees `0x400` size header. The input saving is inefficient but after some tinkering I ran into same dynamic managed sizing barriers, so this way will remain. :trollface:   
   - Bit operations and other hacks are endian dependant
   - The reason for the speed increase is hardware acceleration, smarter code and TASStudio improvements. Some obscure WPF knowledge and hacks are used to speed up the TASStudio rendering.
+  - WPF hack reduces TASStudio layout time complexity from O(n^r), with r being the rows to O(1)
