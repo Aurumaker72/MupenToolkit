@@ -264,7 +264,7 @@ namespace MupenToolkit.Core.Movie
                 if (BitopHelper.GetBit(header.ControllerFlags.Raw, i)) controllers++;
             if (controllers == 0)
             {
-                return (Sentiment.Fail, new Interaction.UIError(Properties.Resources.NoControllers, Properties.Resources.NoControllers), notifications);
+                MessageBox.Show(Properties.Resources.NoControllers, Properties.Resources.SaveData, MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.None);
             }
 
             br.BaseStream.Seek(1024, SeekOrigin.Begin);
