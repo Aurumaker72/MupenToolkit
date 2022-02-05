@@ -131,38 +131,40 @@ namespace MupenToolkit.Core.Movie
         {
             BinaryReader br = new BinaryReader(fs);
             ObservableCollection<ObservableCollection<Sample>> inputs = new();
-            ObservableCollection<int> lens = new ();
-            ObservableCollection<string> names = new ();
-          
-            // TODO: rewrite this dangerous mess
-            char c;
-            char[] name = new char[260];
-            c = br.ReadChar();
-            int cmbs = 0;
-            while (c != -1)
+            ObservableCollection<int> lens = new();
+            ObservableCollection<string> names = new();
+
+            int combosRead = 0;
+            bool goOn = true;
+
+            while (goOn)
             {
-                inputs.Add(new ObservableCollection<Sample>());
-                int i = 0;
-                while (c > 0)
+                if (br.PeekChar() == -1) break;
+
+                StringBuilder comboName = new();
+                
+
+                char last = 'A';
+                while(last != '\0')
                 {
-                    name[i] = c;
-                    c = br.ReadChar();
-                    i++;
+                    var c = br.ReadChar();
+                    last = c;
+                    comboName.Append(c);
                 }
-                name[i++] = '\0';
-                names.Add(new String(name));
+                names.Add(comboName.ToString());
 
-                if (br.BaseStream.Position + sizeof(int) >= br.BaseStream.Length)
-                    break;
-
-                lens.Add(br.ReadInt32());
-
-                while (br.BaseStream.Position + sizeof(int) < br.BaseStream.Length)
+                var len = br.ReadInt32();
+                lens.Add(len);
+                inputs.Add(new());
+                int samplesRead = 0;
+                while(samplesRead < len)
                 {
-                    inputs[cmbs].Add(new Sample(br.ReadInt32()));
+                    inputs[combosRead].Add(new Sample(br.ReadInt32()));
+                    samplesRead ++;
                 }
-                c = br.ReadChar();
-                cmbs++;
+
+                combosRead++;
+                break;
             }
 
 
@@ -230,7 +232,7 @@ namespace MupenToolkit.Core.Movie
                 notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.Author));
             if (header.Description.Length > 256)
                 notifications.Add(String.Format(Properties.Resources.TooLongStringNotificationFormat, Properties.Resources.Description));
-
+            
             gfx = Encoding.ASCII.GetBytes(header.VideoPluginName);
             audio = Encoding.ASCII.GetBytes(header.AudioPluginName);
             input = Encoding.ASCII.GetBytes(header.InputPluginName);
@@ -282,6 +284,31 @@ namespace MupenToolkit.Core.Movie
             return (Sentiment.Success, null, notifications);
         }
 
+        public static (Sentiment Sentiment, Interaction.UIError? Error) SaveCombo(FileStream fs, List<Combo> cmbs, ObservableCollection<ObservableCollection<Sample>> inputs)
+
+        {
+            BinaryWriter br = new BinaryWriter(fs);
+
+            try
+            {
+                for (int i = 0; i < cmbs.Count; i++)
+                {
+                    br.Write(cmbs[i].Name);
+                    br.Write(cmbs[i].Length);
+                    for (int j = 0; j < inputs[i].Count; j++)
+                    {
+                        br.Write(inputs[i][j].Raw);
+                    }
+                }
+            }
+            catch
+            {
+                return (Sentiment.Fail, new UIError("Combo error", "Out of bounds"));
+            }
+            return (Sentiment.Success, null);
+        }
+
+
 
         public static void AttemptLoad(StateContainer mwv, string path)
         {
@@ -295,19 +322,19 @@ namespace MupenToolkit.Core.Movie
             mwv.Busy = true;
 
             // Reset containers
-            mwv.Header = new();
+            mwv.Movie = new();
             mwv.Input = new();
 
             var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-            var ext = Path.GetExtension(path).Remove(0,1).ToLower();
+            var ext = Path.GetExtension(path).Remove(0, 1).ToLower();
             if (ext.Trim() == String.Empty)
             {
                 mwv.Error.Message = MupenToolkit.Properties.Resources.PathError;
                 mwv.Error.Visible ^= true;
                 return;
             }
-                // Yes, this could have been done with 4 lines but expandability or something
-                if (ext == "m64")
+            // Yes, this could have been done with 4 lines but expandability or something
+            if (ext == "m64")
             {
                 var headerParsingStatus = MovieManager.ParseM64Header(fs);
                 if (headerParsingStatus.Status == Core.Interaction.Status.Sentiment.Fail || headerParsingStatus.Header == null)
@@ -318,7 +345,7 @@ namespace MupenToolkit.Core.Movie
                     return;
                 }
                 else
-                    mwv.Header = headerParsingStatus.Header;
+                    mwv.Movie.Header = headerParsingStatus.Header;
 
                 var stat2 = MovieManager.ParseM64Inputs(fs, headerParsingStatus.Header);
                 if (stat2.Status == Core.Interaction.Status.Sentiment.Fail || stat2.Inputs == null)
@@ -330,6 +357,8 @@ namespace MupenToolkit.Core.Movie
                 }
                 else
                     mwv.Input.Samples = stat2.Inputs;
+                mwv.InteractionMode = Provider.InfoProvider.InteractionTypes.M64;
+
             }
             else if (ext == "cmb")
             {
@@ -343,14 +372,24 @@ namespace MupenToolkit.Core.Movie
                 }
                 else
                 {
+                    //mwv.Input.Samples = ret.Inputs;
+                    //mwv.Header.Author = ret.Names[mwv.CurrentController]; // TODO: this is temporary and for debugging: implement separate ui!
+                    //mwv.Header.LengthSamples = (uint)ret.Lengths[mwv.CurrentController];
+                    mwv.Combos.Clear();
+                    for (int i = 0; i < ret.Lengths.Count; i++)
+                    {
+                        mwv.Combos.Add(new Combo(ret.Names[i], ret.Lengths[i]));
+                    }
                     mwv.Input.Samples = ret.Inputs;
-                    mwv.Header.Author = ret.Names[mwv.CurrentController]; // TODO: this is temporary and for debugging: implement separate ui!
-                    mwv.Header.LengthSamples = (uint)ret.Lengths[mwv.CurrentController];
                 }
+                mwv.InteractionMode = Provider.InfoProvider.InteractionTypes.Combo;
+
             }
             else
             {
                 MessageBox.Show("Invalid program state " + ext);
+                mwv.InteractionMode = Provider.InfoProvider.InteractionTypes.None;
+                return;
             }
 
 
@@ -358,9 +397,7 @@ namespace MupenToolkit.Core.Movie
 
 
             mwv.Busy = false;
-
             mwv.Mode = "General";
-            mwv.InteractionMode = Provider.InfoProvider.InteractionTypes.M64;
             mwv.FileLoaded = true;
             Properties.Settings.Default.MovieLastPath = path;
             Properties.Settings.Default.Save();

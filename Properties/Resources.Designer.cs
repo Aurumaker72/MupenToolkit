@@ -331,6 +331,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Diagnosis.
+        /// </summary>
+        public static string DataDiagnosis {
+            get {
+                return ResourceManager.GetString("DataDiagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo.
         /// </summary>
         public static string Demo {
@@ -538,6 +547,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select File.
+        /// </summary>
+        public static string LoadData {
+            get {
+                return ResourceManager.GetString("LoadData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] loading {
@@ -548,20 +566,11 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Load Last Movie.
+        ///   Looks up a localized string similar to Load Last.
         /// </summary>
-        public static string LoadLastMovie {
+        public static string LoadLast {
             get {
-                return ResourceManager.GetString("LoadLastMovie", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select Movie.
-        /// </summary>
-        public static string LoadMovie {
-            get {
-                return ResourceManager.GetString("LoadMovie", resourceCulture);
+                return ResourceManager.GetString("LoadLast", resourceCulture);
             }
         }
         
@@ -599,15 +608,6 @@ namespace MupenToolkit.Properties {
         public static string Mempak {
             get {
                 return ResourceManager.GetString("Mempak", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Movie Diagnosis.
-        /// </summary>
-        public static string MovieDiagnosis {
-            get {
-                return ResourceManager.GetString("MovieDiagnosis", resourceCulture);
             }
         }
         
@@ -747,20 +747,20 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save As.
+        /// </summary>
+        public static string SaveData {
+            get {
+                return ResourceManager.GetString("SaveData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to save.
         /// </summary>
         public static string SaveFailed {
             get {
                 return ResourceManager.GetString("SaveFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Save Movie.
-        /// </summary>
-        public static string SaveMovie {
-            get {
-                return ResourceManager.GetString("SaveMovie", resourceCulture);
             }
         }
         
@@ -927,11 +927,11 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close Movie.
+        ///   Looks up a localized string similar to Back.
         /// </summary>
-        public static string UnloadMovie {
+        public static string UnloadData {
             get {
-                return ResourceManager.GetString("UnloadMovie", resourceCulture);
+                return ResourceManager.GetString("UnloadData", resourceCulture);
             }
         }
         

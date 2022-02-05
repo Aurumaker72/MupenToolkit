@@ -144,7 +144,7 @@
                                     <DataGridCheckBoxColumn Binding="{Binding L, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="L" />
                                     <DataGridTextColumn Binding="{Binding X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="X" />
                                     <DataGridTextColumn Binding="{Binding Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Y" />
-                                    <!--  HACK: setting last column fixed size will prevent "chain" repaint  -->
+                                    <!--  HACK: setting column fixed size will O(n^r) layouting time  -->
                                 </DataGrid.Columns>
                             </ui:ExtendedDataGrid>
 
@@ -184,10 +184,7 @@
                                                     HorizontalAlignment="Center"
                                                     VerticalAlignment="Center"
                                                     RenderTransformOrigin="0.5,0.5">
-
-
                                                     <!--  INFO: The ViewModel will explode if Command in InputBinding is not found, this is a WPF Bug!  -->
-
                                                     <Canvas.RenderTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform ScaleX="1" ScaleY="1" />
@@ -538,7 +535,59 @@
 
                 </Grid>
 
-                <Grid Margin="20" ShowGridLines="False">
+
+                <Grid Margin="20" ShowGridLines="False" Visibility="{Binding Path=InteractionMode, Converter={StaticResource ValueToEqualsParameterVisibilityConverter}, ConverterParameter=Combo}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="{x:Static resx:Resources.Name}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="Transparent"
+                        Text="{Binding SelectedCombo.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="{x:Static resx:Resources.LengthSamples}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="Transparent"
+                        Text="{Binding SelectedCombo.Length, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    
+                </Grid>
+
+                <Grid Margin="20" ShowGridLines="False" Visibility="{Binding Path=InteractionMode, Converter={StaticResource ValueToEqualsParameterVisibilityConverter}, ConverterParameter=M64}">
+                    
                     <!--  Header  -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*" />
@@ -571,7 +620,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Author, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.Author, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="1"
                         Grid.Column="0"
@@ -584,7 +633,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="2"
                         Grid.Column="0"
@@ -597,7 +646,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.RomName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.RomName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Button
                         Grid.Row="3"
                         Grid.Column="0"
@@ -615,7 +664,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.RomCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.RomCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Separator
                         Grid.Row="4"
@@ -637,7 +686,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Rerecords, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.Rerecords, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="6"
                         Grid.Column="0"
@@ -650,7 +699,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.LengthSamples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.LengthSamples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Button
                         Grid.Row="7"
                         Grid.Column="0"
@@ -668,7 +717,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
-                        Text="{Binding Header.Controllers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Movie.Header.Controllers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 </Grid>
 
@@ -764,7 +813,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller0Connected, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller0Connected, Mode=TwoWay}" />
                     <Label
                         Grid.Row="3"
                         Grid.Column="0"
@@ -776,7 +825,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller0Mempak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller0Mempak, Mode=TwoWay}" />
                     <Label
                         Grid.Row="4"
                         Grid.Column="0"
@@ -788,7 +837,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller0Rumblepak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller0Rumblepak, Mode=TwoWay}" />
 
                     <Label
                         Grid.Row="5"
@@ -813,7 +862,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller1Connected, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller1Connected, Mode=TwoWay}" />
                     <Label
                         Grid.Row="8"
                         Grid.Column="0"
@@ -825,7 +874,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller1Mempak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller1Mempak, Mode=TwoWay}" />
                     <Label
                         Grid.Row="9"
                         Grid.Column="0"
@@ -837,7 +886,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller1Rumblepak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller1Rumblepak, Mode=TwoWay}" />
 
                     <Label
                         Grid.Row="10"
@@ -862,7 +911,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller2Connected, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller2Connected, Mode=TwoWay}" />
                     <Label
                         Grid.Row="13"
                         Grid.Column="0"
@@ -874,7 +923,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller2Mempak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller2Mempak, Mode=TwoWay}" />
                     <Label
                         Grid.Row="14"
                         Grid.Column="0"
@@ -886,7 +935,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller2Rumblepak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller2Rumblepak, Mode=TwoWay}" />
 
                     <Label
                         Grid.Row="15"
@@ -911,7 +960,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller3Connected, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller3Connected, Mode=TwoWay}" />
                     <Label
                         Grid.Row="18"
                         Grid.Column="0"
@@ -923,7 +972,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller3Mempak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller3Mempak, Mode=TwoWay}" />
                     <Label
                         Grid.Row="19"
                         Grid.Column="0"
@@ -935,7 +984,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        IsChecked="{Binding Path=Header.ControllerFlags.Controller3Rumblepak, Mode=TwoWay}" />
+                        IsChecked="{Binding Path=Movie.Header.ControllerFlags.Controller3Rumblepak, Mode=TwoWay}" />
 
 
 
@@ -1014,7 +1063,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="69"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="1"
@@ -1029,7 +1078,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="65"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="2"
@@ -1044,7 +1093,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="68"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="3"
@@ -1059,7 +1108,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="70"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="4"
@@ -1074,7 +1123,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="73"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="5"
@@ -1089,7 +1138,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="74"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label
                         Grid.Row="6"
@@ -1104,7 +1153,7 @@
                         VerticalContentAlignment="Center"
                         Command="{Binding CountryChanged}"
                         CommandParameter="83"
-                        IsChecked="{Binding Path=Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83, UpdateSourceTrigger=PropertyChanged}" />
+                        IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83, UpdateSourceTrigger=PropertyChanged}" />
 
                 </Grid>
 
@@ -1312,8 +1361,8 @@
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button
-                    Command="{Binding LoadMovie}"
-                    Content="{x:Static resx:Resources.LoadMovie}"
+                    Command="{Binding LoadData}"
+                    Content="{x:Static resx:Resources.LoadData}"
                     FontSize="16"
                     Style="{StaticResource ReactiveButton}" />
             </StackPanel>
@@ -1463,20 +1512,20 @@
                     </Style>
                 </MenuItem.Style>-->
 
-                <MenuItem Command="{Binding LoadMovie}" Header="{x:Static resx:Resources.LoadMovie}" />
-                <MenuItem Command="{Binding LoadLastMovie}" Header="{x:Static resx:Resources.LoadLastMovie}" />
+                <MenuItem Command="{Binding LoadData}" Header="{x:Static resx:Resources.LoadData}" />
+                <MenuItem Command="{Binding LoadLast}" Header="{x:Static resx:Resources.LoadLast}" />
 
                 <MenuItem
-                    Command="{Binding SaveMovie}"
-                    Header="{x:Static resx:Resources.SaveMovie}"
+                    Command="{Binding SaveData}"
+                    Header="{x:Static resx:Resources.SaveData}"
                     IsEnabled="{Binding FileLoaded}" />
                 <MenuItem
-                    Command="{Binding DiagnoseMovie}"
-                    Header="{x:Static resx:Resources.MovieDiagnosis}"
+                    Command="{Binding DiagnoseData}"
+                    Header="{x:Static resx:Resources.DataDiagnosis}"
                     IsEnabled="{Binding FileLoaded}" />
                 <!--<MenuItem Command="{Binding BypassMovie}" Header="{x:Static resx:Resources.BypassMovie}"/>-->
                 <Separator />
-                <MenuItem Command="{Binding UnloadMovie}" Header="{x:Static resx:Resources.UnloadMovie}" />
+                <MenuItem Command="{Binding UnloadData}" Header="{x:Static resx:Resources.UnloadData}" />
             </MenuItem>
         </Menu>
 

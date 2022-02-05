@@ -19,25 +19,49 @@ namespace MupenToolkit.Core.UI
     [NotifyPropertyChanged]
     public class StateContainer : INotifyPropertyChanged
     {
+        public ICommand LoadData { get; set; }
+        public ICommand LoadLast { get; set; }
+        public ICommand UnloadData { get; set; }
+        public ICommand SaveData { get; set; }
+        public ICommand EditControllerFlags { get; set; }
+        public ICommand EditCountry { get; set; }
+        public ICommand InputStatistics { get; set; }
+        public ICommand CountryChanged { get; set; }
+        public ICommand DiagnoseData { get; set; }
+        public ICommand BypassMovie { get; set; }
+        public ICommand SampleIndexChange { get; set; }
+        public ICommand JoystickClick { get; set; }
+
         public StateContainer()
         {
-            LoadMovie = new LoadMovieCommand { mwv = this };
-            UnloadMovie = new UnloadMovieCommand { mwv = this };
-            SaveMovie = new SaveMovieCommand { mwv = this };
+            LoadData = new LoadDataCommand { mwv = this };
+            UnloadData = new UnloadDataCommand { mwv = this };
+            SaveData = new SaveDataCommand { mwv = this };
             EditControllerFlags = new EditControllerFlagsCommand { mwv = this };
             EditCountry = new EditCountryCommand { mwv = this };
             InputStatistics = new InputStatisticsCommand { mwv = this };
             CountryChanged = new CountryChangedCommand { mwv = this };
-            DiagnoseMovie = new MovieDiagnosisCommand { mwv = this };
+            DiagnoseData = new DataDiagnosisCommand { mwv = this };
             BypassMovie = new BypassMovieCommand { mwv = this };
-            LoadLastMovie = new LoadLastMovieCommand { mwv = this };
+            LoadLast = new LoadLastCommand { mwv = this };
             SampleIndexChange = new SampleIndexChangeCommand { mwv = this };
             JoystickClick = new JoystickClickCommand { mwv=this};
             CanvasClickCommand = new RelayCommand(ExecuteCanvasClickCommand, CanExecuteCanvasClickCommand);
 
         }
-        public Movie.MovieHeader Header { get; set; } = new();
+        /// <summary>
+        /// Storage class for M64
+        /// </summary>
+        public Movie.Movie Movie { get; set; } = new();
+        /// <summary>
+        /// Storage class for CMB
+        /// </summary>
+        public List<Movie.Combo> Combos { get; set; } = new();
+        /// <summary>
+        /// Global input container for inputs interaction and saving
+        /// </summary>
         public Movie.InputContainer Input { get; set; } = new();
+
 
         public int CurrentController { get; set; } = 0;
         public bool Busy { get; set; } = false;
@@ -49,16 +73,33 @@ namespace MupenToolkit.Core.UI
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
         public int CurrentSampleIndex { get; set; }
 
-        public Sample _SelectedSample;
         public Sample SelectedSample
         {
-            get {
+            get
+            {
+
                 if (CurrentController < Input.Samples.Count && CurrentSampleIndex < Input.Samples[CurrentController].Count)
                     return Input.Samples[CurrentController][CurrentSampleIndex];
                 else
-                    return null; // TODO: ??? Dont just throw null bomb
-            }
+                    return null; // TODO: error handling
 
+            }
+        }
+
+        public Combo SelectedCombo
+        {
+            get
+            {
+                if (InteractionMode != Provider.InfoProvider.InteractionTypes.Combo)
+                {
+                    //throw new ArgumentException("Invalid program state");
+                    return null;
+                }
+
+                if (CurrentController < Combos.Count && CurrentController >= 0)
+                    return Combos[CurrentController];
+                else return null;// TODO: error handling
+            }
         }
 
 
@@ -98,18 +139,7 @@ namespace MupenToolkit.Core.UI
 
 
 
-        public ICommand LoadMovie { get; set; }
-        public ICommand LoadLastMovie { get; set; }
-        public ICommand UnloadMovie { get; set; }
-        public ICommand SaveMovie { get; set; }
-        public ICommand EditControllerFlags { get; set; }
-        public ICommand EditCountry { get; set; }
-        public ICommand InputStatistics { get; set; }
-        public ICommand CountryChanged { get; set; }
-        public ICommand DiagnoseMovie { get; set; }
-        public ICommand BypassMovie { get; set; }
-        public ICommand SampleIndexChange { get; set; }
-        public ICommand JoystickClick { get; set; }
+       
         
 
         

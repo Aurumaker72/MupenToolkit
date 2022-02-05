@@ -17,7 +17,7 @@ namespace MupenToolkit.Core.UI
     
 
 
-    public class LoadMovieCommand : ICommand
+    public class LoadDataCommand : ICommand
     {
         public StateContainer mwv;
         public bool CanExecute(object parameter)
@@ -46,7 +46,7 @@ namespace MupenToolkit.Core.UI
         }
     }
     
-    public class LoadLastMovieCommand : ICommand
+    public class LoadLastCommand : ICommand
     {
         public StateContainer mwv;
         public bool CanExecute(object parameter)
@@ -86,7 +86,7 @@ namespace MupenToolkit.Core.UI
         }
     }
 
-    public class UnloadMovieCommand : ICommand
+    public class UnloadDataCommand : ICommand
     {
         public StateContainer mwv;
         public bool CanExecute(object parameter)
@@ -100,7 +100,7 @@ namespace MupenToolkit.Core.UI
         }
         public void Execute(object parameter)
         {
-            mwv.Header = new();
+            mwv.Movie.Header = new();
             mwv.Input = new();
 
             mwv.FileLoaded = false;
@@ -192,7 +192,7 @@ namespace MupenToolkit.Core.UI
 
     
 
-    public class MovieDiagnosisCommand : ICommand
+    public class DataDiagnosisCommand : ICommand
     {
         public StateContainer mwv;
         public bool CanExecute(object parameter)
@@ -209,7 +209,7 @@ namespace MupenToolkit.Core.UI
             if (!mwv.FileLoaded) return; // ???
             mwv.Mode = mwv.Mode == "MovieDiagnosis" ? "General" : "MovieDiagnosis";
             if (mwv.Mode == "MovieDiagnosis")
-                mwv.Diagnosis = MovieDiagnosis.GetDiagnosis();
+                mwv.Diagnosis = mwv.InteractionMode == Provider.InfoProvider.InteractionTypes.M64 ? DataDiagnosis.GetMovieDiagnosis() : DataDiagnosis.GetComboDiagnosis();
 
         }
     }
@@ -228,7 +228,7 @@ namespace MupenToolkit.Core.UI
         public void Execute(object parameter)
         {
             var ccode = (ushort.Parse((string)(parameter)));
-            mwv.Header.RomCountry = ccode;
+            mwv.Movie.Header.RomCountry = ccode;
         }
 
     }
@@ -250,12 +250,14 @@ namespace MupenToolkit.Core.UI
             if (parameter == null) return;
             var i = int.Parse((string)parameter);
             //if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Header.LengthSamples) return;
+            // i = increment
+            if (mwv.CurrentController > mwv.Input.Samples.Count || mwv.CurrentController < 0) return;
             if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Input.Samples[mwv.CurrentController].Count) return;
             mwv.CurrentSampleIndex += i;
         }
 
     }
-    public class SaveMovieCommand : ICommand
+    public class SaveDataCommand : ICommand
     {
         public StateContainer mwv;
         public bool CanExecute(object parameter)
@@ -289,21 +291,39 @@ namespace MupenToolkit.Core.UI
 #endif
             fs = File.Open(shellReturn.ReturnedPath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
             br = new BinaryWriter(fs);
-            var status = MovieManager.SaveMovie(fs, mwv.Header, mwv.Input.Samples);
-            if (status.notifications.Count > 0)
-            {
-                string final = string.Empty;
-                foreach (var item in status.notifications)
-                    final += item + "\n";
-                MessageBox.Show(final, Properties.Resources.SaveMovie, MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.None);
-            }
-            if (status.Sentiment == Status.Sentiment.Fail)
-            {
-                mwv.Error.Message = status.Error.Message;
-                mwv.Error.Visible ^= true;
-                mwv.Busy = false;
-                return;
-            }
+                if (mwv.InteractionMode == Provider.InfoProvider.InteractionTypes.M64)
+                {
+                    var status = MovieManager.SaveMovie(fs, mwv.Movie.Header, mwv.Input.Samples);
+                    if (status.notifications.Count > 0)
+                    {
+                        string final = string.Empty;
+                        foreach (var item in status.notifications)
+                            final += item + "\n";
+                        MessageBox.Show(final, Properties.Resources.SaveData, MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK, MessageBoxOptions.None);
+                    }
+                    if (status.Sentiment == Status.Sentiment.Fail)
+                    {
+                        mwv.Error.Message = status.Error.Message;
+                        mwv.Error.Visible ^= true;
+                        mwv.Busy = false;
+                        return;
+                    }
+                }
+                else if (mwv.InteractionMode == Provider.InfoProvider.InteractionTypes.Combo)
+                {
+                    var status = MovieManager.SaveCombo(fs, mwv.Combos, mwv.Input.Samples);
+                    if (status.Sentiment == Status.Sentiment.Fail)
+                    {
+                        mwv.Error.Message = status.Error.Message;
+                        mwv.Error.Visible ^= true;
+                        mwv.Busy = false;
+                        return;
+                    }
+                }
+                else
+                {
+                    throw new NotImplementedException("Unimplemented mode");
+                }
 #if !DEBUG
         }
             catch
@@ -313,48 +333,6 @@ namespace MupenToolkit.Core.UI
                 mwv.Busy = false;
             }
 #endif
-            //char[] romName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.RomName)).ToCharArray();
-            //Array.Resize(ref romName, 32);
-
-            //char[] videoPluginName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.VideoPluginName)).ToCharArray();
-            //Array.Resize(ref videoPluginName, 64);
-            //char[] audioPluginName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.AudioPluginName)).ToCharArray();
-            //Array.Resize(ref audioPluginName, 64);
-            //char[] inputPluginName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.InputPluginName)).ToCharArray();
-            //Array.Resize(ref inputPluginName, 64);
-            //char[] rspPluginName = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(mwv.Header.RSPPluginName)).ToCharArray();
-            //Array.Resize(ref rspPluginName, 64);
-            //char[] author = Encoding.UTF8.GetString(Encoding.ASCII.GetBytes(mwv.Header.Author)).ToCharArray();
-            //Array.Resize(ref author, 222);
-            //char[] description = Encoding.UTF8.GetString(Encoding.ASCII.GetBytes(mwv.Header.Description)).ToCharArray();
-            //Array.Resize(ref description, 256);
-
-
-            //br.Write(mwv.Header.Magic);
-            //br.Write(mwv.Header.Version);
-            //br.Write(mwv.Header.UID);
-            //br.Write(mwv.Header.LengthVIs);
-            //br.Write(mwv.Header.Rerecords);
-            //br.Write(mwv.Header.VIsPerSecond);
-            //br.Write(mwv.Header.Controllers);
-            //br.Seek(sizeof(short), SeekOrigin.Current);
-            //br.Write(mwv.Header.LengthSamples);
-            //br.Write(mwv.Header.StartFlags);
-            //br.Seek(sizeof(short), SeekOrigin.Current);
-            //br.Write(mwv.Header.ControllerFlags);
-            //br.Seek(sizeof(uint), SeekOrigin.Current); // reservedFlags 
-            //br.Seek(48, SeekOrigin.Current);
-            //br.Seek(80, SeekOrigin.Current);
-            //br.Write(romName);
-            //br.Write(mwv.Header.RomCRC);
-            //br.Write(mwv.Header.RomCountry);
-            //br.Seek(56, SeekOrigin.Current);
-            //br.Write(videoPluginName);
-            //br.Write(audioPluginName);
-            //br.Write(inputPluginName);
-            //br.Write(rspPluginName);
-            //br.Write(author);
-            //br.Write(description);
             if (br != null) br.Flush();
             if (br != null) br.Close();
             if (fs != null) fs.Close();

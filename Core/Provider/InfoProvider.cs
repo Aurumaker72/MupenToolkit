@@ -8,12 +8,13 @@ namespace MupenToolkit.Core.Provider
 {
     public static class InfoProvider
     {
-        public static readonly string[] VALID_FILE_EXTENSIONS = new string[] { "m64", "cmb"};
-        public enum InteractionTypes { 
-        None,
-        M64,
-        Combo,
+        public static readonly string[] VALID_FILE_EXTENSIONS = new string[] { "m64", "cmb" };
+        public enum InteractionTypes
+        {
+            None,
+            M64,
+            Combo,
         }
-        
+
     }
 }

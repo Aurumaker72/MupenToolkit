@@ -288,7 +288,23 @@ namespace MupenToolkit.Core.UI
             return null;
         }
     }
-    public class CurrentModeToEqualsParameterConverter : IValueConverter
+
+    public class ValueToEqualsParameterVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) throw new ArgumentException("Can\'t be null");
+
+            return value.ToString() == parameter.ToString() ? Visibility.Visible : Visibility.Collapsed;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+
+public class CurrentModeToEqualsParameterConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

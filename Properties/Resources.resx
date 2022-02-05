@@ -207,6 +207,9 @@
   <data name="CPadUp" xml:space="preserve">
     <value>C^</value>
   </data>
+  <data name="DataDiagnosis" xml:space="preserve">
+    <value>Diagnosis</value>
+  </data>
   <data name="Demo" xml:space="preserve">
     <value>Demo</value>
   </data>
@@ -276,15 +279,15 @@
   <data name="LengthSamples" xml:space="preserve">
     <value>Length (Samples)</value>
   </data>
+  <data name="LoadData" xml:space="preserve">
+    <value>Select File</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.gif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LoadLastMovie" xml:space="preserve">
-    <value>Load Last Movie</value>
-  </data>
-  <data name="LoadMovie" xml:space="preserve">
-    <value>Select Movie</value>
+  <data name="LoadLast" xml:space="preserve">
+    <value>Load Last</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -297,9 +300,6 @@
   </data>
   <data name="Mempak" xml:space="preserve">
     <value>Mempak</value>
-  </data>
-  <data name="MovieDiagnosis" xml:space="preserve">
-    <value>Movie Diagnosis</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
@@ -346,11 +346,11 @@
   <data name="SaveAlignment" xml:space="preserve">
     <value>Save is misaligned!</value>
   </data>
+  <data name="SaveData" xml:space="preserve">
+    <value>Save As</value>
+  </data>
   <data name="SaveFailed" xml:space="preserve">
     <value>Failed to save</value>
-  </data>
-  <data name="SaveMovie" xml:space="preserve">
-    <value>Save Movie</value>
   </data>
   <data name="Spain" xml:space="preserve">
     <value>Spain</value>
@@ -406,8 +406,8 @@
   <data name="Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
-  <data name="UnloadMovie" xml:space="preserve">
-    <value>Close Movie</value>
+  <data name="UnloadData" xml:space="preserve">
+    <value>Back</value>
   </data>
   <data name="USA" xml:space="preserve">
     <value>USA</value>

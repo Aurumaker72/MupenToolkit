@@ -25,6 +25,8 @@
         <ui:CanvasTopConverter x:Key="CanvasTopConverter"/>
         <ui:SubtractorConverter x:Key="SubtractorConverter"/>
         <ui:AdderConverter x:Key="AdderConverter"/>
+        <ui:ValueToEqualsParameterVisibilityConverter x:Key="ValueToEqualsParameterVisibilityConverter"/>
+
         
         <ui:DividerConverter x:Key="div"/>
 
