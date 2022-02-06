@@ -1,5 +1,6 @@
 ﻿using MupenToolkit.Core.Helper;
 using MupenToolkit.Core.Movie;
+using MupenToolkit.Core.Provider;
 using MupenToolkit.Core.UI;
 using System;
 using System.Collections.Generic;
@@ -18,19 +19,43 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MupenToolkit
 {
     public partial class MainWindow : Window
     {
         public static StateContainer stateContainer = new();
+        private readonly DispatcherTimer MovieTimer = new DispatcherTimer();
+
+
 
         public MainWindow()
         {
+            LocalizationProvider.Initialize();
+
             InitializeComponent();
             stateContainer.FileLoaded = false;
 
             this.DataContext = stateContainer;
+
+            MovieTimer = new DispatcherTimer(DispatcherPriority.Background);
+            MovieTimer.Interval = TimeSpan.FromMilliseconds(1000 / 30);
+            MovieTimer.Tick += new EventHandler(this.MovieTimer_Tick);
+            MovieTimer.Start();
+        }
+
+        private void MovieTimer_Tick(object sender, EventArgs? e)
+        {
+            if (stateContainer.Movie.Resumed && stateContainer.FileLoaded)
+            {
+                //stateContainer.SampleIndexChange.Execute("1"); 
+                // TODO: Is it safe to touch VM from code-behind
+                int i = 1;
+                if (stateContainer.CurrentController > stateContainer.Input.Samples.Count || stateContainer.CurrentController < 0) return;
+                if (stateContainer.CurrentSampleIndex + i < 0 || stateContainer.CurrentSampleIndex > stateContainer.Input.Samples[stateContainer.CurrentController].Count) return;
+                stateContainer.CurrentSampleIndex += i;
+            }
         }
 
         private void Window_Drop(object sender, DragEventArgs e)
@@ -38,7 +63,7 @@ namespace MupenToolkit
             // inplausible with MVVM, we have to resort to events
             string[] fNames = (string[])e.Data.GetData(DataFormats.FileDrop, true);
             string fName = fName = fNames[0];
-            if(fNames.Length > 1)
+            if (fNames.Length > 1)
             {
                 MessageBox.Show(Properties.Resources.DragDropTooMany, Title, MessageBoxButton.OK, MessageBoxImage.Warning);
             }

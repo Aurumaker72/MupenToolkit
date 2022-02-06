@@ -392,10 +392,6 @@ namespace MupenToolkit.Core.Movie
                 return;
             }
 
-
-
-
-
             mwv.Busy = false;
             mwv.Mode = "General";
             mwv.FileLoaded = true;

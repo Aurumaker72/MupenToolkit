@@ -121,61 +121,37 @@
     <value>Analog</value>
   </data>
   <data name="Angle" xml:space="preserve">
-    <value>Ang</value>
-  </data>
-  <data name="AppName" xml:space="preserve">
-    <value>Mupen Toolkit</value>
-    <comment>@Invariant</comment>
+    <value>Winkel</value>
   </data>
   <data name="AudioPluginName" xml:space="preserve">
-    <value>Audio Plugin Name</value>
+    <value>Audioplugin Name</value>
   </data>
   <data name="Australia" xml:space="preserve">
-    <value>Australia</value>
+    <value>Australien</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value>Author</value>
-  </data>
-  <data name="AxisX" xml:space="preserve">
-    <value>X</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="AxisY" xml:space="preserve">
-    <value>Y</value>
-    <comment>@Invariant</comment>
+    <value>Autor</value>
   </data>
   <data name="BadMagicCookie" xml:space="preserve">
-    <value>Invalid magic cookie</value>
+    <value>Ungültige Identifikationsnummer</value>
   </data>
   <data name="Beta" xml:space="preserve">
     <value>Beta</value>
   </data>
-  <data name="ButtonA" xml:space="preserve">
-    <value>A</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="ButtonB" xml:space="preserve">
-    <value>B</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Start</value>
-    <comment>@Invariant</comment>
-  </data>
   <data name="BypassMovie" xml:space="preserve">
-    <value>Bypass</value>
+    <value>Statusumgang</value>
   </data>
   <data name="Check" xml:space="preserve">
     <value>Check</value>
   </data>
   <data name="ComboEOFStringSearch" xml:space="preserve">
-    <value>Malformed combo</value>
+    <value>Malformierte Daten</value>
   </data>
   <data name="ComboOOBLength" xml:space="preserve">
-    <value>Malformed combo</value>
+    <value>Malformierte Daten</value>
   </data>
   <data name="Connected" xml:space="preserve">
-    <value>Connected</value>
+    <value>Verbunden</value>
   </data>
   <data name="Controller" xml:space="preserve">
     <value>Controller</value>
@@ -193,200 +169,152 @@
     <value>Controller 4</value>
   </data>
   <data name="ControllerBoundsCheck" xml:space="preserve">
-    <value>Controller Amount</value>
+    <value>Controlleranzahl</value>
   </data>
   <data name="ControllerBoundsCheckDescription" xml:space="preserve">
-    <value>Whether the controller amount is within logical bounds</value>
+    <value>Ob die Anzahl der Controller innerhalb Normen sind</value>
   </data>
   <data name="Controllers" xml:space="preserve">
-    <value>Controllers</value>
-  </data>
-  <data name="CPadDown" xml:space="preserve">
-    <value>Cv</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="CPadLeft" xml:space="preserve">
-    <value>C&lt;</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="CPadRight" xml:space="preserve">
-    <value>C&gt;</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="CPadUp" xml:space="preserve">
-    <value>C^</value>
-    <comment>@Invariant</comment>
+    <value>Controller</value>
   </data>
   <data name="DataDiagnosis" xml:space="preserve">
-    <value>Diagnosis</value>
-  </data>
-  <data name="Demo" xml:space="preserve">
-    <value>Demo</value>
-    <comment>@Invariant</comment>
+    <value>Diagnose</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="DPadDown" xml:space="preserve">
-    <value>Dv</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="DPadLeft" xml:space="preserve">
-    <value>D&lt;</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="DPadRight" xml:space="preserve">
-    <value>D&gt;</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="DPadUp" xml:space="preserve">
-    <value>D^</value>
-    <comment>@Invariant</comment>
+    <value>Beschreibung</value>
   </data>
   <data name="DragDropTooMany" xml:space="preserve">
-    <value>Dropped more than one file, the first will be considered and rest discarded.</value>
+    <value>Es wurde mehr als eine Datei ausgewählt. Es wird lediglich die erste Datei geladen.</value>
   </data>
   <data name="Evaluation" xml:space="preserve">
-    <value>Description</value>
+    <value>Beschreibung</value>
   </data>
   <data name="ExitApp" xml:space="preserve">
-    <value>Exit</value>
+    <value>Schließen</value>
   </data>
   <data name="Fail" xml:space="preserve">
     <value>FAIL</value>
   </data>
   <data name="France" xml:space="preserve">
-    <value>France</value>
+    <value>Frankreich</value>
   </data>
   <data name="GenericError" xml:space="preserve">
-    <value>Generic parser error</value>
+    <value>Parsingfehler</value>
   </data>
   <data name="Germany" xml:space="preserve">
-    <value>Germany</value>
+    <value>Deutschland</value>
   </data>
   <data name="HeaderParseFailed" xml:space="preserve">
-    <value>Failed to parse header</value>
+    <value>Parsingfehler</value>
   </data>
   <data name="InputPluginName" xml:space="preserve">
-    <value>Input Plugin Name</value>
+    <value>Inputpluginname</value>
   </data>
   <data name="InputsInvalidState" xml:space="preserve">
-    <value>Input buffer resulted logically impossible state</value>
+    <value>Inputpuffer hat einen ungültigen Zustand</value>
   </data>
   <data name="InputsParseFailed" xml:space="preserve">
-    <value>Failed to parse inputs</value>
+    <value>Inputs konnten nicht verarbeitet werden</value>
   </data>
   <data name="InputStatistics" xml:space="preserve">
-    <value>Input Statistics</value>
+    <value>Inputstatistiken</value>
   </data>
   <data name="IsABC" xml:space="preserve">
-    <value>ABC-Compliant</value>
+    <value>ABC-konform</value>
   </data>
   <data name="IsABCDescription" xml:space="preserve">
-    <value>Whether this input sequence complies with A-Button-Challenge</value>
+    <value>Ob diese Inputsequenz ABC-Konform ist</value>
   </data>
   <data name="Italy" xml:space="preserve">
-    <value>Italy</value>
+    <value>Italien</value>
   </data>
   <data name="Japan" xml:space="preserve">
     <value>Japan</value>
   </data>
   <data name="LengthSamples" xml:space="preserve">
-    <value>Length (Samples)</value>
+    <value>Länge (Inputproben)</value>
   </data>
   <data name="LoadData" xml:space="preserve">
-    <value>Select File</value>
+    <value>Datei auswählen</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.gif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LoadLast" xml:space="preserve">
-    <value>Load Last</value>
+    <value>Letzte Datei laden</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MagicCookieCheck" xml:space="preserve">
-    <value>Magic Cookie</value>
+    <value>Identifizierungsnummer</value>
   </data>
   <data name="MagicCookieCheckDescription" xml:space="preserve">
-    <value>Whether the movie's magic cookie (signature leading 4 bytes) match the M64 format convention</value>
-  </data>
-  <data name="Mempak" xml:space="preserve">
-    <value>Mempak</value>
-    <comment>@Invariant</comment>
+    <value>Ob die konstante Identifizierungsnummer M64-konform ist</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Nein</value>
   </data>
   <data name="NoControllers" xml:space="preserve">
-    <value>No Controllers connected</value>
+    <value>Keine Controller verbunden</value>
   </data>
   <data name="NotAMovie" xml:space="preserve">
-    <value>This file is not a movie</value>
+    <value>Diese Datei ist ungültig</value>
   </data>
   <data name="Old Version" xml:space="preserve">
-    <value>Old version</value>
+    <value>Alte Version</value>
   </data>
   <data name="Pass" xml:space="preserve">
-    <value>PASS</value>
+    <value>BESTANDEN</value>
   </data>
   <data name="PasteError" xml:space="preserve">
-    <value>Error when pasting. Is your clipboard content in the correct format?</value>
+    <value>Fehler beim Einfügen. Sind die Inhalte Ihrer Zwischenablage korrekt formattiert?</value>
   </data>
   <data name="PathError" xml:space="preserve">
-    <value>File unavailable</value>
+    <value>Datei unzugänglich</value>
   </data>
   <data name="PickLanguage" xml:space="preserve">
-    <value>Change Language</value>
-  </data>
-  <data name="Rerecords" xml:space="preserve">
-    <value>Rerecords</value>
-    <comment>@Invariant</comment>
+    <value>Sprache verändern</value>
   </data>
   <data name="RomCountry" xml:space="preserve">
-    <value>ROM Country</value>
+    <value>ROM-Land</value>
   </data>
   <data name="RomName" xml:space="preserve">
-    <value>ROM Name</value>
+    <value>ROM-Name</value>
   </data>
   <data name="RSPPluginName" xml:space="preserve">
-    <value>RSP Plugin Name</value>
-  </data>
-  <data name="Rumblepak" xml:space="preserve">
-    <value>Rumblepak</value>
-    <comment>@Invariant</comment>
+    <value>RSPPluginname</value>
   </data>
   <data name="Sample" xml:space="preserve">
-    <value>Sample</value>
+    <value>Inputprobe</value>
   </data>
   <data name="SaveAlignment" xml:space="preserve">
-    <value>Save is misaligned!</value>
+    <value>Pointerverschiebung während des Speicherprozesses!</value>
   </data>
   <data name="SaveData" xml:space="preserve">
-    <value>Save As</value>
+    <value>Speichern Als</value>
   </data>
   <data name="SaveFailed" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Konnte nicht speichern</value>
   </data>
   <data name="Spain" xml:space="preserve">
-    <value>Spain</value>
+    <value>Spanien</value>
   </data>
   <data name="StandardVISCheck" xml:space="preserve">
-    <value>Region-Conformant VI/s</value>
+    <value>Konformante VI/s</value>
   </data>
   <data name="StandardVISCheckDescription" xml:space="preserve">
-    <value>Whether rounded VI/s conform to either PAL/NTSC standard</value>
+    <value>Ob gerundete VI/s normal sind</value>
   </data>
   <data name="StartupTypeSanityCheck" xml:space="preserve">
-    <value>Startup Type</value>
+    <value>Startart</value>
   </data>
   <data name="StartupTypeSanityCheckDescription" xml:space="preserve">
-    <value>Whether the startup type is within logical bounds and known values</value>
+    <value>Ob die Startart normal ist</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
@@ -401,34 +329,22 @@
     <value>{0} held</value>
   </data>
   <data name="TooLongStringNotificationFormat" xml:space="preserve">
-    <value>An inputted property "{0}" had an inappropriate length and has been truncated.</value>
+    <value>Die eingegebene Eigenschaft "{0}" hatte eine unangemessene Länge und wurde getrennt.</value>
   </data>
   <data name="TooShort" xml:space="preserve">
-    <value>Movie is too short</value>
+    <value>Film ist zu kurz</value>
   </data>
   <data name="TotalButtonPresses" xml:space="preserve">
-    <value>Total Button Presses</value>
+    <value>Gesamtknopfdrücke</value>
   </data>
   <data name="TotalButtonPressesDescription" xml:space="preserve">
-    <value>Total Amount of buttons held on each frame</value>
-  </data>
-  <data name="TriggerL" xml:space="preserve">
-    <value>L</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="TriggerR" xml:space="preserve">
-    <value>R</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="TriggerZ" xml:space="preserve">
-    <value>Z</value>
-    <comment>@Invariant</comment>
+    <value>Totale Anzahl der Knopfdrücke</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Unbekannt</value>
   </data>
   <data name="UnloadData" xml:space="preserve">
-    <value>Back</value>
+    <value>Zurück</value>
   </data>
   <data name="USA" xml:space="preserve">
     <value>USA</value>
@@ -437,34 +353,30 @@
     <value>USA/Japan</value>
   </data>
   <data name="Value" xml:space="preserve">
-    <value>Value</value>
+    <value>Wert</value>
   </data>
   <data name="VersionCheck" xml:space="preserve">
-    <value>Version Validity</value>
+    <value>Versiongültigkeit</value>
   </data>
   <data name="VersionCheckDescription" xml:space="preserve">
-    <value>Whether the movies' version is adequate to current standard</value>
+    <value>Ob die Version des Films gültig ist</value>
   </data>
   <data name="VIBoundsCheck" xml:space="preserve">
-    <value>Bound VIs</value>
+    <value>Angemessene VIs</value>
   </data>
   <data name="VIBoundsCheckDescription" xml:space="preserve">
-    <value>Whether VIs are within logical bounds</value>
+    <value>Ob die VIs angemessen sind</value>
   </data>
   <data name="VideoPluginName" xml:space="preserve">
-    <value>Video Plugin Name</value>
+    <value>Videopluginname</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Ja</value>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File</value>
+    <value>Datei</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>MupenToolkit was developed by Aurumaker72, helped by feedback from various community members.</value>
-  </data>
-  <data name="CRC" xml:space="preserve">
-    <value>CRC</value>
-    <comment>@Invariant</comment>
+    <value>MupenToolkit wurde von Aurumaker72 entwickelt, mithilfe von sämtlichen Communitymitgliedern.</value>
   </data>
 </root>

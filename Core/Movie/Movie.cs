@@ -13,6 +13,11 @@ namespace MupenToolkit.Core.Movie
     public class Movie : INotifyPropertyChanged
     {
         public MovieHeader Header { get; set; } = new();
+        /// <summary>
+        /// Whether this movie is in play-back mode
+        /// We store this per-movie to avoid inconsistency
+        /// </summary>
+        public bool Resumed { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

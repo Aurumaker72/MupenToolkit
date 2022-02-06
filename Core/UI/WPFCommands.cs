@@ -1,6 +1,7 @@
 ﻿using MupenToolkit.Core.Helper;
 using MupenToolkit.Core.Interaction;
 using MupenToolkit.Core.Movie;
+using MupenToolkit.Core.Provider;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -213,6 +214,66 @@ namespace MupenToolkit.Core.UI
 
         }
     }
+    public class LanguagePickerCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (!mwv.FileLoaded) return; // ???
+            mwv.Mode = mwv.Mode == "LanguagePicker" ? "General" : "LanguagePicker";
+
+        }
+    }
+
+    public class SetLanguageCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            if (parameter == null) return;
+            var lstr = parameter as string;
+            mwv.Busy = true;
+            LocalizationProvider.SetCulture(lstr);
+            mwv.Busy = false;
+        }
+    }
+
+    public class ShowAboutCommand : ICommand
+    {
+        public StateContainer mwv;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        public void Execute(object parameter)
+        {
+            MessageBox.Show(Properties.Resources.AboutText);
+        }
+    }
+
     public class CountryChangedCommand : ICommand
     {
         public StateContainer mwv;

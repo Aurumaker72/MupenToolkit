@@ -31,7 +31,11 @@ namespace MupenToolkit.Core.UI
         public ICommand BypassMovie { get; set; }
         public ICommand SampleIndexChange { get; set; }
         public ICommand JoystickClick { get; set; }
+        public ICommand LanguagePicker { get; set; }
+        public ICommand SetLanguage { get; set; }
+        public ICommand ShowAbout { get; set; }
 
+        
         public StateContainer()
         {
             LoadData = new LoadDataCommand { mwv = this };
@@ -46,6 +50,9 @@ namespace MupenToolkit.Core.UI
             LoadLast = new LoadLastCommand { mwv = this };
             SampleIndexChange = new SampleIndexChangeCommand { mwv = this };
             JoystickClick = new JoystickClickCommand { mwv=this};
+            LanguagePicker = new LanguagePickerCommand { mwv = this };
+            SetLanguage = new SetLanguageCommand { mwv = this };
+            ShowAbout = new ShowAboutCommand { mwv = this };
             CanvasClickCommand = new RelayCommand(ExecuteCanvasClickCommand, CanExecuteCanvasClickCommand);
 
         }
@@ -64,14 +71,23 @@ namespace MupenToolkit.Core.UI
 
 
         public int CurrentController { get; set; } = 0;
+        public int CurrentSampleIndex { get; set; }
+
         public bool Busy { get; set; } = false;
         public bool FileLoaded { get; set; } = false;
-        public UIError Error { get; set; } = new();
+
         public string Mode { get; set; } = "None";
         public Provider.InfoProvider.InteractionTypes InteractionMode { get; set; } = Provider.InfoProvider.InteractionTypes.None;
+
+        /// <summary>
+        /// Thread culture in 
+        /// </summary>
+        public string InternalCulture { get; set; }
+
         public ObservableCollection<Statistic> Statistics { get; set; } = new();
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();
-        public int CurrentSampleIndex { get; set; }
+
+        public UIError Error { get; set; } = new();
 
         public Sample SelectedSample
         {

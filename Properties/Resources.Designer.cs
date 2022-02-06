@@ -61,6 +61,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MupenToolkit was developed by Aurumaker72, helped by feedback from various community members..
+        /// </summary>
+        public static string AboutText {
+            get {
+                return ResourceManager.GetString("AboutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Analog.
         /// </summary>
         public static string Analog {
@@ -331,6 +340,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CRC.
+        /// </summary>
+        public static string CRC {
+            get {
+                return ResourceManager.GetString("CRC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Diagnosis.
         /// </summary>
         public static string DataDiagnosis {
@@ -426,6 +444,15 @@ namespace MupenToolkit.Properties {
         public static string Fail {
             get {
                 return ResourceManager.GetString("Fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
             }
         }
         
@@ -648,7 +675,7 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Old version.
         /// </summary>
         public static string Old_Version {
             get {
@@ -680,6 +707,15 @@ namespace MupenToolkit.Properties {
         public static string PathError {
             get {
                 return ResourceManager.GetString("PathError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Language.
+        /// </summary>
+        public static string PickLanguage {
+            get {
+                return ResourceManager.GetString("PickLanguage", resourceCulture);
             }
         }
         
@@ -815,15 +851,6 @@ namespace MupenToolkit.Properties {
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

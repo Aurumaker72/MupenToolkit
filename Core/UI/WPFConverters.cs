@@ -279,7 +279,7 @@ namespace MupenToolkit.Core.UI
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null) throw new ArgumentException("Can\'t be null");
+            if (value == null) return DependencyProperty.UnsetValue;
 
             return value.ToString() == parameter.ToString();
         }
