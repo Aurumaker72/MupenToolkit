@@ -467,4 +467,10 @@
     <value>CRC</value>
     <comment>@Invariant</comment>
   </data>
+  <data name="Header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
 </root>

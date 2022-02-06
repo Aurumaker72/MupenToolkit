@@ -377,6 +377,12 @@
     <value>Arquivo</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>MupenToolkit was developed by Aurumaker72, helped by feedback from various community members.</value>
+    <value>MupenToolkit foi desenvolvido pela Aurumaker72, auxiliado pelo feedback de vários membros da comunidade.</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Cabeçalho</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Entrada</value>
   </data>
 </root>

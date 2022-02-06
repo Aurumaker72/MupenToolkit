@@ -333,6 +333,7 @@ namespace MupenToolkit.Core.Movie
                 mwv.Error.Visible ^= true;
                 return;
             }
+
             // Yes, this could have been done with 4 lines but expandability or something
             if (ext == "m64")
             {

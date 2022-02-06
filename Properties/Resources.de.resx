@@ -379,4 +379,10 @@
   <data name="AboutText" xml:space="preserve">
     <value>MupenToolkit wurde von Aurumaker72 entwickelt, mithilfe von sämtlichen Communitymitgliedern.</value>
   </data>
+  <data name="Header" xml:space="preserve">
+    <value>Einleitdaten</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Inputdaten</value>
+  </data>
 </root>
