@@ -38,3 +38,7 @@ If I did something the way I did, there is a good reason.
   - Bit operations and other hacks are endian dependant
   - The reason for the speed increase is hardware acceleration, smarter code and TASStudio improvements. Some obscure WPF knowledge and hacks are used to speed up the TASStudio rendering.
   - WPF hack reduces TASStudio layout time complexity from O(n^r), with r being the rows to O(1)
+
+## Known Issues
+- UI doesn't update with new language data until a restart. Achieving this would require a partial localization rewrite.
+- Loading extremely long movies is slow. Possible naive solution is buffering/segmenting input and virtualization
