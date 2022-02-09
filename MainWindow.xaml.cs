@@ -76,7 +76,7 @@ namespace MupenToolkit
             }
             MovieManager.AttemptLoad(stateContainer, fName);
 
-
+                
         }
 
         private void Border_Joystick_PreviewMouseMove(object sender, MouseEventArgs e)

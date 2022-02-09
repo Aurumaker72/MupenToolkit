@@ -391,4 +391,10 @@
   <data name="Zoom" xml:space="preserve">
     <value>Vergrößerung</value>
   </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
 </root>

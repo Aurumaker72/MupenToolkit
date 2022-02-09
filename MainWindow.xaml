@@ -13,11 +13,14 @@
     Height="500"
     AllowDrop="True"
     DragDrop.Drop="Window_Drop"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    SnapsToDevicePixels="False"
+    >
     <Window.DataContext>
         <ui:StateContainer />
     </Window.DataContext>
 
+    
     <Grid x:Name="Grid_ParentAll">
 
         <Grid
@@ -89,20 +92,23 @@
                                 EnableColumnVirtualization="True"
                                 EnableRowVirtualization="True"
                                 GridLinesVisibility="Vertical"
-                                RowHeight="23"
-                                ColumnWidth="23"
+                                RowHeight="22"
+                                ColumnWidth="22"
                                 ScrollViewer.HorizontalScrollBarVisibility="Visible"
                                 ScrollViewer.VerticalScrollBarVisibility="Visible"
                                 SelectionMode="Extended"
-                                SelectionUnit="Cell"
                                 VerticalGridLinesBrush="Gray"
                                 VirtualizingPanel.IsVirtualizingWhenGrouping="False"
+                                SnapsToDevicePixels="False"
+                                SelectionUnit="Cell"
                                 >
 
                                 <DataGrid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Command="ApplicationCommands.Copy" Header="Copy" />
-                                        <MenuItem Command="ApplicationCommands.Paste" Header="Paste" />
+                                        <MenuItem Command="ApplicationCommands.Copy" Header="{x:Static resx:Resources.Copy}" />
+                                        <MenuItem Command="ApplicationCommands.Paste" Header="{x:Static resx:Resources.Paste}" />
+                                        <MenuItem Command="ApplicationCommands.Undo" Header="{x:Static resx:Resources.Undo}" />
+                                        <MenuItem Command="ApplicationCommands.Redo" Header="{x:Static resx:Resources.Redo}" />
 
                                         <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                             <Label
@@ -688,6 +694,7 @@
                                         Content="&lt;" />
 
                             <ToggleButton
+                                        Cursor="Hand"
                                         Grid.Column="3"
                                         Grid.Row="1"
                                         IsChecked="{Binding Movie.Resumed, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"

@@ -225,7 +225,7 @@
         <SolidColorBrush x:Key="ColorDPadButtonsColumn" Color="White" />
         <SolidColorBrush x:Key="ColorOtherButtonsColumn" Color="LightBlue" />
 
-       
+   
         <Style x:Key="GenericCheckBox" TargetType="{x:Type CheckBox}">
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
