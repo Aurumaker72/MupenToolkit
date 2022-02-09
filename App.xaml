@@ -219,6 +219,13 @@
             <GradientStop Color="#AAA" Offset="0.99" />
             <GradientStop Color="#888" Offset="1" />
         </LinearGradientBrush>
+        <SolidColorBrush x:Key="ColorJoystickColumn" Color="LightYellow" />
+        <SolidColorBrush x:Key="ColorMainButtonsColumn" Color="LightGray" />
+        <SolidColorBrush x:Key="ColorCameraButtonsColumn" Color="Gray" />
+        <SolidColorBrush x:Key="ColorDPadButtonsColumn" Color="White" />
+        <SolidColorBrush x:Key="ColorOtherButtonsColumn" Color="LightBlue" />
+
+       
         <Style x:Key="GenericCheckBox" TargetType="{x:Type CheckBox}">
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>

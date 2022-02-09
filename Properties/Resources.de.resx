@@ -385,4 +385,10 @@
   <data name="Input" xml:space="preserve">
     <value>Inputdaten</value>
   </data>
+  <data name="Expert" xml:space="preserve">
+    <value>Experte</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Vergrößerung</value>
+  </data>
 </root>

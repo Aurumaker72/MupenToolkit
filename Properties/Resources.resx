@@ -473,4 +473,10 @@
   <data name="Input" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="Expert" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Magnification</value>
+  </data>
 </root>
