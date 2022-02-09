@@ -218,7 +218,6 @@
                                                         X2="128"
                                                         Y1="0"
                                                         Y2="0" />
-                                                    <Ellipse />
                                                     <Line
                                                         Stroke="Blue"
                                                         StrokeThickness="4"
@@ -607,8 +606,9 @@
                     
                     <!--  Header  -->
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="0.125*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -627,57 +627,64 @@
 
                     <Label
                         Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.Author}" />
                     <TextBox
                         Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
                         Text="{Binding Movie.Header.Author, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="1"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.Description}" />
                     <TextBox
                         Grid.Row="1"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
                         Text="{Binding Movie.Header.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="2"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.RomName}" />
                     <TextBox
                         Grid.Row="2"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
                         Text="{Binding Movie.Header.RomName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Viewbox Grid.Row="3" Grid.Column="0" Margin="5">
+                        <Ellipse Stroke="Blue" Stretch="Uniform" Opacity="0.25"/>
+                    </Viewbox>
+                    
+
+                 
+
                     <Button
                         Grid.Row="3"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="Transparent"
                         BorderBrush="Gray"
                         Command="{Binding EditCountry}"
                         Content="{x:Static resx:Resources.RomCountry}"
-                        Foreground="Blue"
                         Style="{StaticResource ReactiveButton}" />
                     <TextBox
                         Grid.Row="3"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
@@ -685,13 +692,13 @@
 
                     <Label
                         Grid.Row="4"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.CRC}" />
                     <TextBox
                         Grid.Row="4"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
@@ -699,7 +706,7 @@
                     
                     <Separator
                         Grid.Row="5"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Grid.ColumnSpan="2"
                         Margin="0"
                         HorizontalAlignment="Stretch"
@@ -707,44 +714,47 @@
 
                     <Label
                         Grid.Row="6"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.Rerecords}" />
                     <TextBox
                         Grid.Row="6"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
                         Text="{Binding Movie.Header.Rerecords, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Label
                         Grid.Row="7"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.LengthSamples}" />
                     <TextBox
                         Grid.Row="7"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
                         Text="{Binding Movie.Header.LengthSamples, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <Button
                         Grid.Row="8"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="Transparent"
                         BorderBrush="Gray"
                         Command="{Binding EditControllerFlags}"
                         Content="{x:Static resx:Resources.Controllers}"
-                        Foreground="Blue"
                         Style="{StaticResource ReactiveButton}" />
+
+                    <Viewbox Grid.Row="8" Grid.Column="0" Margin="5">
+                        <Ellipse Stroke="Blue" Stretch="Uniform" Opacity="0.25"/>
+                    </Viewbox>
                     <TextBox
                         Grid.Row="8"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         BorderBrush="Transparent"
@@ -1090,8 +1100,8 @@
                     Margin="5"
                     ShowGridLines="False">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -1111,11 +1121,13 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Content="{x:Static resx:Resources.USA}" />
+
                     <RadioButton
                         Grid.Row="0"
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="69"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=69, UpdateSourceTrigger=PropertyChanged}" />
@@ -1131,6 +1143,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="65"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=65, UpdateSourceTrigger=PropertyChanged}" />
@@ -1146,6 +1159,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="68"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=68, UpdateSourceTrigger=PropertyChanged}" />
@@ -1161,6 +1175,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="70"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=70, UpdateSourceTrigger=PropertyChanged}" />
@@ -1176,6 +1191,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="73"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=73, UpdateSourceTrigger=PropertyChanged}" />
@@ -1191,6 +1207,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="74"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=74, UpdateSourceTrigger=PropertyChanged}" />
@@ -1206,6 +1223,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
+                        FlowDirection="LeftToRight"
                         Command="{Binding CountryChanged}"
                         CommandParameter="83"
                         IsChecked="{Binding Path=Movie.Header.RomCountry, Converter={StaticResource ushortEqConverter}, ConverterParameter=83, UpdateSourceTrigger=PropertyChanged}" />
@@ -1362,6 +1380,7 @@
             IsHitTestVisible="{Binding Path=Mode, Converter={StaticResource eqConverter}, ConverterParameter=LanguagePicker}"
             Opacity="0"
             RenderTransformOrigin="0.5,0.5">
+            
             <Grid.RenderTransform>
                 <ScaleTransform />
             </Grid.RenderTransform>
@@ -1381,8 +1400,8 @@
                 </Style>
             </Grid.Style>
 
-          
-            
+
+
             <Rectangle
                 Fill="LightGray"
                 RadiusX="5"
@@ -1397,14 +1416,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                
-                <RadioButton Grid.Row="0" Content="English" Command="{Binding SetLanguage}" CommandParameter="en-US" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=en-US, UpdateSourceTrigger=PropertyChanged}"/> <!-- Hardcoded! -->
-                <RadioButton Grid.Row="1" Content="Deutsch" Command="{Binding SetLanguage}" CommandParameter="de-DE" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=de-DE, UpdateSourceTrigger=PropertyChanged}"/>
-                <RadioButton Grid.Row="2" Content="Português" Command="{Binding SetLanguage}" CommandParameter="pt" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=pt, UpdateSourceTrigger=PropertyChanged}"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="0" Content="English"  Command="{Binding SetLanguage}" CommandParameter="en-US" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=en-US, UpdateSourceTrigger=PropertyChanged}"/>
+                <Separator Grid.Row="1" Background="Silver"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="2" Content="Deutsch"  Command="{Binding SetLanguage}" CommandParameter="de-DE" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=de-DE, UpdateSourceTrigger=PropertyChanged}"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="3" Content="Português" Command="{Binding SetLanguage}" CommandParameter="pt" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=pt, UpdateSourceTrigger=PropertyChanged}"/>
 
             </Grid>
-            
-           
+
+
 
             <Border
                 BorderBrush="Gray"
@@ -1413,7 +1432,7 @@
 
         </Grid>
 
-        
+
 
 
 

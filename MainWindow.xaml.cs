@@ -53,7 +53,7 @@ namespace MupenToolkit
                 // TODO: Is it safe to touch VM from code-behind
                 int i = 1;
                 if (stateContainer.CurrentController > stateContainer.Input.Samples.Count || stateContainer.CurrentController < 0) return;
-                if (stateContainer.CurrentSampleIndex + i < 0 || stateContainer.CurrentSampleIndex > stateContainer.Input.Samples[stateContainer.CurrentController].Count) return;
+                if (stateContainer.CurrentSampleIndex + i < 0 || stateContainer.CurrentSampleIndex >= stateContainer.Input.Samples[stateContainer.CurrentController].Count-1) return;
                 stateContainer.CurrentSampleIndex += i;
             }
         }
@@ -83,6 +83,7 @@ namespace MupenToolkit
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                if (stateContainer.SelectedSample == null) return;
                 Point p = Mouse.GetPosition(Canvas_Joystick);
                 var tgX = (sbyte)MathHelper.Clamp(Math.Round(p.X), -127, 127);
                 var tgY = (sbyte)MathHelper.Clamp(Math.Round(p.Y), -127, 127);

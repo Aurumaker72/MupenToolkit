@@ -313,7 +313,7 @@ namespace MupenToolkit.Core.UI
             //if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Header.LengthSamples) return;
             // i = increment
             if (mwv.CurrentController > mwv.Input.Samples.Count || mwv.CurrentController < 0) return;
-            if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex > mwv.Input.Samples[mwv.CurrentController].Count) return;
+            if (mwv.CurrentSampleIndex + i < 0 || mwv.CurrentSampleIndex >= mwv.Input.Samples[mwv.CurrentController].Count-1) return;
             mwv.CurrentSampleIndex += i;
         }
 
