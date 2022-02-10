@@ -123,7 +123,7 @@
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
                                                 BorderBrush="Transparent"
-                                                Text="{Binding CurrentController, Mode=TwoWay}" />
+                                                Text="{Binding CurrentController, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                         </DockPanel>
                                         <DockPanel>
                                             <Label Content="{x:Static resx:Resources.Zoom}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
@@ -1446,10 +1446,10 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     BorderBrush="Transparent"
-                    BorderThickness="3"
+                    BorderThickness="0"
                     ItemsSource="{Binding Statistics}">
                     <ListView.View>
-                        <GridView>
+                        <GridView AllowsColumnReorder="False">
                             <GridViewColumn
                                 Width="Auto"
                                 DisplayMemberBinding="{Binding Name}"
@@ -1514,7 +1514,7 @@
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
                 BorderBrush="Transparent"
-                BorderThickness="3"
+                    BorderThickness="0"
                 ItemsSource="{Binding Diagnosis}">
                 <ListView.View>
                     <GridView>
