@@ -491,4 +491,10 @@
   <data name="Redo" xml:space="preserve">
     <value>Redo</value>
   </data>
+  <data name="Movie" xml:space="preserve">
+    <value>Movie</value>
+  </data>
+  <data name="CurrentSample" xml:space="preserve">
+    <value>Current Sample</value>
+  </data>
 </root>

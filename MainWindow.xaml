@@ -129,21 +129,21 @@
                                             <Label Content="{x:Static resx:Resources.Zoom}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
                                             <Slider x:Name="Slider_TASStudioZoom" Minimum="1" Maximum="2" VerticalAlignment="Center" VerticalContentAlignment="Center" MinWidth="64" />
                                         </DockPanel>
-                                        
+
                                         <MenuItem Command="{Binding InputStatistics}" Header="{x:Static resx:Resources.InputStatistics}" />
                                     </ContextMenu>
                                 </DataGrid.ContextMenu>
                                 <DataGrid.LayoutTransform>
                                     <ScaleTransform ScaleX="{Binding Path=Value, ElementName=Slider_TASStudioZoom}" ScaleY="{Binding Path=Value, ElementName=Slider_TASStudioZoom}" />
                                 </DataGrid.LayoutTransform>
-                                
+
                                 <DataGrid.ItemsSource>
                                     <MultiBinding Converter="{StaticResource minConverter}">
                                         <Binding Path="Input.Samples" />
                                         <Binding Path="CurrentController" UpdateSourceTrigger="PropertyChanged" />
                                     </MultiBinding>
                                 </DataGrid.ItemsSource>
-                                
+
                                 <DataGrid.Columns>
 
                                     <DataGridTextColumn Binding="{Binding X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="X" >
@@ -300,9 +300,9 @@
                                             </Style>
                                         </DataGridCheckBoxColumn.ElementStyle>
                                     </DataGridCheckBoxColumn>
-                                   
-                                   
-                                  
+
+
+
                                     <!--  HACK: setting column fixed size will O(n^r) layouting time  -->
                                 </DataGrid.Columns>
                             </ui:ExtendedDataGrid>
@@ -640,16 +640,33 @@
 
 
                                 </Grid>
-                                
+
                             </Grid>
                         </TabItem>
 
                         <TabItem Header="{x:Static resx:Resources.Expert}">
                             <Grid>
-                                <Label FontSize="24" Content="work in progress" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                              
+                                <TreeView HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <TreeViewItem Header="{x:Static resx:Resources.Movie}" IsSelected="True">
+                                        <TreeViewItem Header="{x:Static resx:Resources.Header}">
+                                            <TreeViewItem Header="{Binding Movie.Header.Magic}"/>
+                                            <TreeViewItem Header="{Binding Movie.Header.LengthSamples}"/>
+                                            <TreeViewItem Header="{Binding Movie.Header.LengthVIs}"/>
+                                            <TreeViewItem Header="{Binding Movie.Header.UID}"/>
+                                            <TreeViewItem Header="{Binding Movie.Header.Version}"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="{x:Static resx:Resources.Input}">
+                                            <TreeViewItem Header="{x:Static resx:Resources.CurrentSample}">
+                                                <TreeViewItem Header="{Binding SelectedSample.Raw}"/>
+                                            </TreeViewItem>
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeView>
+                                
                             </Grid>
                         </TabItem>
-                        
+
                     </TabControl>
 
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1">

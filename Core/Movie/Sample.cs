@@ -37,7 +37,12 @@ namespace MupenToolkit.Core.Movie
     //[NotifyPropertyChanged]
     public class Sample : INotifyPropertyChanged
     {
-        public int Raw;
+        public int _Raw;
+        public int Raw
+        {
+            get { return _Raw; }
+            set { _Raw = value; OnPropertyChanged(); }
+        }
 
         public bool _DPadRight;
         public bool DPadRight
@@ -49,7 +54,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _DPadRight = value;
-                BitopHelper.SetBit(ref Raw, _DPadRight, 0);
+                Raw = BitopHelper.SetBit(_Raw, _DPadRight, 0);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -66,7 +71,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _DPadLeft = value;
-                BitopHelper.SetBit(ref Raw, _DPadLeft, 1);
+                Raw = BitopHelper.SetBit(_Raw, _DPadLeft, 1);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -82,7 +87,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _DPadDown = value;
-                BitopHelper.SetBit(ref Raw, _DPadDown, 2);
+                Raw = BitopHelper.SetBit(_Raw, _DPadDown, 2);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -98,7 +103,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _DPadUp = value;
-                BitopHelper.SetBit(ref Raw, _DPadUp, 3);
+                Raw = BitopHelper.SetBit(_Raw, _DPadUp, 3);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -115,7 +120,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _Start = value;
-                BitopHelper.SetBit(ref Raw, _Start, 4);
+                Raw = BitopHelper.SetBit(_Raw, _Start, 4);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -131,7 +136,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _Z = value;
-                BitopHelper.SetBit(ref Raw, _Z, 5);
+                Raw = BitopHelper.SetBit(_Raw, _Z, 5);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -148,7 +153,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _B = value;
-                BitopHelper.SetBit(ref Raw, _B, 6);
+                Raw = BitopHelper.SetBit(_Raw, _B, 6);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -165,7 +170,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _A = value;
-                BitopHelper.SetBit(ref Raw, _A, 7);
+                Raw = BitopHelper.SetBit(_Raw, _A, 7);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -182,7 +187,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _CPadRight = value;
-                BitopHelper.SetBit(ref Raw, _CPadRight, 8);
+                Raw = BitopHelper.SetBit(_Raw, _CPadRight, 8);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -199,7 +204,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _CPadLeft = value;
-                BitopHelper.SetBit(ref Raw, _CPadLeft, 9);
+                Raw = BitopHelper.SetBit(_Raw, _CPadLeft, 9);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -215,7 +220,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _CPadDown = value;
-                BitopHelper.SetBit(ref Raw, _CPadDown, 10);
+                Raw = BitopHelper.SetBit(_Raw, _CPadDown, 10);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -232,7 +237,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _CPadUp = value;
-                BitopHelper.SetBit(ref Raw, _CPadUp, 11);
+                Raw = BitopHelper.SetBit(_Raw, _CPadUp, 11);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -248,7 +253,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _R = value;
-                BitopHelper.SetBit(ref Raw, _R, 12);
+                Raw = BitopHelper.SetBit(_Raw, _R, 12);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -264,7 +269,7 @@ namespace MupenToolkit.Core.Movie
             set
             {
                 _L = value;
-                BitopHelper.SetBit(ref Raw, _L, 13);
+                Raw = BitopHelper.SetBit(_Raw, _L, 13);
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -285,9 +290,10 @@ namespace MupenToolkit.Core.Movie
                 _X = value;
                 unsafe
                 {
-                    fixed (int* ptr = &Raw)
+                    fixed (int* ptr = &_Raw)
                         BitopHelper.SetByte(ptr, _X, 2);
                 }
+                Raw = _Raw; // hack: update
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }
@@ -305,9 +311,10 @@ namespace MupenToolkit.Core.Movie
                 _Y = value;
                 unsafe
                 {
-                    fixed(int* ptr = &Raw)
+                    fixed(int* ptr = &_Raw)
                         BitopHelper.SetByte(ptr, _Y, 3);
                 }
+                Raw = _Raw; // hack: update
                 MainWindow.stateContainer.Statistics = InputStatistics.GetStatistics();
                 OnPropertyChanged();
             }

@@ -397,4 +397,10 @@
   <data name="Copy" xml:space="preserve">
     <value>Kopieren</value>
   </data>
+  <data name="Movie" xml:space="preserve">
+    <value>Film</value>
+  </data>
+  <data name="CurrentSample" xml:space="preserve">
+    <value>Aktuelles Bild</value>
+  </data>
 </root>

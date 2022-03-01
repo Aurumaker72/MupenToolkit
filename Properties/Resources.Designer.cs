@@ -358,6 +358,15 @@ namespace MupenToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Sample.
+        /// </summary>
+        public static string CurrentSample {
+            get {
+                return ResourceManager.GetString("CurrentSample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Diagnosis.
         /// </summary>
         public static string DataDiagnosis {
@@ -671,6 +680,15 @@ namespace MupenToolkit.Properties {
         public static string Mempak {
             get {
                 return ResourceManager.GetString("Mempak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movie.
+        /// </summary>
+        public static string Movie {
+            get {
+                return ResourceManager.GetString("Movie", resourceCulture);
             }
         }
         

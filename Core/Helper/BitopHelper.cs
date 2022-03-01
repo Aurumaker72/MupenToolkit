@@ -29,6 +29,11 @@ namespace MupenToolkit.Core.Helper
         {
             if (!bitval) value &= ~(1 << bitpos); else value |= 1 << bitpos;
         }
+        public static int SetBit(int value, bool bitval, int bitpos)
+        {
+            if (!bitval) value &= ~(1 << bitpos); else value |= 1 << bitpos;
+            return value;
+        }
         public static void SetBit(ref uint value, bool bitval, int bitpos)
         {
             if (!bitval) value &= ~(uint)((1 << bitpos)); else value |= (uint)(1 << bitpos);
