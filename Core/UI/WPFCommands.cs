@@ -250,9 +250,7 @@ namespace MupenToolkit.Core.UI
         {
             if (parameter == null) return;
             var lstr = parameter as string;
-            mwv.Busy = true;
-            LocalizationProvider.SetCulture(lstr);
-            mwv.Busy = false;
+            LocalizationProvider.SetCulture(lstr, mwv);
         }
     }
 

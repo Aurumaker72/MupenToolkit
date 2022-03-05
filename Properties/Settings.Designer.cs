@@ -37,13 +37,13 @@ namespace MupenToolkit.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int CultureIndex {
+        [global::System.Configuration.DefaultSettingValueAttribute("en-US")]
+        public string Culture {
             get {
-                return ((int)(this["CultureIndex"]));
+                return ((string)(this["Culture"]));
             }
             set {
-                this["CultureIndex"] = value;
+                this["Culture"] = value;
             }
         }
     }

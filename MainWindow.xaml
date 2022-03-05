@@ -8,12 +8,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:resx="clr-namespace:MupenToolkit.Properties"
     xmlns:ui="clr-namespace:MupenToolkit.Core.UI"
-    Title="{x:Static resx:Resources.AppName}"
+    Title="{Resx AppName}"
     Width="900"
     Height="500"
     AllowDrop="True"
     DragDrop.Drop="Window_Drop"
     mc:Ignorable="d"
+    WindowStartupLocation="CenterScreen"
+    SizeToContent="Manual"
+    ResxExtension.DefaultResxName="MupenToolkit.Properties.Resources" Language="{UICulture}"
     SnapsToDevicePixels="False"
     >
     <Window.DataContext>
@@ -54,13 +57,13 @@
                     Margin="5"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Content="{x:Static resx:Resources.Header}" />
+                    Content="{Resx Header}" />
                 <GroupBox
                     Grid.Column="1"
                     Margin="5"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Content="{x:Static resx:Resources.Input}" />
+                    Content="{Resx Input}" />
 
                 <Grid
                     Grid.Column="1"
@@ -77,7 +80,7 @@
                         Grid.RowSpan="2"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch">
-                        <TabItem Header="{x:Static resx:Resources.TASStudio}">
+                        <TabItem Header="{Resx TASStudio}">
                             <ui:ExtendedDataGrid
                                 x:Name="DataGrid_TASStudio"
                                 Grid.RowSpan="2"
@@ -105,10 +108,10 @@
 
                                 <DataGrid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Command="ApplicationCommands.Copy" Header="{x:Static resx:Resources.Copy}" />
-                                        <MenuItem Command="ApplicationCommands.Paste" Header="{x:Static resx:Resources.Paste}" />
-                                        <MenuItem Command="ApplicationCommands.Undo" Header="{x:Static resx:Resources.Undo}" />
-                                        <MenuItem Command="ApplicationCommands.Redo" Header="{x:Static resx:Resources.Redo}" />
+                                        <MenuItem Command="ApplicationCommands.Copy" Header="{Resx Copy}" />
+                                        <MenuItem Command="ApplicationCommands.Paste" Header="{Resx Paste}" />
+                                        <MenuItem Command="ApplicationCommands.Undo" Header="{Resx Undo}" />
+                                        <MenuItem Command="ApplicationCommands.Redo" Header="{Resx Redo}" />
 
                                         <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                             <Label
@@ -116,7 +119,7 @@
                                                 VerticalAlignment="Stretch"
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
-                                                Content="{x:Static resx:Resources.Controller}" />
+                                                Content="{Resx Controller}" />
                                             <TextBox
                                                 HorizontalAlignment="Stretch"
                                                 VerticalAlignment="Stretch"
@@ -126,11 +129,11 @@
                                                 Text="{Binding CurrentController, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                                         </DockPanel>
                                         <DockPanel>
-                                            <Label Content="{x:Static resx:Resources.Zoom}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                                            <Label Content="{Resx Zoom}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
                                             <Slider x:Name="Slider_TASStudioZoom" Minimum="1" Maximum="2" VerticalAlignment="Center" VerticalContentAlignment="Center" MinWidth="64" />
                                         </DockPanel>
 
-                                        <MenuItem Command="{Binding InputStatistics}" Header="{x:Static resx:Resources.InputStatistics}" />
+                                        <MenuItem Command="{Binding InputStatistics}" Header="{Resx InputStatistics}" />
                                     </ContextMenu>
                                 </DataGrid.ContextMenu>
                                 <DataGrid.LayoutTransform>
@@ -309,7 +312,7 @@
 
                         </TabItem>
 
-                        <TabItem Header="{x:Static resx:Resources.Analog}" IsEnabled="True">
+                        <TabItem Header="{Resx Analog}" IsEnabled="True">
                             <Grid>
                                 <Grid ShowGridLines="False">
                                     <Grid.RowDefinitions>
@@ -418,7 +421,7 @@
                                                 Grid.Column="0"
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
-                                                Content="{x:Static resx:Resources.AxisX}" />
+                                                Content="{Resx AxisX}" />
                                             <Slider
                                                 Grid.Row="0"
                                                 Grid.Column="1"
@@ -448,7 +451,7 @@
                                                         Grid.Column="0"
                                                         HorizontalContentAlignment="Center"
                                                         VerticalContentAlignment="Center"
-                                                        Content="{x:Static resx:Resources.AxisX}" />
+                                                        Content="{Resx AxisX}" />
                                                     <TextBox
                                                         Grid.Row="1"
                                                         Grid.Column="1"
@@ -465,7 +468,7 @@
                                                 Grid.Column="0"
                                                 HorizontalContentAlignment="Center"
                                                 VerticalContentAlignment="Center"
-                                                Content="{x:Static resx:Resources.AxisY}" />
+                                                Content="{Resx AxisY}" />
                                             <Slider
                                                 Grid.Row="1"
                                                 Grid.Column="1"
@@ -494,7 +497,7 @@
                                                         Grid.Column="0"
                                                         HorizontalContentAlignment="Center"
                                                         VerticalContentAlignment="Center"
-                                                        Content="{x:Static resx:Resources.AxisY}" />
+                                                        Content="{Resx AxisY}" />
 
                                                     <TextBox
                                                         Grid.Row="1"
@@ -644,20 +647,20 @@
                             </Grid>
                         </TabItem>
 
-                        <TabItem Header="{x:Static resx:Resources.Expert}">
+                        <TabItem Header="{Resx Expert}">
                             <Grid>
                               
                                 <TreeView HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                    <TreeViewItem Header="{x:Static resx:Resources.Movie}" IsSelected="True">
-                                        <TreeViewItem Header="{x:Static resx:Resources.Header}">
+                                    <TreeViewItem Header="{Resx Movie}" IsSelected="True">
+                                        <TreeViewItem Header="{Resx Header}">
                                             <TreeViewItem Header="{Binding Movie.Header.Magic}"/>
                                             <TreeViewItem Header="{Binding Movie.Header.LengthSamples}"/>
                                             <TreeViewItem Header="{Binding Movie.Header.LengthVIs}"/>
                                             <TreeViewItem Header="{Binding Movie.Header.UID}"/>
                                             <TreeViewItem Header="{Binding Movie.Header.Version}"/>
                                         </TreeViewItem>
-                                        <TreeViewItem Header="{x:Static resx:Resources.Input}">
-                                            <TreeViewItem Header="{x:Static resx:Resources.CurrentSample}">
+                                        <TreeViewItem Header="{Resx Input}">
+                                            <TreeViewItem Header="{Resx CurrentSample}">
                                                 <TreeViewItem Header="{Binding SelectedSample.Raw}"/>
                                             </TreeViewItem>
                                         </TreeViewItem>
@@ -765,7 +768,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Name}" />
+                        Content="{Resx Name}" />
                     <TextBox
                         Grid.Row="0"
                         Grid.Column="1"
@@ -778,7 +781,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.LengthSamples}" />
+                        Content="{Resx LengthSamples}" />
                     <TextBox
                         Grid.Row="1"
                         Grid.Column="1"
@@ -817,7 +820,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Author}" />
+                        Content="{Resx Author}" />
                     <TextBox
                         Grid.Row="0"
                         Grid.Column="2"
@@ -830,7 +833,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Description}" />
+                        Content="{Resx Description}" />
                     <TextBox
                         Grid.Row="1"
                         Grid.Column="2"
@@ -843,7 +846,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.RomName}" />
+                        Content="{Resx RomName}" />
                     <TextBox
                         Grid.Row="2"
                         Grid.Column="2"
@@ -867,7 +870,7 @@
                         Background="Transparent"
                         BorderBrush="Gray"
                         Command="{Binding EditCountry}"
-                        Content="{x:Static resx:Resources.RomCountry}"
+                        Content="{Resx RomCountry}"
                         Style="{StaticResource ReactiveButton}" />
                     <TextBox
                         Grid.Row="3"
@@ -882,7 +885,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.CRC}" />
+                        Content="{Resx CRC}" />
                     <TextBox
                         Grid.Row="4"
                         Grid.Column="2"
@@ -904,7 +907,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Rerecords}" />
+                        Content="{Resx Rerecords}" />
                     <TextBox
                         Grid.Row="6"
                         Grid.Column="2"
@@ -917,7 +920,7 @@
                         Grid.Column="1"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.LengthSamples}" />
+                        Content="{Resx LengthSamples}" />
                     <TextBox
                         Grid.Row="7"
                         Grid.Column="2"
@@ -933,7 +936,7 @@
                         Background="Transparent"
                         BorderBrush="Gray"
                         Command="{Binding EditControllerFlags}"
-                        Content="{x:Static resx:Resources.Controllers}"
+                        Content="{Resx Controllers}"
                         Style="{StaticResource ReactiveButton}" />
 
                     <Viewbox Grid.Row="8" Grid.Column="0" Margin="5">
@@ -1024,7 +1027,7 @@
                         Grid.ColumnSpan="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Controller0}"
+                        Content="{Resx Controller0}"
                         FontSize="13" />
                     <Separator
                         Grid.Row="1"
@@ -1035,7 +1038,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Connected}" />
+                        Content="{Resx Connected}" />
                     <CheckBox
                         Grid.Row="2"
                         Grid.Column="1"
@@ -1049,7 +1052,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Mempak}" />
+                        Content="{Resx Mempak}" />
                     <CheckBox
                         Grid.Row="3"
                         Grid.Column="1"
@@ -1063,7 +1066,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Rumblepak}" />
+                        Content="{Resx Rumblepak}" />
                     <CheckBox
                         Grid.Row="4"
                         Grid.Column="1"
@@ -1079,7 +1082,7 @@
                         Grid.ColumnSpan="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Controller1}"
+                        Content="{Resx Controller1}"
                         FontSize="13" />
                     <Separator
                         Grid.Row="6"
@@ -1090,7 +1093,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Connected}" />
+                        Content="{Resx Connected}" />
                     <CheckBox
                         Grid.Row="7"
                         Grid.Column="1"
@@ -1104,7 +1107,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Mempak}" />
+                        Content="{Resx Mempak}" />
                     <CheckBox
                         Grid.Row="8"
                         Grid.Column="1"
@@ -1118,7 +1121,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Rumblepak}" />
+                        Content="{Resx Rumblepak}" />
                     <CheckBox
                         Grid.Row="9"
                         Grid.Column="1"
@@ -1134,7 +1137,7 @@
                         Grid.ColumnSpan="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Controller2}"
+                        Content="{Resx Controller2}"
                         FontSize="13" />
                     <Separator
                         Grid.Row="11"
@@ -1145,7 +1148,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Connected}" />
+                        Content="{Resx Connected}" />
                     <CheckBox
                         Grid.Row="12"
                         Grid.Column="1"
@@ -1159,7 +1162,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Mempak}" />
+                        Content="{Resx Mempak}" />
                     <CheckBox
                         Grid.Row="13"
                         Grid.Column="1"
@@ -1173,7 +1176,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Rumblepak}" />
+                        Content="{Resx Rumblepak}" />
                     <CheckBox
                         Grid.Row="14"
                         Grid.Column="1"
@@ -1189,7 +1192,7 @@
                         Grid.ColumnSpan="2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Controller3}"
+                        Content="{Resx Controller3}"
                         FontSize="13" />
                     <Separator
                         Grid.Row="16"
@@ -1200,7 +1203,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Connected}" />
+                        Content="{Resx Connected}" />
                     <CheckBox
                         Grid.Row="17"
                         Grid.Column="1"
@@ -1214,7 +1217,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Mempak}" />
+                        Content="{Resx Mempak}" />
                     <CheckBox
                         Grid.Row="18"
                         Grid.Column="1"
@@ -1228,7 +1231,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Rumblepak}" />
+                        Content="{Resx Rumblepak}" />
                     <CheckBox
                         Grid.Row="19"
                         Grid.Column="1"
@@ -1307,7 +1310,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.USA}" />
+                        Content="{Resx USA}" />
 
                     <RadioButton
                         Grid.Row="0"
@@ -1324,7 +1327,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.USAJapan}" />
+                        Content="{Resx USAJapan}" />
                     <RadioButton
                         Grid.Row="1"
                         Grid.Column="1"
@@ -1340,7 +1343,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Germany}" />
+                        Content="{Resx Germany}" />
                     <RadioButton
                         Grid.Row="2"
                         Grid.Column="1"
@@ -1356,7 +1359,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.France}" />
+                        Content="{Resx France}" />
                     <RadioButton
                         Grid.Row="3"
                         Grid.Column="1"
@@ -1372,7 +1375,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Italy}" />
+                        Content="{Resx Italy}" />
                     <RadioButton
                         Grid.Row="4"
                         Grid.Column="1"
@@ -1388,7 +1391,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Japan}" />
+                        Content="{Resx Japan}" />
                     <RadioButton
                         Grid.Row="5"
                         Grid.Column="1"
@@ -1404,7 +1407,7 @@
                         Grid.Column="0"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Content="{x:Static resx:Resources.Spain}" />
+                        Content="{Resx Spain}" />
                     <RadioButton
                         Grid.Row="6"
                         Grid.Column="1"
@@ -1470,15 +1473,15 @@
                             <GridViewColumn
                                 Width="Auto"
                                 DisplayMemberBinding="{Binding Name}"
-                                Header="{x:Static resx:Resources.Name}" />
+                                Header="{Resx Name}" />
                             <GridViewColumn
                                 Width="Auto"
                                 DisplayMemberBinding="{Binding Description}"
-                                Header="{x:Static resx:Resources.Evaluation}" />
+                                Header="{Resx Evaluation}" />
                             <GridViewColumn
                                 Width="Auto"
                                 DisplayMemberBinding="{Binding Value}"
-                                Header="{x:Static resx:Resources.Value}" />
+                                Header="{Resx Value}" />
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -1538,15 +1541,15 @@
                         <GridViewColumn
                             Width="Auto"
                             DisplayMemberBinding="{Binding Name}"
-                            Header="{x:Static resx:Resources.Check}" />
+                            Header="{Resx Check}" />
                         <GridViewColumn
                             Width="Auto"
                             DisplayMemberBinding="{Binding Description}"
-                            Header="{x:Static resx:Resources.Evaluation}" />
+                            Header="{Resx Evaluation}" />
                         <GridViewColumn
                             Width="Auto"
                             DisplayMemberBinding="{Binding Value}"
-                            Header="{x:Static resx:Resources.Status}" />
+                            Header="{Resx Status}" />
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -1603,10 +1606,10 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <RadioButton FlowDirection="LeftToRight" Grid.Row="0" Content="English"  Command="{Binding SetLanguage}" CommandParameter="en-US" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=en-US, UpdateSourceTrigger=PropertyChanged}"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="0" Content="English"  Command="{Binding SetLanguage}" CommandParameter="en-US" IsChecked="{Binding Culture, Converter={StaticResource eqConverter}, ConverterParameter=en-US, UpdateSourceTrigger=PropertyChanged}"/>
                 <Separator Grid.Row="1" Background="Silver"/>
-                <RadioButton FlowDirection="LeftToRight" Grid.Row="2" Content="Deutsch"  Command="{Binding SetLanguage}" CommandParameter="de-DE" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=de-DE, UpdateSourceTrigger=PropertyChanged}"/>
-                <RadioButton FlowDirection="LeftToRight" Grid.Row="3" Content="Português" Command="{Binding SetLanguage}" CommandParameter="pt" IsChecked="{Binding InternalCulture, Converter={StaticResource eqConverter}, ConverterParameter=pt, UpdateSourceTrigger=PropertyChanged}"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="2" Content="Deutsch"  Command="{Binding SetLanguage}" CommandParameter="de" IsChecked="{Binding Culture, Converter={StaticResource eqConverter}, ConverterParameter=de, UpdateSourceTrigger=PropertyChanged}"/>
+                <RadioButton FlowDirection="LeftToRight" Grid.Row="3" Content="Português" Command="{Binding SetLanguage}" CommandParameter="pt" IsChecked="{Binding Culture, Converter={StaticResource eqConverter}, ConverterParameter=pt, UpdateSourceTrigger=PropertyChanged}"/>
 
             </Grid>
 
@@ -1658,14 +1661,14 @@
                     Margin="5"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    Content="{x:Static resx:Resources.AppName}"
+                    Content="{Resx AppName}"
                     FontSize="30" />
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button
                     Command="{Binding LoadData}"
-                    Content="{x:Static resx:Resources.LoadData}"
+                    Content="{Resx LoadData}"
                     FontSize="16"
                     Style="{StaticResource ReactiveButton}" />
             </StackPanel>
@@ -1798,7 +1801,7 @@
             Background="Transparent">
 
 
-            <MenuItem Header="{x:Static resx:Resources.File}">
+            <MenuItem Header="{Resx File}">
                 <!--<MenuItem.Style>
                     <Style TargetType="{x:Type MenuItem}">
                         <Style.Triggers>
@@ -1814,21 +1817,21 @@
                     </Style>
                 </MenuItem.Style>-->
 
-                <MenuItem Command="{Binding LoadData}" Header="{x:Static resx:Resources.LoadData}" />
-                <MenuItem Command="{Binding LoadLast}" Header="{x:Static resx:Resources.LoadLast}" />
+                <MenuItem Command="{Binding LoadData}" Header="{Resx LoadData}" />
+                <MenuItem Command="{Binding LoadLast}" Header="{Resx LoadLast}" />
 
                 <MenuItem
                     Command="{Binding SaveData}"
-                    Header="{x:Static resx:Resources.SaveData}"
+                    Header="{Resx SaveData}"
                     IsEnabled="{Binding FileLoaded}" />
                 <MenuItem
                     Command="{Binding DiagnoseData}"
-                    Header="{x:Static resx:Resources.DataDiagnosis}"
+                    Header="{Resx DataDiagnosis}"
                     IsEnabled="{Binding FileLoaded}" />
                 <Separator/>
-                <MenuItem Command="{Binding LanguagePicker}" Header="{x:Static resx:Resources.PickLanguage}"/>
+                <MenuItem Command="{Binding LanguagePicker}" Header="{Resx PickLanguage}"/>
                 <Separator/>
-                <MenuItem Command="{Binding UnloadData}" Header="{x:Static resx:Resources.UnloadData}" IsEnabled="{Binding FileLoaded}" />
+                <MenuItem Command="{Binding UnloadData}" Header="{Resx UnloadData}" IsEnabled="{Binding FileLoaded}" />
 
             </MenuItem>
         </Menu>

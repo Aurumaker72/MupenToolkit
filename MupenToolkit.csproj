@@ -25,6 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Infralution.Localization.Wpf">
+      <HintPath>Infralution.Localization.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\loading.gif" />
     <Resource Include="Resources\logo.png" />
   </ItemGroup>

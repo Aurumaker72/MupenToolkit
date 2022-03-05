@@ -79,10 +79,7 @@ namespace MupenToolkit.Core.UI
         public string Mode { get; set; } = "None";
         public Provider.InfoProvider.InteractionTypes InteractionMode { get; set; } = Provider.InfoProvider.InteractionTypes.None;
 
-        /// <summary>
-        /// Thread culture in 
-        /// </summary>
-        public string InternalCulture { get; set; }
+        public string Culture { get; set; }
 
         public ObservableCollection<Statistic> Statistics { get; set; } = new();
         public ObservableCollection<Statistic> Diagnosis { get; set; } = new();

@@ -32,7 +32,7 @@ namespace MupenToolkit
 
         public MainWindow()
         {
-            LocalizationProvider.Initialize();
+            LocalizationProvider.SetCulture(Properties.Settings.Default.Culture, stateContainer);
 
             InitializeComponent();
             stateContainer.FileLoaded = false;
