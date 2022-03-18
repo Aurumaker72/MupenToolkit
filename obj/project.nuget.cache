@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "dgSpecHash": "1c7hhwEOVl72TZJkLG5SI6MUm0BKKgoFqDiQrWeRk4/cihayVl7zD4dI7IoGDPKcXj0M3HbSt2ZZu37swbBzog==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\MupenToolkitPRE\\MupenToolkitPRE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\bluwolficons\\1.0.1\\bluwolficons.1.0.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\dynamicdata\\7.5.2\\dynamicdata.7.5.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp\\6.10.8\\postsharp.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.aggregation\\6.10.8\\postsharp.patterns.aggregation.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.aggregation.redist\\6.10.8\\postsharp.patterns.aggregation.redist.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.common\\6.10.8\\postsharp.patterns.common.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.common.redist\\6.10.8\\postsharp.patterns.common.redist.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.model\\6.10.8\\postsharp.patterns.model.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.patterns.model.redist\\6.10.8\\postsharp.patterns.model.redist.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\postsharp.redist\\6.10.8\\postsharp.redist.6.10.8.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\reactiveui\\17.1.50\\reactiveui.17.1.50.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\reactiveui.wpf\\17.1.50\\reactiveui.wpf.17.1.50.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml.avalonedit\\2.0.0\\showmethexaml.avalonedit.2.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml.msbuild\\2.0.0\\showmethexaml.msbuild.2.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\splat\\14.1.45\\splat.14.1.45.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\virtualizingwrappanel\\1.5.7\\virtualizingwrappanel.1.5.7.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BluwolfIcons 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BluwolfIcons",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

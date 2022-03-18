@@ -1,0 +1,50 @@
+﻿<Application x:Class="MupenToolkitPRE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MupenToolkitPRE"
+             xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:xmlex="clr-namespace:MupenToolkitPRE.UI.XAML" 
+             
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- This is the current way to setup your app's initial theme -->
+                <materialDesign:BundledTheme BaseTheme="Inherit" PrimaryColor="Blue" SecondaryColor="Lime"
+                                             ColorAdjustment="{materialDesign:ColorAdjustment}" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <mvvm:UInt32HexadecimalConverter x:Key="UInt32HexadecimalConverter"/>
+            <mvvm:Int32HexadecimalConverter x:Key="Int32HexadecimalConverter"/>
+            <mvvm:EqualityToBooleanConverter x:Key="EqualityToBooleanConverter"/>
+            <mvvm:CanvasLeftConverter x:Key="CanvasLeftConverter"/>
+            <mvvm:CanvasTopConverter x:Key="CanvasTopConverter"/>
+            <mvvm:SubtractorConverter x:Key="SubtractorConverter"/>
+            <mvvm:AdderConverter x:Key="AdderConverter"/>
+            <mvvm:DividerConverter x:Key="DividerConverter"/>
+            <mvvm:StatisticsTextConverter x:Key="StatisticsTextConverter"/>
+            <mvvm:UnsignedShortValueToEqualsParameterConverter x:Key="UnsignedShortValueToEqualsParameterConverter"/>
+            
+            <Style x:Key="ToolbarButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignToolButton}">
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type FrameworkElement}}, Path=(TextElement.Foreground)}"/>
+                <Setter Property="materialDesign:RippleAssist.RippleSizeMultiplier" Value="0.75"/>
+                <Setter Property="materialDesign:RippleAssist.Feedback" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Control}, Path=Foreground, Converter={StaticResource BrushRoundConverter}}"/>
+            </Style>
+            <Style x:Key="ToolbarSubButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignToolButton}">
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type FrameworkElement}}, Path=(TextElement.Foreground)}"/>
+                <Setter Property="materialDesign:RippleAssist.RippleSizeMultiplier" Value="0.75"/>
+                <Setter Property="materialDesign:RippleAssist.Feedback" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Control}, Path=Foreground, Converter={StaticResource BrushRoundConverter}}"/>
+            </Style>
+            <SolidColorBrush x:Key="ColorJoystickColumn" Color="LightYellow" />
+            <SolidColorBrush x:Key="ColorMainButtonsColumn" Color="LightGray" />
+            <SolidColorBrush x:Key="ColorCameraButtonsColumn" Color="Gray" />
+            <SolidColorBrush x:Key="ColorDPadButtonsColumn" Color="White" />
+            <SolidColorBrush x:Key="ColorOtherButtonsColumn" Color="LightBlue" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
