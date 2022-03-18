@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Alex\source\repos\MupenToolkitPRE\obj\Release\net6.0-windows\
+C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\
 MupenToolkitPRE
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
-C:\Users\Alex\source\repos\MupenToolkitPRE\App.xaml
+C:\Users\Alex\source\repos\MupenToolkitGit\App.xaml
 91998247044
 1-1361176732
-44558748585
-222-102482077
+43-172362506
+2101249068291
 AnalogInputPage.xaml;ControllerFlagsPage.xaml;GenericDialog.xaml;HeaderPage.xaml;HomePage.xaml;MainWindow.xaml;ROMCountryPage.xaml;SettingsPage.xaml;StatisticsPage.xaml;
 
 False

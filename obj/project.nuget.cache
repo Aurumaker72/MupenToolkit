@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "1c7hhwEOVl72TZJkLG5SI6MUm0BKKgoFqDiQrWeRk4/cihayVl7zD4dI7IoGDPKcXj0M3HbSt2ZZu37swbBzog==",
+  "dgSpecHash": "gR3mTaO/Io2VaGNny4dUQH0atM39MzrMlXwmrl3eYjYx0qOcwtq0OTRhZcjmbLre9tpyOeqJ+ZgzbGv4DWiGZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\MupenToolkitPRE\\MupenToolkitPRE.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\MupenToolkitGit\\MupenToolkitPRE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alex\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\bluwolficons\\1.0.1\\bluwolficons.1.0.1.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\dynamicdata\\7.5.2\\dynamicdata.7.5.2.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
@@ -20,9 +19,6 @@
     "C:\\Users\\Alex\\.nuget\\packages\\postsharp.redist\\6.10.8\\postsharp.redist.6.10.8.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\reactiveui\\17.1.50\\reactiveui.17.1.50.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\reactiveui.wpf\\17.1.50\\reactiveui.wpf.17.1.50.nupkg.sha512",
-    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
-    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml.avalonedit\\2.0.0\\showmethexaml.avalonedit.2.0.0.nupkg.sha512",
-    "C:\\Users\\Alex\\.nuget\\packages\\showmethexaml.msbuild\\2.0.0\\showmethexaml.msbuild.2.0.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\splat\\14.1.45\\splat.14.1.45.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\virtualizingwrappanel\\1.5.7\\virtualizingwrappanel.1.5.7.nupkg.sha512",

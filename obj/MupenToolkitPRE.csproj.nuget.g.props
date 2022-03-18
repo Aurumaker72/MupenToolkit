@@ -17,7 +17,6 @@
     <Import Project="$(NuGetPackageRoot)postsharp\6.10.8\build\PostSharp.props" Condition="Exists('$(NuGetPackageRoot)postsharp\6.10.8\build\PostSharp.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgShowMeTheXAML_MSBuild Condition=" '$(PkgShowMeTheXAML_MSBuild)' == '' ">C:\Users\Alex\.nuget\packages\showmethexaml.msbuild\2.0.0</PkgShowMeTheXAML_MSBuild>
     <PkgPostSharp_Patterns_Common Condition=" '$(PkgPostSharp_Patterns_Common)' == '' ">C:\Users\Alex\.nuget\packages\postsharp.patterns.common\6.10.8</PkgPostSharp_Patterns_Common>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\Alex\.nuget\packages\materialdesignthemes\4.3.0</PkgMaterialDesignThemes>
   </PropertyGroup>
