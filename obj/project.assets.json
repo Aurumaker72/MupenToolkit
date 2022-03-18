@@ -1,0 +1,917 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "AvalonEdit/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "BluwolfIcons/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BluwolfIcons.dll": {}
+        },
+        "runtime": {
+          "lib/net461/BluwolfIcons.dll": {}
+        }
+      },
+      "DynamicData/7.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/DynamicData.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/DynamicData.dll": {}
+        }
+      },
+      "MaterialDesignColors/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "[2.0.4, 3.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.Toolkit.Mvvm/7.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {}
+        }
+      },
+      "PostSharp/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "[6.10.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/PostSharp.props": {},
+          "build/PostSharp.targets": {}
+        }
+      },
+      "PostSharp.Patterns.Aggregation/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Aggregation.Redist": "[6.10.8, 7.0.0)",
+          "PostSharp.Patterns.Common": "[6.10.8, 7.0.0)"
+        }
+      },
+      "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Common.Redist": "[6.10.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/net6.0/PostSharp.Patterns.Aggregation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PostSharp.Patterns.Aggregation.dll": {}
+        }
+      },
+      "PostSharp.Patterns.Common/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp": "[6.10.8, 7.0.0)",
+          "PostSharp.Patterns.Common.Redist": "[6.10.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "PostSharp.Patterns.Common.Redist/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "[6.10.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/net6.0/PostSharp.Patterns.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PostSharp.Patterns.Common.dll": {}
+        }
+      },
+      "PostSharp.Patterns.Model/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Aggregation": "[6.10.8, 7.0.0)",
+          "PostSharp.Patterns.Model.Redist": "[6.10.8, 7.0.0)"
+        }
+      },
+      "PostSharp.Patterns.Model.Redist/6.10.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Aggregation.Redist": "[6.10.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/net6.0/PostSharp.Patterns.Model.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PostSharp.Patterns.Model.dll": {}
+        }
+      },
+      "PostSharp.Redist/6.10.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/PostSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PostSharp.dll": {}
+        }
+      },
+      "ReactiveUI/17.1.50": {
+        "type": "package",
+        "dependencies": {
+          "DynamicData": "7.5.2",
+          "Splat": "14.1.45"
+        },
+        "compile": {
+          "lib/net6.0/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ReactiveUI.dll": {}
+        }
+      },
+      "ReactiveUI.WPF/17.1.50": {
+        "type": "package",
+        "dependencies": {
+          "ReactiveUI": "17.1.50"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/ReactiveUI.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ReactiveUI.Wpf.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "ShowMeTheXAML/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/ShowMeTheXAML.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ShowMeTheXAML.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "ShowMeTheXAML.AvalonEdit/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AvalonEdit": "6.0.1",
+          "ShowMeTheXAML": "2.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/ShowMeTheXAML.AvalonEdit.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ShowMeTheXAML.AvalonEdit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "ShowMeTheXAML.MSBuild/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ShowMeTheXAML": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/ShowMeTheXAML.MSBuild.targets": {}
+        }
+      },
+      "Splat/14.1.45": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Splat.dll": {}
+        }
+      },
+      "System.Reactive/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {}
+        },
+        "build": {
+          "buildTransitive/net5.0/_._": {}
+        }
+      },
+      "VirtualizingWrapPanel/1.5.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/VirtualizingWrapPanel.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/VirtualizingWrapPanel.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "AvalonEdit/6.0.1": {
+      "sha512": "JmRwKMDRUUkUGLQmTtIHiSgFSQH9567b2/55Wa/gQp+ZtxQN+mnl5Qt6B/Kgz56FMnnDyE/fV23r7J2SV+NP7g==",
+      "type": "package",
+      "path": "avalonedit/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "avalonedit.6.0.1.nupkg.sha512",
+        "avalonedit.nuspec",
+        "lib/net40/ICSharpCode.AvalonEdit.dll",
+        "lib/net40/ICSharpCode.AvalonEdit.xml",
+        "lib/net45/ICSharpCode.AvalonEdit.dll",
+        "lib/net45/ICSharpCode.AvalonEdit.xml",
+        "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll",
+        "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.xml"
+      ]
+    },
+    "BluwolfIcons/1.0.1": {
+      "sha512": "+7+306bQNZ5RkGmS8RsUHqQKH0rj/x5GpjRevPUBs27Yha4XAkbuDfiurRjvRUskDYqe2RiCyeJUVRVoiR0rIQ==",
+      "type": "package",
+      "path": "bluwolficons/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bluwolficons.1.0.1.nupkg.sha512",
+        "bluwolficons.nuspec",
+        "lib/net461/BluwolfIcons.XML",
+        "lib/net461/BluwolfIcons.dll"
+      ]
+    },
+    "DynamicData/7.5.2": {
+      "sha512": "J6nZsHqG+CYWIrRUPQrZqf7o8bhjWESmbIbGfNQAsJmtDNcc/DYfxBFV8wW44n/Dz0RweczrXQgMtWf+m5X8ig==",
+      "type": "package",
+      "path": "dynamicdata/7.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "dynamicdata.7.5.2.nupkg.sha512",
+        "dynamicdata.nuspec",
+        "lib/net462/DynamicData.dll",
+        "lib/net462/DynamicData.xml",
+        "lib/net6.0/DynamicData.dll",
+        "lib/net6.0/DynamicData.xml",
+        "lib/netstandard2.0/DynamicData.dll",
+        "lib/netstandard2.0/DynamicData.xml",
+        "lib/uap10.0.16299/DynamicData.dll",
+        "lib/uap10.0.16299/DynamicData.pri",
+        "lib/uap10.0.16299/DynamicData.xml",
+        "logo.png"
+      ]
+    },
+    "MaterialDesignColors/2.0.4": {
+      "sha512": "l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
+      "type": "package",
+      "path": "materialdesigncolors/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net452/MaterialDesignColors.dll",
+        "lib/net452/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.2.0.4.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/4.3.0": {
+      "sha512": "edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
+      "type": "package",
+      "path": "materialdesignthemes/4.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net452/MaterialDesignThemes.Wpf.dll",
+        "lib/net452/MaterialDesignThemes.Wpf.pdb",
+        "lib/net452/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.4.3.0.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Microsoft.Toolkit.Mvvm/7.1.2": {
+      "sha512": "tUQn6ar9oP7kmYaZ6pWabxpQaqw95Bsf+GG7prEL0y5MV5F60z76lI/Ppps9zcTqwd7e5CrdZBcdfor9WuvohA==",
+      "type": "package",
+      "path": "microsoft.toolkit.mvvm/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "ThirdPartyNotices.txt",
+        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.pdb",
+        "analyzers/dotnet/cs/Microsoft.Toolkit.Mvvm.SourceGenerators.xml",
+        "lib/net5.0/Microsoft.Toolkit.Mvvm.dll",
+        "lib/net5.0/Microsoft.Toolkit.Mvvm.pdb",
+        "lib/net5.0/Microsoft.Toolkit.Mvvm.xml",
+        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.Mvvm.xml",
+        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.dll",
+        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.pdb",
+        "lib/netstandard2.1/Microsoft.Toolkit.Mvvm.xml",
+        "microsoft.toolkit.mvvm.7.1.2.nupkg.sha512",
+        "microsoft.toolkit.mvvm.nuspec"
+      ]
+    },
+    "PostSharp/6.10.8": {
+      "sha512": "rL6cpXCvjddWU9gPuzzswjxiPZC0Wd2wgO5DGTxu9NoSrmcQouulV/wB3HVznj4N1Hhu+IgCM0ViJDDm5yMJpw==",
+      "type": "package",
+      "path": "postsharp/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.html",
+        "build/PostSharp-Tools.7z",
+        "build/PostSharp.BeforeTargetFrameworkInference.targets",
+        "build/PostSharp.Version.properties",
+        "build/PostSharp.properties",
+        "build/PostSharp.props",
+        "build/PostSharp.targets",
+        "build/PostSharp.tasks",
+        "build/_common/unzipper/SharpCompress.dll",
+        "build/_common/unzipper/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/_common/unzipper/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/unzipper.deps.json",
+        "build/_common/unzipper/unzipper.dll",
+        "build/_common/unzipper/unzipper.exe",
+        "build/_common/unzipper/unzipper.exe.config",
+        "build/_common/unzipper/unzipper.pdb",
+        "build/_common/unzipper/unzipper.runtimeconfig.json",
+        "build/net472/PostSharp.MSBuild.v6.10.8.Release.dll",
+        "build/net472/PostSharp.MSBuild.v6.10.8.Release.pdb",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.8.Release.dll",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.8.Release.pdb",
+        "icon.png",
+        "lib/net35-client/_._",
+        "lib/netstandard1.0/_._",
+        "postsharp.6.10.8.nupkg.sha512",
+        "postsharp.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Aggregation/6.10.8": {
+      "sha512": "IElYQae2WdEg6GWfdTAbd9qV5zm904hINRMbZ4E5At/QYUcgqW73lVZYUBfcRrDV+DfxXPyH3EYx1b/JvylQQQ==",
+      "type": "package",
+      "path": "postsharp.patterns.aggregation/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "postsharp.patterns.aggregation.6.10.8.nupkg.sha512",
+        "postsharp.patterns.aggregation.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
+      "sha512": "eilNfbtRA43e/Ose25npM71X6j3gQHBAu+w+n6D2p52bHe0iKHdEORTz1aEXHloXWnqv94xtZPrJed4kPsiUWA==",
+      "type": "package",
+      "path": "postsharp.patterns.aggregation.redist/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Aggregation.dll",
+        "lib/net45/PostSharp.Patterns.Aggregation.xml",
+        "lib/net5.0/PostSharp.Patterns.Aggregation.dll",
+        "lib/net5.0/PostSharp.Patterns.Aggregation.xml",
+        "lib/net6.0/PostSharp.Patterns.Aggregation.dll",
+        "lib/net6.0/PostSharp.Patterns.Aggregation.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Aggregation.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Aggregation.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Aggregation.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Aggregation.xml",
+        "postsharp.patterns.aggregation.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.aggregation.redist.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Common/6.10.8": {
+      "sha512": "j130m5/uVf6PMW2cbDXdi+m52gU/s9qhTaHy9+tWuTLL+2b24xr9gcJZ6WL9tzkURiZpuaKEjSIpORT7FGtVlw==",
+      "type": "package",
+      "path": "postsharp.patterns.common/6.10.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net40/_._",
+        "lib/netstandard1.3/_._",
+        "postsharp.patterns.common.6.10.8.nupkg.sha512",
+        "postsharp.patterns.common.nuspec",
+        "tools/PostSharp.Patterns.Common.Weaver.dll"
+      ]
+    },
+    "PostSharp.Patterns.Common.Redist/6.10.8": {
+      "sha512": "8o3G78g9/94Rdy61TMohbuCOUVJc5w+ER2KUKu+sIzyeygDiUrVi8b+iIOPNoJssrjkfMq1sNOCOG5fsM7qN6Q==",
+      "type": "package",
+      "path": "postsharp.patterns.common.redist/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Common.dll",
+        "lib/net45/PostSharp.Patterns.Common.xml",
+        "lib/net46/PostSharp.Patterns.Common.dll",
+        "lib/net46/PostSharp.Patterns.Common.xml",
+        "lib/net47/PostSharp.Patterns.Common.dll",
+        "lib/net47/PostSharp.Patterns.Common.xml",
+        "lib/net5.0/PostSharp.Patterns.Common.dll",
+        "lib/net5.0/PostSharp.Patterns.Common.xml",
+        "lib/net6.0/PostSharp.Patterns.Common.dll",
+        "lib/net6.0/PostSharp.Patterns.Common.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.xml",
+        "postsharp.patterns.common.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.common.redist.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Model/6.10.8": {
+      "sha512": "mKCkqEvQbITvqpVOzHeVrzAnT/I3k4lKolL6WArEU7VPF8ZBBeyQDzmvCEX8t3EktmdsDOfrNAtGBtXLpssZVw==",
+      "type": "package",
+      "path": "postsharp.patterns.model/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "postsharp.patterns.model.6.10.8.nupkg.sha512",
+        "postsharp.patterns.model.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Model.Redist/6.10.8": {
+      "sha512": "QPMYee4RgscSVofGQWaSvm4EGNTgn6fMAAi8BwpxaQ15b44zZ8nQDAgBBrGZPVmeZN5RLg9t6izgHM2cxQkHnQ==",
+      "type": "package",
+      "path": "postsharp.patterns.model.redist/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Model.dll",
+        "lib/net45/PostSharp.Patterns.Model.xml",
+        "lib/net5.0/PostSharp.Patterns.Model.dll",
+        "lib/net5.0/PostSharp.Patterns.Model.xml",
+        "lib/net6.0/PostSharp.Patterns.Model.dll",
+        "lib/net6.0/PostSharp.Patterns.Model.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Model.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Model.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Model.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Model.xml",
+        "postsharp.patterns.model.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.model.redist.nuspec"
+      ]
+    },
+    "PostSharp.Redist/6.10.8": {
+      "sha512": "bBdwhTbvQbLE8m76JlVZKqupuk8zuqN8tLmF5T8mfcaRgwu9ngFbe59qnd/wavIR4v4tvOikMwYbSBTXQ9Dxsw==",
+      "type": "package",
+      "path": "postsharp.redist/6.10.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net35-client/PostSharp.dll",
+        "lib/net35-client/PostSharp.xml",
+        "lib/net45/PostSharp.dll",
+        "lib/net45/PostSharp.xml",
+        "lib/net5.0/PostSharp.dll",
+        "lib/net5.0/PostSharp.xml",
+        "lib/net6.0/PostSharp.dll",
+        "lib/net6.0/PostSharp.xml",
+        "lib/netstandard1.3/PostSharp.dll",
+        "lib/netstandard1.3/PostSharp.xml",
+        "lib/netstandard2.0/PostSharp.dll",
+        "lib/netstandard2.0/PostSharp.xml",
+        "postsharp.redist.6.10.8.nupkg.sha512",
+        "postsharp.redist.nuspec"
+      ]
+    },
+    "ReactiveUI/17.1.50": {
+      "sha512": "UofZH1WMwWNLvFkK2SH+gsYTkUmhFFJO0Pix9YG2RzdHQ92mRFCzHzPO1abeU8/cxzyc9hJHX7sBChzUj53Ulg==",
+      "type": "package",
+      "path": "reactiveui/17.1.50",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/monoandroid11.0/ReactiveUI.dll",
+        "lib/monoandroid11.0/ReactiveUI.pdb",
+        "lib/monoandroid11.0/ReactiveUI.xml",
+        "lib/net462/ReactiveUI.dll",
+        "lib/net462/ReactiveUI.xml",
+        "lib/net472/ReactiveUI.dll",
+        "lib/net472/ReactiveUI.xml",
+        "lib/net6.0-android31.0/ReactiveUI.dll",
+        "lib/net6.0-android31.0/ReactiveUI.xml",
+        "lib/net6.0-ios15.0/ReactiveUI.dll",
+        "lib/net6.0-ios15.0/ReactiveUI.xml",
+        "lib/net6.0-macos12.0/ReactiveUI.dll",
+        "lib/net6.0-macos12.0/ReactiveUI.xml",
+        "lib/net6.0-tvos15.0/ReactiveUI.dll",
+        "lib/net6.0-tvos15.0/ReactiveUI.xml",
+        "lib/net6.0/ReactiveUI.dll",
+        "lib/net6.0/ReactiveUI.xml",
+        "lib/netstandard2.0/ReactiveUI.dll",
+        "lib/netstandard2.0/ReactiveUI.xml",
+        "lib/tizen40/ReactiveUI.dll",
+        "lib/tizen40/ReactiveUI.xml",
+        "lib/uap10.0.16299/ReactiveUI.dll",
+        "lib/uap10.0.16299/ReactiveUI.pri",
+        "lib/uap10.0.16299/ReactiveUI.xml",
+        "lib/xamarinios10/ReactiveUI.dll",
+        "lib/xamarinios10/ReactiveUI.xml",
+        "lib/xamarinmac20/ReactiveUI.dll",
+        "lib/xamarinmac20/ReactiveUI.xml",
+        "lib/xamarintvos10/ReactiveUI.dll",
+        "lib/xamarintvos10/ReactiveUI.xml",
+        "logo.png",
+        "reactiveui.17.1.50.nupkg.sha512",
+        "reactiveui.nuspec"
+      ]
+    },
+    "ReactiveUI.WPF/17.1.50": {
+      "sha512": "tyPmVvRdZ9XBS/8RR/QJjSULedHbaKUOafnUWZN5Of2ZgiP31NBRYv4ewWmt5Bghj6vSF2YRCcKljbFDTYHsVg==",
+      "type": "package",
+      "path": "reactiveui.wpf/17.1.50",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net462/ReactiveUI.Wpf.dll",
+        "lib/net462/ReactiveUI.Wpf.xml",
+        "lib/net472/ReactiveUI.Wpf.dll",
+        "lib/net472/ReactiveUI.Wpf.xml",
+        "lib/net48/ReactiveUI.Wpf.dll",
+        "lib/net48/ReactiveUI.Wpf.xml",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.Wpf.dll",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.Wpf.xml",
+        "lib/net6.0-windows7.0/ReactiveUI.Wpf.dll",
+        "lib/net6.0-windows7.0/ReactiveUI.Wpf.xml",
+        "logo.png",
+        "reactiveui.wpf.17.1.50.nupkg.sha512",
+        "reactiveui.wpf.nuspec"
+      ]
+    },
+    "ShowMeTheXAML/2.0.0": {
+      "sha512": "ljDrkSyGhx3EKIq73c9317m7NsvTjCKVdO0vnqzjwdWAgFkpdfrEd3Nn6uF/Mc+QUTSUfFfjmONJDfYSPwCB3g==",
+      "type": "package",
+      "path": "showmethexaml/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ShowMeTheXAML.dll",
+        "lib/monoandroid90/ShowMeTheXAML.dll",
+        "lib/net472/ShowMeTheXAML.dll",
+        "lib/netcoreapp3.1/ShowMeTheXAML.dll",
+        "lib/netstandard2.0/ShowMeTheXAML.dll",
+        "lib/uap10.0.17763/ShowMeTheXAML.dll",
+        "lib/uap10.0.17763/ShowMeTheXAML.pri",
+        "lib/xamarinios10/ShowMeTheXAML.dll",
+        "lib/xamarinmac20/ShowMeTheXAML.dll",
+        "showmethexaml.2.0.0.nupkg.sha512",
+        "showmethexaml.nuspec"
+      ]
+    },
+    "ShowMeTheXAML.AvalonEdit/2.0.0": {
+      "sha512": "dygU2s8iFNmXMNWYnXTxT0qWB7K2gwvinpmep1ILgDoZUsBytRhS+SjGAqdORXz0Hsfvl2he9rTLnKj95TspDQ==",
+      "type": "package",
+      "path": "showmethexaml.avalonedit/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/ShowMeTheXAML.AvalonEdit.dll",
+        "lib/netcoreapp3.1/ShowMeTheXAML.AvalonEdit.dll",
+        "showmethexaml.avalonedit.2.0.0.nupkg.sha512",
+        "showmethexaml.avalonedit.nuspec"
+      ]
+    },
+    "ShowMeTheXAML.MSBuild/2.0.0": {
+      "sha512": "EilS9tMJdusWau9tFMmvPOX+uO8eUGy7I4UHIar+g2xkRgRlT/F3yDJY5jq2jDmzwzx4DUsZo48r37Y3R/R78A==",
+      "type": "package",
+      "path": "showmethexaml.msbuild/2.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid10.0/ShowMeTheXAML.MSBuild.targets",
+        "build/monoandroid90/ShowMeTheXAML.MSBuild.targets",
+        "build/net472/ShowMeTheXAML.MSBuild.targets",
+        "build/netstandard2.0/ShowMeTheXAML.MSBuild.targets",
+        "build/uap10.0.17763/ShowMeTheXAML.MSBuild.targets",
+        "build/xamarinios10/ShowMeTheXAML.MSBuild.targets",
+        "build/xamarinmac20/ShowMeTheXAML.MSBuild.targets",
+        "lib/monoandroid10.0/_._",
+        "lib/monoandroid90/_._",
+        "lib/net472/_._",
+        "lib/netstandard2.0/_._",
+        "lib/uap10.0.17763/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "showmethexaml.msbuild.2.0.0.nupkg.sha512",
+        "showmethexaml.msbuild.nuspec",
+        "tools/netcore/ShowMeTheXAML.MSBuild.deps.json",
+        "tools/netcore/ShowMeTheXAML.MSBuild.dll",
+        "tools/netcore/ShowMeTheXAML.MSBuild.pdb",
+        "tools/netframework/ShowMeTheXAML.MSBuild.dll",
+        "tools/netframework/ShowMeTheXAML.MSBuild.pdb"
+      ]
+    },
+    "Splat/14.1.45": {
+      "sha512": "ayHdfTUklD5ci0s9m4uYMccjtkKVjZ9fVPT5q3PN+SnvyD6bjQVRozOfUHwdwh4LAz9ETZjR/tAgrm+IapXKrw==",
+      "type": "package",
+      "path": "splat/14.1.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net6.0/Splat.dll",
+        "lib/net6.0/Splat.xml",
+        "lib/netstandard2.0/Splat.dll",
+        "lib/netstandard2.0/Splat.xml",
+        "splat.14.1.45.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
+    "System.Reactive/5.0.0": {
+      "sha512": "erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "type": "package",
+      "path": "system.reactive/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net5.0/_._",
+        "build/netcoreapp3.1/System.Reactive.dll",
+        "build/netcoreapp3.1/System.Reactive.targets",
+        "build/netcoreapp3.1/System.Reactive.xml",
+        "buildTransitive/net5.0/_._",
+        "buildTransitive/netcoreapp3.1/System.Reactive.targets",
+        "lib/net472/System.Reactive.dll",
+        "lib/net472/System.Reactive.xml",
+        "lib/net5.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net5.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net5.0/System.Reactive.dll",
+        "lib/net5.0/System.Reactive.xml",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "system.reactive.5.0.0.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "VirtualizingWrapPanel/1.5.7": {
+      "sha512": "BdeoOELIQU6m3KXlbi+vSPuiDS3PFhkYHWrPAjkwAOLEk47vKWUYIhgm/XRHLyFL6my+NsmHigtYt+9YBNJYcg==",
+      "type": "package",
+      "path": "virtualizingwrappanel/1.5.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/VirtualizingWrapPanel.dll",
+        "lib/net5.0-windows7.0/VirtualizingWrapPanel.dll",
+        "lib/net6.0-windows7.0/VirtualizingWrapPanel.dll",
+        "lib/netcoreapp3.1/VirtualizingWrapPanel.dll",
+        "virtualizingwrappanel.1.5.7.nupkg.sha512",
+        "virtualizingwrappanel.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "BluwolfIcons >= 1.0.1",
+      "MaterialDesignColors >= 2.0.4",
+      "MaterialDesignThemes >= 4.3.0",
+      "Microsoft.Toolkit.Mvvm >= 7.1.2",
+      "PostSharp.Patterns.Model >= 6.10.8",
+      "ReactiveUI >= 17.1.50",
+      "ReactiveUI.WPF >= 17.1.50",
+      "ShowMeTheXAML >= 2.0.0",
+      "ShowMeTheXAML.AvalonEdit >= 2.0.0",
+      "ShowMeTheXAML.MSBuild >= 2.0.0",
+      "System.Reactive >= 5.0.0",
+      "VirtualizingWrapPanel >= 1.5.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Alex\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\MupenToolkitPRE\\MupenToolkitPRE.csproj",
+      "projectName": "MupenToolkitPRE",
+      "projectPath": "C:\\Users\\Alex\\source\\repos\\MupenToolkitPRE\\MupenToolkitPRE.csproj",
+      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alex\\source\\repos\\MupenToolkitPRE\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "BluwolfIcons": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[2.0.4, )"
+          },
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "Microsoft.Toolkit.Mvvm": {
+            "target": "Package",
+            "version": "[7.1.2, )"
+          },
+          "PostSharp.Patterns.Model": {
+            "target": "Package",
+            "version": "[6.10.8, )"
+          },
+          "ReactiveUI": {
+            "target": "Package",
+            "version": "[17.1.50, )"
+          },
+          "ReactiveUI.WPF": {
+            "target": "Package",
+            "version": "[17.1.50, )"
+          },
+          "ShowMeTheXAML": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "ShowMeTheXAML.AvalonEdit": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "ShowMeTheXAML.MSBuild": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "System.Reactive": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "VirtualizingWrapPanel": {
+            "target": "Package",
+            "version": "[1.5.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BluwolfIcons 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BluwolfIcons",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

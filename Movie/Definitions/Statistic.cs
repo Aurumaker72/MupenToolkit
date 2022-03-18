@@ -1,0 +1,26 @@
+﻿using PostSharp.Patterns.Model;
+
+namespace MupenToolkitPRE.Movie.Definitions
+{
+    [NotifyPropertyChanged]
+    public class Statistic
+    {
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Value { get; set; }
+
+        public Statistic()
+        {
+        }
+
+        public Statistic(string name, string description, string value)
+        {
+            Name = name;
+            Description = description;
+            Value = value;
+        }
+
+
+    }
+}

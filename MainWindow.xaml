@@ -1,0 +1,138 @@
+﻿<Window x:Class="MupenToolkitPRE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MupenToolkitPRE"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM" 
+        xmlns:ui="clr-namespace:MupenToolkitPRE.UI" 
+        xmlns:xmlex="clr-namespace:MupenToolkitPRE.UI.XAML" 
+        d:DataContext="{d:DesignInstance Type=mvvm:MainViewModel}"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        AutomationProperties.Name="{Binding Title, RelativeSource={RelativeSource Self}}"
+        ResxExtension.DefaultResxName="MupenToolkitPRE.Properties.Resources" Language="{UICulture}"
+        Closing="Window_Closing"
+        SizeToContent="Manual"
+        Title="{Resx AppName}" MinHeight="450" MinWidth="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <materialDesign:DialogHost
+        Identifier="RootDialog"
+        DialogTheme="Inherit"
+        SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}"
+        >
+
+        <materialDesign:DrawerHost
+            IsLeftDrawerOpen="{Binding ElementName=HamburgerMenuToggleButton, Path=IsChecked}">
+
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="220">
+                    <materialDesign:ColorZone  DockPanel.Dock="Top" HorizontalAlignment="Right"  Margin="16">
+                        <ToggleButton 
+                        Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                        IsChecked="{Binding ElementName=HamburgerMenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
+                    </materialDesign:ColorZone>
+
+                    <ListBox 
+                        x:Name="PagesListBox"
+                        Margin="0 16 0 16"
+                        SelectedIndex="{Binding SelectedPageIndex, UpdateSourceTrigger=PropertyChanged}"
+                        SelectedItem="{Binding SelectedPage, UpdateSourceTrigger=PropertyChanged}"
+                        ItemsSource="{Binding PageItems, UpdateSourceTrigger=PropertyChanged}"
+                        Style="{StaticResource MaterialDesignNavigationPrimaryListBox}"
+                        IsEnabled="{Binding FileLoaded}">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource MaterialDesignScrollBarMinimal}"/>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="mvvm:PageItem">
+                                <StackPanel Orientation="Horizontal" Margin="24 4 0 4">
+                                    <ContentControl Content="{Binding Accompanist}" Margin="0 0 5 0" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                    <TextBlock Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+
+            <DockPanel>
+                <materialDesign:ColorZone
+                    Padding="16"
+                    Mode="PrimaryMid"
+                    DockPanel.Dock="Top"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4">
+                    <DockPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <ToggleButton
+                                x:Name="HamburgerMenuToggleButton"
+                                Style="{StaticResource MaterialDesignHamburgerToggleButton}"
+                                IsChecked="False"/>
+                            <Button Command="{Binding SaveCommand}" ToolTip="{Resx Save}"       Margin="24,0,0,0" Content="{materialDesign:PackIcon Kind=FloppyDisc, Size=24}" Style="{StaticResource ToolbarButton}" IsEnabled="{Binding FileLoaded}"/>
+
+                            <materialDesign:PopupBox Margin="16,0,0,0" materialDesign:RippleAssist.RippleSizeMultiplier="0.75" PlacementMode="BottomAndAlignCentres">
+                                <materialDesign:PopupBox.ToggleContent>
+                                    <materialDesign:PackIcon Kind="FolderDownload" Width="24" Height="24" Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=materialDesign:PopupBox}, Path=Foreground}" />
+                                </materialDesign:PopupBox.ToggleContent>
+                                <StackPanel>
+                                    <Button Margin="10" Command="{Binding LoadCommand}" ToolTip="{Resx ResxName=MupenToolkitPRE.Properties.Resources, Key=Load}" Content="{materialDesign:PackIcon Kind=Folder, Size=24}" Style="{StaticResource ToolbarSubButton}"/>
+                                    <Button Margin="10" Command="{Binding LoadLastCommand}"  ToolTip="{Resx ResxName=MupenToolkitPRE.Properties.Resources, Key=LoadLast}" Content="{materialDesign:PackIcon Kind=FolderArrowLeft, Size=24}" Style="{StaticResource ToolbarSubButton}"/>
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                            
+                            <Button Command="{Binding BypassLoadCommand}" ToolTip="{Resx Bypass}"       Margin="16,0,0,0" Content="{materialDesign:PackIcon Kind=Door, Size=24}"     Style="{StaticResource ToolbarButton}" xmlex:DebugVisibilityExtension.IsVisible="True"/>
+                        </StackPanel>
+
+                        <materialDesign:PopupBox
+                            DockPanel.Dock="Right"
+                            PlacementMode="BottomAndAlignRightEdges"
+                            StaysOpen="True"
+                    materialDesign:RippleAssist.RippleSizeMultiplier="0.75">
+                            <StackPanel>
+                                <StackPanel Margin="10">
+                                    <Button Grid.Row="5" HorizontalContentAlignment="Center" VerticalAlignment="Center" Content="{materialDesign:PackIcon Kind=TrayArrowUp}" Command="{Binding UploadLogCommand}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+
+                        <Border BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    </DockPanel>
+                </materialDesign:ColorZone>
+
+                <materialDesign:ColorZone DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid>
+                    
+                        <ScrollViewer
+                        materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
+                        HorizontalScrollBarVisibility="Auto"
+                        VerticalScrollBarVisibility="Auto">
+                            
+                            <ContentControl
+                            DataContext="{Binding Path=SelectedPage, UpdateSourceTrigger=PropertyChanged}"
+                            Margin="{Binding MarginRequirement, FallbackValue=16}"
+                            Content="{Binding Content, UpdateSourceTrigger=PropertyChanged, FallbackValue={x:Null}}"/>
+
+                        </ScrollViewer>
+                        <materialDesign:Snackbar
+                        x:Name="MainSnackbar"
+                        MessageQueue="{materialDesign:MessageQueue}"
+                        Grid.Row="1"/>
+                    </Grid>
+                </materialDesign:ColorZone>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
+
+</Window>

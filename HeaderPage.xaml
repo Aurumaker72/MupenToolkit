@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="MupenToolkitPRE.HeaderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MupenToolkitPRE"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM" 
+      d:DataContext="{d:DesignInstance Type=mvvm:MainViewModel}"
+      mc:Ignorable="d" 
+                          ResxExtension.DefaultResxName="MupenToolkitPRE.Properties.Resources" Language="{UICulture}"
+
+      d:DesignHeight="450" d:DesignWidth="800"
+            >
+    <Grid>
+        <UniformGrid Rows="2" Columns="2">
+            <UniformGrid.Resources>
+                <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Setter Property="Margin" Value="0 5 0 5"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <!--<Setter Property="TextAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>-->
+                </Style>
+                <Style TargetType="GroupBox" BasedOn="{StaticResource MaterialDesignCardGroupBox}">
+                    <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth2"/>
+                    <Setter Property="materialDesign:ShadowAssist.ShadowEdges" Value="Bottom"/>
+                    <Setter Property="Margin" Value="3"/>
+                    <!--<Setter Property="materialDesign:ColorZoneAssist.Mode" Value="SecondaryMid"/>-->
+                </Style>
+            </UniformGrid.Resources>
+            <GroupBox Grid.Row="0" Grid.Column="0" Header="{Resx Individual}">
+                <UniformGrid Rows="4">
+                    <TextBox Grid.Row="0" Text="{Binding Movie.Name, Mode=OneWay}" materialDesign:HintAssist.Hint="{Resx Name}" IsReadOnly="True"/>
+                    <TextBox Grid.Row="1" Text="{Binding Movie.Header.Author, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Author}" MaxLength="222"/>
+                    <TextBox Grid.Row="2" Text="{Binding Movie.Header.Description, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Description}" MaxLength="256"/>
+                    <TextBox Grid.Row="3" Text="{Binding Movie.Header.UID, Mode=TwoWay, Converter={StaticResource UInt32HexadecimalConverter}}" materialDesign:HintAssist.Hint="{Resx UID}"/>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Grid.Row="0" Grid.Column="1" Header="{Resx Plugins}">
+                <UniformGrid Rows="4">
+                    <TextBox Grid.Row="0" Text="{Binding Movie.Header.VideoPluginName, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Video}" MaxLength="64"/>
+                    <TextBox Grid.Row="1" Text="{Binding Movie.Header.InputPluginName, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Input}" MaxLength="64"/>
+                    <TextBox Grid.Row="2" Text="{Binding Movie.Header.AudioPluginName, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Audio}" MaxLength="64"/>
+                    <TextBox Grid.Row="3" Text="{Binding Movie.Header.RSPPluginName, Mode=TwoWay}"   materialDesign:HintAssist.Hint="{Resx RSP}" MaxLength="64"/>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Grid.Column="0" Header="{Resx Input}">
+                <UniformGrid Rows="4">
+                    <TextBox Grid.Row="0" Text="{Binding Movie.Header.Rerecords, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Rerecords}"/>
+                    <TextBox Grid.Row="1" Text="{Binding Movie.Header.LengthSamples, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Length}"/>
+                    <TextBox Grid.Row="2" Text="{Binding Movie.Header.ControllerFlags.Controllers, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Controllers}" IsReadOnly="True"/>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Grid.Column="1" Header="{Resx ROM}">
+                <UniformGrid Rows="4">
+                    <TextBox Grid.Row="0" Text="{Binding Movie.Header.RomName, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Name}" MaxLength="32"/>
+                    <TextBox Grid.Row="1" Text="{Binding Movie.Header.RomCountry, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx Country}"/>
+                    <TextBox Grid.Row="2" Text="{Binding Movie.Header.RomCRC, Mode=TwoWay}" materialDesign:HintAssist.Hint="{Resx CRC}"/>
+                </UniformGrid>
+            </GroupBox>
+        </UniformGrid>
+    </Grid>
+</UserControl>
