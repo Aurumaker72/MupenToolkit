@@ -152,20 +152,23 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
-            if (mvm.CurrentSampleList != null)
+            Task.Factory.StartNew(() =>
             {
-                for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
+                if (mvm.CurrentSampleList != null)
                 {
-                    if (mvm.CurrentSampleList[i].GetButtonByIndex(mvm.StatisticsSelectedButtonIndex))
+                    for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
                     {
-                        mvm.StatisticsFoundFrame = i;
-                        mvm.StatisticsSearchSuccessful = true;
-                        return;
+                        if (mvm.CurrentSampleList[i].GetButtonByIndex(mvm.StatisticsSelectedButtonIndex))
+                        {
+                            mvm.StatisticsFoundFrame = i;
+                            mvm.StatisticsSearchSuccessful = true;
+                            return;
+                        }
                     }
                 }
-            }
-            mvm.StatisticsSearchSuccessful = false;
-            mvm.StatisticsFoundFrame = -1;
+                mvm.StatisticsSearchSuccessful = false;
+                mvm.StatisticsFoundFrame = -1;
+            });
         }
     }
     public class UploadLogCommand : ICommand
@@ -206,21 +209,24 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
-            if (mvm.CurrentSampleList != null)
+            Task.Factory.StartNew(() =>
             {
-                for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
+                if (mvm.CurrentSampleList != null)
                 {
-                    var sample = mvm.CurrentSampleList[i];
-                    if (sample.X == mvm.StatisticsSelectedJoystickValue.X && sample.Y == mvm.StatisticsSelectedJoystickValue.Y)
+                    for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
                     {
-                        mvm.StatisticsFoundFrame = i;
-                        mvm.StatisticsSearchSuccessful = true;
-                        return;
+                        var sample = mvm.CurrentSampleList[i];
+                        if (sample.X == mvm.StatisticsSelectedJoystickValue.X && sample.Y == mvm.StatisticsSelectedJoystickValue.Y)
+                        {
+                            mvm.StatisticsFoundFrame = i;
+                            mvm.StatisticsSearchSuccessful = true;
+                            return;
+                        }
                     }
                 }
-            }
-            mvm.StatisticsSearchSuccessful = false;
-            mvm.StatisticsFoundFrame = -1;
+                mvm.StatisticsSearchSuccessful = false;
+                mvm.StatisticsFoundFrame = -1;
+            });
         }
     }
 
