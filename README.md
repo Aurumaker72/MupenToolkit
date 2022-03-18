@@ -40,5 +40,4 @@ If I did something the way I did, there is a good reason.
   - WPF hack reduces TASStudio layout time complexity from O(n^r), with r being the rows to O(1)
 
 ## Known Issues
-- UI doesn't update with new language data until a restart. Achieving this would require a partial localization rewrite.
 - Loading extremely long movies is slow. Possible naive solution is buffering/segmenting input and virtualization
