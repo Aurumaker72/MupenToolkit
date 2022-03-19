@@ -65,7 +65,7 @@ namespace MupenToolkitPRE {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;V1.0.0.0;component/genericdialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;component/genericdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\GenericDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -58,7 +58,7 @@ namespace MupenToolkitPRE {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;V1.0.0.0;component/statisticspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;component/statisticspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StatisticsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

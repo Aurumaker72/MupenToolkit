@@ -43,7 +43,7 @@
                         Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
                         IsChecked="{Binding ElementName=HamburgerMenuToggleButton, Path=IsChecked, Mode=TwoWay}"/>
                     </materialDesign:ColorZone>
-
+                   
                     <ListBox 
                         x:Name="PagesListBox"
                         Margin="0 16 0 16"

@@ -153,11 +153,6 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
             try
             {
                 header.Magic = br.ReadUInt32();
-                if (header.Magic != 0x4D36341A && header.Magic != 439629389)
-                {
-                    br.Close();
-                    return (new(false, Properties.Resources.WrongMagic), null);
-                }
                 header.Version = br.ReadUInt32();
                 header.UID = br.ReadUInt32();
                 header.LengthVIs = br.ReadUInt32();
@@ -182,7 +177,31 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
 
                 header.Author = br.ReadBytes(222).UTF8ToStringTrimmed();
                 header.Description = br.ReadBytes(256).UTF8ToStringTrimmed();
-
+                if (header.Magic != 0x4D36341A && header.Magic != 439629389)
+                {
+                    br.Close();
+                    return (new(false, Properties.Resources.WrongMagic), null);
+                }
+                if (header.Version != 3)
+                {
+                    br.Close();
+                    return (new(false, Properties.Resources.OutdatedVersion), null);
+                }
+                if (header.UID == 0 || header.RomCRC == 0)
+                {
+                    br.Close();
+                    return (new(false, Properties.Resources.InvalidUID), null);
+                }
+                if (header.LengthVIs == 0)
+                {
+                    br.Close();
+                    return (new(false, Properties.Resources.TooShort), null);
+                }
+                if (header.VIsPerSecond != 50 && header.VIsPerSecond != 60)
+                {
+                    br.Close();
+                    return (new(false, Properties.Resources.InvalidVIsPerSecond), null);
+                }
                 return (new(true), header);
             }
             catch
@@ -193,6 +212,11 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
 
         protected override (InteractionStatus Status, ObservableCollection<ObservableCollection<Sample>>? Samples) LoadInputs(BinaryReader br, MovieHeader header)
         {
+            if(br.BaseStream.Position != 1024)
+            {
+                return (new(false, Properties.Resources.SamplesLoadingMisalignment), null);
+            }
+
             br.BaseStream.Seek(1024, SeekOrigin.Begin);
 
             ObservableCollection<ObservableCollection<Sample>> inputs = new();
@@ -200,6 +224,7 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
             if (header.ControllerFlags.Controller1Connected) inputs.Add(new());
             if (header.ControllerFlags.Controller2Connected) inputs.Add(new());
             if (header.ControllerFlags.Controller3Connected) inputs.Add(new());
+            
 
             long curFrame = 0;
             while (curFrame < br.BaseStream.Length)

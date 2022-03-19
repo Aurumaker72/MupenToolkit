@@ -333,4 +333,29 @@
   <data name="AnalogJoystickKeyboard" xml:space="preserve">
     <value>Analog Joystick Keyboard</value>
   </data>
+  <data name="SamplesLoadingMisalignment" xml:space="preserve">
+    <value>File pointer was misaligned after header loading</value>
+  </data>
+  <data name="StartFlags" xml:space="preserve">
+    <value>Start flags</value>
+  </data>
+  <data name="Savestate" xml:space="preserve">
+    <value>Savestate</value>
+  </data>
+  <data name="Poweron" xml:space="preserve">
+    <value>Power-on</value>
+  </data>
+  <data name="EEPROM" xml:space="preserve">
+    <value>EEPROM</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="OutdatedVersion" xml:space="preserve">
+    <value>Outdated version</value>
+  </data>
+  <data name="InvalidUID" xml:space="preserve">
+    <value>Invalid UID</value>
+  </data>
+  <data name="InvalidVIsPerSecond" xml:space="preserve">
+    <value>Invalid VI/s</value>
+  </data>
 </root>

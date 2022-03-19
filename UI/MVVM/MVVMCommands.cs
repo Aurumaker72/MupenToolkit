@@ -107,6 +107,7 @@ namespace MupenToolkitPRE.MVVM
             MovieLoadHelper.Load(mvm);
         }
     }
+    
     public class UnloadCommand : ICommand
     {
         public MainViewModel mvm;
@@ -306,6 +307,22 @@ namespace MupenToolkitPRE.MVVM
         {
             var ccode = ushort.Parse((string)(parameter));
             mvm.Movie.Header.RomCountry = ccode;
+        }
+    }
+    public class StartFlagsChangedCommand : ICommand
+    {
+        public MainViewModel mvm;
+        public bool CanExecute(object? parameter) => true;
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public void Execute(object? parameter)
+        {
+            var ccode = ushort.Parse((string)(parameter));
+            mvm.Movie.Header.StartFlags = ccode;
         }
     }
 }

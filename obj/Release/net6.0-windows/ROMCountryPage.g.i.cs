@@ -59,7 +59,7 @@ namespace MupenToolkitPRE {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;V1.0.0.0;component/romcountrypage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MupenToolkitPRE;component/romcountrypage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ROMCountryPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

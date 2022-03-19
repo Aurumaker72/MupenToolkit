@@ -74,7 +74,6 @@ C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\MupenToolk
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\MupenToolkitPRE.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\MupenToolkitPRE.pdb
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\de\MupenToolkitPRE.resources.dll
-C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\ICSharpCode.AvalonEdit.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\BluwolfIcons.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\DynamicData.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\MaterialDesignColors.dll
@@ -86,8 +85,6 @@ C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\PostSharp.
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\PostSharp.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\ReactiveUI.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\ReactiveUI.Wpf.dll
-C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\ShowMeTheXAML.dll
-C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\ShowMeTheXAML.AvalonEdit.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\Splat.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\System.Reactive.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Release\net6.0-windows\VirtualizingWrapPanel.dll

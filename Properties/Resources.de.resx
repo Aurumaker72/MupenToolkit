@@ -297,4 +297,25 @@
   <data name="AnalogJoystickKeyboard" xml:space="preserve">
     <value>Analogjoysticksteuerung mit Tastatur</value>
   </data>
+  <data name="SamplesLoadingMisalignment" xml:space="preserve">
+    <value>Dateizeiger desynchronisierte sich nach Lesen der Einleitdaten</value>
+  </data>
+  <data name="StartFlags" xml:space="preserve">
+    <value>Starteigenschaften</value>
+  </data>
+  <data name="Poweron" xml:space="preserve">
+    <value>Konsolenneustart</value>
+  </data>
+  <data name="Savestate" xml:space="preserve">
+    <value>Snapshot</value>
+  </data>
+  <data name="OutdatedVersion" xml:space="preserve">
+    <value>Veraltete Version</value>
+  </data>
+  <data name="InvalidUID" xml:space="preserve">
+    <value>Ungültige UID</value>
+  </data>
+  <data name="InvalidVIsPerSecond" xml:space="preserve">
+    <value>Ungültige VI/s</value>
+  </data>
 </root>

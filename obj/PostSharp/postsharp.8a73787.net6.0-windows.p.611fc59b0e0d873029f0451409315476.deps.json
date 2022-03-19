@@ -513,16 +513,6 @@
         },
         "runtimeTargets": {}
       },
-      "AvalonEdit/6.0.1": {
-        "dependencies": {},
-        "runtime": {
-          "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll": {
-            "assemblyVersion": "6.0.1.278",
-            "fileVersion": "6.0.1.278"
-          }
-        },
-        "runtimeTargets": {}
-      },
       "BluwolfIcons/1.0.1": {
         "dependencies": {},
         "runtime": {},
@@ -631,31 +621,6 @@
             "fileVersion": "17.1.50.10374"
           }
         },
-        "runtimeTargets": {}
-      },
-      "ShowMeTheXAML/2.0.0": {
-        "dependencies": {},
-        "runtime": {
-          "lib/netcoreapp3.1/ShowMeTheXAML.dll": {
-            "assemblyVersion": "2.0.0.62",
-            "fileVersion": "2.0.0.62"
-          }
-        },
-        "runtimeTargets": {}
-      },
-      "ShowMeTheXAML.AvalonEdit/2.0.0": {
-        "dependencies": {},
-        "runtime": {
-          "lib/netcoreapp3.1/ShowMeTheXAML.AvalonEdit.dll": {
-            "assemblyVersion": "2.0.0.62",
-            "fileVersion": "2.0.0.62"
-          }
-        },
-        "runtimeTargets": {}
-      },
-      "ShowMeTheXAML.MSBuild/2.0.0": {
-        "dependencies": {},
-        "runtime": {},
         "runtimeTargets": {}
       },
       "Splat/14.1.45": {
@@ -1093,13 +1058,6 @@
       "path": "",
       "hashPath": ""
     },
-    "AvalonEdit/6.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "",
-      "path": "avalonedit/6.0.1",
-      "hashPath": "avalonedit.6.0.1.nupkg.sha512"
-    },
     "BluwolfIcons/1.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1190,27 +1148,6 @@
       "sha512": "",
       "path": "reactiveui.wpf/17.1.50",
       "hashPath": "reactiveui.wpf.17.1.50.nupkg.sha512"
-    },
-    "ShowMeTheXAML/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "",
-      "path": "showmethexaml/2.0.0",
-      "hashPath": "showmethexaml.2.0.0.nupkg.sha512"
-    },
-    "ShowMeTheXAML.AvalonEdit/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "",
-      "path": "showmethexaml.avalonedit/2.0.0",
-      "hashPath": "showmethexaml.avalonedit.2.0.0.nupkg.sha512"
-    },
-    "ShowMeTheXAML.MSBuild/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "",
-      "path": "showmethexaml.msbuild/2.0.0",
-      "hashPath": "showmethexaml.msbuild.2.0.0.nupkg.sha512"
     },
     "Splat/14.1.45": {
       "type": "package",

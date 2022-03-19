@@ -45,7 +45,7 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
         /// Movie start flags
         /// 1 - Savestate
         /// 2 - Power-on
-        /// 3 - EEPROM
+        /// 4 - EEPROM
         /// Other - Unknown
         /// </summary>
         public ushort StartFlags { get; set; }

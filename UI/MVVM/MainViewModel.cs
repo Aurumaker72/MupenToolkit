@@ -83,6 +83,7 @@ namespace MupenToolkitPRE.MVVM
         public CountryChangedCommand CountryChangedCommand { get; set; }
         public LoadLastCommand LoadLastCommand { get; set; }
         public UploadLogCommand UploadLogCommand { get; set; }
+        public StartFlagsChangedCommand StartFlagsChangedCommand { get; set; }
         #endregion
 
         #region UI
@@ -130,6 +131,7 @@ namespace MupenToolkitPRE.MVVM
             CountryChangedCommand = new() { mvm = this };
             LoadLastCommand = new() { mvm = this };
             UploadLogCommand = new() { mvm = this };
+            StartFlagsChangedCommand = new() { mvm = this };
 
             PageItems = new ObservableCollection<PageItem>(new[]
             {
@@ -159,6 +161,10 @@ namespace MupenToolkitPRE.MVVM
                 this, CodeBehindPackIconWrapper.FromKind(PackIconKind.Flag,               24),
                 delegate{AnalogInputPage.MovieTimer.Stop();
                 }),
+                new PageItem(typeof(StartFlagsPage),
+                this, CodeBehindPackIconWrapper.FromKind(PackIconKind.ChevronRightBox,               24),
+                delegate{AnalogInputPage.MovieTimer.Stop();
+                }),
                 new PageItem(typeof(SettingsPage),
                 this, CodeBehindPackIconWrapper.FromKind(PackIconKind.Settings,           24),
                 delegate{AnalogInputPage.MovieTimer.Stop();
@@ -176,7 +182,8 @@ namespace MupenToolkitPRE.MVVM
             PageItems[3].Name = Properties.Resources.AnalogInput;
             PageItems[4].Name = Properties.Resources.Statistics;
             PageItems[5].Name = Properties.Resources.Country;
-            PageItems[6].Name = Properties.Resources.Settings;
+            PageItems[6].Name = Properties.Resources.StartFlags;
+            PageItems[7].Name = Properties.Resources.Settings;
 
         }
 

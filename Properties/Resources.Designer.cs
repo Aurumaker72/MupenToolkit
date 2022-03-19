@@ -214,6 +214,15 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EEPROM.
+        /// </summary>
+        public static string EEPROM {
+            get {
+                return ResourceManager.GetString("EEPROM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to France.
         /// </summary>
         public static string France {
@@ -282,6 +291,24 @@ namespace MupenToolkitPRE.Properties {
         public static string InsufficientControllers {
             get {
                 return ResourceManager.GetString("InsufficientControllers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid UID.
+        /// </summary>
+        public static string InvalidUID {
+            get {
+                return ResourceManager.GetString("InvalidUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid VI/s.
+        /// </summary>
+        public static string InvalidVIsPerSecond {
+            get {
+                return ResourceManager.GetString("InvalidVIsPerSecond", resourceCulture);
             }
         }
         
@@ -430,11 +457,29 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Outdated version.
+        /// </summary>
+        public static string OutdatedVersion {
+            get {
+                return ResourceManager.GetString("OutdatedVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plugins.
         /// </summary>
         public static string Plugins {
             get {
                 return ResourceManager.GetString("Plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Power-on.
+        /// </summary>
+        public static string Poweron {
+            get {
+                return ResourceManager.GetString("Poweron", resourceCulture);
             }
         }
         
@@ -484,11 +529,29 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File pointer was misaligned after header loading.
+        /// </summary>
+        public static string SamplesLoadingMisalignment {
+            get {
+                return ResourceManager.GetString("SamplesLoadingMisalignment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Savestate.
+        /// </summary>
+        public static string Savestate {
+            get {
+                return ResourceManager.GetString("Savestate", resourceCulture);
             }
         }
         
@@ -534,6 +597,15 @@ namespace MupenToolkitPRE.Properties {
         public static string Spain {
             get {
                 return ResourceManager.GetString("Spain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start flags.
+        /// </summary>
+        public static string StartFlags {
+            get {
+                return ResourceManager.GetString("StartFlags", resourceCulture);
             }
         }
         
