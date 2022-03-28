@@ -46,6 +46,17 @@
                 <Setter Property="materialDesign:RippleAssist.RippleSizeMultiplier" Value="0.75"/>
                 <Setter Property="materialDesign:RippleAssist.Feedback" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Control}, Path=Foreground, Converter={StaticResource BrushRoundConverter}}"/>
             </Style>
+            <Storyboard x:Key="FadeIn">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <LinearDoubleKeyFrame KeyTime="00:00:1" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="FadeOut">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <LinearDoubleKeyFrame KeyTime="00:00:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            
             <SolidColorBrush x:Key="ColorJoystickColumn" Color="LightYellow" />
             <SolidColorBrush x:Key="ColorMainButtonsColumn" Color="LightGray" />
             <SolidColorBrush x:Key="ColorCameraButtonsColumn" Color="Gray" />

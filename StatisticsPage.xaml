@@ -85,8 +85,8 @@
                                         <Grid>
 
                                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="3" Text="{Binding Path=StatisticsSelectedJoystickValue.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="64" materialDesign:HintAssist.Hint="X"/>
-                                                <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="3" Text="{Binding Path=StatisticsSelectedJoystickValue.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="64" materialDesign:HintAssist.Hint="Y"/>
+                                                <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="4" Text="{Binding Path=StatisticsSelectedJoystickValue.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="64" materialDesign:HintAssist.Hint="X"/>
+                                                <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}" MaxLength="4" Text="{Binding Path=StatisticsSelectedJoystickValue.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinWidth="64" materialDesign:HintAssist.Hint="Y"/>
                                             </StackPanel>
                                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}" Content="{materialDesign:PackIcon Kind=Search}" HorizontalAlignment="Right" Margin="20" Command="{Binding SeekJoystickCommand}"/>
 

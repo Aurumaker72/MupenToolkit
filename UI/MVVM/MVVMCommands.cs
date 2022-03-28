@@ -63,15 +63,18 @@ namespace MupenToolkitPRE.MVVM
             }
             Task.Factory.StartNew(() =>
             {
+                mvm.Busy = true;
                 var ret = mvm.Movie.Load(_path);
                 if (!ret.Status.Success)
                 {
+                    mvm.Busy = false;
                     ShowDialog(ret.Status.FailReason);
                     return;
                 }
                 mvm.Samples = ret.Samples;
                 ShowSnackbar(mvm.MainSnackbar, Properties.Resources.MovieLoadedSuccessfully);
                 mvm.FileLoaded = true;
+                mvm.Busy = false;
                 Properties.Settings.Default.LastPath = _path;
                 Properties.Settings.Default.Save(); // save here?
             });
@@ -155,6 +158,7 @@ namespace MupenToolkitPRE.MVVM
         {
             Task.Factory.StartNew(() =>
             {
+                mvm.Busy = true;
                 if (mvm.CurrentSampleList != null)
                 {
                     for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
@@ -163,10 +167,12 @@ namespace MupenToolkitPRE.MVVM
                         {
                             mvm.StatisticsFoundFrame = i;
                             mvm.StatisticsSearchSuccessful = true;
+                            mvm.Busy = false;
                             return;
                         }
                     }
                 }
+                mvm.Busy = false;
                 mvm.StatisticsSearchSuccessful = false;
                 mvm.StatisticsFoundFrame = -1;
             });
@@ -212,6 +218,7 @@ namespace MupenToolkitPRE.MVVM
         {
             Task.Factory.StartNew(() =>
             {
+                mvm.Busy = true;
                 if (mvm.CurrentSampleList != null)
                 {
                     for (int i = 0; i < mvm.CurrentSampleList.Count; i++)
@@ -221,10 +228,12 @@ namespace MupenToolkitPRE.MVVM
                         {
                             mvm.StatisticsFoundFrame = i;
                             mvm.StatisticsSearchSuccessful = true;
+                            mvm.Busy = false;
                             return;
                         }
                     }
                 }
+                mvm.Busy = false;
                 mvm.StatisticsSearchSuccessful = false;
                 mvm.StatisticsFoundFrame = -1;
             });
@@ -248,14 +257,16 @@ namespace MupenToolkitPRE.MVVM
                 return;
             Task.Factory.StartNew(() =>
             {
+                mvm.Busy = true;
                 var ret = mvm.Movie.Save(shlRet.ReturnedPath, mvm.Samples);
                 if (!ret.Success)
                 {
+                    mvm.Busy = false;
                     ShowDialog(ret.FailReason);
                     return;
                 }
                 ShowSnackbar(mvm.MainSnackbar, Properties.Resources.MovieSavedSuccessfully);
-                mvm.FileLoaded = true;
+                mvm.Busy = false;
             });
         }
     }

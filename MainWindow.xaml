@@ -92,6 +92,26 @@
                             </materialDesign:PopupBox>
                             
                             <Button Command="{Binding BypassLoadCommand}" ToolTip="{Resx Bypass}"       Margin="16,0,0,0" Content="{materialDesign:PackIcon Kind=Door, Size=24}"     Style="{StaticResource ToolbarButton}" xmlex:DebugVisibilityExtension.IsVisible="True"/>
+
+                            <materialDesign:Card Margin="16,0,0,0" Width="24" Height="24" Opacity="0">
+                                <materialDesign:Card.Style>
+                                    <Style TargetType="materialDesign:Card" BasedOn="{StaticResource {x:Type materialDesign:Card}}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=Busy}" Value="True">
+                                                <DataTrigger.EnterActions>
+                                                    <BeginStoryboard Storyboard="{StaticResource FadeIn}" Name="FadeInStoryboard"/>
+                                                </DataTrigger.EnterActions>
+                                                <DataTrigger.ExitActions>
+                                                    <StopStoryboard BeginStoryboardName="FadeInStoryboard"/>
+                                                    <BeginStoryboard Storyboard="{StaticResource FadeOut}"/>
+                                                </DataTrigger.ExitActions>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </materialDesign:Card.Style>
+                                <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}" Value="0" IsIndeterminate="True"/>
+                            </materialDesign:Card>
+
                         </StackPanel>
 
                         <materialDesign:PopupBox

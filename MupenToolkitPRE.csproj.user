@@ -29,6 +29,9 @@
     <Page Update="ControllerFlagsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ReplacementPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="StartFlagsPage.xaml">
       <SubType>Designer</SubType>
     </Page>

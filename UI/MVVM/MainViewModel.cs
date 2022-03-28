@@ -114,6 +114,7 @@ namespace MupenToolkitPRE.MVVM
         }
         public ObservableCollection<PageItem> PageItems { get; set; } = new();
         public bool FileLoaded { get; set; }
+        public bool Busy { get; set; }
         #endregion
 
         public MainViewModel(Snackbar sb = null)

@@ -41,6 +41,9 @@
     <Compile Update="ControllerFlagsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ReplacementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StartFlagsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -97,6 +100,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ControllerFlagsPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReplacementPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
