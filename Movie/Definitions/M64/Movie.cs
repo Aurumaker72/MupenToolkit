@@ -212,19 +212,21 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
 
         protected override (InteractionStatus Status, ObservableCollection<ObservableCollection<Sample>>? Samples) LoadInputs(BinaryReader br, MovieHeader header)
         {
-            if(br.BaseStream.Position != 1024)
+            if (br.BaseStream.Position != 1024)
             {
                 return (new(false, Properties.Resources.SamplesLoadingMisalignment), null);
             }
 
             br.BaseStream.Seek(1024, SeekOrigin.Begin);
 
+            // INFO: We need to retouch header here
+            header.LengthFile = ((uint)br.BaseStream.Length - 1024) / 4;
+
             ObservableCollection<ObservableCollection<Sample>> inputs = new();
             if (header.ControllerFlags.Controller0Connected) inputs.Add(new());
             if (header.ControllerFlags.Controller1Connected) inputs.Add(new());
             if (header.ControllerFlags.Controller2Connected) inputs.Add(new());
             if (header.ControllerFlags.Controller3Connected) inputs.Add(new());
-            
 
             long curFrame = 0;
             while (curFrame < br.BaseStream.Length)
@@ -239,6 +241,7 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
                 }
                 curFrame++;
             }
+
             return (new(true), inputs);
         }
     }

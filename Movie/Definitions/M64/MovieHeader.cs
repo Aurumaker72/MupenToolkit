@@ -42,6 +42,10 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
         /// </summary>
         public uint LengthSamples { get; set; }
         /// <summary>
+        /// Movie length determined by file size
+        /// </summary>
+        public uint LengthFile { get; set; }
+        /// <summary>
         /// Movie start flags
         /// 1 - Savestate
         /// 2 - Power-on

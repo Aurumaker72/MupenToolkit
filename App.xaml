@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:MupenToolkitPRE"
              xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:xmlex="clr-namespace:MupenToolkitPRE.UI.XAML" 
+             xmlns:xmlex="clr-namespace:MupenToolkitPRE.UI.XAML" 
              
              StartupUri="MainWindow.xaml">
     <Application.Resources>
@@ -29,6 +29,12 @@
             <mvvm:DividerConverter x:Key="DividerConverter"/>
             <mvvm:StatisticsTextConverter x:Key="StatisticsTextConverter"/>
             <mvvm:UnsignedShortValueToEqualsParameterConverter x:Key="UnsignedShortValueToEqualsParameterConverter"/>
+ 
+            <xmlex:FadeTransition x:Key="DefaultContentTransition" Duration="0:0:0.5"/>
+            
+            <DataTemplate DataType="{x:Type xmlex:TransitionSelector}">
+                <TextBlock Text="{Binding (TextSearch.Text)}" FontWeight="Bold"/>
+            </DataTemplate>
             
             <Style x:Key="ToolbarButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignToolButton}">
                 <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type FrameworkElement}}, Path=(TextElement.Foreground)}"/>

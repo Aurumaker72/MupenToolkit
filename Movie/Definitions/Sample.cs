@@ -271,6 +271,7 @@ namespace MupenToolkitPRE.Movie.Definitions
                 }
                 Raw = _Raw; // hack: update
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Degree));
             }
         }
 
@@ -291,6 +292,15 @@ namespace MupenToolkitPRE.Movie.Definitions
                 }
                 Raw = _Raw; // hack: update
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(Degree));
+            }
+        }
+
+        public double Degree
+        {
+            get
+            {
+                return Math.Atan2(Y, X) * (180 / Math.PI);
             }
         }
 

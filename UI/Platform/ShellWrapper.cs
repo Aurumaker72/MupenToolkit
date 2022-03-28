@@ -8,9 +8,10 @@ namespace MupenToolkitPRE.UI.Platform
     {
         public static (string ReturnedPath, bool Cancelled) OpenFileDialogPrompt()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:\\";
+            OpenFileDialog openFileDialog = new()
+            {
+                InitialDirectory = "C:\\"
+            };
             string filter = "Movie files |";
             for (int i = 0; i < InfoProvider.ValidFileExtensions.Length; i++)
             {
@@ -29,10 +30,10 @@ namespace MupenToolkitPRE.UI.Platform
         }
         public static (string ReturnedPath, bool Cancelled) SaveFileDialogPrompt()
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-
-            saveFileDialog.InitialDirectory = "C:\\";
+            SaveFileDialog saveFileDialog = new()
+            {
+                InitialDirectory = "C:\\"
+            };
             string filter = "Movie files |";
             for (int i = 0; i < InfoProvider.ValidFileExtensions.Length; i++)
             {

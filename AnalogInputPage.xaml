@@ -23,6 +23,11 @@
         <materialDesign:ColorZone materialDesign:ShadowAssist.ShadowDepth="Depth2" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Mode="PrimaryMid"/>
 
         <Grid Grid.Column="1" Margin="5">
+            <Grid.Resources>
+                <ToolTip x:Key="DegreeToolTip">
+                    <TextBlock Text="{Binding CurrentSample.Degree, StringFormat='{}{0:F0}°'}"/>
+                </ToolTip>
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -38,21 +43,21 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+            <Grid Grid.Column="0" Grid.ColumnSpan="3" Margin="5" MaxWidth="306">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBox  TextAlignment="Center" Text="{Binding CurrentSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="50"/>
-                <Slider Grid.Row="1" Minimum="-127" Maximum="127" Value="{Binding CurrentSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="256"/>
+                <Slider ToolTipService.InitialShowDelay="0" Grid.Row="1" Minimum="-127" Maximum="127" Value="{Binding CurrentSample.X, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="256" ToolTip="{StaticResource DegreeToolTip}"/>
             </Grid>
-            <Grid Grid.Column="3" Grid.ColumnSpan="3" Margin="5">
+            <Grid Grid.Column="3" Grid.ColumnSpan="3" Margin="5" MaxWidth="306">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBox  TextAlignment="Center" Text="{Binding CurrentSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="50"/>
-                <Slider Grid.Row="1" Minimum="-127" Maximum="127" Value="{Binding CurrentSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="256"/>
+                <Slider ToolTipService.InitialShowDelay="0" Grid.Row="1" Minimum="-127" Maximum="127" Value="{Binding CurrentSample.Y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxWidth="256" ToolTip="{StaticResource DegreeToolTip}"/>
             </Grid>
             <CheckBox Grid.Column="0" Grid.Row="1" Content="A" IsChecked="{Binding CurrentSample.A, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="1" Grid.Row="1" Content="B" IsChecked="{Binding CurrentSample.B, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
@@ -64,11 +69,14 @@
             <CheckBox Grid.Column="0" Grid.Row="3" Content="{materialDesign:PackIcon Kind=ChevronLeft, Size=24}" IsChecked="{Binding CurrentSample.CPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="2" Grid.Row="3" Content="{materialDesign:PackIcon Kind=ChevronRight, Size=24}" IsChecked="{Binding CurrentSample.CPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="1" Grid.Row="4" Content="{materialDesign:PackIcon Kind=ChevronDown, Size=24}" IsChecked="{Binding CurrentSample.CPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox Grid.Column="1" Grid.Row="3" Content="R1" IsChecked="{Binding CurrentSample.Reserved1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
             <CheckBox Grid.Column="4" Grid.Row="2" Content="{materialDesign:PackIcon Kind=ArrowUp, Size=24}" IsChecked="{Binding CurrentSample.DPadUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="3" Grid.Row="3" Content="{materialDesign:PackIcon Kind=ArrowLeft, Size=24}" IsChecked="{Binding CurrentSample.DPadLeft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="5" Grid.Row="3" Content="{materialDesign:PackIcon Kind=ArrowRight, Size=24}" IsChecked="{Binding CurrentSample.DPadRight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="4" Grid.Row="4" Content="{materialDesign:PackIcon Kind=ArrowDown, Size=24}" IsChecked="{Binding CurrentSample.DPadDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox Grid.Column="4" Grid.Row="3" Content="R2" IsChecked="{Binding CurrentSample.Reserved1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
         </Grid>
         <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
             <Grid.ColumnDefinitions>
@@ -105,6 +113,7 @@
                                                 BorderThickness="1"
                                                 CornerRadius="10"
                                                 MouseMove="Border_Joystick_MouseMove"
+                                                
                 PreviewKeyDown="Generic_KeyDown"
                 PreviewMouseDown="Border_Joystick_PreviewMouseDown"
                 PreviewMouseUp="Border_Joystick_PreviewMouseUp">

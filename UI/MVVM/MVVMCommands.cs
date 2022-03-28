@@ -107,7 +107,7 @@ namespace MupenToolkitPRE.MVVM
             MovieLoadHelper.Load(mvm);
         }
     }
-    
+
     public class UnloadCommand : ICommand
     {
         public MainViewModel mvm;

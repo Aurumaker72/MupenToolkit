@@ -1,207 +1,249 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Threading;
 
 namespace MupenToolkitPRE.UI.XAML
 {
-    [TemplatePart(Name = FirstTemplatePartName, Type = typeof(ContentPresenter))]
-    [TemplatePart(Name = SecondTemplatePartName, Type = typeof(ContentPresenter))]
-    public class CrossFadeContentControl : ContentControl
+    [System.Windows.Markup.ContentProperty("Content")]
+    public class TransitionPresenter : FrameworkElement
     {
-        #region Constants and Statics
-        /// <summary>
-        /// The new
-        /// <see cref="T:System.Windows.Controls.ContentPresenter"/>
-        /// template part name.
-        /// </summary>
-        private const string FirstTemplatePartName = "FirstContentPresenter";
-
-        /// <summary>
-        /// The old
-        /// <see cref="T:System.Windows.Controls.ContentPresenter"/>
-        /// template part name.
-        /// </summary>
-        private const string SecondTemplatePartName = "SecondContentPresenter";
-        #endregion
-
-        #region Template Parts
-        /// <summary>
-        /// The first <see cref="T:System.Windows.Controls.ContentPresenter"/>.
-        /// </summary>
-        private ContentPresenter _firstContentPresenter;
-
-        /// <summary>
-        /// The second <see cref="T:System.Windows.Controls.ContentPresenter"/>.
-        /// </summary>
-        private ContentPresenter _secondContentPresenter;
-
-        /// <summary>
-        /// The new <see cref="T:System.Windows.Controls.ContentPresenter"/>.
-        /// </summary>
-        private ContentPresenter _newContentPresenter;
-
-        /// <summary>
-        /// The old <see cref="T:System.Windows.Controls.ContentPresenter"/>.
-        /// </summary>
-        private ContentPresenter _oldContentPresenter;
-        #endregion
-
-        /// <summary>
-        /// Determines whether to set the new content to the first or second
-        /// <see cref="T:System.Windows.Controls.ContentPresenter"/>.
-        /// </summary>
-        private bool _useFirstAsNew;
-
-        private DispatcherOperation _pendingTransition;
-        private DoubleAnimation _fadeOutAnimation;
-
-        static CrossFadeContentControl()
+        static TransitionPresenter()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(CrossFadeContentControl),
-                new FrameworkPropertyMetadata(typeof(CrossFadeContentControl)));
+            ClipToBoundsProperty.OverrideMetadata(typeof(TransitionPresenter), new FrameworkPropertyMetadata(null, CoerceClipToBounds));
         }
 
-        /// <summary>
-        /// Initialzies a new instance of the CrossFadeContentControl class.
-        /// </summary>
-        public CrossFadeContentControl()
-            : base()
+        // Force clip to be true if the active Transition requires it
+        private static object CoerceClipToBounds(object element, object value)
         {
+            TransitionPresenter transitionElement = (TransitionPresenter)element;
+            bool clip = (bool)value;
+            if (!clip && transitionElement.IsTransitioning)
+            {
+                Transition transition = transitionElement.Transition;
+                if (transition.ClipToBounds)
+                    return true;
+            }
+            return value;
         }
 
-        #region IsCrossFadeEnabled
+        public object Content
+        {
+            get { return (object)GetValue(ContentProperty); }
+            set { SetValue(ContentProperty, value); }
+        }
 
-        public static readonly DependencyProperty IsCrossFadeEnabledProperty =
-            DependencyProperty.Register(
-                nameof(IsCrossFadeEnabled),
+        public static readonly DependencyProperty ContentProperty =
+            DependencyProperty.Register("Content",
+                typeof(object),
+                typeof(TransitionPresenter),
+                new UIPropertyMetadata(null, OnContentChanged, CoerceContent));
+
+        // Don't update content until done transitioning
+        private static object CoerceContent(object element, object value)
+        {
+            TransitionPresenter te = (TransitionPresenter)element;
+            if (te.IsTransitioning)
+                return te.CurrentContentPresenter.Content;
+            return value;
+        }
+
+        private static void OnContentChanged(object element, DependencyPropertyChangedEventArgs e)
+        {
+            TransitionPresenter te = (TransitionPresenter)element;
+            te.BeginTransition();
+        }
+
+        public DataTemplate ContentTemplate
+        {
+            get { return (DataTemplate)GetValue(ContentTemplateProperty); }
+            set { SetValue(ContentTemplateProperty, value); }
+        }
+
+        public static readonly DependencyProperty ContentTemplateProperty =
+            DependencyProperty.Register("ContentTemplate",
+                typeof(DataTemplate),
+                typeof(TransitionPresenter),
+                new UIPropertyMetadata(null, OnContentTemplateChanged));
+
+        private static void OnContentTemplateChanged(object element, DependencyPropertyChangedEventArgs e)
+        {
+            TransitionPresenter te = (TransitionPresenter)element;
+            te.CurrentContentPresenter.ContentTemplate = (DataTemplate)e.NewValue;
+        }
+
+        public DataTemplateSelector ContentTemplateSelector
+        {
+            get { return (DataTemplateSelector)GetValue(ContentTemplateSelectorProperty); }
+            set { SetValue(ContentTemplateSelectorProperty, value); }
+        }
+
+        public static readonly DependencyProperty ContentTemplateSelectorProperty =
+            DependencyProperty.Register("ContentTemplateSelector",
+                typeof(DataTemplateSelector),
+                typeof(TransitionPresenter),
+                new UIPropertyMetadata(null, OnContentTemplateSelectorChanged));
+
+        private static void OnContentTemplateSelectorChanged(object element, DependencyPropertyChangedEventArgs e)
+        {
+            TransitionPresenter te = (TransitionPresenter)element;
+            te.CurrentContentPresenter.ContentTemplateSelector = (DataTemplateSelector)e.NewValue;
+        }
+
+        public bool IsTransitioning
+        {
+            get { return (bool)GetValue(IsTransitioningProperty); }
+            private set { SetValue(IsTransitioningPropertyKey, value); }
+        }
+
+        private static readonly DependencyPropertyKey IsTransitioningPropertyKey =
+            DependencyProperty.RegisterReadOnly("IsTransitioning",
                 typeof(bool),
-                typeof(CrossFadeContentControl),
-                new PropertyMetadata(true));
+                typeof(TransitionPresenter),
+                new UIPropertyMetadata(false));
 
-        public bool IsCrossFadeEnabled
+        public static readonly DependencyProperty IsTransitioningProperty =
+            IsTransitioningPropertyKey.DependencyProperty;
+
+        public Transition Transition
         {
-            get => (bool)GetValue(IsCrossFadeEnabledProperty);
-            set => SetValue(IsCrossFadeEnabledProperty, value);
+            get { return (Transition)GetValue(TransitionProperty); }
+            set { SetValue(TransitionProperty, value); }
         }
 
-        #endregion
+        public static readonly DependencyProperty TransitionProperty =
+            DependencyProperty.Register("Transition", typeof(Transition), typeof(TransitionPresenter), new UIPropertyMetadata(null, null, CoerceTransition));
 
-        private bool Animates =>
-            SystemParameters.ClientAreaAnimation &&
-            RenderCapability.Tier > 0 &&
-            IsCrossFadeEnabled;
-
-        /// <summary>
-        /// Flips the logical content presenters to prepare for the next visual
-        /// transition.
-        /// </summary>
-        private void FlipPresenters()
+        private static object CoerceTransition(object element, object value)
         {
-            _newContentPresenter = _useFirstAsNew ? _firstContentPresenter : _secondContentPresenter;
-            _oldContentPresenter = _useFirstAsNew ? _secondContentPresenter : _firstContentPresenter;
-            _useFirstAsNew = !_useFirstAsNew;
+            TransitionPresenter te = (TransitionPresenter)element;
+            if (te.IsTransitioning) return te._activeTransition;
+            return value;
         }
 
-        /// <summary>
-        /// When overridden in a derived class, is invoked whenever application 
-        /// code or internal processes (such as a rebuilding layout pass) call
-        /// <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
-        /// In simplest terms, this means the method is called just before a UI 
-        /// element displays in an application.
-        /// </summary>
-        public override void OnApplyTemplate()
+        public TransitionSelector TransitionSelector
         {
-            base.OnApplyTemplate();
-
-            _firstContentPresenter = GetTemplateChild(FirstTemplatePartName) as ContentPresenter;
-            _secondContentPresenter = GetTemplateChild(SecondTemplatePartName) as ContentPresenter;
-            _newContentPresenter = _secondContentPresenter;
-            _oldContentPresenter = _firstContentPresenter;
-            _useFirstAsNew = true;
-
-            if (Content != null)
-            {
-                OnContentChanged(null, Content);
-            }
+            get { return (TransitionSelector)GetValue(TransitionSelectorProperty); }
+            set { SetValue(TransitionSelectorProperty, value); }
         }
 
-        /// <summary>
-        /// Called when the value of the
-        /// <see cref="P:System.Windows.Controls.ContentControl.Content"/>
-        /// property changes.
-        /// </summary>
-        /// <param name="oldContent">The old <see cref="T:System.Object"/>.</param>
-        /// <param name="newContent">The new <see cref="T:System.Object"/>.</param>
-        protected override void OnContentChanged(object oldContent, object newContent)
+        public static readonly DependencyProperty TransitionSelectorProperty =
+            DependencyProperty.Register("TransitionSelector", typeof(TransitionSelector), typeof(TransitionPresenter), new UIPropertyMetadata(null));
+
+        public TransitionPresenter()
         {
-            base.OnContentChanged(oldContent, newContent);
+            _children = new UIElementCollection(this, null);
+            ContentPresenter currentContent = new ContentPresenter();
+            _currentHost = new AdornerDecorator();
+            _currentHost.Child = currentContent;
+            _children.Add(_currentHost);
 
-            if (_pendingTransition != null)
+            ContentPresenter previousContent = new ContentPresenter();
+            _previousHost = new AdornerDecorator();
+            _previousHost.Child = previousContent;
+        }
+
+        private void BeginTransition()
+        {
+            TransitionSelector selector = TransitionSelector;
+
+            Transition transition = selector != null ?
+                selector.SelectTransition(CurrentContentPresenter.Content, Content) :
+                Transition;
+
+            if (transition != null)
             {
-                _pendingTransition.Abort();
-                _pendingTransition = null;
+                // Swap content presenters
+                AdornerDecorator temp = _previousHost;
+                _previousHost = _currentHost;
+                _currentHost = temp;
             }
 
-            if (_fadeOutAnimation != null)
+            ContentPresenter currentContent = CurrentContentPresenter;
+            // Set the current content
+            currentContent.Content = Content;
+            currentContent.ContentTemplate = ContentTemplate;
+            currentContent.ContentTemplateSelector = ContentTemplateSelector;
+
+            if (transition != null)
             {
-                _fadeOutAnimation.Completed -= OnFadeOutAnimationCompleted;
-                _fadeOutAnimation = null;
-            }
+                ContentPresenter previousContent = PreviousContentPresenter;
 
-            UIElement oldElement = oldContent as UIElement;
-            UIElement newElement = newContent as UIElement;
+                if (transition.IsNewContentTopmost)
+                    Children.Add(_currentHost);
+                else
+                    Children.Insert(0, _currentHost);
 
-            // Require the appropriate template parts plus a new element to
-            // transition to.
-            if (_firstContentPresenter == null || _secondContentPresenter == null || newElement == null)
-            {
-                return;
-            }
-
-            if (oldElement != null)
-            {
-                FlipPresenters();
-            }
-
-            bool useTransition = oldElement != null && Animates;
-
-            _newContentPresenter.Opacity = useTransition ? 0 : 1;
-            _newContentPresenter.Visibility = Visibility.Visible;
-            _newContentPresenter.Content = newElement;
-
-            _oldContentPresenter.Opacity = 1;
-            _oldContentPresenter.Visibility = useTransition ? Visibility.Visible : Visibility.Collapsed;
-            _oldContentPresenter.Content = useTransition ? oldElement : null;
-
-            if (useTransition)
-            {
-                _pendingTransition = Dispatcher.BeginInvoke(() =>
-                {
-                    _newContentPresenter.Opacity = 1;
-
-                    _fadeOutAnimation = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(300), FillBehavior.Stop);
-                    _fadeOutAnimation.Completed += OnFadeOutAnimationCompleted;
-
-                    var fadeInAnimation = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(300), FillBehavior.Stop);
-
-                    _oldContentPresenter.BeginAnimation(OpacityProperty, _fadeOutAnimation);
-                    _newContentPresenter.BeginAnimation(OpacityProperty, fadeInAnimation);
-                }, DispatcherPriority.ApplicationIdle);
+                IsTransitioning = true;
+                _activeTransition = transition;
+                CoerceValue(TransitionProperty);
+                CoerceValue(ClipToBoundsProperty);
+                transition.BeginTransition(this, previousContent, currentContent);
             }
         }
 
-        private void OnFadeOutAnimationCompleted(object sender, EventArgs e)
+        // Clean up after the transition is complete
+        internal void OnTransitionCompleted()
         {
-            if (_oldContentPresenter != null)
-            {
-                _oldContentPresenter.Visibility = Visibility.Collapsed;
-                _oldContentPresenter.Content = null;
-            }
+            _children.Clear();
+            _children.Add(_currentHost);
+            _currentHost.Visibility = Visibility.Visible;
+            _previousHost.Visibility = Visibility.Visible;
+            ((ContentPresenter)_previousHost.Child).Content = null;
 
-            _fadeOutAnimation = null;
+            IsTransitioning = false;
+            _activeTransition = null;
+            CoerceValue(TransitionProperty);
+            CoerceValue(ClipToBoundsProperty);
+            CoerceValue(ContentProperty);
         }
+
+        protected override Size MeasureOverride(Size availableSize)
+        {
+            _currentHost.Measure(availableSize);
+            return _currentHost.DesiredSize;
+        }
+
+        protected override Size ArrangeOverride(Size finalSize)
+        {
+            foreach (UIElement uie in _children)
+                uie.Arrange(new Rect(finalSize));
+            return finalSize;
+        }
+
+        protected override int VisualChildrenCount
+        {
+            get { return _children.Count; }
+        }
+
+        protected override Visual GetVisualChild(int index)
+        {
+            if (index < 0 || index >= _children.Count)
+                throw new ArgumentOutOfRangeException("index");
+            return _children[index];
+        }
+
+        internal UIElementCollection Children
+        {
+            get { return _children; }
+        }
+
+        private ContentPresenter PreviousContentPresenter
+        {
+            get { return ((ContentPresenter)_previousHost.Child); }
+        }
+
+        private ContentPresenter CurrentContentPresenter
+        {
+            get { return ((ContentPresenter)_currentHost.Child); }
+        }
+
+        private UIElementCollection _children;
+
+        private AdornerDecorator _currentHost;
+        private AdornerDecorator _previousHost;
+
+        private Transition _activeTransition;
     }
 }

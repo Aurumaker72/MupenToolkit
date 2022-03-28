@@ -23,30 +23,34 @@ namespace MupenToolkitPRE
                 MainWindow.MainVM.FrameAdvanceCommand.Execute("1");
             }
         }
+        private void UpdateJoystick(Point position)
+        {
+            if (MainWindow.MainVM.CurrentSample == null) return;
+            // Configurable snapping, etc...
+            var tgX = (sbyte)Math.Clamp(Math.Round(position.X), -127, 127);
+            var tgY = (sbyte)Math.Clamp(Math.Round(position.Y), -127, 127);
+            if (Properties.Settings.Default.AnalogJoystickSnapping)
+            {
+                if (tgX < 7 && tgX > -7)
+                    tgX = 0;
+                if (tgY < 7 && tgY > -7)
+                    tgY = 0;
+            }
+            MainWindow.MainVM.CurrentSample.X = tgX;
+            MainWindow.MainVM.CurrentSample.Y = tgY;
+        }
         private void Border_Joystick_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                if (MainWindow.MainVM.CurrentSample == null) return;
-                // Configurable snapping, etc...
-                var p = Mouse.GetPosition(Canvas_Joystick);
-                var tgX = (sbyte)Math.Clamp(Math.Round(p.X), -127, 127);
-                var tgY = (sbyte)Math.Clamp(Math.Round(p.Y), -127, 127);
-                if (Properties.Settings.Default.AnalogJoystickSnapping)
-                {
-                    if (tgX < 7 && tgX > -7)
-                        tgX = 0;
-                    if (tgY < 7 && tgY > -7)
-                        tgY = 0;
-                }
-                MainWindow.MainVM.CurrentSample.X = tgX;
-                MainWindow.MainVM.CurrentSample.Y = tgY;
+                UpdateJoystick(Mouse.GetPosition(Canvas_Joystick));
             }
         }
 
         private void Border_Joystick_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             Border_Joystick.CaptureMouse();
+            UpdateJoystick(Mouse.GetPosition(Canvas_Joystick));
         }
 
         private void Border_Joystick_PreviewMouseUp(object sender, MouseButtonEventArgs e)

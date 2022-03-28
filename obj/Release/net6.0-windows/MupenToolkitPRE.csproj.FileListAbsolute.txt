@@ -131,3 +131,5 @@ C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\MupenToolk
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\MupenToolkitPRE.pdb
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\MupenToolkitPRE.genruntimeconfig.cache
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\PostSharp\postsharp.app.config
+C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\StartFlagsPage.g.cs
+C:\Users\Alex\source\repos\MupenToolkitGit\obj\Release\net6.0-windows\StartFlagsPage.baml

@@ -1,6 +1,5 @@
 ﻿using Infralution.Localization.Wpf;
 using MupenToolkitPRE.MVVM;
-using System.Diagnostics;
 using System.Globalization;
 
 namespace MupenToolkitPRE.UI.Localization

@@ -43,7 +43,7 @@
                 <StackPanel
                     Visibility="Collapsed"
                     Opacity="0"
-                    xmlex:SlideTransition.ShouldBeShown="{Binding Path=FileLoaded, UpdateSourceTrigger=PropertyChanged}">
+                    xmlex:OpacityTransition.ShouldBeShown="{Binding Path=FileLoaded, UpdateSourceTrigger=PropertyChanged}">
                     <StackPanel.RenderTransform>
                         <TranslateTransform/>
                     </StackPanel.RenderTransform>

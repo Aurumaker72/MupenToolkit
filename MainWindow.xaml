@@ -118,11 +118,12 @@
                         materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                         HorizontalScrollBarVisibility="Auto"
                         VerticalScrollBarVisibility="Auto">
-                            
-                            <ContentControl
-                            DataContext="{Binding Path=SelectedPage, UpdateSourceTrigger=PropertyChanged}"
-                            Margin="{Binding MarginRequirement, FallbackValue=16}"
-                            Content="{Binding Content, UpdateSourceTrigger=PropertyChanged, FallbackValue={x:Null}}"/>
+
+                            <xmlex:TransitionPresenter
+                                Transition="{StaticResource DefaultContentTransition}"
+                                DataContext="{Binding Path=SelectedPage, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="{Binding MarginRequirement, FallbackValue=16}"
+                                Content="{Binding Content, UpdateSourceTrigger=PropertyChanged, FallbackValue={x:Null}}"/>
 
                         </ScrollViewer>
                         <materialDesign:Snackbar
