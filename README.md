@@ -4,20 +4,20 @@ Continuation of Mupen Utilities
 [![Release](https://img.shields.io/github/v/release/Aurumaker72/MupenToolkit?label=Release)](https://github.com/Aurumaker72/MupenToolkit/releases)
 
 ## Comparison
-| Aspect         | Mupen Utilities     | Mupen Toolkit |
+| Aspect         | Mupen Utilities     | Mupen Toolkit | Mupen Toolkit Preview |
 |--------------|-----------|------------|
 | Median loading time of 1-hour long movie in miliseconds across 1000 runs | 1554      | 7        |
-| Basic Header Editing      | ✔️ | ✔️ |
-| Advanced Header Editing      | ✔️ | ✔️ |
-| M64 Support | ✔️ | ✔️ |
-| CMB Support | ✔️ | ✔️ |
-| REC Support | ❌ | ❌ |
-| TAS Studio      | ✔️ | ✔️ |
-| Input Statistics      | ✔️ | ✔️ |
-| Copy/Paste      | 〰️ | ✔️ |
-| Replacement      | ✔️ | ❌* |
-| Movie Diagnostic | ✔️ | ✔️ |
-| [TAS Studio Fast Edit](hoverOverTheControlWhichBroughtYouHere "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |
+| Basic Header Editing      | ✔️ | ✔️ | ✔️ |
+| Advanced Header Editing      | ✔️ | ✔️ |  ✔️ |
+| M64 Support | ✔️ | ✔️ | ✔️ |
+| CMB Support | ✔️ | ✔️ | ❌ |
+| REC Support | ❌ | ❌ | ❌ |
+| TAS Studio      | ✔️ | ✔️ | ❌ |
+| Input Statistics      | ✔️ | ✔️ | ✔️ |
+| Copy/Paste      | 〰️ | ✔️ | 〰️ |
+| Replacement      | ✔️ | ❌* | ❌* |
+| Movie Diagnostic | ✔️ | ✔️ | 〰️ |
+| [TAS Studio Fast Edit](hoverOverTheControlWhichBroughtYouHere "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |  〰️ |
 #### Legend
 \*: coming soon...
 
