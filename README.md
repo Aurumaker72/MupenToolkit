@@ -4,26 +4,17 @@ Continuation of Mupen Utilities
 [![Release](https://img.shields.io/github/v/release/Aurumaker72/MupenToolkit?label=Release)](https://github.com/Aurumaker72/MupenToolkit/releases)
 
 ## Comparison
-| Aspect         | Mupen Utilities     | Mupen Toolkit | Mupen Toolkit Preview |
-|--------------|-----------|------------|
-| Median loading time of 1-hour long movie in miliseconds across 1000 runs | 1554      | 7        |
-| Basic Header Editing      | ✔️ | ✔️ | ✔️ |
-| Advanced Header Editing      | ✔️ | ✔️ |  ✔️ |
-| M64 Support | ✔️ | ✔️ | ✔️ |
-| CMB Support | ✔️ | ✔️ | ❌ |
-| REC Support | ❌ | ❌ | ❌ |
-| TAS Studio      | ✔️ | ✔️ | ❌ |
-| Input Statistics      | ✔️ | ✔️ | ✔️ |
-| Copy/Paste      | 〰️ | ✔️ | 〰️ |
-| Replacement      | ✔️ | ❌* | ❌* |
-| Movie Diagnostic | ✔️ | ✔️ | 〰️ |
-| [TAS Studio Fast Edit](hoverOverTheControlWhichBroughtYouHere "Allows immediate keyboard-only input and full keyboard control of TAS Studio without any mouse input")  | ❌ | ✔️ |  〰️ |
-#### Legend
-\*: coming soon...
-
-\.: low priority
-
-\!: high priority
+|                                                         | Mupen Utilities | Mupen Toolkit | Mupen Toolkit Preview |                                         |
+|---------------------------------------------------------|-----------------|---------------|-----------------------|-----------------------------------------|
+| Median load time (median of 1hr movie across 1000 runs) | 1554            | 7             | -                     | not applicable due to lack of TASStudio |
+| Full header editing                                     | Yes             | Yes           | Yes                   |                                         |
+| M64                                                     | Yes             | Yes           | Yes                   |                                         |
+| CMB                                                     | Yes             | Yes           | No                    | low priority                            |
+| REC                                                     | Yes             | No            | No                    |                                         |
+| Statistics                                              | Yes             | Yes           | Yes                   |                                         |
+| Seeker                                                  | Yes             | No            | Yes                   |                                         |
+| Diagnostic                                              | Yes             | Yes           | Yes (implicit)        |                                         |
+| Replacement                                             | Yes             | No            | No                    | high priority                           |
 
 ## Why?
 Mupen Utilities is very big and feature-packed but extremely error-prone, inaccurate and bloated. It has become realistically unmaintainable due to the displayed code quality.
