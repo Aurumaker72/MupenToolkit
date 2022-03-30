@@ -196,7 +196,7 @@
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
-    <comment>@Invariant</comment>
+    
   </data>
   <data name="TooShort" xml:space="preserve">
     <value>Movie header is too short</value>
@@ -357,5 +357,26 @@
   </data>
   <data name="InvalidVIsPerSecond" xml:space="preserve">
     <value>Invalid VI/s</value>
+  </data>
+  <data name="AlreadyBusy" xml:space="preserve">
+    <value>The program is already busy. To avoid race conditions, you can not perform this action.</value>
+  </data>
+  <data name="NotifyOnRaceConditionAvoidance" xml:space="preserve">
+    <value>Notify on race condition avoidance</value>
+  </data>
+  <data name="NotifyOnRaceConditionAvoidanceToolTip" xml:space="preserve">
+    <value>Notifies user when the program avoids illegal state and race condition</value>
+  </data>
+  <data name="InsufficientVIs" xml:space="preserve">
+    <value>Input sequence is too short</value>
+  </data>
+  <data name="MovieLoadFailed" xml:space="preserve">
+    <value>Failed to load movie</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="MovieSaveFailed" xml:space="preserve">
+    <value>Failed to save movie</value>
   </data>
 </root>

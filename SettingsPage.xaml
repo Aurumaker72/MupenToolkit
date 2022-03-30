@@ -97,9 +97,16 @@
                             </Viewbox>
                         </StackPanel>
                     </TabItem.Header>
-                    <ListBox>
-                        <ListBoxItem Content="hallo dame la gomita ah"/>
-                    </ListBox>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel.Resources>
+                            <Style TargetType="CheckBox" BasedOn="{StaticResource MaterialDesignCheckBox}">
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="ToolTipService.InitialShowDelay" Value="0"/>
+                                <Setter Property="ToolTipService.BetweenShowDelay" Value="0"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <CheckBox IsChecked="{xmlex:SettingBinding Path=NotifyOnRaceConditionAvoidance}" Content="{Resx NotifyOnRaceConditionAvoidance}" ToolTip="{Resx NotifyOnRaceConditionAvoidanceToolTip}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
                 </TabItem>
 
             </TabControl>

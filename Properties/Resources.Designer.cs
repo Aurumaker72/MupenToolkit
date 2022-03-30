@@ -79,6 +79,15 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The program is already busy. To avoid race conditions, you can not perform this action..
+        /// </summary>
+        public static string AlreadyBusy {
+            get {
+                return ResourceManager.GetString("AlreadyBusy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Analog.
         /// </summary>
         public static string AnalogInput {
@@ -277,6 +286,15 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string Info {
+            get {
+                return ResourceManager.GetString("Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input {
@@ -291,6 +309,15 @@ namespace MupenToolkitPRE.Properties {
         public static string InsufficientControllers {
             get {
                 return ResourceManager.GetString("InsufficientControllers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input sequence is too short.
+        /// </summary>
+        public static string InsufficientVIs {
+            get {
+                return ResourceManager.GetString("InsufficientVIs", resourceCulture);
             }
         }
         
@@ -421,11 +448,29 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load movie.
+        /// </summary>
+        public static string MovieLoadFailed {
+            get {
+                return ResourceManager.GetString("MovieLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Movie saved successfully.
         /// </summary>
         public static string MovieSavedSuccessfully {
             get {
                 return ResourceManager.GetString("MovieSavedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save movie.
+        /// </summary>
+        public static string MovieSaveFailed {
+            get {
+                return ResourceManager.GetString("MovieSaveFailed", resourceCulture);
             }
         }
         
@@ -444,6 +489,24 @@ namespace MupenToolkitPRE.Properties {
         public static string No {
             get {
                 return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notify on race condition avoidance.
+        /// </summary>
+        public static string NotifyOnRaceConditionAvoidance {
+            get {
+                return ResourceManager.GetString("NotifyOnRaceConditionAvoidance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notifies user when the program avoids illegal state and race condition.
+        /// </summary>
+        public static string NotifyOnRaceConditionAvoidanceToolTip {
+            get {
+                return ResourceManager.GetString("NotifyOnRaceConditionAvoidanceToolTip", resourceCulture);
             }
         }
         

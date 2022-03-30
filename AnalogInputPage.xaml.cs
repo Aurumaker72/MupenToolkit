@@ -8,7 +8,7 @@ namespace MupenToolkitPRE
     public partial class AnalogInputPage
     {
 
-        public static readonly DispatcherTimer MovieTimer = new DispatcherTimer(DispatcherPriority.Background);
+        public static readonly DispatcherTimer MovieTimer = new();
 
         public AnalogInputPage()
         {

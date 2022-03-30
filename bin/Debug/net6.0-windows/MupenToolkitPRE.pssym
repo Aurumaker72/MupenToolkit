@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="1721" PostSharpLinesOfCode="0" EnhancedTypesCount="7" SchemaVersion="1" PostSharpVersion="6.10.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="1747" PostSharpLinesOfCode="0" EnhancedTypesCount="7" SchemaVersion="1" PostSharpVersion="6.10.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Evolution Source="#1=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;MovieType&gt;k__BackingField" Target="#2=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;MovieType&gt;k__OriginalField" />
   <Evolution Source="#2" Target="#3=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::{MovieType}k__BackingField()" />
   <Evolution Source="#4=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Movie&gt;k__BackingField" Target="#5=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Movie&gt;k__OriginalField" />
@@ -127,7 +127,7 @@
   <Evolution Source="#187=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__BackingField" Target="#188=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__OriginalField" />
   <Evolution Source="#188" Target="#189=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Description}k__BackingField()" />
   <Class Class="#190=T:[PostSharp.Patterns.Model]PostSharp.Patterns.Model.NotifyPropertyChangedAttribute">
-    <Instance Declaration="#191=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel" Id="96f6e09159aa8da2">
+    <Instance Declaration="#191=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel" Id="96f6e0916f5bfa2e">
       <Target Tags="premium">
         <JoinPoint Advising="#190" Description="#192=Introduces event ChildPropertyChanged" Ordinal="0" LinesAvoided="0" />
         <JoinPoint Advising="#190" Description="#193=Introduces event ChildPropertyChanging" LinesAvoided="0" />
@@ -249,7 +249,7 @@
         <JoinPoint Advised="#261=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::RefreshPages()" Advising="#190" Description="#200" Ordinal="117" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#262=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem" Id="96f6e091fc2350bc">
+    <Instance Declaration="#262=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem" Id="96f6e091a0f9ee28">
       <Target Tags="premium">
         <JoinPoint Advising="#190" Description="#193" Ordinal="118" LinesAvoided="0" />
         <JoinPoint Advising="#190" Description="#194" Ordinal="119" LinesAvoided="0" />
@@ -276,7 +276,7 @@
         <JoinPoint Advised="#270=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::CreateContent()" Advising="#190" Description="#200" Ordinal="140" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#271=T:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint" Id="96f6e09139b83132">
+    <Instance Declaration="#271=T:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint" Id="96f6e0910b0c23cc">
       <Target>
         <JoinPoint Advising="#190" Description="#192" Ordinal="141" LinesAvoided="0" />
         <JoinPoint Advising="#190" Description="#193" Ordinal="142" LinesAvoided="0" />
@@ -294,7 +294,7 @@
         <JoinPoint Advised="#277=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::Equals(System.Int32, System.Int32)" Advising="#190" Description="#200" Ordinal="154" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#278=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage" Id="96f6e0911b6f065d">
+    <Instance Declaration="#278=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage" Id="96f6e091fd7fe45e">
       <Target Tags="premium">
         <JoinPoint Advising="#190" Description="#192" Ordinal="155" LinesAvoided="0" />
         <JoinPoint Advising="#190" Description="#193" Ordinal="156" LinesAvoided="0" />
@@ -311,7 +311,7 @@
         <JoinPoint Advised="#282=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::set_Playing(System.Boolean)" Advising="#190" Description="#200" Ordinal="167" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#283=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic" Id="96f6e091e13a5330">
+    <Instance Declaration="#283=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic" Id="96f6e0916864d887">
       <Target>
         <JoinPoint Advising="#190" Description="#284=Introduces event PropertyChanged" Ordinal="183" LinesAvoided="1" />
         <JoinPoint Advising="#190" Description="#192" Ordinal="184" LinesAvoided="0" />
@@ -335,7 +335,7 @@
         <JoinPoint Advised="#131" Advising="#190" Description="#242" Semantic="Setter" Ordinal="202" LinesAvoided="1" />
       </Target>
     </Instance>
-    <Instance Declaration="#293=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie" Id="96f6e091623ae229">
+    <Instance Declaration="#293=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie" Id="96f6e091b502fb72">
       <Target Tags="premium">
         <JoinPoint Advising="#190" Description="#196" Ordinal="168" LinesAvoided="0" />
         <JoinPoint Advised="#294=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_Header()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="169" LinesAvoided="0" />
@@ -354,7 +354,7 @@
         <JoinPoint Advised="#302=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::LoadInputs(System.IO.BinaryReader, [MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#190" Description="#200" Ordinal="182" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#303=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader" Id="96f6e09126dd801e">
+    <Instance Declaration="#303=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader" Id="96f6e09116bda227">
       <Target>
         <JoinPoint Advising="#190" Description="#195" Ordinal="203" LinesAvoided="0" />
         <JoinPoint Advising="#190" Description="#194" Ordinal="204" LinesAvoided="0" />

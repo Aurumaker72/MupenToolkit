@@ -14,8 +14,11 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
-        <TextBlock x:Name="Message" Margin="5" FontSize="18" Grid.Row="0"/>
+        <StackPanel>
+            <TextBlock x:Name="Title" Margin="5" FontSize="23" Grid.Row="0" TextAlignment="Center"/>
+            <TextBlock x:Name="Message" Margin="5" FontSize="16" Grid.Row="0" TextAlignment="Center" LineHeight="26"/>
+
+        </StackPanel>
         <Separator Grid.Row="1" Margin="5" />
         
         <Button Grid.Row="2"

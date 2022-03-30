@@ -177,30 +177,33 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
 
                 header.Author = br.ReadBytes(222).UTF8ToStringTrimmed();
                 header.Description = br.ReadBytes(256).UTF8ToStringTrimmed();
+                string errorMessage = string.Empty;
+
                 if (header.Magic != 0x4D36341A && header.Magic != 439629389)
                 {
-                    br.Close();
-                    return (new(false, Properties.Resources.WrongMagic), null);
+                    errorMessage += Properties.Resources.WrongMagic + Environment.NewLine;
                 }
                 if (header.Version != 3)
                 {
-                    br.Close();
-                    return (new(false, Properties.Resources.OutdatedVersion), null);
+                    errorMessage += Properties.Resources.OutdatedVersion + Environment.NewLine;
                 }
                 if (header.UID == 0 || header.RomCRC == 0)
                 {
-                    br.Close();
-                    return (new(false, Properties.Resources.InvalidUID), null);
+                    errorMessage += Properties.Resources.InvalidUID + Environment.NewLine;
                 }
                 if (header.LengthVIs == 0)
                 {
-                    br.Close();
-                    return (new(false, Properties.Resources.TooShort), null);
+                    errorMessage += Properties.Resources.InsufficientVIs + Environment.NewLine;
                 }
                 if (header.VIsPerSecond != 50 && header.VIsPerSecond != 60)
                 {
+                    errorMessage += Properties.Resources.InvalidVIsPerSecond + Environment.NewLine;
+                }
+                if (errorMessage != String.Empty)
+                {
                     br.Close();
-                    return (new(false, Properties.Resources.InvalidVIsPerSecond), null);
+                    errorMessage = errorMessage.Trim().TrimEnd(Environment.NewLine.ToCharArray());
+                    return (new(false, errorMessage), null);
                 }
                 return (new(true), header);
             }
@@ -235,7 +238,7 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
                 {
                     if (BitOperationsHelper.GetBit(header.ControllerFlags.Raw, i))
                     {
-                        if (br.BaseStream.Position + sizeof(int) < br.BaseStream.Length)
+                        if (br.BaseStream.Position + sizeof(int) < br.BaseStream.Length && i < inputs.Count)
                             inputs[i].Add(new Sample(br.ReadInt32()));
                     }
                 }

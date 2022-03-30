@@ -318,4 +318,28 @@
   <data name="InvalidVIsPerSecond" xml:space="preserve">
     <value>Ungültige VI/s</value>
   </data>
+  <data name="AlreadyBusy" xml:space="preserve">
+    <value>Die Anwendung ist bereits beschäftigt. Um ein Wettlauf-Risiko zu vermeiden, wurde die aktuelle Aufforderung nicht erfüllt.</value>
+  </data>
+  <data name="NotifyOnRaceConditionAvoidance" xml:space="preserve">
+    <value>Benachrichtige bei Vermeidung eines Wettlauf-Risikos</value>
+  </data>
+  <data name="NotifyOnRaceConditionAvoidanceToolTip" xml:space="preserve">
+    <value>Informiert den Benutzer, wenn die Anwendung einen falschen logischen Status oder Wettlauf-Risiko vermeidet</value>
+  </data>
+  <data name="InsufficientVIs" xml:space="preserve">
+    <value>Eingabesequenz ist zu kurz</value>
+  </data>
+  <data name="MovieLoadFailed" xml:space="preserve">
+    <value>Film konnte nicht geladen werden</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="MovieSaveFailed" xml:space="preserve">
+    <value>Film konnte nicht gespeichert werden</value>
+  </data>
 </root>

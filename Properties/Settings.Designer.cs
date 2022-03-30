@@ -82,5 +82,17 @@ namespace MupenToolkitPRE.Properties {
                 this["AnalogJoystickKeyboard"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool NotifyOnRaceConditionAvoidance {
+            get {
+                return ((bool)(this["NotifyOnRaceConditionAvoidance"]));
+            }
+            set {
+                this["NotifyOnRaceConditionAvoidance"] = value;
+            }
+        }
     }
 }

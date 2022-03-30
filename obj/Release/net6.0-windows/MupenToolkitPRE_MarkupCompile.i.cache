@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Alex\source\repos\MupenToolkitGit\App.xaml
-10-640944176
+11-549406114
 1-1361176732
-442022880623
+45410610413
 2101249068291
-AnalogInputPage.xaml;ControllerFlagsPage.xaml;GenericDialog.xaml;HeaderPage.xaml;HomePage.xaml;MainWindow.xaml;ROMCountryPage.xaml;SettingsPage.xaml;StartFlagsPage.xaml;StatisticsPage.xaml;
+AnalogInputPage.xaml;ControllerFlagsPage.xaml;GenericDialog.xaml;HeaderPage.xaml;HomePage.xaml;MainWindow.xaml;ReplacementPage.xaml;ROMCountryPage.xaml;SettingsPage.xaml;StartFlagsPage.xaml;StatisticsPage.xaml;
 
-False
+True
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="1234" PostSharpLinesOfCode="0" EnhancedTypesCount="7" SchemaVersion="1" PostSharpVersion="6.10.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="1329" PostSharpLinesOfCode="0" EnhancedTypesCount="7" SchemaVersion="1" PostSharpVersion="6.10.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Evolution Source="#1=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;MovieType&gt;k__BackingField" Target="#2=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;MovieType&gt;k__OriginalField" />
   <Evolution Source="#2" Target="#3=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::{MovieType}k__BackingField()" />
   <Evolution Source="#4=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Movie&gt;k__BackingField" Target="#5=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Movie&gt;k__OriginalField" />
@@ -56,384 +56,389 @@
   <Evolution Source="#80" Target="#81=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::{PageItems}k__BackingField()" />
   <Evolution Source="#82=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;FileLoaded&gt;k__BackingField" Target="#83=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;FileLoaded&gt;k__OriginalField" />
   <Evolution Source="#83" Target="#84=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::{FileLoaded}k__BackingField()" />
-  <Evolution Source="#85=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_ContentType" Target="#86=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_ContentType&gt;k__OriginalField" />
-  <Evolution Source="#86" Target="#87=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_ContentType()" />
-  <Evolution Source="#88=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_DataContext" Target="#89=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_DataContext&gt;k__OriginalField" />
-  <Evolution Source="#89" Target="#90=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_DataContext()" />
-  <Evolution Source="#91=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_Content" Target="#92=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_Content&gt;k__OriginalField" />
-  <Evolution Source="#92" Target="#93=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_Content()" />
-  <Evolution Source="#94=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Name&gt;k__BackingField" Target="#95=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Name&gt;k__OriginalField" />
-  <Evolution Source="#95" Target="#96=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{Name}k__BackingField()" />
-  <Evolution Source="#97=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;MarginRequirement&gt;k__BackingField" Target="#98=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;MarginRequirement&gt;k__OriginalField" />
-  <Evolution Source="#98" Target="#99=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{MarginRequirement}k__BackingField()" />
-  <Evolution Source="#100=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Accompanist&gt;k__BackingField" Target="#101=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Accompanist&gt;k__OriginalField" />
-  <Evolution Source="#101" Target="#102=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{Accompanist}k__BackingField()" />
-  <Evolution Source="#103=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;X&gt;k__BackingField" Target="#104=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;X&gt;k__OriginalField" />
-  <Evolution Source="#104" Target="#105=P:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::{X}k__BackingField()" />
-  <Evolution Source="#106=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;Y&gt;k__BackingField" Target="#107=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;Y&gt;k__OriginalField" />
-  <Evolution Source="#107" Target="#108=P:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::{Y}k__BackingField()" />
-  <Evolution Source="#109=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Name&gt;k__BackingField" Target="#110=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Name&gt;k__OriginalField" />
-  <Evolution Source="#110" Target="#111=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::{Name}k__BackingField()" />
-  <Evolution Source="#112=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Playing&gt;k__BackingField" Target="#113=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Playing&gt;k__OriginalField" />
-  <Evolution Source="#113" Target="#114=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::{Playing}k__BackingField()" />
-  <Evolution Source="#115=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;Header&gt;k__BackingField" Target="#116=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;Header&gt;k__OriginalField" />
-  <Evolution Source="#116" Target="#117=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::{Header}k__BackingField()" />
-  <Evolution Source="#118=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;HeaderUnchanged&gt;k__BackingField" Target="#119=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;HeaderUnchanged&gt;k__OriginalField" />
-  <Evolution Source="#119" Target="#120=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::{HeaderUnchanged}k__BackingField()" />
-  <Evolution Source="#121=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Name&gt;k__BackingField" Target="#122=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Name&gt;k__OriginalField" />
-  <Evolution Source="#122" Target="#123=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Name}k__BackingField()" />
-  <Evolution Source="#124=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Description&gt;k__BackingField" Target="#125=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Description&gt;k__OriginalField" />
-  <Evolution Source="#125" Target="#126=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Description}k__BackingField()" />
-  <Evolution Source="#127=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Value&gt;k__BackingField" Target="#128=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Value&gt;k__OriginalField" />
-  <Evolution Source="#128" Target="#129=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Value}k__BackingField()" />
-  <Evolution Source="#130=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Magic&gt;k__BackingField" Target="#131=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Magic&gt;k__OriginalField" />
-  <Evolution Source="#131" Target="#132=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Magic}k__BackingField()" />
-  <Evolution Source="#133=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Version&gt;k__BackingField" Target="#134=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Version&gt;k__OriginalField" />
-  <Evolution Source="#134" Target="#135=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Version}k__BackingField()" />
-  <Evolution Source="#136=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;UID&gt;k__BackingField" Target="#137=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;UID&gt;k__OriginalField" />
-  <Evolution Source="#137" Target="#138=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{UID}k__BackingField()" />
-  <Evolution Source="#139=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthVIs&gt;k__BackingField" Target="#140=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthVIs&gt;k__OriginalField" />
-  <Evolution Source="#140" Target="#141=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthVIs}k__BackingField()" />
-  <Evolution Source="#142=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Rerecords&gt;k__BackingField" Target="#143=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Rerecords&gt;k__OriginalField" />
-  <Evolution Source="#143" Target="#144=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Rerecords}k__BackingField()" />
-  <Evolution Source="#145=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VIsPerSecond&gt;k__BackingField" Target="#146=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VIsPerSecond&gt;k__OriginalField" />
-  <Evolution Source="#146" Target="#147=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{VIsPerSecond}k__BackingField()" />
-  <Evolution Source="#148=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthSamples&gt;k__BackingField" Target="#149=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthSamples&gt;k__OriginalField" />
-  <Evolution Source="#149" Target="#150=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthSamples}k__BackingField()" />
-  <Evolution Source="#151=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthFile&gt;k__BackingField" Target="#152=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthFile&gt;k__OriginalField" />
-  <Evolution Source="#152" Target="#153=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthFile}k__BackingField()" />
-  <Evolution Source="#154=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;StartFlags&gt;k__BackingField" Target="#155=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;StartFlags&gt;k__OriginalField" />
-  <Evolution Source="#155" Target="#156=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{StartFlags}k__BackingField()" />
-  <Evolution Source="#157=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;ControllerFlags&gt;k__BackingField" Target="#158=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;ControllerFlags&gt;k__OriginalField" />
-  <Evolution Source="#158" Target="#159=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{ControllerFlags}k__BackingField()" />
-  <Evolution Source="#160=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomName&gt;k__BackingField" Target="#161=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomName&gt;k__OriginalField" />
-  <Evolution Source="#161" Target="#162=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomName}k__BackingField()" />
-  <Evolution Source="#163=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCRC&gt;k__BackingField" Target="#164=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCRC&gt;k__OriginalField" />
-  <Evolution Source="#164" Target="#165=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomCRC}k__BackingField()" />
-  <Evolution Source="#166=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCountry&gt;k__BackingField" Target="#167=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCountry&gt;k__OriginalField" />
-  <Evolution Source="#167" Target="#168=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomCountry}k__BackingField()" />
-  <Evolution Source="#169=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VideoPluginName&gt;k__BackingField" Target="#170=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VideoPluginName&gt;k__OriginalField" />
-  <Evolution Source="#170" Target="#171=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{VideoPluginName}k__BackingField()" />
-  <Evolution Source="#172=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;AudioPluginName&gt;k__BackingField" Target="#173=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;AudioPluginName&gt;k__OriginalField" />
-  <Evolution Source="#173" Target="#174=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{AudioPluginName}k__BackingField()" />
-  <Evolution Source="#175=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;InputPluginName&gt;k__BackingField" Target="#176=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;InputPluginName&gt;k__OriginalField" />
-  <Evolution Source="#176" Target="#177=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{InputPluginName}k__BackingField()" />
-  <Evolution Source="#178=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RSPPluginName&gt;k__BackingField" Target="#179=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RSPPluginName&gt;k__OriginalField" />
-  <Evolution Source="#179" Target="#180=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RSPPluginName}k__BackingField()" />
-  <Evolution Source="#181=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Author&gt;k__BackingField" Target="#182=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Author&gt;k__OriginalField" />
-  <Evolution Source="#182" Target="#183=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Author}k__BackingField()" />
-  <Evolution Source="#184=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__BackingField" Target="#185=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__OriginalField" />
-  <Evolution Source="#185" Target="#186=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Description}k__BackingField()" />
-  <Class Class="#187=T:[PostSharp.Patterns.Model]PostSharp.Patterns.Model.NotifyPropertyChangedAttribute">
-    <Instance Declaration="#188=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel" Id="96f6e09120966a86">
+  <Evolution Source="#85=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Busy&gt;k__BackingField" Target="#86=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::&lt;Busy&gt;k__OriginalField" />
+  <Evolution Source="#86" Target="#87=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::{Busy}k__BackingField()" />
+  <Evolution Source="#88=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_ContentType" Target="#89=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_ContentType&gt;k__OriginalField" />
+  <Evolution Source="#89" Target="#90=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_ContentType()" />
+  <Evolution Source="#91=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_DataContext" Target="#92=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_DataContext&gt;k__OriginalField" />
+  <Evolution Source="#92" Target="#93=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_DataContext()" />
+  <Evolution Source="#94=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_Content" Target="#95=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;_Content&gt;k__OriginalField" />
+  <Evolution Source="#95" Target="#96=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::_Content()" />
+  <Evolution Source="#97=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Name&gt;k__BackingField" Target="#98=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Name&gt;k__OriginalField" />
+  <Evolution Source="#98" Target="#99=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{Name}k__BackingField()" />
+  <Evolution Source="#100=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;MarginRequirement&gt;k__BackingField" Target="#101=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;MarginRequirement&gt;k__OriginalField" />
+  <Evolution Source="#101" Target="#102=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{MarginRequirement}k__BackingField()" />
+  <Evolution Source="#103=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Accompanist&gt;k__BackingField" Target="#104=F:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::&lt;Accompanist&gt;k__OriginalField" />
+  <Evolution Source="#104" Target="#105=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::{Accompanist}k__BackingField()" />
+  <Evolution Source="#106=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;X&gt;k__BackingField" Target="#107=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;X&gt;k__OriginalField" />
+  <Evolution Source="#107" Target="#108=P:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::{X}k__BackingField()" />
+  <Evolution Source="#109=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;Y&gt;k__BackingField" Target="#110=F:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::&lt;Y&gt;k__OriginalField" />
+  <Evolution Source="#110" Target="#111=P:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::{Y}k__BackingField()" />
+  <Evolution Source="#112=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Name&gt;k__BackingField" Target="#113=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Name&gt;k__OriginalField" />
+  <Evolution Source="#113" Target="#114=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::{Name}k__BackingField()" />
+  <Evolution Source="#115=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Playing&gt;k__BackingField" Target="#116=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::&lt;Playing&gt;k__OriginalField" />
+  <Evolution Source="#116" Target="#117=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::{Playing}k__BackingField()" />
+  <Evolution Source="#118=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;Header&gt;k__BackingField" Target="#119=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;Header&gt;k__OriginalField" />
+  <Evolution Source="#119" Target="#120=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::{Header}k__BackingField()" />
+  <Evolution Source="#121=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;HeaderUnchanged&gt;k__BackingField" Target="#122=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::&lt;HeaderUnchanged&gt;k__OriginalField" />
+  <Evolution Source="#122" Target="#123=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::{HeaderUnchanged}k__BackingField()" />
+  <Evolution Source="#124=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Name&gt;k__BackingField" Target="#125=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Name&gt;k__OriginalField" />
+  <Evolution Source="#125" Target="#126=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Name}k__BackingField()" />
+  <Evolution Source="#127=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Description&gt;k__BackingField" Target="#128=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Description&gt;k__OriginalField" />
+  <Evolution Source="#128" Target="#129=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Description}k__BackingField()" />
+  <Evolution Source="#130=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Value&gt;k__BackingField" Target="#131=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::&lt;Value&gt;k__OriginalField" />
+  <Evolution Source="#131" Target="#132=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::{Value}k__BackingField()" />
+  <Evolution Source="#133=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Magic&gt;k__BackingField" Target="#134=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Magic&gt;k__OriginalField" />
+  <Evolution Source="#134" Target="#135=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Magic}k__BackingField()" />
+  <Evolution Source="#136=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Version&gt;k__BackingField" Target="#137=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Version&gt;k__OriginalField" />
+  <Evolution Source="#137" Target="#138=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Version}k__BackingField()" />
+  <Evolution Source="#139=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;UID&gt;k__BackingField" Target="#140=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;UID&gt;k__OriginalField" />
+  <Evolution Source="#140" Target="#141=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{UID}k__BackingField()" />
+  <Evolution Source="#142=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthVIs&gt;k__BackingField" Target="#143=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthVIs&gt;k__OriginalField" />
+  <Evolution Source="#143" Target="#144=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthVIs}k__BackingField()" />
+  <Evolution Source="#145=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Rerecords&gt;k__BackingField" Target="#146=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Rerecords&gt;k__OriginalField" />
+  <Evolution Source="#146" Target="#147=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Rerecords}k__BackingField()" />
+  <Evolution Source="#148=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VIsPerSecond&gt;k__BackingField" Target="#149=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VIsPerSecond&gt;k__OriginalField" />
+  <Evolution Source="#149" Target="#150=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{VIsPerSecond}k__BackingField()" />
+  <Evolution Source="#151=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthSamples&gt;k__BackingField" Target="#152=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthSamples&gt;k__OriginalField" />
+  <Evolution Source="#152" Target="#153=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthSamples}k__BackingField()" />
+  <Evolution Source="#154=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthFile&gt;k__BackingField" Target="#155=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;LengthFile&gt;k__OriginalField" />
+  <Evolution Source="#155" Target="#156=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{LengthFile}k__BackingField()" />
+  <Evolution Source="#157=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;StartFlags&gt;k__BackingField" Target="#158=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;StartFlags&gt;k__OriginalField" />
+  <Evolution Source="#158" Target="#159=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{StartFlags}k__BackingField()" />
+  <Evolution Source="#160=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;ControllerFlags&gt;k__BackingField" Target="#161=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;ControllerFlags&gt;k__OriginalField" />
+  <Evolution Source="#161" Target="#162=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{ControllerFlags}k__BackingField()" />
+  <Evolution Source="#163=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomName&gt;k__BackingField" Target="#164=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomName&gt;k__OriginalField" />
+  <Evolution Source="#164" Target="#165=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomName}k__BackingField()" />
+  <Evolution Source="#166=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCRC&gt;k__BackingField" Target="#167=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCRC&gt;k__OriginalField" />
+  <Evolution Source="#167" Target="#168=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomCRC}k__BackingField()" />
+  <Evolution Source="#169=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCountry&gt;k__BackingField" Target="#170=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RomCountry&gt;k__OriginalField" />
+  <Evolution Source="#170" Target="#171=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RomCountry}k__BackingField()" />
+  <Evolution Source="#172=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VideoPluginName&gt;k__BackingField" Target="#173=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;VideoPluginName&gt;k__OriginalField" />
+  <Evolution Source="#173" Target="#174=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{VideoPluginName}k__BackingField()" />
+  <Evolution Source="#175=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;AudioPluginName&gt;k__BackingField" Target="#176=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;AudioPluginName&gt;k__OriginalField" />
+  <Evolution Source="#176" Target="#177=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{AudioPluginName}k__BackingField()" />
+  <Evolution Source="#178=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;InputPluginName&gt;k__BackingField" Target="#179=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;InputPluginName&gt;k__OriginalField" />
+  <Evolution Source="#179" Target="#180=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{InputPluginName}k__BackingField()" />
+  <Evolution Source="#181=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RSPPluginName&gt;k__BackingField" Target="#182=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;RSPPluginName&gt;k__OriginalField" />
+  <Evolution Source="#182" Target="#183=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{RSPPluginName}k__BackingField()" />
+  <Evolution Source="#184=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Author&gt;k__BackingField" Target="#185=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Author&gt;k__OriginalField" />
+  <Evolution Source="#185" Target="#186=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Author}k__BackingField()" />
+  <Evolution Source="#187=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__BackingField" Target="#188=F:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::&lt;Description&gt;k__OriginalField" />
+  <Evolution Source="#188" Target="#189=P:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::{Description}k__BackingField()" />
+  <Class Class="#190=T:[PostSharp.Patterns.Model]PostSharp.Patterns.Model.NotifyPropertyChangedAttribute">
+    <Instance Declaration="#191=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel" Id="96f6e09160200f3f">
       <Target Tags="premium">
-        <JoinPoint Advising="#187" Description="#189=Introduces event ChildPropertyChanged" Ordinal="0" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#190=Introduces event ChildPropertyChanging" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#191=Introduces method OnChildPropertyChanged" Ordinal="2" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#192=Introduces method OnChildPropertyChanging" Ordinal="3" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193=Introduces method QueryInterface" Ordinal="4" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#194=Introduces interface(s) INotifyChildPropertyChanged, IQueryInterface" Ordinal="5" LinesAvoided="0" />
-        <JoinPoint Advised="#195=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Movie()" Advising="#187" Description="#196=Activates notifications for the property" Semantic="Getter" Ordinal="6" LinesAvoided="0" />
-        <JoinPoint Advised="#195" Advising="#187" Description="#197=Flushes the notification queue when the control flow exits the object" Semantic="Getter" Ordinal="7" LinesAvoided="0" />
-        <JoinPoint Advised="#198=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Movie([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="8" LinesAvoided="0" />
-        <JoinPoint Advised="#199=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Samples()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="9" LinesAvoided="0" />
-        <JoinPoint Advised="#199" Advising="#187" Description="#197" Semantic="Getter" Ordinal="10" LinesAvoided="0" />
-        <JoinPoint Advised="#200=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Samples(System.Collections.ObjectModel.ObservableCollection{[System.ObjectModel]System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Sample}})" Advising="#187" Description="#197" Semantic="Setter" Ordinal="11" LinesAvoided="0" />
-        <JoinPoint Advised="#201=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSample()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="12" LinesAvoided="0" />
-        <JoinPoint Advised="#201" Advising="#187" Description="#197" Semantic="Getter" Ordinal="13" LinesAvoided="0" />
-        <JoinPoint Advised="#202=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSampleList()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="14" LinesAvoided="0" />
-        <JoinPoint Advised="#202" Advising="#187" Description="#197" Semantic="Getter" Ordinal="15" LinesAvoided="0" />
-        <JoinPoint Advised="#203=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Statistics()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="16" LinesAvoided="0" />
-        <JoinPoint Advised="#203" Advising="#187" Description="#197" Semantic="Getter" Ordinal="17" LinesAvoided="0" />
-        <JoinPoint Advised="#204=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Statistics(System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic})" Advising="#187" Description="#197" Semantic="Setter" Ordinal="18" LinesAvoided="0" />
-        <JoinPoint Advised="#205=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSelectedJoystickValue()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="19" LinesAvoided="0" />
-        <JoinPoint Advised="#205" Advising="#187" Description="#197" Semantic="Getter" Ordinal="20" LinesAvoided="0" />
-        <JoinPoint Advised="#206=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSelectedJoystickValue([MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="21" LinesAvoided="0" />
-        <JoinPoint Advised="#207=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_ChangeThemeCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="22" LinesAvoided="0" />
-        <JoinPoint Advised="#207" Advising="#187" Description="#197" Semantic="Getter" Ordinal="23" LinesAvoided="0" />
-        <JoinPoint Advised="#208=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_ChangeThemeCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.ChangeThemeCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="24" LinesAvoided="0" />
-        <JoinPoint Advised="#209=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_LoadCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="25" LinesAvoided="0" />
-        <JoinPoint Advised="#209" Advising="#187" Description="#197" Semantic="Getter" Ordinal="26" LinesAvoided="0" />
-        <JoinPoint Advised="#210=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_LoadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.LoadCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="27" LinesAvoided="0" />
-        <JoinPoint Advised="#211=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SaveCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="28" LinesAvoided="0" />
-        <JoinPoint Advised="#211" Advising="#187" Description="#197" Semantic="Getter" Ordinal="29" LinesAvoided="0" />
-        <JoinPoint Advised="#212=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SaveCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SaveCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="30" LinesAvoided="0" />
-        <JoinPoint Advised="#213=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_ChangeCultureCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="31" LinesAvoided="0" />
-        <JoinPoint Advised="#213" Advising="#187" Description="#197" Semantic="Getter" Ordinal="32" LinesAvoided="0" />
-        <JoinPoint Advised="#214=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_ChangeCultureCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.ChangeCultureCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="33" LinesAvoided="0" />
-        <JoinPoint Advised="#215=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_FrameAdvanceCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="34" LinesAvoided="0" />
-        <JoinPoint Advised="#215" Advising="#187" Description="#197" Semantic="Getter" Ordinal="35" LinesAvoided="0" />
-        <JoinPoint Advised="#216=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_FrameAdvanceCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.FrameAdvanceCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="36" LinesAvoided="0" />
-        <JoinPoint Advised="#217=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_TogglePlayCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="37" LinesAvoided="0" />
-        <JoinPoint Advised="#217" Advising="#187" Description="#197" Semantic="Getter" Ordinal="38" LinesAvoided="0" />
-        <JoinPoint Advised="#218=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_TogglePlayCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.TogglePlayCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="39" LinesAvoided="0" />
-        <JoinPoint Advised="#219=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_BypassLoadCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="40" LinesAvoided="0" />
-        <JoinPoint Advised="#219" Advising="#187" Description="#197" Semantic="Getter" Ordinal="41" LinesAvoided="0" />
-        <JoinPoint Advised="#220=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_BypassLoadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.BypassLoadCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="42" LinesAvoided="0" />
-        <JoinPoint Advised="#221=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SeekButtonCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="43" LinesAvoided="0" />
-        <JoinPoint Advised="#221" Advising="#187" Description="#197" Semantic="Getter" Ordinal="44" LinesAvoided="0" />
-        <JoinPoint Advised="#222=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SeekButtonCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SeekButtonCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="45" LinesAvoided="0" />
-        <JoinPoint Advised="#223=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SeekJoystickCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="46" LinesAvoided="0" />
-        <JoinPoint Advised="#223" Advising="#187" Description="#197" Semantic="Getter" Ordinal="47" LinesAvoided="0" />
-        <JoinPoint Advised="#224=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SeekJoystickCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SeekJoystickCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="48" LinesAvoided="0" />
-        <JoinPoint Advised="#225=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_UnloadCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="49" LinesAvoided="0" />
-        <JoinPoint Advised="#225" Advising="#187" Description="#197" Semantic="Getter" Ordinal="50" LinesAvoided="0" />
-        <JoinPoint Advised="#226=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_UnloadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.UnloadCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="51" LinesAvoided="0" />
-        <JoinPoint Advised="#227=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CountryChangedCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="52" LinesAvoided="0" />
-        <JoinPoint Advised="#227" Advising="#187" Description="#197" Semantic="Getter" Ordinal="53" LinesAvoided="0" />
-        <JoinPoint Advised="#228=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CountryChangedCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.CountryChangedCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="54" LinesAvoided="0" />
-        <JoinPoint Advised="#229=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_LoadLastCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="55" LinesAvoided="0" />
-        <JoinPoint Advised="#229" Advising="#187" Description="#197" Semantic="Getter" Ordinal="56" LinesAvoided="0" />
-        <JoinPoint Advised="#230=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_LoadLastCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.LoadLastCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="57" LinesAvoided="0" />
-        <JoinPoint Advised="#231=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_UploadLogCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="58" LinesAvoided="0" />
-        <JoinPoint Advised="#231" Advising="#187" Description="#197" Semantic="Getter" Ordinal="59" LinesAvoided="0" />
-        <JoinPoint Advised="#232=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_UploadLogCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.UploadLogCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="60" LinesAvoided="0" />
-        <JoinPoint Advised="#233=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StartFlagsChangedCommand()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="61" LinesAvoided="0" />
-        <JoinPoint Advised="#233" Advising="#187" Description="#197" Semantic="Getter" Ordinal="62" LinesAvoided="0" />
-        <JoinPoint Advised="#234=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StartFlagsChangedCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.StartFlagsChangedCommand)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="63" LinesAvoided="0" />
-        <JoinPoint Advised="#235=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SelectedPage()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="64" LinesAvoided="0" />
-        <JoinPoint Advised="#235" Advising="#187" Description="#197" Semantic="Getter" Ordinal="65" LinesAvoided="0" />
-        <JoinPoint Advised="#236=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SelectedPage([MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="66" LinesAvoided="0" />
-        <JoinPoint Advised="#237=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_PageItems()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="67" LinesAvoided="0" />
-        <JoinPoint Advised="#237" Advising="#187" Description="#197" Semantic="Getter" Ordinal="68" LinesAvoided="0" />
-        <JoinPoint Advised="#238=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_PageItems(System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem})" Advising="#187" Description="#197" Semantic="Setter" Ordinal="69" LinesAvoided="0" />
-        <JoinPoint Advised="#2" Advising="#187" Description="#239=Enqueues change notifications for affected properties" Semantic="Setter" Ordinal="70" LinesAvoided="1" />
-        <JoinPoint Advised="#5" Advising="#187" Description="#239" Semantic="Setter" Ordinal="71" LinesAvoided="1" />
-        <JoinPoint Advised="#8" Advising="#187" Description="#239" Semantic="Setter" Ordinal="72" LinesAvoided="1" />
-        <JoinPoint Advised="#11" Advising="#187" Description="#239" Semantic="Setter" Ordinal="73" LinesAvoided="1" />
-        <JoinPoint Advised="#14" Advising="#187" Description="#239" Semantic="Setter" Ordinal="74" LinesAvoided="1" />
-        <JoinPoint Advised="#17" Advising="#187" Description="#239" Semantic="Setter" Ordinal="75" LinesAvoided="1" />
-        <JoinPoint Advised="#20" Advising="#187" Description="#239" Semantic="Setter" Ordinal="76" LinesAvoided="1" />
-        <JoinPoint Advised="#23" Advising="#187" Description="#239" Semantic="Setter" Ordinal="77" LinesAvoided="1" />
-        <JoinPoint Advised="#26" Advising="#187" Description="#239" Semantic="Setter" Ordinal="78" LinesAvoided="1" />
-        <JoinPoint Advised="#29" Advising="#187" Description="#239" Semantic="Setter" Ordinal="79" LinesAvoided="1" />
-        <JoinPoint Advised="#32" Advising="#187" Description="#239" Semantic="Setter" Ordinal="80" LinesAvoided="1" />
-        <JoinPoint Advised="#35" Advising="#187" Description="#239" Semantic="Setter" Ordinal="81" LinesAvoided="1" />
-        <JoinPoint Advised="#38" Advising="#187" Description="#239" Semantic="Setter" Ordinal="82" LinesAvoided="1" />
-        <JoinPoint Advised="#41" Advising="#187" Description="#239" Semantic="Setter" Ordinal="83" LinesAvoided="1" />
-        <JoinPoint Advised="#44" Advising="#187" Description="#239" Semantic="Setter" Ordinal="84" LinesAvoided="1" />
-        <JoinPoint Advised="#47" Advising="#187" Description="#239" Semantic="Setter" Ordinal="85" LinesAvoided="1" />
-        <JoinPoint Advised="#50" Advising="#187" Description="#239" Semantic="Setter" Ordinal="86" LinesAvoided="1" />
-        <JoinPoint Advised="#53" Advising="#187" Description="#239" Semantic="Setter" Ordinal="87" LinesAvoided="1" />
-        <JoinPoint Advised="#56" Advising="#187" Description="#239" Semantic="Setter" Ordinal="88" LinesAvoided="1" />
-        <JoinPoint Advised="#59" Advising="#187" Description="#239" Semantic="Setter" Ordinal="89" LinesAvoided="1" />
-        <JoinPoint Advised="#62" Advising="#187" Description="#239" Semantic="Setter" Ordinal="90" LinesAvoided="1" />
-        <JoinPoint Advised="#65" Advising="#187" Description="#239" Semantic="Setter" Ordinal="91" LinesAvoided="1" />
-        <JoinPoint Advised="#68" Advising="#187" Description="#239" Semantic="Setter" Ordinal="92" LinesAvoided="1" />
-        <JoinPoint Advised="#71" Advising="#187" Description="#239" Semantic="Setter" Ordinal="93" LinesAvoided="1" />
-        <JoinPoint Advised="#74" Advising="#187" Description="#239" Semantic="Setter" Ordinal="94" LinesAvoided="1" />
-        <JoinPoint Advised="#77" Advising="#187" Description="#239" Semantic="Setter" Ordinal="95" LinesAvoided="1" />
-        <JoinPoint Advised="#80" Advising="#187" Description="#239" Semantic="Setter" Ordinal="96" LinesAvoided="1" />
-        <JoinPoint Advised="#83" Advising="#187" Description="#239" Semantic="Setter" Ordinal="97" LinesAvoided="1" />
-        <JoinPoint Advised="#240=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_MovieType()" Advising="#187" Description="#197" Ordinal="98" LinesAvoided="0" />
-        <JoinPoint Advised="#241=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_MovieType([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.MovieTypes)" Advising="#187" Description="#197" Ordinal="99" LinesAvoided="0" />
-        <JoinPoint Advised="#242=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentController()" Advising="#187" Description="#197" Ordinal="100" LinesAvoided="0" />
-        <JoinPoint Advised="#243=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CurrentController(System.Int32)" Advising="#187" Description="#197" Ordinal="101" LinesAvoided="0" />
-        <JoinPoint Advised="#244=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSampleIndex()" Advising="#187" Description="#197" Ordinal="102" LinesAvoided="0" />
-        <JoinPoint Advised="#245=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CurrentSampleIndex(System.Int32)" Advising="#187" Description="#197" Ordinal="103" LinesAvoided="0" />
-        <JoinPoint Advised="#246=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSelectedButtonIndex()" Advising="#187" Description="#197" Ordinal="104" LinesAvoided="0" />
-        <JoinPoint Advised="#247=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSelectedButtonIndex(System.Int32)" Advising="#187" Description="#197" Ordinal="105" LinesAvoided="0" />
-        <JoinPoint Advised="#248=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsFoundFrame()" Advising="#187" Description="#197" Ordinal="106" LinesAvoided="0" />
-        <JoinPoint Advised="#249=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsFoundFrame(System.Int32)" Advising="#187" Description="#197" Ordinal="107" LinesAvoided="0" />
-        <JoinPoint Advised="#250=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSearchSuccessful()" Advising="#187" Description="#197" Ordinal="108" LinesAvoided="0" />
-        <JoinPoint Advised="#251=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSearchSuccessful(System.Boolean)" Advising="#187" Description="#197" Ordinal="109" LinesAvoided="0" />
-        <JoinPoint Advised="#252=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SelectedPageIndex()" Advising="#187" Description="#197" Ordinal="110" LinesAvoided="0" />
-        <JoinPoint Advised="#253=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SelectedPageIndex(System.Int32)" Advising="#187" Description="#197" Ordinal="111" LinesAvoided="0" />
-        <JoinPoint Advised="#254=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_FileLoaded()" Advising="#187" Description="#197" Ordinal="112" LinesAvoided="0" />
-        <JoinPoint Advised="#255=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_FileLoaded(System.Boolean)" Advising="#187" Description="#197" Ordinal="113" LinesAvoided="0" />
-        <JoinPoint Advised="#256=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::RefreshPages()" Advising="#187" Description="#197" Ordinal="114" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#192=Introduces event ChildPropertyChanged" Ordinal="0" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193=Introduces event ChildPropertyChanging" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#194=Introduces method OnChildPropertyChanged" Ordinal="2" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195=Introduces method OnChildPropertyChanging" Ordinal="3" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196=Introduces method QueryInterface" Ordinal="4" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#197=Introduces interface(s) INotifyChildPropertyChanged, IQueryInterface" Ordinal="5" LinesAvoided="0" />
+        <JoinPoint Advised="#198=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Movie()" Advising="#190" Description="#199=Activates notifications for the property" Semantic="Getter" Ordinal="6" LinesAvoided="0" />
+        <JoinPoint Advised="#198" Advising="#190" Description="#200=Flushes the notification queue when the control flow exits the object" Semantic="Getter" Ordinal="7" LinesAvoided="0" />
+        <JoinPoint Advised="#201=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Movie([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="8" LinesAvoided="0" />
+        <JoinPoint Advised="#202=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Samples()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="9" LinesAvoided="0" />
+        <JoinPoint Advised="#202" Advising="#190" Description="#200" Semantic="Getter" Ordinal="10" LinesAvoided="0" />
+        <JoinPoint Advised="#203=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Samples(System.Collections.ObjectModel.ObservableCollection{[System.ObjectModel]System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Sample}})" Advising="#190" Description="#200" Semantic="Setter" Ordinal="11" LinesAvoided="0" />
+        <JoinPoint Advised="#204=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSample()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="12" LinesAvoided="0" />
+        <JoinPoint Advised="#204" Advising="#190" Description="#200" Semantic="Getter" Ordinal="13" LinesAvoided="0" />
+        <JoinPoint Advised="#205=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSampleList()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="14" LinesAvoided="0" />
+        <JoinPoint Advised="#205" Advising="#190" Description="#200" Semantic="Getter" Ordinal="15" LinesAvoided="0" />
+        <JoinPoint Advised="#206=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Statistics()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="16" LinesAvoided="0" />
+        <JoinPoint Advised="#206" Advising="#190" Description="#200" Semantic="Getter" Ordinal="17" LinesAvoided="0" />
+        <JoinPoint Advised="#207=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Statistics(System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic})" Advising="#190" Description="#200" Semantic="Setter" Ordinal="18" LinesAvoided="0" />
+        <JoinPoint Advised="#208=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSelectedJoystickValue()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="19" LinesAvoided="0" />
+        <JoinPoint Advised="#208" Advising="#190" Description="#200" Semantic="Getter" Ordinal="20" LinesAvoided="0" />
+        <JoinPoint Advised="#209=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSelectedJoystickValue([MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="21" LinesAvoided="0" />
+        <JoinPoint Advised="#210=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_ChangeThemeCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="22" LinesAvoided="0" />
+        <JoinPoint Advised="#210" Advising="#190" Description="#200" Semantic="Getter" Ordinal="23" LinesAvoided="0" />
+        <JoinPoint Advised="#211=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_ChangeThemeCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.ChangeThemeCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="24" LinesAvoided="0" />
+        <JoinPoint Advised="#212=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_LoadCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="25" LinesAvoided="0" />
+        <JoinPoint Advised="#212" Advising="#190" Description="#200" Semantic="Getter" Ordinal="26" LinesAvoided="0" />
+        <JoinPoint Advised="#213=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_LoadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.LoadCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="27" LinesAvoided="0" />
+        <JoinPoint Advised="#214=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SaveCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="28" LinesAvoided="0" />
+        <JoinPoint Advised="#214" Advising="#190" Description="#200" Semantic="Getter" Ordinal="29" LinesAvoided="0" />
+        <JoinPoint Advised="#215=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SaveCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SaveCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="30" LinesAvoided="0" />
+        <JoinPoint Advised="#216=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_ChangeCultureCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="31" LinesAvoided="0" />
+        <JoinPoint Advised="#216" Advising="#190" Description="#200" Semantic="Getter" Ordinal="32" LinesAvoided="0" />
+        <JoinPoint Advised="#217=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_ChangeCultureCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.ChangeCultureCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="33" LinesAvoided="0" />
+        <JoinPoint Advised="#218=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_FrameAdvanceCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="34" LinesAvoided="0" />
+        <JoinPoint Advised="#218" Advising="#190" Description="#200" Semantic="Getter" Ordinal="35" LinesAvoided="0" />
+        <JoinPoint Advised="#219=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_FrameAdvanceCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.FrameAdvanceCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="36" LinesAvoided="0" />
+        <JoinPoint Advised="#220=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_TogglePlayCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="37" LinesAvoided="0" />
+        <JoinPoint Advised="#220" Advising="#190" Description="#200" Semantic="Getter" Ordinal="38" LinesAvoided="0" />
+        <JoinPoint Advised="#221=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_TogglePlayCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.TogglePlayCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="39" LinesAvoided="0" />
+        <JoinPoint Advised="#222=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_BypassLoadCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="40" LinesAvoided="0" />
+        <JoinPoint Advised="#222" Advising="#190" Description="#200" Semantic="Getter" Ordinal="41" LinesAvoided="0" />
+        <JoinPoint Advised="#223=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_BypassLoadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.BypassLoadCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="42" LinesAvoided="0" />
+        <JoinPoint Advised="#224=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SeekButtonCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="43" LinesAvoided="0" />
+        <JoinPoint Advised="#224" Advising="#190" Description="#200" Semantic="Getter" Ordinal="44" LinesAvoided="0" />
+        <JoinPoint Advised="#225=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SeekButtonCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SeekButtonCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="45" LinesAvoided="0" />
+        <JoinPoint Advised="#226=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SeekJoystickCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="46" LinesAvoided="0" />
+        <JoinPoint Advised="#226" Advising="#190" Description="#200" Semantic="Getter" Ordinal="47" LinesAvoided="0" />
+        <JoinPoint Advised="#227=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SeekJoystickCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.SeekJoystickCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="48" LinesAvoided="0" />
+        <JoinPoint Advised="#228=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_UnloadCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="49" LinesAvoided="0" />
+        <JoinPoint Advised="#228" Advising="#190" Description="#200" Semantic="Getter" Ordinal="50" LinesAvoided="0" />
+        <JoinPoint Advised="#229=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_UnloadCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.UnloadCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="51" LinesAvoided="0" />
+        <JoinPoint Advised="#230=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CountryChangedCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="52" LinesAvoided="0" />
+        <JoinPoint Advised="#230" Advising="#190" Description="#200" Semantic="Getter" Ordinal="53" LinesAvoided="0" />
+        <JoinPoint Advised="#231=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CountryChangedCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.CountryChangedCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="54" LinesAvoided="0" />
+        <JoinPoint Advised="#232=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_LoadLastCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="55" LinesAvoided="0" />
+        <JoinPoint Advised="#232" Advising="#190" Description="#200" Semantic="Getter" Ordinal="56" LinesAvoided="0" />
+        <JoinPoint Advised="#233=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_LoadLastCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.LoadLastCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="57" LinesAvoided="0" />
+        <JoinPoint Advised="#234=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_UploadLogCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="58" LinesAvoided="0" />
+        <JoinPoint Advised="#234" Advising="#190" Description="#200" Semantic="Getter" Ordinal="59" LinesAvoided="0" />
+        <JoinPoint Advised="#235=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_UploadLogCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.UploadLogCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="60" LinesAvoided="0" />
+        <JoinPoint Advised="#236=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StartFlagsChangedCommand()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="61" LinesAvoided="0" />
+        <JoinPoint Advised="#236" Advising="#190" Description="#200" Semantic="Getter" Ordinal="62" LinesAvoided="0" />
+        <JoinPoint Advised="#237=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StartFlagsChangedCommand([MupenToolkitPRE]MupenToolkitPRE.MVVM.StartFlagsChangedCommand)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="63" LinesAvoided="0" />
+        <JoinPoint Advised="#238=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SelectedPage()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="64" LinesAvoided="0" />
+        <JoinPoint Advised="#238" Advising="#190" Description="#200" Semantic="Getter" Ordinal="65" LinesAvoided="0" />
+        <JoinPoint Advised="#239=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SelectedPage([MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="66" LinesAvoided="0" />
+        <JoinPoint Advised="#240=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_PageItems()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="67" LinesAvoided="0" />
+        <JoinPoint Advised="#240" Advising="#190" Description="#200" Semantic="Getter" Ordinal="68" LinesAvoided="0" />
+        <JoinPoint Advised="#241=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_PageItems(System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem})" Advising="#190" Description="#200" Semantic="Setter" Ordinal="69" LinesAvoided="0" />
+        <JoinPoint Advised="#2" Advising="#190" Description="#242=Enqueues change notifications for affected properties" Semantic="Setter" Ordinal="70" LinesAvoided="1" />
+        <JoinPoint Advised="#5" Advising="#190" Description="#242" Semantic="Setter" Ordinal="71" LinesAvoided="1" />
+        <JoinPoint Advised="#8" Advising="#190" Description="#242" Semantic="Setter" Ordinal="72" LinesAvoided="1" />
+        <JoinPoint Advised="#11" Advising="#190" Description="#242" Semantic="Setter" Ordinal="73" LinesAvoided="1" />
+        <JoinPoint Advised="#14" Advising="#190" Description="#242" Semantic="Setter" Ordinal="74" LinesAvoided="1" />
+        <JoinPoint Advised="#17" Advising="#190" Description="#242" Semantic="Setter" Ordinal="75" LinesAvoided="1" />
+        <JoinPoint Advised="#20" Advising="#190" Description="#242" Semantic="Setter" Ordinal="76" LinesAvoided="1" />
+        <JoinPoint Advised="#23" Advising="#190" Description="#242" Semantic="Setter" Ordinal="77" LinesAvoided="1" />
+        <JoinPoint Advised="#26" Advising="#190" Description="#242" Semantic="Setter" Ordinal="78" LinesAvoided="1" />
+        <JoinPoint Advised="#29" Advising="#190" Description="#242" Semantic="Setter" Ordinal="79" LinesAvoided="1" />
+        <JoinPoint Advised="#32" Advising="#190" Description="#242" Semantic="Setter" Ordinal="80" LinesAvoided="1" />
+        <JoinPoint Advised="#35" Advising="#190" Description="#242" Semantic="Setter" Ordinal="81" LinesAvoided="1" />
+        <JoinPoint Advised="#38" Advising="#190" Description="#242" Semantic="Setter" Ordinal="82" LinesAvoided="1" />
+        <JoinPoint Advised="#41" Advising="#190" Description="#242" Semantic="Setter" Ordinal="83" LinesAvoided="1" />
+        <JoinPoint Advised="#44" Advising="#190" Description="#242" Semantic="Setter" Ordinal="84" LinesAvoided="1" />
+        <JoinPoint Advised="#47" Advising="#190" Description="#242" Semantic="Setter" Ordinal="85" LinesAvoided="1" />
+        <JoinPoint Advised="#50" Advising="#190" Description="#242" Semantic="Setter" Ordinal="86" LinesAvoided="1" />
+        <JoinPoint Advised="#53" Advising="#190" Description="#242" Semantic="Setter" Ordinal="87" LinesAvoided="1" />
+        <JoinPoint Advised="#56" Advising="#190" Description="#242" Semantic="Setter" Ordinal="88" LinesAvoided="1" />
+        <JoinPoint Advised="#59" Advising="#190" Description="#242" Semantic="Setter" Ordinal="89" LinesAvoided="1" />
+        <JoinPoint Advised="#62" Advising="#190" Description="#242" Semantic="Setter" Ordinal="90" LinesAvoided="1" />
+        <JoinPoint Advised="#65" Advising="#190" Description="#242" Semantic="Setter" Ordinal="91" LinesAvoided="1" />
+        <JoinPoint Advised="#68" Advising="#190" Description="#242" Semantic="Setter" Ordinal="92" LinesAvoided="1" />
+        <JoinPoint Advised="#71" Advising="#190" Description="#242" Semantic="Setter" Ordinal="93" LinesAvoided="1" />
+        <JoinPoint Advised="#74" Advising="#190" Description="#242" Semantic="Setter" Ordinal="94" LinesAvoided="1" />
+        <JoinPoint Advised="#77" Advising="#190" Description="#242" Semantic="Setter" Ordinal="95" LinesAvoided="1" />
+        <JoinPoint Advised="#80" Advising="#190" Description="#242" Semantic="Setter" Ordinal="96" LinesAvoided="1" />
+        <JoinPoint Advised="#83" Advising="#190" Description="#242" Semantic="Setter" Ordinal="97" LinesAvoided="1" />
+        <JoinPoint Advised="#86" Advising="#190" Description="#242" Semantic="Setter" Ordinal="98" LinesAvoided="1" />
+        <JoinPoint Advised="#243=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_MovieType()" Advising="#190" Description="#200" Ordinal="99" LinesAvoided="0" />
+        <JoinPoint Advised="#244=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_MovieType([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.MovieTypes)" Advising="#190" Description="#200" Ordinal="100" LinesAvoided="0" />
+        <JoinPoint Advised="#245=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentController()" Advising="#190" Description="#200" Ordinal="101" LinesAvoided="0" />
+        <JoinPoint Advised="#246=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CurrentController(System.Int32)" Advising="#190" Description="#200" Ordinal="102" LinesAvoided="0" />
+        <JoinPoint Advised="#247=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_CurrentSampleIndex()" Advising="#190" Description="#200" Ordinal="103" LinesAvoided="0" />
+        <JoinPoint Advised="#248=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_CurrentSampleIndex(System.Int32)" Advising="#190" Description="#200" Ordinal="104" LinesAvoided="0" />
+        <JoinPoint Advised="#249=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSelectedButtonIndex()" Advising="#190" Description="#200" Ordinal="105" LinesAvoided="0" />
+        <JoinPoint Advised="#250=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSelectedButtonIndex(System.Int32)" Advising="#190" Description="#200" Ordinal="106" LinesAvoided="0" />
+        <JoinPoint Advised="#251=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsFoundFrame()" Advising="#190" Description="#200" Ordinal="107" LinesAvoided="0" />
+        <JoinPoint Advised="#252=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsFoundFrame(System.Int32)" Advising="#190" Description="#200" Ordinal="108" LinesAvoided="0" />
+        <JoinPoint Advised="#253=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_StatisticsSearchSuccessful()" Advising="#190" Description="#200" Ordinal="109" LinesAvoided="0" />
+        <JoinPoint Advised="#254=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_StatisticsSearchSuccessful(System.Boolean)" Advising="#190" Description="#200" Ordinal="110" LinesAvoided="0" />
+        <JoinPoint Advised="#255=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_SelectedPageIndex()" Advising="#190" Description="#200" Ordinal="111" LinesAvoided="0" />
+        <JoinPoint Advised="#256=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_SelectedPageIndex(System.Int32)" Advising="#190" Description="#200" Ordinal="112" LinesAvoided="0" />
+        <JoinPoint Advised="#257=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_FileLoaded()" Advising="#190" Description="#200" Ordinal="113" LinesAvoided="0" />
+        <JoinPoint Advised="#258=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_FileLoaded(System.Boolean)" Advising="#190" Description="#200" Ordinal="114" LinesAvoided="0" />
+        <JoinPoint Advised="#259=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::get_Busy()" Advising="#190" Description="#200" Ordinal="115" LinesAvoided="0" />
+        <JoinPoint Advised="#260=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::set_Busy(System.Boolean)" Advising="#190" Description="#200" Ordinal="116" LinesAvoided="0" />
+        <JoinPoint Advised="#261=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::RefreshPages()" Advising="#190" Description="#200" Ordinal="117" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#257=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem" Id="96f6e0918e6da8dd">
+    <Instance Declaration="#262=T:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem" Id="96f6e091b28a3549">
       <Target Tags="premium">
-        <JoinPoint Advising="#187" Description="#190" Ordinal="115" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#191" Ordinal="116" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#192" Ordinal="117" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#189" Ordinal="118" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193" Ordinal="119" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#194" Ordinal="120" LinesAvoided="0" />
-        <JoinPoint Advised="#258=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Content()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="121" LinesAvoided="0" />
-        <JoinPoint Advised="#258" Advising="#187" Description="#197" Semantic="Getter" Ordinal="122" LinesAvoided="0" />
-        <JoinPoint Advised="#259=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Name()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="123" LinesAvoided="0" />
-        <JoinPoint Advised="#259" Advising="#187" Description="#197" Semantic="Getter" Ordinal="124" LinesAvoided="0" />
-        <JoinPoint Advised="#260=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_Name(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="125" LinesAvoided="0" />
-        <JoinPoint Advised="#261=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Accompanist()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="126" LinesAvoided="0" />
-        <JoinPoint Advised="#261" Advising="#187" Description="#197" Semantic="Getter" Ordinal="127" LinesAvoided="0" />
-        <JoinPoint Advised="#262=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_Accompanist(System.Windows.Controls.Control)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="128" LinesAvoided="0" />
-        <JoinPoint Advised="#86" Advising="#187" Description="#239" Semantic="Setter" Ordinal="129" LinesAvoided="1" />
-        <JoinPoint Advised="#89" Advising="#187" Description="#239" Semantic="Setter" Ordinal="130" LinesAvoided="1" />
-        <JoinPoint Advised="#92" Advising="#187" Description="#239" Semantic="Setter" Ordinal="131" LinesAvoided="1" />
-        <JoinPoint Advised="#95" Advising="#187" Description="#239" Semantic="Setter" Ordinal="132" LinesAvoided="1" />
-        <JoinPoint Advised="#98" Advising="#187" Description="#239" Semantic="Setter" Ordinal="133" LinesAvoided="1" />
-        <JoinPoint Advised="#101" Advising="#187" Description="#239" Semantic="Setter" Ordinal="134" LinesAvoided="1" />
-        <JoinPoint Advised="#263=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_MarginRequirement()" Advising="#187" Description="#197" Ordinal="135" LinesAvoided="0" />
-        <JoinPoint Advised="#264=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_MarginRequirement(System.Windows.Thickness)" Advising="#187" Description="#197" Ordinal="136" LinesAvoided="0" />
-        <JoinPoint Advised="#265=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::CreateContent()" Advising="#187" Description="#197" Ordinal="137" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193" Ordinal="118" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#194" Ordinal="119" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195" Ordinal="120" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#192" Ordinal="121" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="122" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#197" Ordinal="123" LinesAvoided="0" />
+        <JoinPoint Advised="#263=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Content()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="124" LinesAvoided="0" />
+        <JoinPoint Advised="#263" Advising="#190" Description="#200" Semantic="Getter" Ordinal="125" LinesAvoided="0" />
+        <JoinPoint Advised="#264=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Name()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="126" LinesAvoided="0" />
+        <JoinPoint Advised="#264" Advising="#190" Description="#200" Semantic="Getter" Ordinal="127" LinesAvoided="0" />
+        <JoinPoint Advised="#265=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_Name(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="128" LinesAvoided="0" />
+        <JoinPoint Advised="#266=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_Accompanist()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="129" LinesAvoided="0" />
+        <JoinPoint Advised="#266" Advising="#190" Description="#200" Semantic="Getter" Ordinal="130" LinesAvoided="0" />
+        <JoinPoint Advised="#267=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_Accompanist(System.Windows.Controls.Control)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="131" LinesAvoided="0" />
+        <JoinPoint Advised="#89" Advising="#190" Description="#242" Semantic="Setter" Ordinal="132" LinesAvoided="1" />
+        <JoinPoint Advised="#92" Advising="#190" Description="#242" Semantic="Setter" Ordinal="133" LinesAvoided="1" />
+        <JoinPoint Advised="#95" Advising="#190" Description="#242" Semantic="Setter" Ordinal="134" LinesAvoided="1" />
+        <JoinPoint Advised="#98" Advising="#190" Description="#242" Semantic="Setter" Ordinal="135" LinesAvoided="1" />
+        <JoinPoint Advised="#101" Advising="#190" Description="#242" Semantic="Setter" Ordinal="136" LinesAvoided="1" />
+        <JoinPoint Advised="#104" Advising="#190" Description="#242" Semantic="Setter" Ordinal="137" LinesAvoided="1" />
+        <JoinPoint Advised="#268=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::get_MarginRequirement()" Advising="#190" Description="#200" Ordinal="138" LinesAvoided="0" />
+        <JoinPoint Advised="#269=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::set_MarginRequirement(System.Windows.Thickness)" Advising="#190" Description="#200" Ordinal="139" LinesAvoided="0" />
+        <JoinPoint Advised="#270=M:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::CreateContent()" Advising="#190" Description="#200" Ordinal="140" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#266=T:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint" Id="96f6e0916f488d16">
+    <Instance Declaration="#271=T:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint" Id="96f6e09128e83571">
       <Target>
-        <JoinPoint Advising="#187" Description="#189" Ordinal="138" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#190" Ordinal="139" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193" Ordinal="140" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#191" Ordinal="141" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#192" Ordinal="142" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#194" Ordinal="143" LinesAvoided="0" />
-        <JoinPoint Advised="#104" Advising="#187" Description="#239" Semantic="Setter" Ordinal="144" LinesAvoided="1" />
-        <JoinPoint Advised="#107" Advising="#187" Description="#239" Semantic="Setter" Ordinal="145" LinesAvoided="1" />
-        <JoinPoint Advised="#267=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::get_X()" Advising="#187" Description="#197" Ordinal="146" LinesAvoided="0" />
-        <JoinPoint Advised="#268=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::set_X(System.Int32)" Advising="#187" Description="#197" Ordinal="147" LinesAvoided="0" />
-        <JoinPoint Advised="#269=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::get_Y()" Advising="#187" Description="#197" Ordinal="148" LinesAvoided="0" />
-        <JoinPoint Advised="#270=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::set_Y(System.Int32)" Advising="#187" Description="#197" Ordinal="149" LinesAvoided="0" />
-        <JoinPoint Advised="#271=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::Equals([MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint)" Advising="#187" Description="#197" Ordinal="150" LinesAvoided="0" />
-        <JoinPoint Advised="#272=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::Equals(System.Int32, System.Int32)" Advising="#187" Description="#197" Ordinal="151" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#192" Ordinal="141" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193" Ordinal="142" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="143" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#194" Ordinal="144" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195" Ordinal="145" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#197" Ordinal="146" LinesAvoided="0" />
+        <JoinPoint Advised="#107" Advising="#190" Description="#242" Semantic="Setter" Ordinal="147" LinesAvoided="1" />
+        <JoinPoint Advised="#110" Advising="#190" Description="#242" Semantic="Setter" Ordinal="148" LinesAvoided="1" />
+        <JoinPoint Advised="#272=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::get_X()" Advising="#190" Description="#200" Ordinal="149" LinesAvoided="0" />
+        <JoinPoint Advised="#273=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::set_X(System.Int32)" Advising="#190" Description="#200" Ordinal="150" LinesAvoided="0" />
+        <JoinPoint Advised="#274=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::get_Y()" Advising="#190" Description="#200" Ordinal="151" LinesAvoided="0" />
+        <JoinPoint Advised="#275=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::set_Y(System.Int32)" Advising="#190" Description="#200" Ordinal="152" LinesAvoided="0" />
+        <JoinPoint Advised="#276=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::Equals([MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint)" Advising="#190" Description="#200" Ordinal="153" LinesAvoided="0" />
+        <JoinPoint Advised="#277=M:[MupenToolkitPRE]MupenToolkitPRE.UI.MVVM.WrapperTypes.INPCPoint::Equals(System.Int32, System.Int32)" Advising="#190" Description="#200" Ordinal="154" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#273=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage" Id="96f6e091c5efaea7">
+    <Instance Declaration="#278=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage" Id="96f6e0918c36e371">
       <Target Tags="premium">
-        <JoinPoint Advising="#187" Description="#189" Ordinal="152" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#190" Ordinal="153" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193" Ordinal="154" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#191" Ordinal="155" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#192" Ordinal="156" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#194" Ordinal="157" LinesAvoided="0" />
-        <JoinPoint Advised="#274=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::get_Name()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="158" LinesAvoided="0" />
-        <JoinPoint Advised="#274" Advising="#187" Description="#197" Semantic="Getter" Ordinal="159" LinesAvoided="0" />
-        <JoinPoint Advised="#275=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::set_Name(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="160" LinesAvoided="0" />
-        <JoinPoint Advised="#110" Advising="#187" Description="#239" Semantic="Setter" Ordinal="161" LinesAvoided="1" />
-        <JoinPoint Advised="#113" Advising="#187" Description="#239" Semantic="Setter" Ordinal="162" LinesAvoided="1" />
-        <JoinPoint Advised="#276=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::get_Playing()" Advising="#187" Description="#197" Ordinal="163" LinesAvoided="0" />
-        <JoinPoint Advised="#277=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::set_Playing(System.Boolean)" Advising="#187" Description="#197" Ordinal="164" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#192" Ordinal="155" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193" Ordinal="156" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="157" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#194" Ordinal="158" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195" Ordinal="159" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#197" Ordinal="160" LinesAvoided="0" />
+        <JoinPoint Advised="#279=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::get_Name()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="161" LinesAvoided="0" />
+        <JoinPoint Advised="#279" Advising="#190" Description="#200" Semantic="Getter" Ordinal="162" LinesAvoided="0" />
+        <JoinPoint Advised="#280=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::set_Name(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="163" LinesAvoided="0" />
+        <JoinPoint Advised="#113" Advising="#190" Description="#242" Semantic="Setter" Ordinal="164" LinesAvoided="1" />
+        <JoinPoint Advised="#116" Advising="#190" Description="#242" Semantic="Setter" Ordinal="165" LinesAvoided="1" />
+        <JoinPoint Advised="#281=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::get_Playing()" Advising="#190" Description="#200" Ordinal="166" LinesAvoided="0" />
+        <JoinPoint Advised="#282=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Manager.BaseN64Storage::set_Playing(System.Boolean)" Advising="#190" Description="#200" Ordinal="167" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#278=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic" Id="96f6e09146e4c1b1">
+    <Instance Declaration="#283=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic" Id="96f6e09193e6cdac">
       <Target>
-        <JoinPoint Advising="#187" Description="#279=Introduces event PropertyChanged" Ordinal="180" LinesAvoided="1" />
-        <JoinPoint Advising="#187" Description="#189" Ordinal="181" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193" Ordinal="182" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#280=Introduces method OnPropertyChanged" Ordinal="183" LinesAvoided="2" />
-        <JoinPoint Advising="#187" Description="#191" Ordinal="184" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#192" Ordinal="185" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#190" Ordinal="186" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#281=Introduces interface(s) INotifyPropertyChanged, INotifyChildPropertyChanged, IQueryInterface" Ordinal="187" LinesAvoided="0" />
-        <JoinPoint Advised="#282=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Name()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="188" LinesAvoided="0" />
-        <JoinPoint Advised="#282" Advising="#187" Description="#197" Semantic="Getter" Ordinal="189" LinesAvoided="0" />
-        <JoinPoint Advised="#283=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Name(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="190" LinesAvoided="0" />
-        <JoinPoint Advised="#284=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Description()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="191" LinesAvoided="0" />
-        <JoinPoint Advised="#284" Advising="#187" Description="#197" Semantic="Getter" Ordinal="192" LinesAvoided="0" />
-        <JoinPoint Advised="#285=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Description(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="193" LinesAvoided="0" />
-        <JoinPoint Advised="#286=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Value()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="194" LinesAvoided="0" />
-        <JoinPoint Advised="#286" Advising="#187" Description="#197" Semantic="Getter" Ordinal="195" LinesAvoided="0" />
-        <JoinPoint Advised="#287=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Value(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="196" LinesAvoided="0" />
-        <JoinPoint Advised="#122" Advising="#187" Description="#239" Semantic="Setter" Ordinal="197" LinesAvoided="1" />
-        <JoinPoint Advised="#125" Advising="#187" Description="#239" Semantic="Setter" Ordinal="198" LinesAvoided="1" />
-        <JoinPoint Advised="#128" Advising="#187" Description="#239" Semantic="Setter" Ordinal="199" LinesAvoided="1" />
+        <JoinPoint Advising="#190" Description="#284=Introduces event PropertyChanged" Ordinal="183" LinesAvoided="1" />
+        <JoinPoint Advising="#190" Description="#192" Ordinal="184" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="185" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#285=Introduces method OnPropertyChanged" Ordinal="186" LinesAvoided="2" />
+        <JoinPoint Advising="#190" Description="#194" Ordinal="187" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195" Ordinal="188" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193" Ordinal="189" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#286=Introduces interface(s) INotifyPropertyChanged, INotifyChildPropertyChanged, IQueryInterface" Ordinal="190" LinesAvoided="0" />
+        <JoinPoint Advised="#287=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Name()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="191" LinesAvoided="0" />
+        <JoinPoint Advised="#287" Advising="#190" Description="#200" Semantic="Getter" Ordinal="192" LinesAvoided="0" />
+        <JoinPoint Advised="#288=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Name(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="193" LinesAvoided="0" />
+        <JoinPoint Advised="#289=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Description()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="194" LinesAvoided="0" />
+        <JoinPoint Advised="#289" Advising="#190" Description="#200" Semantic="Getter" Ordinal="195" LinesAvoided="0" />
+        <JoinPoint Advised="#290=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Description(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="196" LinesAvoided="0" />
+        <JoinPoint Advised="#291=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::get_Value()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="197" LinesAvoided="0" />
+        <JoinPoint Advised="#291" Advising="#190" Description="#200" Semantic="Getter" Ordinal="198" LinesAvoided="0" />
+        <JoinPoint Advised="#292=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Statistic::set_Value(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="199" LinesAvoided="0" />
+        <JoinPoint Advised="#125" Advising="#190" Description="#242" Semantic="Setter" Ordinal="200" LinesAvoided="1" />
+        <JoinPoint Advised="#128" Advising="#190" Description="#242" Semantic="Setter" Ordinal="201" LinesAvoided="1" />
+        <JoinPoint Advised="#131" Advising="#190" Description="#242" Semantic="Setter" Ordinal="202" LinesAvoided="1" />
       </Target>
     </Instance>
-    <Instance Declaration="#288=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie" Id="96f6e091517624db">
+    <Instance Declaration="#293=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie" Id="96f6e091839acfe6">
       <Target Tags="premium">
-        <JoinPoint Advising="#187" Description="#193" Ordinal="165" LinesAvoided="0" />
-        <JoinPoint Advised="#289=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_Header()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="166" LinesAvoided="0" />
-        <JoinPoint Advised="#289" Advising="#187" Description="#197" Semantic="Getter" Ordinal="167" LinesAvoided="0" />
-        <JoinPoint Advised="#290=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::set_Header([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="168" LinesAvoided="0" />
-        <JoinPoint Advised="#291=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_HeaderUnchanged()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="169" LinesAvoided="0" />
-        <JoinPoint Advised="#291" Advising="#187" Description="#197" Semantic="Getter" Ordinal="170" LinesAvoided="0" />
-        <JoinPoint Advised="#292=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::set_HeaderUnchanged([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="171" LinesAvoided="0" />
-        <JoinPoint Advised="#293=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_Extension()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="172" LinesAvoided="0" />
-        <JoinPoint Advised="#293" Advising="#187" Description="#197" Semantic="Getter" Ordinal="173" LinesAvoided="0" />
-        <JoinPoint Advised="#116" Advising="#187" Description="#239" Semantic="Setter" Ordinal="174" LinesAvoided="1" />
-        <JoinPoint Advised="#119" Advising="#187" Description="#239" Semantic="Setter" Ordinal="175" LinesAvoided="1" />
-        <JoinPoint Advised="#294=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::Load(System.String)" Advising="#187" Description="#197" Ordinal="176" LinesAvoided="0" />
-        <JoinPoint Advised="#295=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::Save(System.String, System.Collections.ObjectModel.ObservableCollection{[System.ObjectModel]System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Sample}})" Advising="#187" Description="#197" Ordinal="177" LinesAvoided="0" />
-        <JoinPoint Advised="#296=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::LoadHeader(System.IO.BinaryReader)" Advising="#187" Description="#197" Ordinal="178" LinesAvoided="0" />
-        <JoinPoint Advised="#297=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::LoadInputs(System.IO.BinaryReader, [MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#187" Description="#197" Ordinal="179" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="168" LinesAvoided="0" />
+        <JoinPoint Advised="#294=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_Header()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="169" LinesAvoided="0" />
+        <JoinPoint Advised="#294" Advising="#190" Description="#200" Semantic="Getter" Ordinal="170" LinesAvoided="0" />
+        <JoinPoint Advised="#295=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::set_Header([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="171" LinesAvoided="0" />
+        <JoinPoint Advised="#296=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_HeaderUnchanged()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="172" LinesAvoided="0" />
+        <JoinPoint Advised="#296" Advising="#190" Description="#200" Semantic="Getter" Ordinal="173" LinesAvoided="0" />
+        <JoinPoint Advised="#297=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::set_HeaderUnchanged([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="174" LinesAvoided="0" />
+        <JoinPoint Advised="#298=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::get_Extension()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="175" LinesAvoided="0" />
+        <JoinPoint Advised="#298" Advising="#190" Description="#200" Semantic="Getter" Ordinal="176" LinesAvoided="0" />
+        <JoinPoint Advised="#119" Advising="#190" Description="#242" Semantic="Setter" Ordinal="177" LinesAvoided="1" />
+        <JoinPoint Advised="#122" Advising="#190" Description="#242" Semantic="Setter" Ordinal="178" LinesAvoided="1" />
+        <JoinPoint Advised="#299=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::Load(System.String)" Advising="#190" Description="#200" Ordinal="179" LinesAvoided="0" />
+        <JoinPoint Advised="#300=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::Save(System.String, System.Collections.ObjectModel.ObservableCollection{[System.ObjectModel]System.Collections.ObjectModel.ObservableCollection{[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.Sample}})" Advising="#190" Description="#200" Ordinal="180" LinesAvoided="0" />
+        <JoinPoint Advised="#301=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::LoadHeader(System.IO.BinaryReader)" Advising="#190" Description="#200" Ordinal="181" LinesAvoided="0" />
+        <JoinPoint Advised="#302=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.Movie::LoadInputs(System.IO.BinaryReader, [MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader)" Advising="#190" Description="#200" Ordinal="182" LinesAvoided="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#298=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader" Id="96f6e091de535b3b">
+    <Instance Declaration="#303=T:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader" Id="96f6e091a9847ccd">
       <Target>
-        <JoinPoint Advising="#187" Description="#192" Ordinal="200" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#191" Ordinal="201" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#193" Ordinal="202" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#190" Ordinal="203" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#189" Ordinal="204" LinesAvoided="0" />
-        <JoinPoint Advising="#187" Description="#194" Ordinal="205" LinesAvoided="0" />
-        <JoinPoint Advised="#299=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_ControllerFlags()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="206" LinesAvoided="0" />
-        <JoinPoint Advised="#299" Advising="#187" Description="#197" Semantic="Getter" Ordinal="207" LinesAvoided="0" />
-        <JoinPoint Advised="#300=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_ControllerFlags([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.ControllersBitflag)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="208" LinesAvoided="0" />
-        <JoinPoint Advised="#301=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomName()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="209" LinesAvoided="0" />
-        <JoinPoint Advised="#301" Advising="#187" Description="#197" Semantic="Getter" Ordinal="210" LinesAvoided="0" />
-        <JoinPoint Advised="#302=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomName(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="211" LinesAvoided="0" />
-        <JoinPoint Advised="#303=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_VideoPluginName()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="212" LinesAvoided="0" />
-        <JoinPoint Advised="#303" Advising="#187" Description="#197" Semantic="Getter" Ordinal="213" LinesAvoided="0" />
-        <JoinPoint Advised="#304=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_VideoPluginName(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="214" LinesAvoided="0" />
-        <JoinPoint Advised="#305=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_AudioPluginName()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="215" LinesAvoided="0" />
-        <JoinPoint Advised="#305" Advising="#187" Description="#197" Semantic="Getter" Ordinal="216" LinesAvoided="0" />
-        <JoinPoint Advised="#306=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_AudioPluginName(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="217" LinesAvoided="0" />
-        <JoinPoint Advised="#307=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_InputPluginName()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="218" LinesAvoided="0" />
-        <JoinPoint Advised="#307" Advising="#187" Description="#197" Semantic="Getter" Ordinal="219" LinesAvoided="0" />
-        <JoinPoint Advised="#308=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_InputPluginName(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="220" LinesAvoided="0" />
-        <JoinPoint Advised="#309=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RSPPluginName()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="221" LinesAvoided="0" />
-        <JoinPoint Advised="#309" Advising="#187" Description="#197" Semantic="Getter" Ordinal="222" LinesAvoided="0" />
-        <JoinPoint Advised="#310=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RSPPluginName(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="223" LinesAvoided="0" />
-        <JoinPoint Advised="#311=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Author()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="224" LinesAvoided="0" />
-        <JoinPoint Advised="#311" Advising="#187" Description="#197" Semantic="Getter" Ordinal="225" LinesAvoided="0" />
-        <JoinPoint Advised="#312=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Author(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="226" LinesAvoided="0" />
-        <JoinPoint Advised="#313=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Description()" Advising="#187" Description="#196" Semantic="Getter" Ordinal="227" LinesAvoided="0" />
-        <JoinPoint Advised="#313" Advising="#187" Description="#197" Semantic="Getter" Ordinal="228" LinesAvoided="0" />
-        <JoinPoint Advised="#314=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Description(System.String)" Advising="#187" Description="#197" Semantic="Setter" Ordinal="229" LinesAvoided="0" />
-        <JoinPoint Advised="#131" Advising="#187" Description="#239" Semantic="Setter" Ordinal="230" LinesAvoided="1" />
-        <JoinPoint Advised="#134" Advising="#187" Description="#239" Semantic="Setter" Ordinal="231" LinesAvoided="1" />
-        <JoinPoint Advised="#137" Advising="#187" Description="#239" Semantic="Setter" Ordinal="232" LinesAvoided="1" />
-        <JoinPoint Advised="#140" Advising="#187" Description="#239" Semantic="Setter" Ordinal="233" LinesAvoided="1" />
-        <JoinPoint Advised="#143" Advising="#187" Description="#239" Semantic="Setter" Ordinal="234" LinesAvoided="1" />
-        <JoinPoint Advised="#146" Advising="#187" Description="#239" Semantic="Setter" Ordinal="235" LinesAvoided="1" />
-        <JoinPoint Advised="#149" Advising="#187" Description="#239" Semantic="Setter" Ordinal="236" LinesAvoided="1" />
-        <JoinPoint Advised="#152" Advising="#187" Description="#239" Semantic="Setter" Ordinal="237" LinesAvoided="1" />
-        <JoinPoint Advised="#155" Advising="#187" Description="#239" Semantic="Setter" Ordinal="238" LinesAvoided="1" />
-        <JoinPoint Advised="#158" Advising="#187" Description="#239" Semantic="Setter" Ordinal="239" LinesAvoided="1" />
-        <JoinPoint Advised="#161" Advising="#187" Description="#239" Semantic="Setter" Ordinal="240" LinesAvoided="1" />
-        <JoinPoint Advised="#164" Advising="#187" Description="#239" Semantic="Setter" Ordinal="241" LinesAvoided="1" />
-        <JoinPoint Advised="#167" Advising="#187" Description="#239" Semantic="Setter" Ordinal="242" LinesAvoided="1" />
-        <JoinPoint Advised="#170" Advising="#187" Description="#239" Semantic="Setter" Ordinal="243" LinesAvoided="1" />
-        <JoinPoint Advised="#173" Advising="#187" Description="#239" Semantic="Setter" Ordinal="244" LinesAvoided="1" />
-        <JoinPoint Advised="#176" Advising="#187" Description="#239" Semantic="Setter" Ordinal="245" LinesAvoided="1" />
-        <JoinPoint Advised="#179" Advising="#187" Description="#239" Semantic="Setter" Ordinal="246" LinesAvoided="1" />
-        <JoinPoint Advised="#182" Advising="#187" Description="#239" Semantic="Setter" Ordinal="247" LinesAvoided="1" />
-        <JoinPoint Advised="#185" Advising="#187" Description="#239" Semantic="Setter" Ordinal="248" LinesAvoided="1" />
-        <JoinPoint Advised="#315=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Magic()" Advising="#187" Description="#197" Ordinal="249" LinesAvoided="0" />
-        <JoinPoint Advised="#316=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Magic(System.UInt32)" Advising="#187" Description="#197" Ordinal="250" LinesAvoided="0" />
-        <JoinPoint Advised="#317=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Version()" Advising="#187" Description="#197" Ordinal="251" LinesAvoided="0" />
-        <JoinPoint Advised="#318=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Version(System.UInt32)" Advising="#187" Description="#197" Ordinal="252" LinesAvoided="0" />
-        <JoinPoint Advised="#319=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_UID()" Advising="#187" Description="#197" Ordinal="253" LinesAvoided="0" />
-        <JoinPoint Advised="#320=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_UID(System.UInt32)" Advising="#187" Description="#197" Ordinal="254" LinesAvoided="0" />
-        <JoinPoint Advised="#321=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthVIs()" Advising="#187" Description="#197" Ordinal="255" LinesAvoided="0" />
-        <JoinPoint Advised="#322=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthVIs(System.UInt32)" Advising="#187" Description="#197" Ordinal="256" LinesAvoided="0" />
-        <JoinPoint Advised="#323=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Rerecords()" Advising="#187" Description="#197" Ordinal="257" LinesAvoided="0" />
-        <JoinPoint Advised="#324=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Rerecords(System.UInt32)" Advising="#187" Description="#197" Ordinal="258" LinesAvoided="0" />
-        <JoinPoint Advised="#325=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_VIsPerSecond()" Advising="#187" Description="#197" Ordinal="259" LinesAvoided="0" />
-        <JoinPoint Advised="#326=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_VIsPerSecond(System.Byte)" Advising="#187" Description="#197" Ordinal="260" LinesAvoided="0" />
-        <JoinPoint Advised="#327=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthSamples()" Advising="#187" Description="#197" Ordinal="261" LinesAvoided="0" />
-        <JoinPoint Advised="#328=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthSamples(System.UInt32)" Advising="#187" Description="#197" Ordinal="262" LinesAvoided="0" />
-        <JoinPoint Advised="#329=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthFile()" Advising="#187" Description="#197" Ordinal="263" LinesAvoided="0" />
-        <JoinPoint Advised="#330=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthFile(System.UInt32)" Advising="#187" Description="#197" Ordinal="264" LinesAvoided="0" />
-        <JoinPoint Advised="#331=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_StartFlags()" Advising="#187" Description="#197" Ordinal="265" LinesAvoided="0" />
-        <JoinPoint Advised="#332=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_StartFlags(System.UInt16)" Advising="#187" Description="#197" Ordinal="266" LinesAvoided="0" />
-        <JoinPoint Advised="#333=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomCRC()" Advising="#187" Description="#197" Ordinal="267" LinesAvoided="0" />
-        <JoinPoint Advised="#334=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomCRC(System.UInt32)" Advising="#187" Description="#197" Ordinal="268" LinesAvoided="0" />
-        <JoinPoint Advised="#335=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomCountry()" Advising="#187" Description="#197" Ordinal="269" LinesAvoided="0" />
-        <JoinPoint Advised="#336=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomCountry(System.UInt16)" Advising="#187" Description="#197" Ordinal="270" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#195" Ordinal="203" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#194" Ordinal="204" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#196" Ordinal="205" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#193" Ordinal="206" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#192" Ordinal="207" LinesAvoided="0" />
+        <JoinPoint Advising="#190" Description="#197" Ordinal="208" LinesAvoided="0" />
+        <JoinPoint Advised="#304=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_ControllerFlags()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="209" LinesAvoided="0" />
+        <JoinPoint Advised="#304" Advising="#190" Description="#200" Semantic="Getter" Ordinal="210" LinesAvoided="0" />
+        <JoinPoint Advised="#305=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_ControllerFlags([MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.ControllersBitflag)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="211" LinesAvoided="0" />
+        <JoinPoint Advised="#306=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomName()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="212" LinesAvoided="0" />
+        <JoinPoint Advised="#306" Advising="#190" Description="#200" Semantic="Getter" Ordinal="213" LinesAvoided="0" />
+        <JoinPoint Advised="#307=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomName(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="214" LinesAvoided="0" />
+        <JoinPoint Advised="#308=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_VideoPluginName()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="215" LinesAvoided="0" />
+        <JoinPoint Advised="#308" Advising="#190" Description="#200" Semantic="Getter" Ordinal="216" LinesAvoided="0" />
+        <JoinPoint Advised="#309=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_VideoPluginName(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="217" LinesAvoided="0" />
+        <JoinPoint Advised="#310=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_AudioPluginName()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="218" LinesAvoided="0" />
+        <JoinPoint Advised="#310" Advising="#190" Description="#200" Semantic="Getter" Ordinal="219" LinesAvoided="0" />
+        <JoinPoint Advised="#311=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_AudioPluginName(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="220" LinesAvoided="0" />
+        <JoinPoint Advised="#312=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_InputPluginName()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="221" LinesAvoided="0" />
+        <JoinPoint Advised="#312" Advising="#190" Description="#200" Semantic="Getter" Ordinal="222" LinesAvoided="0" />
+        <JoinPoint Advised="#313=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_InputPluginName(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="223" LinesAvoided="0" />
+        <JoinPoint Advised="#314=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RSPPluginName()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="224" LinesAvoided="0" />
+        <JoinPoint Advised="#314" Advising="#190" Description="#200" Semantic="Getter" Ordinal="225" LinesAvoided="0" />
+        <JoinPoint Advised="#315=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RSPPluginName(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="226" LinesAvoided="0" />
+        <JoinPoint Advised="#316=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Author()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="227" LinesAvoided="0" />
+        <JoinPoint Advised="#316" Advising="#190" Description="#200" Semantic="Getter" Ordinal="228" LinesAvoided="0" />
+        <JoinPoint Advised="#317=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Author(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="229" LinesAvoided="0" />
+        <JoinPoint Advised="#318=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Description()" Advising="#190" Description="#199" Semantic="Getter" Ordinal="230" LinesAvoided="0" />
+        <JoinPoint Advised="#318" Advising="#190" Description="#200" Semantic="Getter" Ordinal="231" LinesAvoided="0" />
+        <JoinPoint Advised="#319=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Description(System.String)" Advising="#190" Description="#200" Semantic="Setter" Ordinal="232" LinesAvoided="0" />
+        <JoinPoint Advised="#134" Advising="#190" Description="#242" Semantic="Setter" Ordinal="233" LinesAvoided="1" />
+        <JoinPoint Advised="#137" Advising="#190" Description="#242" Semantic="Setter" Ordinal="234" LinesAvoided="1" />
+        <JoinPoint Advised="#140" Advising="#190" Description="#242" Semantic="Setter" Ordinal="235" LinesAvoided="1" />
+        <JoinPoint Advised="#143" Advising="#190" Description="#242" Semantic="Setter" Ordinal="236" LinesAvoided="1" />
+        <JoinPoint Advised="#146" Advising="#190" Description="#242" Semantic="Setter" Ordinal="237" LinesAvoided="1" />
+        <JoinPoint Advised="#149" Advising="#190" Description="#242" Semantic="Setter" Ordinal="238" LinesAvoided="1" />
+        <JoinPoint Advised="#152" Advising="#190" Description="#242" Semantic="Setter" Ordinal="239" LinesAvoided="1" />
+        <JoinPoint Advised="#155" Advising="#190" Description="#242" Semantic="Setter" Ordinal="240" LinesAvoided="1" />
+        <JoinPoint Advised="#158" Advising="#190" Description="#242" Semantic="Setter" Ordinal="241" LinesAvoided="1" />
+        <JoinPoint Advised="#161" Advising="#190" Description="#242" Semantic="Setter" Ordinal="242" LinesAvoided="1" />
+        <JoinPoint Advised="#164" Advising="#190" Description="#242" Semantic="Setter" Ordinal="243" LinesAvoided="1" />
+        <JoinPoint Advised="#167" Advising="#190" Description="#242" Semantic="Setter" Ordinal="244" LinesAvoided="1" />
+        <JoinPoint Advised="#170" Advising="#190" Description="#242" Semantic="Setter" Ordinal="245" LinesAvoided="1" />
+        <JoinPoint Advised="#173" Advising="#190" Description="#242" Semantic="Setter" Ordinal="246" LinesAvoided="1" />
+        <JoinPoint Advised="#176" Advising="#190" Description="#242" Semantic="Setter" Ordinal="247" LinesAvoided="1" />
+        <JoinPoint Advised="#179" Advising="#190" Description="#242" Semantic="Setter" Ordinal="248" LinesAvoided="1" />
+        <JoinPoint Advised="#182" Advising="#190" Description="#242" Semantic="Setter" Ordinal="249" LinesAvoided="1" />
+        <JoinPoint Advised="#185" Advising="#190" Description="#242" Semantic="Setter" Ordinal="250" LinesAvoided="1" />
+        <JoinPoint Advised="#188" Advising="#190" Description="#242" Semantic="Setter" Ordinal="251" LinesAvoided="1" />
+        <JoinPoint Advised="#320=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Magic()" Advising="#190" Description="#200" Ordinal="252" LinesAvoided="0" />
+        <JoinPoint Advised="#321=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Magic(System.UInt32)" Advising="#190" Description="#200" Ordinal="253" LinesAvoided="0" />
+        <JoinPoint Advised="#322=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Version()" Advising="#190" Description="#200" Ordinal="254" LinesAvoided="0" />
+        <JoinPoint Advised="#323=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Version(System.UInt32)" Advising="#190" Description="#200" Ordinal="255" LinesAvoided="0" />
+        <JoinPoint Advised="#324=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_UID()" Advising="#190" Description="#200" Ordinal="256" LinesAvoided="0" />
+        <JoinPoint Advised="#325=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_UID(System.UInt32)" Advising="#190" Description="#200" Ordinal="257" LinesAvoided="0" />
+        <JoinPoint Advised="#326=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthVIs()" Advising="#190" Description="#200" Ordinal="258" LinesAvoided="0" />
+        <JoinPoint Advised="#327=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthVIs(System.UInt32)" Advising="#190" Description="#200" Ordinal="259" LinesAvoided="0" />
+        <JoinPoint Advised="#328=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_Rerecords()" Advising="#190" Description="#200" Ordinal="260" LinesAvoided="0" />
+        <JoinPoint Advised="#329=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_Rerecords(System.UInt32)" Advising="#190" Description="#200" Ordinal="261" LinesAvoided="0" />
+        <JoinPoint Advised="#330=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_VIsPerSecond()" Advising="#190" Description="#200" Ordinal="262" LinesAvoided="0" />
+        <JoinPoint Advised="#331=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_VIsPerSecond(System.Byte)" Advising="#190" Description="#200" Ordinal="263" LinesAvoided="0" />
+        <JoinPoint Advised="#332=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthSamples()" Advising="#190" Description="#200" Ordinal="264" LinesAvoided="0" />
+        <JoinPoint Advised="#333=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthSamples(System.UInt32)" Advising="#190" Description="#200" Ordinal="265" LinesAvoided="0" />
+        <JoinPoint Advised="#334=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_LengthFile()" Advising="#190" Description="#200" Ordinal="266" LinesAvoided="0" />
+        <JoinPoint Advised="#335=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_LengthFile(System.UInt32)" Advising="#190" Description="#200" Ordinal="267" LinesAvoided="0" />
+        <JoinPoint Advised="#336=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_StartFlags()" Advising="#190" Description="#200" Ordinal="268" LinesAvoided="0" />
+        <JoinPoint Advised="#337=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_StartFlags(System.UInt16)" Advising="#190" Description="#200" Ordinal="269" LinesAvoided="0" />
+        <JoinPoint Advised="#338=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomCRC()" Advising="#190" Description="#200" Ordinal="270" LinesAvoided="0" />
+        <JoinPoint Advised="#339=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomCRC(System.UInt32)" Advising="#190" Description="#200" Ordinal="271" LinesAvoided="0" />
+        <JoinPoint Advised="#340=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::get_RomCountry()" Advising="#190" Description="#200" Ordinal="272" LinesAvoided="0" />
+        <JoinPoint Advised="#341=M:[MupenToolkitPRE]MupenToolkitPRE.Movie.Definitions.M64.MovieHeader::set_RomCountry(System.UInt16)" Advising="#190" Description="#200" Ordinal="273" LinesAvoided="0" />
       </Target>
     </Instance>
   </Class>
-  <Annotation Target="#337=M:[PostSharp.Patterns.Model]PostSharp.Patterns.Model.NotifyPropertyChangedAttribute::InitializeAspectInstance(PostSharp.Aspects.Advices.AspectInitializationReason)" Arguments="#338=2" Description="#339=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
-  <Annotation Target="#340=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSampleIndex()" Description="#341=The CurrentSampleIndex property depends on _CurrentSampleIndex." />
-  <Annotation Target="#342=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSample()" Description="#343=The CurrentSample property depends on Samples.Count, CurrentController, Samples.Item.Count, CurrentSampleIndex and Samples.Item.Item." />
-  <Annotation Target="#344=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSampleList()" Description="#345=The CurrentSampleList property depends on Samples.Count, Samples.Item and CurrentController." />
-  <Annotation Target="#346=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::SelectedPageIndex()" Description="#347=The SelectedPageIndex property depends on _SelectedPageIndex." />
-  <Annotation Target="#348=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::SelectedPage()" Description="#349=The SelectedPage property depends on _SelectedPage." />
-  <Annotation Target="#350=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::Samples()" Description="#351=A change in Samples possibly affects CurrentSample and CurrentSampleList." LinesAvoided="2" />
-  <Annotation Target="#350" Description="#352=The NotifyPropertyChanged aspect recursively tracks changes in Samples and Samples.Item." LinesAvoided="8" />
-  <Annotation Target="#353=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentController()" Description="#354=A change in CurrentController possibly affects CurrentSample and CurrentSampleList." LinesAvoided="2" />
-  <Annotation Target="#340" Description="#355=A change in CurrentSampleIndex possibly affects CurrentSample." LinesAvoided="1" />
-  <Annotation Target="#356=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::Content()" Description="#357=The Content property depends on _Content, _ContentType and _DataContext." />
+  <Annotation Target="#342=M:[PostSharp.Patterns.Model]PostSharp.Patterns.Model.NotifyPropertyChangedAttribute::InitializeAspectInstance(PostSharp.Aspects.Advices.AspectInitializationReason)" Arguments="#343=2" Description="#344=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#345=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSampleIndex()" Description="#346=The CurrentSampleIndex property depends on _CurrentSampleIndex." />
+  <Annotation Target="#347=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSample()" Description="#348=The CurrentSample property depends on Samples.Count, CurrentController, Samples.Item.Count, CurrentSampleIndex and Samples.Item.Item." />
+  <Annotation Target="#349=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentSampleList()" Description="#350=The CurrentSampleList property depends on Samples.Count, Samples.Item and CurrentController." />
+  <Annotation Target="#351=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::SelectedPageIndex()" Description="#352=The SelectedPageIndex property depends on _SelectedPageIndex." />
+  <Annotation Target="#353=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::SelectedPage()" Description="#354=The SelectedPage property depends on _SelectedPage." />
+  <Annotation Target="#355=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::Samples()" Description="#356=A change in Samples possibly affects CurrentSample and CurrentSampleList." LinesAvoided="2" />
+  <Annotation Target="#355" Description="#357=The NotifyPropertyChanged aspect recursively tracks changes in Samples and Samples.Item." LinesAvoided="8" />
+  <Annotation Target="#358=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.MainViewModel::CurrentController()" Description="#359=A change in CurrentController possibly affects CurrentSample and CurrentSampleList." LinesAvoided="2" />
+  <Annotation Target="#345" Description="#360=A change in CurrentSampleIndex possibly affects CurrentSample." LinesAvoided="1" />
+  <Annotation Target="#361=P:[MupenToolkitPRE]MupenToolkitPRE.MVVM.PageItem::Content()" Description="#362=The Content property depends on _Content, _ContentType and _DataContext." />
 </Symbols>

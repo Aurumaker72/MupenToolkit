@@ -49,6 +49,12 @@ namespace MupenToolkitPRE.MVVM
     {
         public static void Load(MainViewModel mvm, string path = null)
         {
+            if (mvm.Busy)
+            {
+                ShowDialogIf(Properties.Resources.AlreadyBusy, Properties.Resources.Info, Properties.Settings.Default.NotifyOnRaceConditionAvoidance);
+                return;
+            }
+
             string _path = string.Empty;
             if (path == null)
             {
@@ -68,7 +74,7 @@ namespace MupenToolkitPRE.MVVM
                 if (!ret.Status.Success)
                 {
                     mvm.Busy = false;
-                    ShowDialog(ret.Status.FailReason);
+                    ShowDialog(ret.Status.FailReason, Properties.Resources.MovieLoadFailed);
                     return;
                 }
                 mvm.Samples = ret.Samples;
@@ -156,6 +162,11 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
+            if (mvm.Busy)
+            {
+                ShowDialogIf(Properties.Resources.AlreadyBusy, Properties.Resources.Info, Properties.Settings.Default.NotifyOnRaceConditionAvoidance);
+                return;
+            }
             Task.Factory.StartNew(() =>
             {
                 mvm.Busy = true;
@@ -216,6 +227,11 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
+            if (mvm.Busy)
+            {
+                ShowDialogIf(Properties.Resources.AlreadyBusy, Properties.Resources.Info, Properties.Settings.Default.NotifyOnRaceConditionAvoidance);
+                return;
+            }
             Task.Factory.StartNew(() =>
             {
                 mvm.Busy = true;
@@ -252,6 +268,11 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
+            if (mvm.Busy)
+            {
+                ShowDialogIf(Properties.Resources.AlreadyBusy, Properties.Resources.Info, Properties.Settings.Default.NotifyOnRaceConditionAvoidance);
+                return;
+            }
             var shlRet = ShellWrapper.SaveFileDialogPrompt();
             if (shlRet.Cancelled)
                 return;
@@ -262,7 +283,7 @@ namespace MupenToolkitPRE.MVVM
                 if (!ret.Success)
                 {
                     mvm.Busy = false;
-                    ShowDialog(ret.FailReason);
+                    ShowDialog(ret.FailReason, Properties.Resources.MovieSaveFailed);
                     return;
                 }
                 ShowSnackbar(mvm.MainSnackbar, Properties.Resources.MovieSavedSuccessfully);
