@@ -23,7 +23,7 @@
           "lib/net6.0/DynamicData.dll": {}
         }
       },
-      "MaterialDesignColors/2.0.4": {
+      "MaterialDesignColors/2.0.5": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
@@ -32,10 +32,10 @@
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
         }
       },
-      "MaterialDesignThemes/4.3.0": {
+      "MaterialDesignThemes/4.4.0": {
         "type": "package",
         "dependencies": {
-          "MaterialDesignColors": "[2.0.4, 3.0.0)"
+          "MaterialDesignColors": "[2.0.5, 3.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
@@ -56,10 +56,10 @@
           "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {}
         }
       },
-      "PostSharp/6.10.8": {
+      "PostSharp/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp.Redist": "[6.10.9, 7.0.0)"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -72,17 +72,17 @@
           "build/PostSharp.targets": {}
         }
       },
-      "PostSharp.Patterns.Aggregation/6.10.8": {
+      "PostSharp.Patterns.Aggregation/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Patterns.Aggregation.Redist": "[6.10.8, 7.0.0)",
-          "PostSharp.Patterns.Common": "[6.10.8, 7.0.0)"
+          "PostSharp.Patterns.Aggregation.Redist": "[6.10.9, 7.0.0)",
+          "PostSharp.Patterns.Common": "[6.10.9, 7.0.0)"
         }
       },
-      "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
+      "PostSharp.Patterns.Aggregation.Redist/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp.Patterns.Common.Redist": "[6.10.9, 7.0.0)"
         },
         "compile": {
           "lib/net6.0/PostSharp.Patterns.Aggregation.dll": {}
@@ -91,11 +91,11 @@
           "lib/net6.0/PostSharp.Patterns.Aggregation.dll": {}
         }
       },
-      "PostSharp.Patterns.Common/6.10.8": {
+      "PostSharp.Patterns.Common/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp": "[6.10.8, 7.0.0)",
-          "PostSharp.Patterns.Common.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp": "[6.10.9, 7.0.0)",
+          "PostSharp.Patterns.Common.Redist": "[6.10.9, 7.0.0)"
         },
         "compile": {
           "lib/netstandard1.3/_._": {}
@@ -104,10 +104,10 @@
           "lib/netstandard1.3/_._": {}
         }
       },
-      "PostSharp.Patterns.Common.Redist/6.10.8": {
+      "PostSharp.Patterns.Common.Redist/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp.Redist": "[6.10.9, 7.0.0)"
         },
         "compile": {
           "lib/net6.0/PostSharp.Patterns.Common.dll": {}
@@ -116,17 +116,17 @@
           "lib/net6.0/PostSharp.Patterns.Common.dll": {}
         }
       },
-      "PostSharp.Patterns.Model/6.10.8": {
+      "PostSharp.Patterns.Model/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Patterns.Aggregation": "[6.10.8, 7.0.0)",
-          "PostSharp.Patterns.Model.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp.Patterns.Aggregation": "[6.10.9, 7.0.0)",
+          "PostSharp.Patterns.Model.Redist": "[6.10.9, 7.0.0)"
         }
       },
-      "PostSharp.Patterns.Model.Redist/6.10.8": {
+      "PostSharp.Patterns.Model.Redist/6.10.9": {
         "type": "package",
         "dependencies": {
-          "PostSharp.Patterns.Aggregation.Redist": "[6.10.8, 7.0.0)"
+          "PostSharp.Patterns.Aggregation.Redist": "[6.10.9, 7.0.0)"
         },
         "compile": {
           "lib/net6.0/PostSharp.Patterns.Model.dll": {}
@@ -135,7 +135,7 @@
           "lib/net6.0/PostSharp.Patterns.Model.dll": {}
         }
       },
-      "PostSharp.Redist/6.10.8": {
+      "PostSharp.Redist/6.10.9": {
         "type": "package",
         "compile": {
           "lib/net6.0/PostSharp.dll": {}
@@ -243,10 +243,10 @@
         "logo.png"
       ]
     },
-    "MaterialDesignColors/2.0.4": {
-      "sha512": "l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
+    "MaterialDesignColors/2.0.5": {
+      "sha512": "y5gEo4wo46CTiaTOiROPoKqTW5LJAu0g6b+yd0MslS3Fppu6hMheOIIkrmvvpFPbC4jbgAwakYYCzPKWbHC4LQ==",
       "type": "package",
-      "path": "materialdesigncolors/2.0.4",
+      "path": "materialdesigncolors/2.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -255,14 +255,14 @@
         "lib/net452/MaterialDesignColors.pdb",
         "lib/netcoreapp3.1/MaterialDesignColors.dll",
         "lib/netcoreapp3.1/MaterialDesignColors.pdb",
-        "materialdesigncolors.2.0.4.nupkg.sha512",
+        "materialdesigncolors.2.0.5.nupkg.sha512",
         "materialdesigncolors.nuspec"
       ]
     },
-    "MaterialDesignThemes/4.3.0": {
-      "sha512": "edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
+    "MaterialDesignThemes/4.4.0": {
+      "sha512": "VdO8WvCYB6A6cDd181HLVgORn2IeNDMTlGxf2x91S1xsK6JYY3L1+WYxrkLJm4XEuvI0mY0biLM8MS6go+PQcw==",
       "type": "package",
-      "path": "materialdesignthemes/4.3.0",
+      "path": "materialdesignthemes/4.4.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -293,7 +293,7 @@
         "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
         "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
         "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
-        "materialdesignthemes.4.3.0.nupkg.sha512",
+        "materialdesignthemes.4.4.0.nupkg.sha512",
         "materialdesignthemes.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
@@ -324,10 +324,10 @@
         "microsoft.toolkit.mvvm.nuspec"
       ]
     },
-    "PostSharp/6.10.8": {
-      "sha512": "rL6cpXCvjddWU9gPuzzswjxiPZC0Wd2wgO5DGTxu9NoSrmcQouulV/wB3HVznj4N1Hhu+IgCM0ViJDDm5yMJpw==",
+    "PostSharp/6.10.9": {
+      "sha512": "X+h6O9et8TJCNTX5OKZVfNhD6Q5EapuAfokGacMQzj9b5SCfAtEAm8P5pKnbxIhrRYuOOVUiPwEYR31h0pld7w==",
       "type": "package",
-      "path": "postsharp/6.10.8",
+      "path": "postsharp/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -350,34 +350,34 @@
         "build/_common/unzipper/unzipper.exe.config",
         "build/_common/unzipper/unzipper.pdb",
         "build/_common/unzipper/unzipper.runtimeconfig.json",
-        "build/net472/PostSharp.MSBuild.v6.10.8.Release.dll",
-        "build/net472/PostSharp.MSBuild.v6.10.8.Release.pdb",
-        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.8.Release.dll",
-        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.8.Release.pdb",
+        "build/net472/PostSharp.MSBuild.v6.10.9.Release.dll",
+        "build/net472/PostSharp.MSBuild.v6.10.9.Release.pdb",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.9.Release.dll",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.10.9.Release.pdb",
         "icon.png",
         "lib/net35-client/_._",
         "lib/netstandard1.0/_._",
-        "postsharp.6.10.8.nupkg.sha512",
+        "postsharp.6.10.9.nupkg.sha512",
         "postsharp.nuspec"
       ]
     },
-    "PostSharp.Patterns.Aggregation/6.10.8": {
-      "sha512": "IElYQae2WdEg6GWfdTAbd9qV5zm904hINRMbZ4E5At/QYUcgqW73lVZYUBfcRrDV+DfxXPyH3EYx1b/JvylQQQ==",
+    "PostSharp.Patterns.Aggregation/6.10.9": {
+      "sha512": "aza5cqqi7n+KUTS16lYE/bxNMY2qGQyPKXCs4oGqmC+FiwspWFkvamPJ6NulXPfVTtfdqiXlqYzu+dPWd71hOA==",
       "type": "package",
-      "path": "postsharp.patterns.aggregation/6.10.8",
+      "path": "postsharp.patterns.aggregation/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "icon.png",
-        "postsharp.patterns.aggregation.6.10.8.nupkg.sha512",
+        "postsharp.patterns.aggregation.6.10.9.nupkg.sha512",
         "postsharp.patterns.aggregation.nuspec"
       ]
     },
-    "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
-      "sha512": "eilNfbtRA43e/Ose25npM71X6j3gQHBAu+w+n6D2p52bHe0iKHdEORTz1aEXHloXWnqv94xtZPrJed4kPsiUWA==",
+    "PostSharp.Patterns.Aggregation.Redist/6.10.9": {
+      "sha512": "GLN6eyNPt1+CNgSOpsx7XmycnrYV5IWLfENJdM4FKIgTlyru51zWwUtAZpemPjnxGPvvf1PZMB4zS+hER/HDJw==",
       "type": "package",
-      "path": "postsharp.patterns.aggregation.redist/6.10.8",
+      "path": "postsharp.patterns.aggregation.redist/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -393,14 +393,14 @@
         "lib/netstandard1.3/PostSharp.Patterns.Aggregation.xml",
         "lib/netstandard2.0/PostSharp.Patterns.Aggregation.dll",
         "lib/netstandard2.0/PostSharp.Patterns.Aggregation.xml",
-        "postsharp.patterns.aggregation.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.aggregation.redist.6.10.9.nupkg.sha512",
         "postsharp.patterns.aggregation.redist.nuspec"
       ]
     },
-    "PostSharp.Patterns.Common/6.10.8": {
-      "sha512": "j130m5/uVf6PMW2cbDXdi+m52gU/s9qhTaHy9+tWuTLL+2b24xr9gcJZ6WL9tzkURiZpuaKEjSIpORT7FGtVlw==",
+    "PostSharp.Patterns.Common/6.10.9": {
+      "sha512": "5L4Rr5ykOoGju6J76slfJQKsTjTf6CUDatUe3GMsYAqH1TVRVT9Jn9D6R0OBDXptZnHFV18XDcJ3wrQZsm4Zsw==",
       "type": "package",
-      "path": "postsharp.patterns.common/6.10.8",
+      "path": "postsharp.patterns.common/6.10.9",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -409,15 +409,15 @@
         "icon.png",
         "lib/net40/_._",
         "lib/netstandard1.3/_._",
-        "postsharp.patterns.common.6.10.8.nupkg.sha512",
+        "postsharp.patterns.common.6.10.9.nupkg.sha512",
         "postsharp.patterns.common.nuspec",
         "tools/PostSharp.Patterns.Common.Weaver.dll"
       ]
     },
-    "PostSharp.Patterns.Common.Redist/6.10.8": {
-      "sha512": "8o3G78g9/94Rdy61TMohbuCOUVJc5w+ER2KUKu+sIzyeygDiUrVi8b+iIOPNoJssrjkfMq1sNOCOG5fsM7qN6Q==",
+    "PostSharp.Patterns.Common.Redist/6.10.9": {
+      "sha512": "a++4y8T5n7hf3w4T8eW84C/4EsJTcmK7HWZJn6WC+orUJFhyStKOeVoS1ZAuQg4LpzrO2LZ3HuB5VCDluNVxMQ==",
       "type": "package",
-      "path": "postsharp.patterns.common.redist/6.10.8",
+      "path": "postsharp.patterns.common.redist/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -437,27 +437,27 @@
         "lib/netstandard1.3/PostSharp.Patterns.Common.xml",
         "lib/netstandard2.0/PostSharp.Patterns.Common.dll",
         "lib/netstandard2.0/PostSharp.Patterns.Common.xml",
-        "postsharp.patterns.common.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.common.redist.6.10.9.nupkg.sha512",
         "postsharp.patterns.common.redist.nuspec"
       ]
     },
-    "PostSharp.Patterns.Model/6.10.8": {
-      "sha512": "mKCkqEvQbITvqpVOzHeVrzAnT/I3k4lKolL6WArEU7VPF8ZBBeyQDzmvCEX8t3EktmdsDOfrNAtGBtXLpssZVw==",
+    "PostSharp.Patterns.Model/6.10.9": {
+      "sha512": "uZv2aVRDVUmHiZdQjIJ67odsI88MpimzHAvRP5NmY+NgnHsQEEpgiV8tjlEQDwP77OwmYnDchqSdVs3jjM504w==",
       "type": "package",
-      "path": "postsharp.patterns.model/6.10.8",
+      "path": "postsharp.patterns.model/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "icon.png",
-        "postsharp.patterns.model.6.10.8.nupkg.sha512",
+        "postsharp.patterns.model.6.10.9.nupkg.sha512",
         "postsharp.patterns.model.nuspec"
       ]
     },
-    "PostSharp.Patterns.Model.Redist/6.10.8": {
-      "sha512": "QPMYee4RgscSVofGQWaSvm4EGNTgn6fMAAi8BwpxaQ15b44zZ8nQDAgBBrGZPVmeZN5RLg9t6izgHM2cxQkHnQ==",
+    "PostSharp.Patterns.Model.Redist/6.10.9": {
+      "sha512": "NXB1t6rkxL99ii9n6nQvmkFLZREL2ESxgJ3im9v0L+p6n/75aaLEfP5Rvg0RwAgV8uZHClBzGtV/iyr93oF30g==",
       "type": "package",
-      "path": "postsharp.patterns.model.redist/6.10.8",
+      "path": "postsharp.patterns.model.redist/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -473,14 +473,14 @@
         "lib/netstandard1.3/PostSharp.Patterns.Model.xml",
         "lib/netstandard2.0/PostSharp.Patterns.Model.dll",
         "lib/netstandard2.0/PostSharp.Patterns.Model.xml",
-        "postsharp.patterns.model.redist.6.10.8.nupkg.sha512",
+        "postsharp.patterns.model.redist.6.10.9.nupkg.sha512",
         "postsharp.patterns.model.redist.nuspec"
       ]
     },
-    "PostSharp.Redist/6.10.8": {
-      "sha512": "bBdwhTbvQbLE8m76JlVZKqupuk8zuqN8tLmF5T8mfcaRgwu9ngFbe59qnd/wavIR4v4tvOikMwYbSBTXQ9Dxsw==",
+    "PostSharp.Redist/6.10.9": {
+      "sha512": "NBrMs/vX2DlnwnQV4Z630baLTv09/X9qFxZ2bBy2VSmVqOWvknQn419SRDM9dn9XNozyztDDVR3DiZfNnqiy+Q==",
       "type": "package",
-      "path": "postsharp.redist/6.10.8",
+      "path": "postsharp.redist/6.10.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -498,7 +498,7 @@
         "lib/netstandard1.3/PostSharp.xml",
         "lib/netstandard2.0/PostSharp.dll",
         "lib/netstandard2.0/PostSharp.xml",
-        "postsharp.redist.6.10.8.nupkg.sha512",
+        "postsharp.redist.6.10.9.nupkg.sha512",
         "postsharp.redist.nuspec"
       ]
     },
@@ -632,10 +632,10 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "BluwolfIcons >= 1.0.1",
-      "MaterialDesignColors >= 2.0.4",
-      "MaterialDesignThemes >= 4.3.0",
+      "MaterialDesignColors >= 2.0.5",
+      "MaterialDesignThemes >= 4.4.0",
       "Microsoft.Toolkit.Mvvm >= 7.1.2",
-      "PostSharp.Patterns.Model >= 6.10.8",
+      "PostSharp.Patterns.Model >= 6.10.9",
       "ReactiveUI >= 17.1.50",
       "ReactiveUI.WPF >= 17.1.50",
       "System.Reactive >= 5.0.0",
@@ -693,11 +693,11 @@
           },
           "MaterialDesignColors": {
             "target": "Package",
-            "version": "[2.0.4, )"
+            "version": "[2.0.5, )"
           },
           "MaterialDesignThemes": {
             "target": "Package",
-            "version": "[4.3.0, )"
+            "version": "[4.4.0, )"
           },
           "Microsoft.Toolkit.Mvvm": {
             "target": "Package",
@@ -705,7 +705,7 @@
           },
           "PostSharp.Patterns.Model": {
             "target": "Package",
-            "version": "[6.10.8, )"
+            "version": "[6.10.9, )"
           },
           "ReactiveUI": {
             "target": "Package",
@@ -738,6 +738,14 @@
           {
             "name": "Microsoft.AspNetCore.App.Ref",
             "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
           }
         ],
         "frameworkReferences": {

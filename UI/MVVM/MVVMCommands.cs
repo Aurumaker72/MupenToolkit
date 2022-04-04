@@ -1,4 +1,5 @@
 ﻿using MupenToolkitPRE.LowLevel;
+using MupenToolkitPRE.Movie.Helper;
 using MupenToolkitPRE.UI.Localization;
 using MupenToolkitPRE.UI.Platform;
 using System;
@@ -67,6 +68,7 @@ namespace MupenToolkitPRE.MVVM
             {
                 _path = path;
             }
+            if (!_path.ValidMoviePath()) return;
             Task.Factory.StartNew(() =>
             {
                 mvm.Busy = true;

@@ -16,6 +16,9 @@
         ResxExtension.DefaultResxName="MupenToolkitPRE.Properties.Resources" Language="{UICulture}"
         Closing="Window_Closing"
         SizeToContent="Manual"
+        AllowDrop="True"
+        Drop="Window_Drop"
+        DragOver="Window_DragOver"
         Title="{Resx AppName}" MinHeight="450" MinWidth="800">
     <Window.Resources>
         <ResourceDictionary>
@@ -93,9 +96,9 @@
                             
                             <Button Command="{Binding BypassLoadCommand}" ToolTip="{Resx Bypass}"       Margin="16,0,0,0" Content="{materialDesign:PackIcon Kind=Door, Size=24}"     Style="{StaticResource ToolbarButton}" xmlex:DebugVisibilityExtension.IsVisible="True"/>
 
-                            <materialDesign:Card Margin="16,0,0,0" Width="24" Height="24" Opacity="0">
-                                <materialDesign:Card.Style>
-                                    <Style TargetType="materialDesign:Card" BasedOn="{StaticResource {x:Type materialDesign:Card}}">
+                                <ProgressBar Value="0" IsIndeterminate="True" Margin="16,0,0,0" Width="24" Height="24" Opacity="0" materialDesign:ShadowAssist.ShadowDepth="Depth5" Foreground="{StaticResource MaterialDesignShadowBrush}">
+                                <ProgressBar.Style>
+                                    <Style TargetType="ProgressBar" BasedOn="{StaticResource MaterialDesignCircularProgressBar}">
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding Path=Busy}" Value="True">
                                                 <DataTrigger.EnterActions>
@@ -108,9 +111,8 @@
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
-                                </materialDesign:Card.Style>
-                                <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}" Value="0" IsIndeterminate="True"/>
-                            </materialDesign:Card>
+                                </ProgressBar.Style>
+                            </ProgressBar>
 
                         </StackPanel>
 
