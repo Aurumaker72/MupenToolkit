@@ -379,4 +379,7 @@
   <data name="MovieSaveFailed" xml:space="preserve">
     <value>Failed to save movie</value>
   </data>
+  <data name="SerializationInvalidOperation" xml:space="preserve">
+    <value>Serialization of movie failed</value>
+  </data>
 </root>

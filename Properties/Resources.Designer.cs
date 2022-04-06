@@ -646,6 +646,15 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Serialization of movie failed.
+        /// </summary>
+        public static string SerializationInvalidOperation {
+            get {
+                return ResourceManager.GetString("SerializationInvalidOperation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string Settings {

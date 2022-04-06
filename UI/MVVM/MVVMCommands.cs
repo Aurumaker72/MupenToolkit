@@ -203,18 +203,25 @@ namespace MupenToolkitPRE.MVVM
 
         public void Execute(object? parameter)
         {
-            Directory.CreateDirectory(PathHelper.GetAppLogsFolder());
-            var path = Path.Combine(PathHelper.GetAppLogsFolder(), "movie.xml");
-            XmlSerializer SerializerObj = new XmlSerializer(typeof(Movie.Definitions.M64.Movie));
-            TextWriter WriteFileStream = new StreamWriter(path);
-            SerializerObj.Serialize(WriteFileStream, mvm.Movie);
-            WriteFileStream.Flush();
-            WriteFileStream.Close();
-            Process.Start(new ProcessStartInfo()
+            try
             {
-                FileName = path,
-                UseShellExecute = true
-            });
+                Directory.CreateDirectory(PathHelper.GetAppLogsFolder());
+                var path = Path.Combine(PathHelper.GetAppLogsFolder(), "movie.xml");
+                XmlSerializer SerializerObj = new XmlSerializer(typeof(Movie.Definitions.M64.Movie));
+                TextWriter WriteFileStream = new StreamWriter(path);
+                SerializerObj.Serialize(WriteFileStream, mvm.Movie);
+                WriteFileStream.Flush();
+                WriteFileStream.Close();
+                Process.Start(new ProcessStartInfo()
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                });
+            }
+            catch(InvalidOperationException opEx)
+            {
+                ShowDialog(Properties.Resources.SerializationInvalidOperation, Properties.Resources.GenericError);
+            }
         }
     }
     public class SeekJoystickCommand : ICommand
