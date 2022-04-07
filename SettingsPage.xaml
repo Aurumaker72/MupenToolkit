@@ -106,6 +106,7 @@
                             </Style>
                         </StackPanel.Resources>
                         <CheckBox IsChecked="{xmlex:SettingBinding Path=NotifyOnRaceConditionAvoidance}" Content="{Resx NotifyOnRaceConditionAvoidance}" ToolTip="{Resx NotifyOnRaceConditionAvoidanceToolTip}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox IsChecked="{xmlex:SettingBinding Path=AutomaticFocusNavigation}" Content="{Resx AutomaticFocusNavigation}" ToolTip="{Resx AutomaticFocusNavigationToolTip}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
                 </TabItem>
 

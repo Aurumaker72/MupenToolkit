@@ -29,6 +29,7 @@
             <mvvm:DividerConverter x:Key="DividerConverter"/>
             <mvvm:StatisticsTextConverter x:Key="StatisticsTextConverter"/>
             <mvvm:UnsignedShortValueToEqualsParameterConverter x:Key="UnsignedShortValueToEqualsParameterConverter"/>
+            <mvvm:InvertedIntegerEqualityToVisibilityConverter x:Key="InvertedIntegerEqualityToVisibilityConverter"/>
  
             <xmlex:FadeTransition x:Key="DefaultContentTransition" Duration="0:0:0.5"/>
             

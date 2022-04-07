@@ -142,6 +142,24 @@ namespace MupenToolkitPRE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Automatic Navigation.
+        /// </summary>
+        public static string AutomaticFocusNavigation {
+            get {
+                return ResourceManager.GetString("AutomaticFocusNavigation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigates to specific contextually related locations in response to actions.
+        /// </summary>
+        public static string AutomaticFocusNavigationToolTip {
+            get {
+                return ResourceManager.GetString("AutomaticFocusNavigationToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bypass.
         /// </summary>
         public static string Bypass {
@@ -255,6 +273,15 @@ namespace MupenToolkitPRE.Properties {
         public static string Germany {
             get {
                 return ResourceManager.GetString("Germany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to.
+        /// </summary>
+        public static string GoTo {
+            get {
+                return ResourceManager.GetString("GoTo", resourceCulture);
             }
         }
         

@@ -84,6 +84,7 @@ namespace MupenToolkitPRE.MVVM
         public LoadLastCommand LoadLastCommand { get; set; }
         public UploadLogCommand UploadLogCommand { get; set; }
         public StartFlagsChangedCommand StartFlagsChangedCommand { get; set; }
+        public FrameSetCommand FrameSetCommand { get; set; }
         #endregion
 
         #region UI
@@ -133,6 +134,7 @@ namespace MupenToolkitPRE.MVVM
             LoadLastCommand = new() { mvm = this };
             UploadLogCommand = new() { mvm = this };
             StartFlagsChangedCommand = new() { mvm = this };
+            FrameSetCommand = new() { mvm = this };
 
             PageItems = new ObservableCollection<PageItem>(new[]
             {
@@ -193,7 +195,7 @@ namespace MupenToolkitPRE.MVVM
     [NotifyPropertyChanged]
     public class PageItem : ObservableObject
     {
-        private readonly Type _ContentType;
+        public readonly Type _ContentType;
         private readonly object? _DataContext;
         private object? _Content;
         [SafeForDependencyAnalysis]

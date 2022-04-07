@@ -382,4 +382,13 @@
   <data name="SerializationInvalidOperation" xml:space="preserve">
     <value>Serialization of movie failed</value>
   </data>
+  <data name="GoTo" xml:space="preserve">
+    <value>Go to</value>
+  </data>
+  <data name="AutomaticFocusNavigation" xml:space="preserve">
+    <value>Automatic Navigation</value>
+  </data>
+  <data name="AutomaticFocusNavigationToolTip" xml:space="preserve">
+    <value>Navigates to specific contextually related locations in response to actions</value>
+  </data>
 </root>

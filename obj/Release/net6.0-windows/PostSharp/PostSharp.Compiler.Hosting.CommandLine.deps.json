@@ -427,7 +427,7 @@
         "runtime": {},
         "runtimeTargets": {}
       },
-      "PostSharp/6.10.8": {
+      "PostSharp/6.10.9": {
         "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
@@ -528,22 +528,22 @@
         },
         "runtimeTargets": {}
       },
-      "MaterialDesignColors/2.0.4": {
+      "MaterialDesignColors/2.0.5": {
         "dependencies": {},
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {
-            "assemblyVersion": "2.0.4.3",
-            "fileVersion": "2.0.4.3"
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
           }
         },
         "runtimeTargets": {}
       },
-      "MaterialDesignThemes/4.3.0": {
+      "MaterialDesignThemes/4.4.0": {
         "dependencies": {},
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
-            "assemblyVersion": "4.3.0.3",
-            "fileVersion": "4.3.0.3"
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.4.0.0"
           }
         },
         "runtimeTargets": {}
@@ -558,47 +558,47 @@
         },
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Aggregation/6.10.8": {
+      "PostSharp.Patterns.Aggregation/6.10.9": {
         "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
+      "PostSharp.Patterns.Aggregation.Redist/6.10.9": {
         "dependencies": {},
         "runtime": {
           "lib/net6.0/PostSharp.Patterns.Aggregation.dll": {
-            "assemblyVersion": "6.10.8.0",
-            "fileVersion": "6.10.8.0"
+            "assemblyVersion": "6.10.9.0",
+            "fileVersion": "6.10.9.0"
           }
         },
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Common/6.10.8": {
+      "PostSharp.Patterns.Common/6.10.9": {
         "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Common.Redist/6.10.8": {
+      "PostSharp.Patterns.Common.Redist/6.10.9": {
         "dependencies": {},
         "runtime": {
           "lib/net6.0/PostSharp.Patterns.Common.dll": {
-            "assemblyVersion": "6.10.8.0",
-            "fileVersion": "6.10.8.0"
+            "assemblyVersion": "6.10.9.0",
+            "fileVersion": "6.10.9.0"
           }
         },
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Model/6.10.8": {
+      "PostSharp.Patterns.Model/6.10.9": {
         "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
-      "PostSharp.Patterns.Model.Redist/6.10.8": {
+      "PostSharp.Patterns.Model.Redist/6.10.9": {
         "dependencies": {},
         "runtime": {
           "lib/net6.0/PostSharp.Patterns.Model.dll": {
-            "assemblyVersion": "6.10.8.0",
-            "fileVersion": "6.10.8.0"
+            "assemblyVersion": "6.10.9.0",
+            "fileVersion": "6.10.9.0"
           }
         },
         "runtimeTargets": {}
@@ -653,12 +653,12 @@
         },
         "runtimeTargets": {}
       },
-      "PostSharp.Redist/6.10.8": {
+      "PostSharp.Redist/6.10.9": {
         "dependencies": {},
         "runtime": {
           "lib/net6.0/PostSharp.dll": {
-            "assemblyVersion": "6.10.8.0",
-            "fileVersion": "6.10.8.0"
+            "assemblyVersion": "6.10.9.0",
+            "fileVersion": "6.10.9.0"
           }
         },
         "runtimeTargets": {}
@@ -1016,12 +1016,12 @@
       "path": "system.valuetuple/4.4.0",
       "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     },
-    "PostSharp/6.10.8": {
+    "PostSharp/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp/6.10.8",
-      "hashPath": "postsharp.6.10.8.nupkg.sha512"
+      "path": "postsharp/6.10.9",
+      "hashPath": "postsharp.6.10.9.nupkg.sha512"
     },
     "PostSharp.Compiler.Common/1.0.0": {
       "type": "project",
@@ -1072,19 +1072,19 @@
       "path": "dynamicdata/7.5.2",
       "hashPath": "dynamicdata.7.5.2.nupkg.sha512"
     },
-    "MaterialDesignColors/2.0.4": {
+    "MaterialDesignColors/2.0.5": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "materialdesigncolors/2.0.4",
-      "hashPath": "materialdesigncolors.2.0.4.nupkg.sha512"
+      "path": "materialdesigncolors/2.0.5",
+      "hashPath": "materialdesigncolors.2.0.5.nupkg.sha512"
     },
-    "MaterialDesignThemes/4.3.0": {
+    "MaterialDesignThemes/4.4.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "materialdesignthemes/4.3.0",
-      "hashPath": "materialdesignthemes.4.3.0.nupkg.sha512"
+      "path": "materialdesignthemes/4.4.0",
+      "hashPath": "materialdesignthemes.4.4.0.nupkg.sha512"
     },
     "Microsoft.Toolkit.Mvvm/7.1.2": {
       "type": "package",
@@ -1093,47 +1093,47 @@
       "path": "microsoft.toolkit.mvvm/7.1.2",
       "hashPath": "microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
     },
-    "PostSharp.Patterns.Aggregation/6.10.8": {
+    "PostSharp.Patterns.Aggregation/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.aggregation/6.10.8",
-      "hashPath": "postsharp.patterns.aggregation.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.aggregation/6.10.9",
+      "hashPath": "postsharp.patterns.aggregation.6.10.9.nupkg.sha512"
     },
-    "PostSharp.Patterns.Aggregation.Redist/6.10.8": {
+    "PostSharp.Patterns.Aggregation.Redist/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.aggregation.redist/6.10.8",
-      "hashPath": "postsharp.patterns.aggregation.redist.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.aggregation.redist/6.10.9",
+      "hashPath": "postsharp.patterns.aggregation.redist.6.10.9.nupkg.sha512"
     },
-    "PostSharp.Patterns.Common/6.10.8": {
+    "PostSharp.Patterns.Common/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.common/6.10.8",
-      "hashPath": "postsharp.patterns.common.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.common/6.10.9",
+      "hashPath": "postsharp.patterns.common.6.10.9.nupkg.sha512"
     },
-    "PostSharp.Patterns.Common.Redist/6.10.8": {
+    "PostSharp.Patterns.Common.Redist/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.common.redist/6.10.8",
-      "hashPath": "postsharp.patterns.common.redist.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.common.redist/6.10.9",
+      "hashPath": "postsharp.patterns.common.redist.6.10.9.nupkg.sha512"
     },
-    "PostSharp.Patterns.Model/6.10.8": {
+    "PostSharp.Patterns.Model/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.model/6.10.8",
-      "hashPath": "postsharp.patterns.model.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.model/6.10.9",
+      "hashPath": "postsharp.patterns.model.6.10.9.nupkg.sha512"
     },
-    "PostSharp.Patterns.Model.Redist/6.10.8": {
+    "PostSharp.Patterns.Model.Redist/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.patterns.model.redist/6.10.8",
-      "hashPath": "postsharp.patterns.model.redist.6.10.8.nupkg.sha512"
+      "path": "postsharp.patterns.model.redist/6.10.9",
+      "hashPath": "postsharp.patterns.model.redist.6.10.9.nupkg.sha512"
     },
     "ReactiveUI/17.1.50": {
       "type": "package",
@@ -1170,12 +1170,12 @@
       "path": "virtualizingwrappanel/1.5.7",
       "hashPath": "virtualizingwrappanel.1.5.7.nupkg.sha512"
     },
-    "PostSharp.Redist/6.10.8": {
+    "PostSharp.Redist/6.10.9": {
       "type": "package",
       "serviceable": true,
       "sha512": "",
-      "path": "postsharp.redist/6.10.8",
-      "hashPath": "postsharp.redist.6.10.8.nupkg.sha512"
+      "path": "postsharp.redist/6.10.9",
+      "hashPath": "postsharp.redist.6.10.9.nupkg.sha512"
     }
   }
 }

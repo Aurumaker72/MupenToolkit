@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:MupenToolkitPRE"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM"
+      xmlns:xamlex="clr-namespace:MupenToolkitPRE.UI.XAML"
       d:DataContext="{d:DesignInstance Type=mvvm:MainViewModel}"
       mc:Ignorable="d" 
       ResxExtension.DefaultResxName="MupenToolkitPRE.Properties.Resources" 
@@ -100,8 +101,9 @@
                         <materialDesign:Card Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10">
                             <Grid Margin="20">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <materialDesign:PackIcon Kind="Clock" Margin="10 0 10 0"/>
-                                    <TextBlock  Text="{Binding Path=StatisticsFoundFrame, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StatisticsTextConverter}}" Margin="10 0 10 0"/>
+                                    <materialDesign:PackIcon Kind="Clock" Margin="10 0 10 0" VerticalAlignment="Center"/>
+                                    <TextBlock  Text="{Binding Path=StatisticsFoundFrame, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StatisticsTextConverter}}" Margin="10 0 10 0" VerticalAlignment="Center"/>
+                                    <Button Content="{Resx GoTo}" Margin="10 0 10 0" Command="{Binding FrameSetCommand}" CommandParameter="{Binding StatisticsFoundFrame}" Visibility="{Binding StatisticsFoundFrame, Converter={StaticResource InvertedIntegerEqualityToVisibilityConverter}, ConverterParameter={xamlex:Int32 -1}}" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Grid>
                         </materialDesign:Card>

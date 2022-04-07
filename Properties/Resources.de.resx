@@ -345,4 +345,13 @@
   <data name="SerializationInvalidOperation" xml:space="preserve">
     <value>Filmserialisierung gescheitert</value>
   </data>
+  <data name="GoTo" xml:space="preserve">
+    <value>Gehe zu</value>
+  </data>
+  <data name="AutomaticFocusNavigation" xml:space="preserve">
+    <value>Automatische Navigation</value>
+  </data>
+  <data name="AutomaticFocusNavigationToolTip" xml:space="preserve">
+    <value>Navigiert zu kontextuell relevanten Lokationen bei Ausführung bestimmter Befehle</value>
+  </data>
 </root>

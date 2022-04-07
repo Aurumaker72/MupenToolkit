@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Xml.Serialization;
 using static MupenToolkitPRE.UI.XAML.DialogHelper;
+using System.Linq;
 
 namespace MupenToolkitPRE.MVVM
 {
@@ -316,6 +317,31 @@ namespace MupenToolkitPRE.MVVM
             if (parameter == null || mvm.CurrentController >= mvm.Samples.Count) return;
             var fInc = Int32.Parse((string)parameter);
             mvm.CurrentSampleIndex = NumericHelper.ClampFrame(mvm.Samples[mvm.CurrentController].Count, mvm.CurrentSampleIndex + fInc);
+        }
+    }
+    public class FrameSetCommand : ICommand
+    {
+        public MainViewModel mvm;
+        public bool CanExecute(object? parameter) => true;
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public void Execute(object? parameter)
+        {
+            if (parameter == null || mvm.CurrentController >= mvm.Samples.Count) return;
+            mvm.CurrentSampleIndex = NumericHelper.ClampFrame(mvm.Samples[mvm.CurrentController].Count, (int)parameter);
+            // navigate to analog input page :/ MVVM violation
+            if (Properties.Settings.Default.AutomaticFocusNavigation)
+            {
+                foreach (var item in mvm.PageItems.Where(item => item._ContentType == typeof(AnalogInputPage)))
+                {
+                    mvm.SelectedPage = item;
+                    break;
+                }
+            }
         }
     }
 

@@ -94,5 +94,17 @@ namespace MupenToolkitPRE.Properties {
                 this["NotifyOnRaceConditionAvoidance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutomaticFocusNavigation {
+            get {
+                return ((bool)(this["AutomaticFocusNavigation"]));
+            }
+            set {
+                this["AutomaticFocusNavigation"] = value;
+            }
+        }
     }
 }
