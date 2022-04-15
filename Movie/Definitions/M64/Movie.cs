@@ -187,10 +187,10 @@ namespace MupenToolkitPRE.Movie.Definitions.M64
                 {
                     errorMessage += Properties.Resources.OutdatedVersion + Environment.NewLine;
                 }
-                if (header.UID == 0 || header.RomCRC == 0)
-                {
-                    errorMessage += Properties.Resources.InvalidUID + Environment.NewLine;
-                }
+                //if (header.UID == 0 || header.RomCRC == 0)
+                //{
+                //    errorMessage += Properties.Resources.InvalidUID + Environment.NewLine;
+                //}
                 if (header.LengthVIs == 0)
                 {
                     errorMessage += Properties.Resources.InsufficientVIs + Environment.NewLine;

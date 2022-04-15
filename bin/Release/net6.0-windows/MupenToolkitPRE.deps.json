@@ -18,7 +18,7 @@
           "System.Reactive": "5.0.0",
           "VirtualizingWrapPanel": "1.5.7",
           "Infralution.Localization.Wpf": "3.3.0.0",
-          "SciChart.Wpf.UI.Transitionz": "3.1.0.0"
+          "WPFBareAnimations": "1.0.0.0"
         },
         "runtime": {
           "MupenToolkitPRE.dll": {}
@@ -194,11 +194,11 @@
           }
         }
       },
-      "SciChart.Wpf.UI.Transitionz/3.1.0.0": {
+      "WPFBareAnimations/1.0.0.0": {
         "runtime": {
-          "SciChart.Wpf.UI.Transitionz.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+          "WPFBareAnimations.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -341,7 +341,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SciChart.Wpf.UI.Transitionz/3.1.0.0": {
+    "WPFBareAnimations/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

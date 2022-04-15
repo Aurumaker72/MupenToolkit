@@ -29,8 +29,8 @@
     <Reference Include="Infralution.Localization.Wpf">
       <HintPath>Library\Infralution.Localization.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="SciChart.Wpf.UI.Transitionz">
-      <HintPath>Library\SciChart.Wpf.UI.Transitionz.dll</HintPath>
+    <Reference Include="WPFBareAnimations">
+      <HintPath>Library\WPFBareAnimations.dll</HintPath>
     </Reference>
   </ItemGroup>
 

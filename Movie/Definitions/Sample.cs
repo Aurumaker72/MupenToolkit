@@ -4,305 +4,209 @@ using System;
 
 namespace MupenToolkitPRE.Movie.Definitions
 {
-    public class Sample : ObservableObject
-    {
-        protected int _Raw;
-        public int Raw
-        {
-            get { return _Raw; }
-            set
-            {
-                _Raw = value;
-                OnPropertyChanged();
-            }
-        }
 
-        protected bool _DPadRight;
+    // !!!
+    // this class is absolutely performance and memory critical
+    // i had to rethink the hierarchy for this and sacrifice some readability
+    // 
+    // HACK 1 - use INPC attribute instead of inheriting from ObservableObject; this avoids 1 (2?) eventhandlers being created
+    // HACK 2 - use undocumented IncludeAdditionalHelperMethods flag to not create ONPC wrappers (e.g.: SetProperty)
+    // POTENTIAL HACK 3 - Pass pointer to raw inside SetBit then copy afterward to avoid further stack interaction
+    [INotifyPropertyChanged(IncludeAdditionalHelperMethods = false)]
+    public partial class Sample
+    {
+        [ObservableProperty]
+        private int raw;
+
         public bool DPadRight
         {
-            get
-            {
-                return _DPadRight;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 0);
             set
             {
-                _DPadRight = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _DPadRight, 0);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 0);
                 OnPropertyChanged();
             }
         }
 
 
-        protected bool _DPadLeft;
         public bool DPadLeft
         {
-            get
-            {
-                return _DPadLeft;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 1);
             set
             {
-                _DPadLeft = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _DPadLeft, 1);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 1);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _DPadDown;
         public bool DPadDown
         {
-            get
-            {
-                return _DPadDown;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 2);
             set
             {
-                _DPadDown = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _DPadDown, 2);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 2);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _DPadUp;
         public bool DPadUp
         {
-            get
-            {
-                return _DPadUp;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 3);
             set
             {
-                _DPadUp = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _DPadUp, 3);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 3);
                 OnPropertyChanged();
             }
         }
 
 
-        protected bool _Start;
         public bool Start
         {
-            get
-            {
-                return _Start;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 4);
             set
             {
-                _Start = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _Start, 4);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 4);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _Z;
         public bool Z
         {
-            get
-            {
-                return _Z;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 5);
             set
             {
-                _Z = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _Z, 5);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 5);
                 OnPropertyChanged();
             }
         }
 
 
-        protected bool _B;
         public bool B
         {
-            get
-            {
-                return _B;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 6);
             set
             {
-                _B = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _B, 6);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 6);
                 OnPropertyChanged();
             }
         }
 
 
-        protected bool _A;
         public bool A
         {
-            get
-            {
-                return _A;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 7);
             set
             {
-                _A = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _A, 7);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 7);
                 OnPropertyChanged();
             }
         }
 
-
-        protected bool _CPadRight;
         public bool CPadRight
         {
-            get
-            {
-                return _CPadRight;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 8);
             set
             {
-                _CPadRight = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _CPadRight, 8);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 8);
                 OnPropertyChanged();
             }
         }
 
 
-        protected bool _CPadLeft;
         public bool CPadLeft
         {
-            get
-            {
-                return _CPadLeft;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 9);
             set
             {
-                _CPadLeft = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _CPadLeft, 9);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 9);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _CPadDown;
         public bool CPadDown
         {
-            get
-            {
-                return _CPadDown;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 10);
             set
             {
-                _CPadDown = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _CPadDown, 10);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 10);
                 OnPropertyChanged();
             }
         }
 
-
-        protected bool _CPadUp;
         public bool CPadUp
         {
-            get
-            {
-                return _CPadUp;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 11);
             set
             {
-                _CPadUp = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _CPadUp, 11);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 11);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _R;
         public bool R
         {
-            get
-            {
-                return _R;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 12);
             set
             {
-                _R = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _R, 12);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 12);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _L;
         public bool L
         {
-            get
-            {
-                return _L;
-            }
+            get => BitOperationsHelper.GetBit(Raw, 13);
             set
             {
-                _L = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _L, 13);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 13);
                 OnPropertyChanged();
             }
         }
 
-        protected bool _Reserved1;
-        protected bool _Reserved2;
         public bool Reserved1
         {
-            get { return _Reserved1; }
+            get => BitOperationsHelper.GetBit(Raw, 14);
             set
             {
-                _Reserved1 = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _Reserved1, 14);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 14);
+                OnPropertyChanged();
             }
         }
         public bool Reserved2
         {
-            get { return _Reserved2; }
+            get => BitOperationsHelper.GetBit(Raw, 15);
             set
             {
-                _Reserved2 = value;
-                Raw = BitOperationsHelper.SetBit(_Raw, _Reserved2, 15);
+                Raw = BitOperationsHelper.SetBit(Raw, value, 15);
+                OnPropertyChanged();
             }
         }
-        protected sbyte _X;
+
         public sbyte X
         {
-            get
-            {
-                return _X;
-            }
+            get => BitOperationsHelper.GetSByte(Raw, 2);
             set
             {
-                _X = value;
-                unsafe
-                {
-                    fixed (int* ptr = &_Raw)
-                        BitOperationsHelper.SetByte(ptr, _X, 2);
-                }
-                Raw = _Raw; // hack: update
+                BitOperationsHelper.SetByte(ref raw, value, 2);
+                Raw = raw;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(Degree));
             }
         }
 
-        protected sbyte _Y;
         public sbyte Y
         {
-            get
-            {
-                return _Y;
-            }
+            get => BitOperationsHelper.GetSByte(Raw, 3);
             set
             {
-                _Y = value;
-                unsafe
-                {
-                    fixed (int* ptr = &_Raw)
-                        BitOperationsHelper.SetByte(ptr, _Y, 3);
-                }
-                Raw = _Raw; // hack: update
+                BitOperationsHelper.SetByte(ref raw, value, 3);
+                Raw = raw;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(Degree));
             }
         }
 
-        public double Degree
-        {
-            get
-            {
-                return Math.Atan2(Y, X) * (180 / Math.PI);
-            }
-        }
+        public double Degree => Math.Atan2(Y, X) * (180 / Math.PI);
 
         public Sample(int rawValue)
         {

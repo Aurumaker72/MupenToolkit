@@ -89,7 +89,6 @@ C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\Splat.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\System.Reactive.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\VirtualizingWrapPanel.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\Infralution.Localization.Wpf.dll
-C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\SciChart.Wpf.UI.Transitionz.dll
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\MupenToolkitPRE.csproj.AssemblyReference.cache
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\AnalogInputPage.g.cs
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\ControllerFlagsPage.g.cs
@@ -135,3 +134,4 @@ C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\StartFlagsPa
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\StartFlagsPage.baml
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\ReplacementPage.g.cs
 C:\Users\Alex\source\repos\MupenToolkitGit\obj\Debug\net6.0-windows\ReplacementPage.baml
+C:\Users\Alex\source\repos\MupenToolkitGit\bin\Debug\net6.0-windows\WPFBareAnimations.dll

@@ -19,6 +19,12 @@
             *val &= ~((int)0xff << (8 * pos));
             *val |= ((int)b << (8 * pos));
         }
+        public static int SetSByte(int targetValue, sbyte byteValue, int pos)
+        {
+            targetValue &= ~((int)0xff << (8 * pos));
+            targetValue |= ((int)byteValue << (8 * pos));
+            return targetValue;
+        }
         public unsafe static void SetByte(ref int val, sbyte b, int pos)
         {
             val &= ~((int)0xff << (8 * pos));

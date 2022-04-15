@@ -8,7 +8,7 @@
       xmlns:mvvm="clr-namespace:MupenToolkitPRE.MVVM"
       xmlns:xmlex="clr-namespace:MupenToolkitPRE.UI.XAML"
       d:DataContext="{d:DesignInstance Type=mvvm:MainViewModel}"
-             xmlns:tz="http://schemas.abtsoftware.co.uk/transitionz" 
+      xmlns:bareanimations="clr-namespace:WPFBareAnimations;assembly=WPFBareAnimations"
       mc:Ignorable="d" 
                                        ResxExtension.DefaultResxName="MupenToolkitPRE.Properties.Resources" Language="{UICulture}"
 
@@ -28,7 +28,7 @@
                     TextWrapping="NoWrap"
                     HorizontalAlignment="Center"
                     TextAlignment="Center"
-                    Text="{Resx AppName}"/>
+                    Text="{Resx AppName}" Margin="0 10 0 10"/>
 
                 <Button
                     Style="{StaticResource MaterialDesignFlatButton}"
@@ -41,12 +41,11 @@
                     </StackPanel>
                 </Button>
                 <StackPanel
-                    Visibility="Collapsed"
+                    Visibility="Hidden"
                     Opacity="0"
-                    xmlex:OpacityTransition.ShouldBeShown="{Binding Path=FileLoaded, UpdateSourceTrigger=PropertyChanged}">
-                    <StackPanel.RenderTransform>
-                        <TranslateTransform/>
-                    </StackPanel.RenderTransform>
+                    bareanimations:OpacityTransition.ShouldBeShown="{Binding Path=FileLoaded, UpdateSourceTrigger=PropertyChanged}"
+                    bareanimations:OpacityTransition.AnimationDuration="00:00:0.5"
+                    bareanimations:OpacityTransition.CollapseOnInvisibility="False">
                     <Button
                     Style="{StaticResource MaterialDesignFlatButton}"
                     Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
@@ -67,8 +66,21 @@
                             <TextBlock Margin="8 0 0 0" Text="{Resx UnloadMovie}"/>
                         </StackPanel>
                     </Button>
+                    <!--<materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="200" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="5" FontSize="26" Grid.Row="0" Text="{Resx Analog}"/>
+                            <TextBlock Margin="5" FontSize="13" TextWrapping="Wrap" Grid.Row="1" Text="Dolor sit amet jqioerj ji q iorjqeo riwerj weoirj qqrj qiorj qer"/>
+                            <Button Grid.Row="0" Content="{materialDesign:PackIcon Kind=OpenInNew}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </materialDesign:Card>-->
                 </StackPanel>
+              
             </StackPanel>
+            
         </Grid>
 
 

@@ -16,7 +16,6 @@ using MaterialDesignThemes.Wpf.Transitions;
 using MupenToolkitPRE;
 using MupenToolkitPRE.MVVM;
 using MupenToolkitPRE.UI.XAML;
-using SciChart.Wpf.UI.Transitionz;
 using System;
 using System.Diagnostics;
 using System.Windows;
